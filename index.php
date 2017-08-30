@@ -5,23 +5,29 @@
 		<meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Remove if you're not building a responsive site. (But then why would you do such a thing?) -->
-        <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-        <!-- <link rel="shortcut icon" href="_ui/img/favicon.ico"/> -->
+        <!-- <link rel="shortcut icon" href="/_ui/img/favicon.ico"/> -->
 
-        <link rel="stylesheet" href="dist/css/main.css" type="text/css" media="all">
+        <link rel="stylesheet" href="/dist/css/main.css" type="text/css" media="all">
 
-        <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/css/main.min.css" type="text/css" media="all"> -->
-        <!-- <script src="<?php echo get_template_directory_uri(); ?>/dist/js/header-scripts.min.js"></script> -->
+        <!-- <link rel="stylesheet" href="/dist/css/main.min.css" type="text/css" media="all"> -->
+        <!-- <script src="/dist/js/header-scripts.min.js"></script> -->
     </head>
+
     <body>
         <header>
+			<nav class="offscreen" aria-label="Screen Reader Skip Links">
+				<li><a href="#primary">Primary Nav</a></li>
+				<!--  -->
+				<li><a href="#MAIN CONTENT"></a></li>
+			</nav>
+
 			<div class="top-bar">
 				<a href="/"><img src="" alt="Spirit of Milan"></a>
 				<a href="/"><img src="" alt="Princi"></a>
-				<a href="#">Menu</a>
+				<a href="#" class="trigger">Menu</a>
 			</div>
 
-			<div id="navigation">
+			<div id="primary" class="menu">
 				<nav role="navigation" aria-label="Primary Navigation">
 					<ul>
 						<li><a href="/heritage">Heritage</a></li>
@@ -46,9 +52,7 @@
 			</div>
 		</header>
 
-		<div class="debug">
-    		<label><input type="checkbox"> Debug</label>
-  		</div>
+
 
 
 
@@ -112,26 +116,27 @@
     </div>
   </div>
 
-  <script>
-    var debugInput = document.querySelector("input");
-    function updateDebugState() {
-        document.body.classList.toggle('debug-on', debugInput.checked);
-    }
-    debugInput.addEventListener("click", updateDebugState);
-    updateDebugState();
-  </script>
 
+	<!-- DEBUG INFO -->
+	<div class="debug">
+		<label><input type="checkbox"> Debug</label>
+	</div>
 
-
-
-
-
+	<script>
+		var debugInput = document.querySelector("input");
+		function updateDebugState() {
+	    	document.body.classList.toggle('debug-on', debugInput.checked);
+		}
+		debugInput.addEventListener("click", updateDebugState);
+		updateDebugState();
+	</script>
+	<!-- END DEBUG -->
 
 	<footer>
 		&copy;2017 Princi. All rights reserved.
 	</footer>
 
-    <script src="dist/js/footer-scripts.js"></script>
-    <!-- <script src="<?php echo get_template_directory_uri(); ?>/dist/js/footer-scripts.min.js"></script> -->
+    <script src="/dist/js/footer-scripts.js"></script>
+    <!-- <script src="/dist/js/footer-scripts.min.js"></script> -->
     </body>
 </html>
