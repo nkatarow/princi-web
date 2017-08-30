@@ -1,30 +1,190 @@
-ul {
-	margin-left: 20px;
-	padding: 0;
-}
+/* ==========================================================================
+   COMPONENTS/_NAV.SCSS
+   ========================================================================== */
 
-.menu {
-	background-color: white;
-	border: 1px solid black;
-	display: none;
-	left: 0;
-	padding: 20px;
-	position: absolute;
+// top bar fixed items
+.top-bar {
+	height: 60px;
+	position: fixed;
+	top: 0;
 	width: 100%;
-}
-	.menu.active {
+	z-index: 3;
+
+	a {
 		display: block;
+		position: absolute;
+		top: 0;
 	}
 
-.trigger {
-	display: inline-block;
+	.tagline { left: 0; }
+	.trigger { right: 0; }
+
+	.logo {
+		left: 50%;
+		transform: translateX(-50%);
+	}
 }
-	.trigger img {
-		width: 30px;
+
+// menu container
+.menu {
+	background-color: $black;
+	height: 100vh;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	text-align: center;
+	transition: opacity 0.5s, visibility 0s 0.5s;
+	width: 100vw;
+	visibility: hidden;
+	z-index: 2;
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		transition: opacity 0.5s;
+
+		.edge-menu {
+			opacity: 1;
+			transform: translateY(0%);
+		}
+
+		#language { transition-delay: 250ms; }
+
+		#main {
+			opacity: 1;
+			transform: translateY(0%);
+			transition-delay: 500ms;
+		}
+
+		#secondary { transition-delay: 750ms; }
+		#social { transition-delay: 1000ms; }
 	}
 
-@media only all and (min-width: 700px) {
+	a { color: $white; }
+
+	#main {
+		font-size: 7.5vh;
+		opacity: 0;
+		transform: translateY(5%);
+		transition: transform 250ms, opacity 250ms;
+		z-index: 4;
+
+		a:hover,
+		a:focus {
+			font-style: italic;
+		}
+	}
+
+	.nav-hover {
+		position: absolute;
+		height: 100%;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding: 5vh;
+		z-index: 3;
+
+		img {
+			position: absolute;
+			height: 100%;
+			left: 0;
+			opacity: 0;
+			top: 0;
+			transition: opacity 100ms linear;
+			width: auto;
+			width: 100%;
+
+			&.active {
+				opacity: 1;
+				z-index: 2;
+			}
+		}
+	}
+
+	.edge-menu {
+		opacity: 0;
+		transform: translateY(25%);
+		transition: transform 250ms, opacity 250ms;
+
+		z-index: 4;
+
+		li { display: block; }
+
+		a:hover,
+		a:focus {
+			color: $bronze;
+		}
+	}
+
+}
+
+
+// only do on mobile
+@media screen and (max-width: $bp-large) {
 	.menu {
-		display: block;
+		.mobile-grouping {
+			left: 50%;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%) translateX(-50%);
+		}
+		#main { transform: translateY(5%); }
+	}
+}
+
+
+// above 50em
+@media screen and (min-width: $bp-large) {
+	.menu {
+		#main {
+			left: 50%;
+			position: absolute;
+			top: 50%;
+			transform: translateX(-50%) translateY(5%);
+			width: 50vw;
+		}
+
+		&.active {
+			#main {
+				transform: translateX(-50%) translateY(-50%);
+				transition-delay: 250ms;
+			}
+			#language {
+				transform: rotate(-90deg) translateY(0%);
+				transition-delay: 500ms;
+			}
+			#secondary {
+				transform: translateX(-50%) translateY(0%);
+				transition-delay: 750ms;
+			}
+			#social {
+				transform: rotate(90deg) translateY(0%);
+				transition-delay: 1000ms;
+			}
+		}
+
+		.edge-menu {
+			position: absolute;
+
+			li { display: inline-block; }
+		}
+
+		#language {
+			left: $space;
+			top: 50%;
+			transform: rotate(-90deg) translateY(-25%);
+		}
+
+		#secondary {
+			bottom: $space-double;
+			left: 50%;
+			transform: translateX(-50%) translateY(-25%);
+		}
+
+		#social {
+			right: $space;
+			top: 50%;
+			transform: rotate(90deg) translateY(-25%);
+		}
 	}
 }

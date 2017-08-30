@@ -1,5 +1,5 @@
 /* ==========================================================================
-   COMPONENTS/_PARALLAX
+   COMPONENTS/_PARALLAX.SCSS
    ========================================================================== */
 
   /* Parallax base styles
@@ -60,13 +60,13 @@
 
   .debug {
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: .5em;
     z-index: 999;
     background: rgba(0,0,0,.85);
     color: #fff;
     padding: .5em;
-    border-radius: 0 0 5px 5px;
+    border-radius: 5px 5px 0 0;
   }
   .debug-on .parallax__group {
     -webkit-transform: translate3d(800px, 0, -800px) rotateY(30deg);

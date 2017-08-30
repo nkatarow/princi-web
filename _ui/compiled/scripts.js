@@ -1512,6 +1512,13 @@ APP.nav = {
                 self.hideNav();
             }
         });
+
+		$('#main a').hover(function(){
+			var target = this.text,
+				target = target.toLowerCase();
+
+			$('.nav-hover img.' + target).toggleClass('active');
+		});
     },
     hideNav: function () {
         // fn hideNav
