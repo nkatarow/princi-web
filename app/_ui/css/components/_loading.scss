@@ -1,0 +1,108 @@
+/* ==========================================================================
+   COMPONENTS/_LOADING.SCSS
+   ========================================================================== */
+
+.loading-screen {
+	background-color: $black;
+	height: 100vh;
+	opacity: 0;
+	position: fixed;
+	left: 0;
+	top: 0;
+	transition: opacity 250ms, visibility 0s 250ms;
+	visibility: hidden;
+	width: 100vw;
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		transition: opacity 250ms;
+	}
+
+	.progress {
+	    background: $bronze;
+		bottom: 0;
+	    display: block;
+	    height: 4px;
+		position: absolute;
+	    text-align: center;
+	    transition: width 250ms;
+	    width: 0;
+	}
+
+	svg {
+		max-width: 95%;
+		max-height: 95%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+	}
+
+	svg .line {
+		fill-opacity: 0;
+		stroke: $bronze;
+		stroke-width: 4;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke-miterlimit: 10;
+	}
+
+	svg #dot path,
+	svg #dot2 path {
+		fill: $bronze;
+		fill-opacity: 0;
+	}
+
+	svg #p .line {
+		stroke-dasharray: 490.0091552734375;
+		animation: p 3s infinite ease-in-out;
+	}
+
+	svg #ri .line {
+		stroke-dasharray: 69.10530090332031;
+		animation: ri 3s infinite linear;
+	}
+
+	svg #nci .line {
+		stroke-dasharray: 130.82090759277344;
+		animation: nci 3s infinite linear;
+	}
+
+	svg #dot path { animation: dot1 3s infinite linear; }
+
+	svg #dot2 path { animation: dot2 3s infinite linear; }
+
+	@keyframes p {
+		0% { stroke-dashoffset: 490.0091552734375; }
+		40% { stroke-dashoffset: 0; }
+	}
+
+	@keyframes ri {
+		0%, 40% { stroke-dashoffset: 69.10530090332031; }
+		50% { stroke-dashoffset: 0; }
+	}
+
+	@keyframes nci {
+		0%, 50% { stroke-dashoffset: 130.82090759277344; }
+		70% { stroke-dashoffset: 0; }
+	}
+
+	@keyframes dot1 {
+		0%, 74% { fill-opacity: 0; }
+		75% { fill-opacity: 1; }
+		100% { fill-opacity: 1; }
+	}
+
+	@keyframes dot2 {
+		0%, 79% { fill-opacity: 0; }
+		80% { fill-opacity: 1; }
+		100% { fill-opacity: 1; }
+	}
+}
+
+@media screen and (min-width: $bp-large) {
+	.loading-screen .progress { height: 8px; }
+}

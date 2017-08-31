@@ -1,93 +1,10 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <title>Princi</title>
-		<meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Remove if you're not building a responsive site. (But then why would you do such a thing?) -->
-        <!-- <link rel="shortcut icon" href="_ui/img/favicon.ico"/> -->
+	</main>
 
-        <link rel="stylesheet" href="dist/css/main.css" type="text/css" media="all">
+	<footer>
+		&copy;2017 Princi. All rights reserved.
+	</footer>
 
-        <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/css/main.min.css" type="text/css" media="all"> -->
-        <!-- <script src="<?php echo get_template_directory_uri(); ?>/dist/js/header-scripts.min.js"></script> -->
-
-		<style media="screen">
-			svg {
-				max-width: 95%;
-				max-height: 95%;
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				margin: auto;
-			}
-
-			svg .line {
-			    fill-opacity: 0;
-			    stroke: #000;
-			    stroke-width: 4;
-				stroke-linecap: round;
-				stroke-linejoin: round;
-				stroke-miterlimit: 10;
-			}
-
-			svg #dot path,
-			svt #dot2 path {
-			    fill-opacity: 0;
-			}
-
-			svg #p .line {
-			    stroke-dasharray: 490.0091552734375;
-				animation: p 3s infinite ease-in-out;
-			}
-
-			svg #ri .line {
-			    stroke-dasharray: 69.10530090332031;
-				animation: ri 3s infinite linear;
-			}
-
-			svg #nci .line {
-			    stroke-dasharray: 130.82090759277344;
-				animation: nci 3s infinite linear;
-			}
-
-			svg #dot path { animation: dot1 3s infinite linear; }
-
-			svg #dot2 path { animation: dot2 3s infinite linear; }
-
-			@keyframes p {
-				0% { stroke-dashoffset: 490.0091552734375; }
-			  	40% { stroke-dashoffset: 0; }
-			}
-
-			@keyframes ri {
-				0%, 40% { stroke-dashoffset: 69.10530090332031; }
-			   	50% { stroke-dashoffset: 0; }
-			}
-
-			@keyframes nci {
-				0%, 50% { stroke-dashoffset: 130.82090759277344; }
-			   	70% { stroke-dashoffset: 0; }
-			}
-
-			@keyframes dot1 {
-				0%, 74% { fill-opacity: 0; }
-				75% { fill-opacity: 1; }
-				100% { fill-opacity: 1; }
-			}
-
-			@keyframes dot2 {
-				0%, 79% { fill-opacity: 0; }
-				80% { fill-opacity: 1; }
-				100% { fill-opacity: 1; }
-			}
-
-		</style>
-    </head>
-    <body>
-
+	<div class="loading-screen">
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="138.8px"
@@ -134,10 +51,10 @@
 			</g>
 		</svg>
 
-		<script type="text/javascript">
-			// var path = document.querySelector("svg #nci path");
-			// var total_length = path.getTotalLength();
-			// console.log(total_length);
-		</script>
+		<div class="progress"></div>
+	</div>
 
+    <script src="/_ui/compiled/scripts.js"></script>
+    <!-- <script src="/_ui/dist/scripts.min.js"></script> -->
+    </body>
 </html>

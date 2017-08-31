@@ -8,29 +8,39 @@ var gulp = require ('gulp'),
 	concat = require('gulp-concat'),
 	merge = require('merge-stream'),
 	del = require('del'),
-	plumber = require('gulp-plumber');
-	livereload = require('gulp-livereload');
+	plumber = require('gulp-plumber'),
+	livereload = require('gulp-livereload'),
+	nunjucksRender = require('gulp-nunjucks-render');
 
 function onError(err) {
 	console.log(err);
 }
 
+// nunjucks templating
+gulp.task('nunjucks', function() {
+	return gulp.src('app/pages/**/*.+(html|nunjucks)')
+		.pipe(nunjucksRender({
+			path: ['app/templates']
+		}))
+		.pipe(gulp.dest('app'))
+});
+
 // Concat/autoprefix CSS
 gulp.task('styles', function(){
-	return sass('_ui/css/main.scss', { style: 'expanded'})
+	return sass('app/_ui/css/main.scss', { style: 'expanded'})
 		.pipe(sourcemaps.init())
 		.pipe(sourcemaps.write())
 		.pipe(autoprefixer({browsers: ['last 2 version', 'safari 5', 'ie 9', 'ios 6', 'android 4', '> 1%']}))
-		.pipe(gulp.dest('_ui/compiled'))
+		.pipe(gulp.dest('app/_ui/compiled'))
 		.pipe(plumber({errorHandler: onError}))
 		.pipe(livereload());
 });
 
 // Concat JS
 gulp.task('scripts', function(){
-	return gulp.src(['_ui/js/lib/*.js', '_ui/js/app.main.js', '_ui/js/components/*.js'])
+	return gulp.src(['app/_ui/js/lib/*.js', 'app/_ui/js/app.main.js', 'app/_ui/js/components/*.js'])
 		.pipe(concat('scripts.js'))
-		.pipe(gulp.dest('_ui/compiled'))
+		.pipe(gulp.dest('app/_ui/compiled'))
 		.pipe(plumber({errorHandler: onError}))
 		.pipe(livereload());
 });
@@ -38,44 +48,46 @@ gulp.task('scripts', function(){
 
 // Minify / Uglify
 gulp.task('minify', function(){
-	return gulp.src('_ui/compiled/main.css')
+	return gulp.src('app/_ui/compiled/main.css')
 		.pipe(cleanCSS())
 		.pipe(rename({suffix: '.min'}))
-		.pipe(gulp.dest('_ui/dist'))
+		.pipe(gulp.dest('app/_ui/dist'))
 		.pipe(plumber({errorHandler: onError}));
 });
 gulp.task('uglify', function(){
-	return gulp.src('_ui/compiled/scripts.js')
+	return gulp.src('app/_ui/compiled/scripts.js')
 		.pipe(rename({suffix: '.min'}))
 		.pipe(uglify(''))
-		.pipe(gulp.dest('_ui/dist'))
+		.pipe(gulp.dest('app/_ui/dist'))
 		.pipe(plumber({errorHandler: onError}));
 });
 
 
 // Cleaners
 gulp.task('cleancompiled', function(){
-	return del(['_ui/compiled']);
+	return del(['app/_ui/compiled']);
 });
 gulp.task('cleandist', function(){
-	return del(['_ui/dist']);
+	return del(['app/_ui/dist']);
 });
 
 
 // Default task
 gulp.task('default', ['cleancompiled'], function(){
-	gulp.start('styles', 'scripts');
+	gulp.start('styles', 'scripts', 'nunjucks');
 });
 
 // Watch task
 gulp.task('watch', function(){
 	livereload.listen();
 
-	gulp.watch('_ui/css/**/*.scss', ['styles']);
-	gulp.watch('_ui/js/**/*.js', ['scripts']);
+	gulp.watch('app/_ui/css/**/*.scss', ['styles']);
+	gulp.watch('app/_ui/js/**/*.js', ['scripts']);
+	gulp.watch('app/pages/*.nunjucks', ['nunjucks']);
+	gulp.watch('app/templates/*.nunjucks', ['nunjucks']);
 });
 
 // Build task
 gulp.task('build', ['cleandist'], function(){
-	gulp.start('minify', 'uglify');
+	gulp.start('minify', 'uglify', 'nunjucks');
 });
