@@ -1,0 +1,23 @@
+<!-- food.nunjucks -->
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+	<div id="content">
+		<style media="screen">
+			.food-type {
+				background-image: url(/_ui/img/fpo/roberto-devil.png);
+				background-attachment: fixed;
+				background-size: cover;
+				background-position: top left;
+				height: 100vh;
+				width: 100vw;
+			}
+		</style>
+
+
+		<div class="food-type">
+			<h1>Pizza</h1>
+
+		</div>
+	</div>
+{% endblock %}

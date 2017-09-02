@@ -1,0 +1,47 @@
+/* ==========================================================================
+   COMPONENTS/_IMAGE-TRANSITION.SCSS
+   ========================================================================== */
+
+.new-results-div {
+	opacity: 1;
+	transition: opacity 250ms linear;
+}
+
+.image-transition {
+	background-color: pink;
+	position: relative;
+
+	.img-link {
+		display: block;
+		height: 200px;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 200px;
+		transition:
+			height 250ms linear,
+			width 250ms linear,
+			top 250ms linear,
+			left 250ms linear;
+
+
+		&.transition-in {
+			height: 100vh;
+			left: 0;
+			width: 100vw;
+		}
+
+		.mask {
+			height: 100%;
+			width: 100%;
+
+			.img {
+				background-attachment: fixed;
+				background-size: cover;
+				background-position: top left;
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+}

@@ -13,6 +13,9 @@ $(function() {
 		$('body').attr('class', '');
 		$('body').addClass(titleLower);
 
+		if (!$('.new-results-div').length) {
+			$main.wrapInner('<div class="new-results-div" />');
+		}
 		// APP.instantiations.init();
 	},
 
@@ -36,28 +39,14 @@ $(function() {
 		init();
 	},
 
-	loadPage = function(href) {
+	loadPage = function(e, href, imageLoad) {
 		console.log("loadPage");
 
-		$('.loading-screen').addClass('active');
-
-		console.log("wrap 1");
-		$main.wrapInner('<div class="new-results-div" />');
-
-		setTimeout(function(){
-			if ($('#primary').hasClass('active')) {
-				APP.nav.hideNav();
-			}
-
-			$main.css('opacity', '0');
-
-			scroll(0,0);
-
-			/* ----- Set height of $main to ensure the footer doesn't jump up -----  */
-			var newResultsHeight = $('.new-results-div').outerHeight();
-			$main.height(newResultsHeight);
-
-		}, 250);
+		if (!imageLoad) {
+			APP.pageLoads.defaultLoadIn($main);
+		} else {
+			APP.pageLoads.imageLoadIn(e);
+		}
 
 		$.ajax({
 			xhr: function(){
@@ -81,45 +70,53 @@ $(function() {
 			success: function(result){
 				console.log("success");
 
-				setTimeout(function(){
+				// HERE IS WHERE WE NEED TO LOAD BEHIND INSTEAD OF REPLACING WHEN IMAGE LOAD
 
-					/* ----- Where the new content is added ----- */
-					var pageContent = $('#content').html($(result).find('#content').html());
-					$main.html(pageContent);
+				if (!imageLoad) {
+					setTimeout(function(){
+						/* ----- Where the new content is added ----- */
+						var pageContent = $(result).find('#content').html();
+						// var pageContent = $('#content').html($(result).find('#content').html());
+						$main.html(pageContent);
 
-					/* ----- Wrap content in div so we can get it's height ----- */
-					$main.wrapInner('<div class="new-results-div" />');
+						/* ----- Wrap content in div so we can get it's height ----- */
+						$main.wrapInner('<div class="new-results-div" />');
 
-					/* ----- Get height of new container inside results container and set $main to it so there's no content jumpage -----  */
-					var newResultsHeight = $('.new-results-div').outerHeight();
-					$main.height(newResultsHeight);
+						/* ----- Get height of new container inside results container and set $main to it so there's no content jumpage -----  */
+						var newResultsHeight = $('.new-results-div').outerHeight();
+						$main.height(newResultsHeight);
 
-					/* ----- Removes the temp height from $main ----- */
-					$main.css('height', '');
+						/* ----- Removes the temp height from $main ----- */
+						$main.css('height', '');
 
-					$main.css('opacity', '1');
-					ajaxLoad();
-				}, 500);
+						ajaxLoad();
+					}, 500);
+				} else {
+					console.log("NOT");
+
+					var pageContent = $(result).find('#content').html();
+
+					$main.append(
+						'<div class="secondary-results-div">' +
+							pageContent +
+						'</div>'
+					);
+				}
 
 			},
 			complete: function(){
-				console.log("complete");
+				console.log("complete" + imageLoad);
 
-				setTimeout(function(){
-					$('.loading-screen').removeClass('active');
-					$('.progress').css('width', '0');
-				}, 2000);
+				if (!imageLoad) {
+					APP.pageLoads.defaultLoadOut($main);
+				} else {
+					APP.pageLoads.imageLoadOut();
+				}
 			},
 			error: function(){
 				console.log("error");
 				location.reload();
-			}//,
-			// timeout: function() {
-			// 	console.log("timeout");
-			// },
-			// statusCode: function(){
-			// 	console.log("status code");
-			// }
+			}
 		});
 	};
 
@@ -140,15 +137,21 @@ $(function() {
 			loadPage(location.href);
 			return false;
 		}
-
 	});
 
-	$(document).on('click', 'a', function(event) {
-		var href = $(this).attr("href");
+	$(document).on('click', 'a', function(e) {
+		e.preventDefault();
+
+		var href = $(this).attr("href"),
+			imageLoad = false;
+
+		if ($(this).hasClass('img-link')) {
+			imageLoad = true;
+		}
 
 		if ((href.indexOf(document.domain) > -1 || href.indexOf(':') === -1) && href != '#') {
 			history.pushState({}, '', href);
-			loadPage(href);
+			loadPage(e, href, imageLoad);
 			return false;
 		}
 	});

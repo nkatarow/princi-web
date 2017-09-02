@@ -3,7 +3,7 @@
 
 {% block content %}
 	<div id="content">
-		<h1>PRINCI</h1>
+		<h1>Princi</h1>
 
 		<div class="parallax">
 			<div id="group1" class="parallax__group">

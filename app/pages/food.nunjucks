@@ -4,5 +4,18 @@
 {% block content %}
 	<div id="content">
 		<h1>FOOD PAGE</h1>
+
+		<div class="image-transition">
+			<a href="/food-type.html" class="img-link">
+				<div class="mask">
+					<div class="img" style="background-image: url(/_ui/img/fpo/roberto-devil.png"></div>
+				</div>
+			</a>
+
+			<div class="copy">
+				<h2>Subpage</h2>
+				<p>Here's a small write up about the page that we want to get you into. Just to wet your whistle, so to speak.</p>
+			</div>
+		</div>
 	</div>
 {% endblock %}
