@@ -3,8 +3,20 @@
    ========================================================================== */
 
 .new-results-div {
+	background-color: transparent;
 	opacity: 1;
-	transition: opacity 250ms linear;
+	height: 100%;
+	transition: opacity 250ms linear, height 250ms linear;
+	z-index: 2;
+
+	&.transition-in { height: 100vh; }
+}
+
+.secondary-results-div {
+	left: 0;
+	position: absolute;
+	top: 0;
+	z-index: 1;
 }
 
 .image-transition {
@@ -19,10 +31,10 @@
 		top: 0;
 		width: 200px;
 		transition:
-			height 250ms linear,
-			width 250ms linear,
-			top 250ms linear,
-			left 250ms linear;
+			height 500ms linear,
+			width 500ms linear,
+			top 500ms linear,
+			left 500ms linear;
 
 
 		&.transition-in {

@@ -50,16 +50,14 @@ APP.pageLoads = {
 		}, 3500);
 	},
 
-	imageLoadIn: function(e, $main) {
+	imageLoadIn: function(e) {
 		var self = this;
 		console.log("function imageLoadIn");
 
 		// will need to abstract to this img-link
 		$('.img-link').css('top', -this.getElemDistance(e.target));
 		$('.img-link').addClass('transition-in');
-
-
-		setTimeout(function(){}, 500);
+		$('.new-results-div').addClass('transition-in');
 	},
 
 	imageLoadOut: function() {
@@ -71,6 +69,7 @@ APP.pageLoads = {
 			$('.new-results-div').remove();
 			$('.secondary-results-div').addClass('new-results-div');
 			$('.new-results-div').removeClass('secondary-results-div');
+			$('.food-details').addClass('active');
 		}, 500);
 	},
 

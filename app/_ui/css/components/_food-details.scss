@@ -1,0 +1,16 @@
+/* ==========================================================================
+   COMPONENTS/_FOOD-DETAILS.SCSS
+   ========================================================================== */
+
+.food-details {
+	background-color: $black;
+	color: $white;
+	height: 100vh;
+	left: -100%;
+	position: absolute;
+	top: 0;
+	transition: left 250ms ease-in-out;
+	width: 50vw;
+
+	&.active { left: 0; }
+}
