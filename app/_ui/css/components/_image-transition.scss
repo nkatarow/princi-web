@@ -3,9 +3,9 @@
    ========================================================================== */
 
 .new-results-div {
-	background-color: transparent;
-	opacity: 1;
 	height: 100%;
+	opacity: 1;
+	position: relative;
 	transition: opacity 250ms linear, height 250ms linear;
 	z-index: 2;
 
@@ -31,10 +31,10 @@
 		top: 0;
 		width: 200px;
 		transition:
-			height 500ms linear,
-			width 500ms linear,
-			top 500ms linear,
-			left 500ms linear;
+			height 250ms linear,
+			width 250ms linear,
+			top 250ms linear,
+			left 250ms linear;
 
 
 		&.transition-in {

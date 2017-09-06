@@ -11,34 +11,39 @@
 */
 
 APP.pageLoads = {
-    defaultLoadIn: function($main) {
+    defaultLoadIn: function($main, pageContent) {
 		console.log("function defaultLoadIn");
 
+		// Attach and display default loading screen
 		$('body').prepend(APP.loadingScreen);
-		$('.loading-screen').addClass('active');
 
 		setTimeout(function(){
+			$('.loading-screen').addClass('active');
+		}, 250);
+
+		setTimeout(function(){
+			// If primary menu is open, close it
 			if ($('#primary').hasClass('active')) {
 				APP.nav.hideNav();
 			}
 
-		}, 500);
+			// Hide main content area and scroll to top
+			// $main.css('opacity', '0');
+			scroll(0,0);
 
-		$main.css('opacity', '0');
-		scroll(0,0);
+			// Add new content & container, setting height for it
+			$main.html(pageContent);
+			$main.wrapInner('<div class="new-results-div" />');
 
-		$main.wrapInner('<div class="new-results-div" />');
-
-		setTimeout(function(){
 			/* ----- Set height of $main to ensure the footer doesn't jump up -----  */
 			var newResultsHeight = $('.new-results-div').outerHeight();
 			$main.height(newResultsHeight);
-		}, 250);
+		}, 500);
 	},
 
 	defaultLoadOut: function($main) {
 		console.log("function defaultLoadOut");
-		$main.css('opacity', '1');
+		// $main.css('opacity', '1');
 
 		setTimeout(function(){
 			$('.loading-screen').removeClass('active');
@@ -50,26 +55,46 @@ APP.pageLoads = {
 		}, 3500);
 	},
 
-	imageLoadIn: function(e) {
+	detailLoadIn: function(e, $main, pageContent) {
 		var self = this;
 		console.log("function imageLoadIn");
 
+		// Animate image to cover full screen
 		// will need to abstract to this img-link
 		$('.img-link').css('top', -this.getElemDistance(e.target));
 		$('.img-link').addClass('transition-in');
 		$('.new-results-div').addClass('transition-in');
-	},
 
-	imageLoadOut: function() {
-		console.log("function imageLoadOut");
-
-		$('.new-results-div').css('opacity', '0');
+		setTimeout(function(){
+			// Add new content behind current
+			$main.append('<div class="secondary-results-div">' + pageContent + '</div>');
+			$('.new-results-div').css('opacity', '0');
+		}, 250);
 
 		setTimeout(function(){
 			$('.new-results-div').remove();
 			$('.secondary-results-div').addClass('new-results-div');
 			$('.new-results-div').removeClass('secondary-results-div');
 			$('.food-details').addClass('active');
+		}, 500);
+	},
+
+	detailLoadOut: function($main, pageContent) {
+		// Add new content behind current
+		$main.append('<div class="secondary-results-div">' + pageContent + '</div>');
+
+		// Slide out detail pane
+		$('.food-details').removeClass('active');
+
+		setTimeout(function(){
+			// slide out background
+			$('.food-type').removeClass('active');
+		}, 250);
+
+		setTimeout(function(){
+			$('.new-results-div').remove();
+			$('.secondary-results-div').addClass('new-results-div');
+			$('.new-results-div').removeClass('secondary-results-div');
 		}, 500);
 	},
 
