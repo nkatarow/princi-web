@@ -4,9 +4,9 @@
 {% block content %}
 	<div id="content">
 		<div class="food-type detail-page active" style="background-image: url(/_ui/img/fpo/roberto-devil.png);">
-			<a href="#" class="food-type-toggle">X</a>
-
 			<section class="food-details">
+				<a href="/food.html" class="food-type-toggle">X</a>
+
 				<h1>Pizza</h1>
 				<h2>Served all day</h2>
 

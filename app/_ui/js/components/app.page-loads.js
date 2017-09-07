@@ -12,7 +12,7 @@
 
 APP.pageLoads = {
     defaultLoadIn: function($main, pageContent) {
-		console.log("function defaultLoadIn");
+		// console.log("function defaultLoadIn");
 
 		// Attach and display default loading screen
 		$('body').prepend(APP.loadingScreen);
@@ -42,7 +42,7 @@ APP.pageLoads = {
 	},
 
 	defaultLoadOut: function($main) {
-		console.log("function defaultLoadOut");
+		// console.log("function defaultLoadOut");
 		// $main.css('opacity', '1');
 
 		setTimeout(function(){
@@ -57,7 +57,7 @@ APP.pageLoads = {
 
 	detailLoadIn: function(e, $main, pageContent) {
 		var self = this;
-		console.log("function imageLoadIn");
+		// console.log("function imageLoadIn");
 
 		// Animate image to cover full screen
 		// will need to abstract to this img-link
@@ -89,6 +89,7 @@ APP.pageLoads = {
 		setTimeout(function(){
 			// slide out background
 			$('.food-type').removeClass('active');
+			$('body').removeClass('food-details-page');
 		}, 250);
 
 		setTimeout(function(){

@@ -14,26 +14,35 @@
 	background-color: $black;
 	color: $white;
 	height: 50vh;
-	top: 0;
+	bottom: 0;
 	overflow: scroll;
 	position: absolute;
 	left: 0;
 	width: 100vw;
 
 	&.active { bottom: 0; }
+
+	.food-type-toggle {
+		color: $white;
+		display: block;
+		font-size: 2em;
+		position: absolute;
+		right: $space;
+		top: $space;
+	}
 }
 
 
 @media screen and (max-width: $bp-large) {
 	.food-type {
-		transform: translateY(-100%);
+		transform: translateY(100%);
 		transition: transform 250ms ease-in-out;
 
 		&.active { transform: translateY(0); }
 	}
 
 	.food-details {
-		transform: translateY(-100%);
+		transform: translateY(100%);
 		transition: transform 250ms ease-in-out;
 
 		&.active { transform: translateY(0); }

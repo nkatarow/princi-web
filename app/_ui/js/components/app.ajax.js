@@ -35,7 +35,9 @@ $(function() {
 			$main.wrapInner('<div class="new-results-div" />');
 		}
 
-		if ($('.food-details')) {
+		if ($('.food-details').length) {
+			$('body').addClass('food-details-page');
+
 			setTimeout(function(){
 				$('.food-details').addClass('active');
 			}, 500);

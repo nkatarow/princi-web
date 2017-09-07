@@ -2,6 +2,94 @@
    COMPONENTS/_NAV.SCSS
    ========================================================================== */
 
+.trigger {
+	// background: green;
+	display: block;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	height: 35px;
+	width: 35px;
+
+	&.active {
+		#hamburger {
+			&:before, span, &:after { width: 0%; }
+
+			&:before { transition-delay: 0s; }
+			span { transition-delay: .125s; }
+			&:after { transition-delay: .25s; }
+		}
+
+		#cross {
+        	&:before {
+				height: 80%;
+        		transition-delay: .625s;
+			}
+			&:after {
+        		transition-delay: .375s;
+        		width: 80%;
+			}
+		}
+	}
+}
+
+#hamburger {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+	&:before,
+	span,
+	&:after {
+  		background: $bronze;
+		content: '';
+		display: block;
+      	height: 2px;
+      	left: 0px;
+      	margin: 0 0 8px;
+      	position: relative;
+      	top: 0px;
+      	width: 100%;
+		transition: .25s ease-in-out;
+	}
+
+	&:before { transition-delay: .5s; }
+	span { transition-delay: .625s; }
+	&:after { transition-delay: .75s; }
+}
+
+#cross {
+	// background-color: red;
+    height: 100%;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 100%;
+
+	&:before,
+	&:after {
+  		background: $bronze;
+		content: '';
+        position: absolute;
+		transition: .25s ease-in-out;
+	}
+
+	&:before {
+        height: 0%;
+        left: 17px;
+		transition-delay: 0s;
+        top: 10%;
+        width: 2px;
+	}
+	&:after {
+        height: 2px;
+        left: 10%;
+		transition-delay: .25s;
+        top: 17px;
+        width: 0%;
+	}
+}
+
+
 // top bar fixed items
 .top-bar {
 	height: 60px;
@@ -13,16 +101,21 @@
 	a {
 		display: block;
 		position: absolute;
-		top: 0;
+		// top: 0;
 	}
 
 	.tagline { left: 0; }
-	.trigger { right: 0; }
+	// .trigger { right: 0; }
 
 	.logo {
 		left: 50%;
+		top: -$space;
 		transform: translateX(-50%);
 	}
+}
+
+.food-details-page .top-bar {
+	z-index: 2;
 }
 
 // menu container

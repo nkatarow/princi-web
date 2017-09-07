@@ -18,11 +18,15 @@ APP.nav = {
         $('.trigger').click(function (event) {
             event.preventDefault();
 
-            if (!$(this).hasClass('active')) {
-                self.showNav();
-            } else {
-                self.hideNav();
-            }
+			$(this).toggleClass('active');
+
+			$('#primary').toggleClass('active');
+
+            // if (!$(this).hasClass('active')) {
+            //     self.showNav();
+            // } else {
+            //     self.hideNav();
+            // }
         });
 
 		$('#main a').hover(function(){

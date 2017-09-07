@@ -3,67 +3,94 @@
 
 {% block content %}
 	<div id="content">
-		<h1>Princi</h1>
+		<h1 class="offscreen">Princi</h1>
 
 		<div class="parallax">
-			<div id="group1" class="parallax__group">
-			  <div class="parallax__layer parallax__layer--base">
-			    <div class="title">Base Layer</div>
-			  </div>
-			</div>
-			<div id="group2" class="parallax__group">
-			  <div class="parallax__layer parallax__layer--base">
-			    <div class="title">Base Layer</div>
-			  </div>
-			  <div class="parallax__layer parallax__layer--back">
-			    <div class="title">Background Layer</div>
-			  </div>
-			</div>
-			<div id="group3" class="parallax__group">
-			  <div class="parallax__layer parallax__layer--fore">
-			    <div class="title">Foreground Layer</div>
-			  </div>
-			  <div class="parallax__layer parallax__layer--base">
-			    <div class="title">Base Layer</div>
-			  </div>
-			</div>
-			<div id="group4" class="parallax__group">
-			  <div class="parallax__layer parallax__layer--base">
-			    <div class="title">Base Layer</div>
-			  </div>
-			  <div class="parallax__layer parallax__layer--back">
-			    <div class="title">Background Layer</div>
-			  </div>
-			  <div class="parallax__layer parallax__layer--deep">
-			    <div class="title">Deep Background Layer</div>
-			  </div>
-			</div>
-			<div id="group5" class="parallax__group">
-			  <div class="parallax__layer parallax__layer--fore">
-			    <div class="title">Foreground Layer</div>
-			  </div>
-			  <div class="parallax__layer parallax__layer--base">
-			    <div class="title">Base Layer</div>
-			  </div>
-			</div>
-			<div id="group6" class="parallax__group">
-			  <div class="parallax__layer parallax__layer--back">
-			    <div class="title">Background Layer</div>
-			  </div>
-			  <div class="parallax__layer parallax__layer--base">
-			    <div class="title">Base Layer</div>
-			  </div>
-			</div>
-			<div id="group7" class="parallax__group">
-			  <div class="parallax__layer parallax__layer--base">
-			    <div class="title">Base Layer</div>
-			  </div>
-			</div>
+			<section id="intro" class="parallax__group">
+			  	<div class="parallax__layer parallax__layer--back headline">
+					<h2>
+						<span>Spirit</span>
+						<span>Di Milano</span>
+					</h2>
+			  	</div>
+
+			  	<div class="parallax__layer parallax__layer--base hero">
+					<img src="/_ui/img/homepage/hero.jpg" class="title" alt="" />
+			  	</div>
+			</section> <!-- /#intro -->
+
+
+
+			<section id="intro-video-group" class="parallax__group">
+				<div class="parallax__layer parallax__layer--back introduction">
+					<div class="title">
+						<p>Artisanal food source and served from the heart. Immersive, authentic, and uniquely Italian. This is Rocco Princi's dream, down to the very last detail.</p>
+						<p class="small">Buon Appetito!</p>
+					</div>
+				</div>
+
+			  	<div class="parallax__layer parallax__layer--deep video">
+					<h2>Flour. Water. Craft.</h2>
+					<video src="videofile.ogg" autoplay poster="/_ui/img/homepage/video.jpg"></video>
+				</div>
+			</section>
+
+
+
+			<section id="cta-group" class="parallax__group">
+				<div class="parallax__layer parallax__layer--back cta-heritage">
+					<div class="flex cta-home">
+						<div class="half">
+							<img src="/_ui/img/homepage/cta-heritage.jpg" alt="">
+						</div>
+						<div class="half">
+							<p>A story about passion, perfectionism, and the pursuit of extraordinary ingredients.</p>
+							<a href="#" class="btn">Meet Rocco</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="parallax__layer parallax__layer--back cta-food">
+					<div class="cta-home">
+						<p>A story about passion, perfectionism, and the pursuit of extraordinary ingredients.</p>
+						<a href="#" class="btn">Meet Rocco</a>
+
+						<img src="/_ui/img/homepage/cta-food.jpg" alt="">
+					</div>
+				</div>
+
+				<div class="parallax__layer parallax__layer--back cta-locations">
+					<div class="flex cta-home">
+						<div class="half">
+							<img src="/_ui/img/homepage/cta-locations.jpg" alt="">
+						</div>
+						<div class="half">
+							<p>A story about passion, perfectionism, and the pursuit of extraordinary ingredients.</p>
+							<a href="#" class="btn">Meet Rocco</a>
+						</div>
+					</div>
+				</div>
+			</section><!-- /#video-group -->
+
+
+			{# <section id="bottom-cta" class="parallax__group">
+				<div class="parallax__layer parallax__layer--back large-cta">
+					<a href="#" class="">
+						<h2>OUR HERITAGE</h2>
+					</a>
+				</div>
+			</section> #}
+
+
+
+			{# <section id="cta-group" class="parallax__group">
+			</section> #}
 		</div>
 
 
+
 		<!-- DEBUG INFO -->
-		<div class="debug">
+		{# <div class="debug">
 			<label><input type="checkbox"> Debug</label>
 		</div>
 
@@ -74,7 +101,7 @@
 			}
 			debugInput.addEventListener("click", updateDebugState);
 			updateDebugState();
-		</script>
+		</script> #}
 		<!-- END DEBUG -->
 
 

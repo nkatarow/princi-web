@@ -2,57 +2,160 @@
    COMPONENTS/_PARALLAX.SCSS
    ========================================================================== */
 
-  /* Parallax base styles
-  --------------------------------------------- */
-
-  .parallax {
+// Parallax base styles
+.parallax {
     height: 500px; /* fallback for older browsers */
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-perspective: 300px;
     perspective: 300px;
-  }
+    perspective-origin-x: 100%;
+}
 
-  .parallax__group {
+.parallax__group {
     position: relative;
     height: 500px; /* fallback for older browsers */
     height: 100vh;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-  }
+}
 
-  .parallax__layer {
+.parallax__layer {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-  }
+    transform-origin-x: 100%;
+}
 
-  .parallax__layer--fore {
+.parallax__layer--fore {
     -webkit-transform: translateZ(90px) scale(.7);
     transform: translateZ(90px) scale(.7);
     z-index: 1;
-  }
+}
 
-  .parallax__layer--base {
+.parallax__layer--base {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     z-index: 4;
-  }
+}
 
-  .parallax__layer--back {
+.parallax__layer--back {
     -webkit-transform: translateZ(-300px) scale(2);
     transform: translateZ(-300px) scale(2);
     z-index: 3;
-  }
+}
 
-  .parallax__layer--deep {
+.parallax__layer--deep {
     -webkit-transform: translateZ(-600px) scale(3);
     transform: translateZ(-600px) scale(3);
     z-index: 2;
-  }
+}
+
+
+
+// Custom Homepage
+#intro {
+	height: 100vh;
+	z-index: 4;
+
+	.headline {
+		// font-size: 18em;
+		// background-color: $white;
+		color: $bronze;
+		// font-size: 15vh;
+		height: 100vh;
+		text-align: center;
+		text-transform: uppercase;
+
+		span {
+			display: block;
+			position: absolute;
+			width: 100%;
+
+			&:first-child { top: 0%; }
+			&:last-child { bottom: 0%; }
+		}
+	}
+
+	.hero { height: 100vh; }
+}
+
+@media screen and (max-height: 985px) {
+	#intro .headline { font-size: 15vh; }
+}
+@media screen and (min-height: 986px) {
+	#intro .headline { font-size: 14.75em; }
+}
+
+#intro-video-group {
+	margin-top: 100vh;
+	z-index: 3;
+
+	.introduction {
+		background: $white;
+		height: 65vh;
+
+		p {
+			font-size: 3.6em;
+
+			&.small { font-size: 1.4em; }
+		}
+	}
+
+	.video {
+		height: 100vh;
+		margin-top: 100vh;
+
+		h2 {
+			color: $white;
+			font-size: 9.6em;
+			position: absolute;
+			text-align: center;
+			text-transform: uppercase;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+			z-index: 5;
+		}
+
+		video {
+			left: 0;
+			position: absolute;
+			transform: translateY(-50%);
+			top: 50%;
+		}
+	}
+}
+
+#cta-group {
+	margin-top: 200vh;
+	z-index: 4;
+
+	.cta-heritage {
+		background: $white;
+		height: 100vh;
+	}
+	.cta-food {
+		background: $white;
+		height: 100vh;
+		margin-top: 200vh;
+	}
+
+	.cta-locations {
+		background: $white;
+		height: 100vh;
+		margin-top: 400vh;
+	}
+}
+
+// #bottom-cta {
+//  	z-index: 2;
+// }
+
+
 
 
   /* Debugger styles - used to show the effect
@@ -98,9 +201,9 @@
   //   padding:0;
   // }
 
-  .parallax {
-    font-size: 200%;
-  }
+  // .parallax {
+  //   font-size: 200%;
+  // }
 
    /* centre the content in the parallax layers */
   .title {
@@ -169,12 +272,12 @@
 
   /* misc
   --------------------------------------------- */
-  .demo__info {
-    position: absolute;
-    z-index:100;
-    bottom: 1vh;
-    top: auto;
-    font-size:80%;
-    text-align:center;
-    width: 100%;
-  }
+  // .demo__info {
+  //   position: absolute;
+  //   z-index:100;
+  //   bottom: 1vh;
+  //   top: auto;
+  //   font-size:80%;
+  //   text-align:center;
+  //   width: 100%;
+  // }
