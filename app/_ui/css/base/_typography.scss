@@ -3,17 +3,19 @@
    ========================================================================== */
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $futura;
     font-size: 62.5%;
 }
 
 // Headings
 h1, .h1   {
     line-height: 1.2;
+	font-weight: 500;
 }
 
 h2, .h2    {
     line-height: 1.2;
+	font-weight: 500;
 }
 
 h3, .h3   {

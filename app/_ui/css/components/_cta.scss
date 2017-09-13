@@ -2,15 +2,50 @@
    COMPONENTS/_CTA.SCSS
    ========================================================================== */
 
+.bottom-cta {
+	// background-attachment: fixed;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
 
-.large-cta {
-	background: $beige;
-	display: block;
+	&.heritage-cta { background-image: url(/_ui/img/global/bg-heritage-menu.jpg); }
 }
 
-.cta-home {
-	p {
-		color: $bronze;
-		font-size: 4.8em;
+.bottom-cta-link {
+	background-color: $beige;
+	display: block;
+	height: 100vh;
+	opacity: 1;
+	position: relative;
+	text-align: center;
+	transition: background-color .25s ease-out;
+
+	&:hover,
+	&:focus {
+		background-color: transparent;
+	}
+
+	.cta-container {
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%) translateX(-50%);
+		width: 100%;
+	}
+
+	h2 {
+		color: $white;
+		font-size: 5.4em;
+		letter-spacing: 0.10em;
+		margin-bottom: $space;
+	}
+}
+
+
+@media screen and (min-width: $bp-large) {
+	.bottom-cta-link {
+		max-height: 560px;
+
+		h2 { font-size: 9.6em; }
 	}
 }

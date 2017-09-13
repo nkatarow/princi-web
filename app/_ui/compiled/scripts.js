@@ -1651,7 +1651,7 @@ APP.nav = {
 			$(this).toggleClass('active');
 
 			$('#primary').toggleClass('active');
-
+        	$('.top-bar').toggleClass('active');
             // if (!$(this).hasClass('active')) {
             //     self.showNav();
             // } else {
@@ -1679,6 +1679,7 @@ APP.nav = {
 
         $('#primary').addClass('active');
         $('.trigger').addClass('active');
+        $('.top-bar').addClass('active');
     }
 };
 

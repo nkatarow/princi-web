@@ -23,6 +23,7 @@ gulp.task('nunjucks', function() {
 			path: ['app/templates']
 		}))
 		.pipe(gulp.dest('app'))
+		.pipe(livereload());
 });
 
 // Concat/autoprefix CSS

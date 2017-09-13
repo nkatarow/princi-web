@@ -1,0 +1,196 @@
+/* ==========================================================================
+   COMPONENTS/_HOMEPAGE.SCSS
+   ========================================================================== */
+
+/* These are the base styles for fonts and sizing that also act as a backup to the parallax styles */
+
+// Mobile first
+#intro {
+	height: 100vh;
+	position: relative;
+	overflow-x: hidden;
+
+	.headline {
+		color: $bronze;
+		font-weight: 500;
+		height: 100vh;
+		text-align: center;
+		text-transform: uppercase;
+
+		h2 {
+			font-size: 5.4em;
+			letter-spacing: 0.10em;
+
+			span {
+				display: block;
+				position: absolute;
+				width: 100%;
+
+				&:first-child { top: 18%; }
+				&:last-child { bottom: 16%; }
+			}
+		}
+	}
+
+	.hero {
+		img {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%) scale(2);
+		}
+	}
+}
+
+#intro-video-group {
+	.introduction {
+		background: $white;
+
+		.line {
+			display: block;
+			height: 100px;
+			margin: 0 auto 25%;
+			position: relative;
+			width: 1px;
+
+			&::before {
+				border-left: 1px solid transparent;
+				content: '';
+				height: 0;
+				left: 0;
+				position: absolute;
+				top: 0;
+				transition: height .5s ease-out;
+			}
+
+			&.draw::before {
+				border-left-color: $bronze;
+				height: 100px;
+			}
+		}
+
+		.title {
+			margin: 0 auto;
+			text-align: center;
+			width: 80%;
+		}
+
+		p {
+			color: $bronze;
+			font-size: 2.4em;
+			font-weight: 500;
+
+			&.small {
+				font-family: $tradegothic;
+				font-size: 1.4em;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.video {
+		margin-top: 25%;
+		position: relative;
+
+		video { width: 100%; }
+
+		h2 {
+			color: $white;
+			font-size: 2em;
+			letter-spacing: 0.10em;
+			position: absolute;
+			text-align: center;
+			text-transform: uppercase;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+			z-index: 5;
+		}
+	}
+}
+
+#cta-group {
+	margin-top: 25%;
+	text-align: center;
+
+	.cta-home { margin-bottom: 25%; }
+
+	.portrait { max-width: 65%; }
+	.landscape { max-width: 90%; }
+
+	p {
+		color: $bronze;
+		font-size: 2.4em;
+		font-weight: 500;
+		margin: 10% auto 15%;
+		max-width: 90%;
+	}
+}
+
+// Medium Viewport
+@media screen and (min-width: $bp-large) {
+	#intro {
+		.headline {
+			h2 {
+				font-size: 18em;
+
+				span {
+					&:first-child { top: 8%; }
+					&:last-child { bottom: 5%; }
+				}
+			}
+		}
+
+		.hero {
+			img { transform: translateY(-50%) scale(1); }
+		}
+	}
+
+	#intro-video-group {
+		.introduction {
+			.line {
+				height: 200px;
+				margin-bottom: 8%;
+
+				&.draw::before { height: 200px; }
+			}
+
+			.title {
+				max-width: 825px;
+
+				p {
+					font-size: 3.6em;
+
+					&.small { font-size: 1.4em; }
+				}
+			}
+		}
+
+		.video {
+			margin-top: 10%;
+
+			h2 { font-size: 9.6em; }
+		}
+	}
+
+	#cta-group {
+		margin-top: 10%;
+
+		.cta-home {
+			margin-bottom: 15%;
+
+			.edge {
+				padding-left: 10%;
+				position: absolute;
+				right: 0;
+			}
+		}
+
+		.portrait { max-width: 100%; }
+		.landscape { max-width: 100%; }
+
+		p {
+			font-size: 4.8em;
+			max-width: 600px;
+		}
+	}
+}

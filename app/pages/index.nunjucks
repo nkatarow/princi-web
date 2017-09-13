@@ -9,7 +9,7 @@
 			<section id="intro" class="parallax__group">
 			  	<div class="parallax__layer parallax__layer--back headline">
 					<h2>
-						<span>Spirit</span>
+						<span>Spirito</span>
 						<span>Di Milano</span>
 					</h2>
 			  	</div>
@@ -23,6 +23,7 @@
 
 			<section id="intro-video-group" class="parallax__group">
 				<div class="parallax__layer parallax__layer--back introduction">
+					<span class="line"></span>
 					<div class="title">
 						<p>Artisanal food source and served from the heart. Immersive, authentic, and uniquely Italian. This is Rocco Princi's dream, down to the very last detail.</p>
 						<p class="small">Buon Appetito!</p>
@@ -31,7 +32,7 @@
 
 			  	<div class="parallax__layer parallax__layer--deep video">
 					<h2>Flour. Water. Craft.</h2>
-					<video src="videofile.ogg" autoplay poster="/_ui/img/homepage/video.jpg"></video>
+					<video src="/_ui/video/sample.mp4" autoplay poster="/_ui/img/homepage/video.jpg"></video>
 				</div>
 			</section>
 
@@ -40,51 +41,67 @@
 			<section id="cta-group" class="parallax__group">
 				<div class="parallax__layer parallax__layer--back cta-heritage">
 					<div class="flex cta-home">
-						<div class="half">
-							<img src="/_ui/img/homepage/cta-heritage.jpg" alt="">
+						<div class="half left">
+							<img src="/_ui/img/homepage/cta-heritage.jpg" class="portrait" alt="">
 						</div>
 						<div class="half">
 							<p>A story about passion, perfectionism, and the pursuit of extraordinary ingredients.</p>
-							<a href="#" class="btn">Meet Rocco</a>
+
+							<a href="#" class="btn">
+								<span class="line"></span>
+								<span class="fill"></span>
+								<span class="text">Meet Rocco</span>
+							</a>
 						</div>
 					</div>
 				</div>
 
 				<div class="parallax__layer parallax__layer--back cta-food">
 					<div class="cta-home">
-						<p>A story about passion, perfectionism, and the pursuit of extraordinary ingredients.</p>
-						<a href="#" class="btn">Meet Rocco</a>
+						<img src="/_ui/img/homepage/cta-food.jpg" class="landscape" alt="">
 
-						<img src="/_ui/img/homepage/cta-food.jpg" alt="">
+						<p>Traditional Italian recipes, crafted by hand and baked fresh throughout the day.</p>
+
+						<a href="#" class="btn">
+							<span class="line"></span>
+							<span class="fill"></span>
+							<span class="text">Explore the Menu</span>
+						</a>
 					</div>
 				</div>
 
 				<div class="parallax__layer parallax__layer--back cta-locations">
 					<div class="flex cta-home">
-						<div class="half">
-							<img src="/_ui/img/homepage/cta-locations.jpg" alt="">
+						<div class="half second right edge">
+							<img src="/_ui/img/homepage/cta-locations.jpg" class="landscape" alt="">
 						</div>
-						<div class="half">
-							<p>A story about passion, perfectionism, and the pursuit of extraordinary ingredients.</p>
-							<a href="#" class="btn">Meet Rocco</a>
+						<div class="half first">
+							<p>An open invitation for lovers of food and design&mdash;come enjoy a meal in the Milanese style.</p>
+
+							<a href="#" class="btn">
+								<span class="line"></span>
+								<span class="fill"></span>
+								<span class="text">Find a Princi</span>
+							</a>
 						</div>
 					</div>
 				</div>
 			</section><!-- /#video-group -->
 
 
-			{# <section id="bottom-cta" class="parallax__group">
-				<div class="parallax__layer parallax__layer--back large-cta">
-					<a href="#" class="">
+			<section id="" class="bottom-cta heritage-cta">
+				<a href="#" class="bottom-cta-link">
+					<div class="cta-container">
 						<h2>OUR HERITAGE</h2>
-					</a>
-				</div>
-			</section> #}
 
-
-
-			{# <section id="cta-group" class="parallax__group">
-			</section> #}
+						<div class="btn alt">
+							<span class="line"></span>
+							<span class="fill"></span>
+							<span class="text">Find a Princi</span>
+						</div>
+					</div>
+				</a>
+			</section>
 		</div>
 
 

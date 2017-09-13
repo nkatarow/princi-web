@@ -2,12 +2,52 @@
    BASE/_LAYOUT.SCSS
    ========================================================================== */
 
-.flex {
-	display: flex;
-	margin: 0 auto;
-	max-width: $max-width;
+footer {
+	bottom: 0;
+	color: $white;
+	left: 0;
+	position: absolute;
+	text-align: center;
+	width: 100%;
 
-	.half {
-		width: 50%;
+	small {
+		font-family: $tradegothic;
+		display: block;
+		font-size: 1.2em;
+		text-transform: uppercase;
+		margin: $space 0 $space-double;
+	}
+}
+
+@media screen and (min-width: $bp-large) {
+	footer {
+		.wordmark {
+			bottom: $space-double;
+			position: absolute;
+			left: $space-double;
+		}
+
+		small {
+			bottom: 0;
+			position: absolute;
+			font-size: 1.4em;
+			right: $space-double;
+		}
+	}
+
+	.flex {
+		align-items: center;
+		display: flex;
+		margin: 0 auto;
+		max-width: $max-width;
+
+		.half {
+			width: 50%;
+
+			&.left { text-align: left; }
+			&.right { text-align: right; }
+			&.first { order: 1; }
+			&.second { order: 2; }
+		}
 	}
 }
