@@ -2291,6 +2291,7 @@ window.APP = {
 
         self.events.parent = this;
 
+		// INSTANTIATIONS
         // Init Components
         APP.nav.init();
 
@@ -2303,6 +2304,12 @@ window.APP = {
 			reset: true,
 		});
 		if ($('.reveal').length) { sr.reveal('.reveal'); }
+
+		if ($('.sequence').length) {
+			$('.sequence').each(function(){
+				sr.reveal('#' + $(this).attr('id') + ' .seq', 500);
+			})
+		}
 
 		// Button Animations
 		$(window).scroll(function (){
@@ -2318,6 +2325,15 @@ window.APP = {
 				}
 			});
 		});
+
+		if ($("#inline-video").length) {
+			var video = document.getElementById('inline-video');
+
+			video.addEventListener('loadeddata', function() {
+				if (video.readyState >= 2) { video.play(); }
+			});
+		}
+		// END: INSTANTIATIONS
 
         // EVENT DELEGATION
         $(window).bind('resize', function(event) {

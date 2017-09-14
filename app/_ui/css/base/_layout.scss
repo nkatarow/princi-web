@@ -28,9 +28,10 @@ footer {
 		}
 
 		small {
-			bottom: 0;
+			bottom: $space;
 			position: absolute;
 			font-size: 1.4em;
+			margin-bottom: 0;
 			right: $space-double;
 		}
 	}

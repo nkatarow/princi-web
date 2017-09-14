@@ -10,10 +10,17 @@
 	position: relative;
 	overflow-x: hidden;
 
+	.intro-container {
+		height: 380px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
+	}
+
 	.headline {
 		color: $bronze;
 		font-weight: 500;
-		height: 100vh;
 		text-align: center;
 		text-transform: uppercase;
 
@@ -26,20 +33,25 @@
 				position: absolute;
 				width: 100%;
 
-				&:first-child { top: 18%; }
-				&:last-child { bottom: 16%; }
+				&:first-child { top: 0%; }
+				&:last-child { bottom: -2%; }
 			}
 		}
 	}
 
 	.hero {
-		img {
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%) scale(2);
-		}
+		background-image: url(/_ui/img/homepage/hero.jpg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		display: block;
+		height: 300px;
+		margin-top: 37.5px;
+		width: 100%;
+		position: relative;
 	}
 }
+
 
 #intro-video-group {
 	.introduction {
@@ -83,6 +95,7 @@
 				font-family: $tradegothic;
 				font-size: 1.4em;
 				text-transform: uppercase;
+				letter-spacing: 0.05em;
 			}
 		}
 	}
@@ -108,6 +121,7 @@
 	}
 }
 
+
 #cta-group {
 	margin-top: 25%;
 	text-align: center;
@@ -126,24 +140,43 @@
 	}
 }
 
+
 // Medium Viewport
-@media screen and (min-width: $bp-large) {
+@media screen and (min-width: $bp-med) and (min-height: $bp-small-3) {
 	#intro {
-		.headline {
+		.intro-container {
+			height: 485px;
+
+			h2 { font-size: 12em; }
+
+			.hero { margin-top: 85px; }
+		}
+	}
+}
+
+
+// Larger viewports
+@media screen and (min-width: $bp-large-2) and (min-height: 850px) {
+	#intro {
+		.intro-container {
+			height: 730px;
+
 			h2 {
 				font-size: 18em;
 
 				span {
-					&:first-child { top: 8%; }
-					&:last-child { bottom: 5%; }
+					&:first-child { top: -2%; }
+					&:last-child { bottom: -8%; }
 				}
 			}
-		}
 
-		.hero {
-			img { transform: translateY(-50%) scale(1); }
+			.hero {
+				height: 500px;
+				margin-top: 120px;
+			}
 		}
 	}
+
 
 	#intro-video-group {
 		.introduction {

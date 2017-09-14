@@ -2,46 +2,15 @@
    COMPONENTS/_NAV.SCSS
    ========================================================================== */
 
-.trigger {
-	display: block;
-	position: absolute;
-	top: 15px;
-	right: 15px;
-	height: 25px;
-	width: 25px;
-
-	&.active {
-		#hamburger {
-			&:before, span, &:after { width: 0%; }
-
-			&:before { transition-delay: 0s; }
-			span { transition-delay: .125s; }
-			&:after { transition-delay: .25s; }
-		}
-
-		#cross {
-        	&:before {
-				background: $white;
-				height: 80%;
-        		transition-delay: .625s;
-			}
-			&:after {
-				background: $white;
-        		transition-delay: .375s;
-        		width: 80%;
-			}
-		}
-	}
-}
-
+// default styles
 #hamburger {
     position: absolute;
     height: 100%;
     width: 100%;
 
-	&:before,
+	&::before,
 	span,
-	&:after {
+	&::after {
   		background: $bronze;
 		content: '';
 		display: block;
@@ -54,9 +23,9 @@
 		transition: .25s ease-in-out;
 	}
 
-	&:before { transition-delay: .5s; }
+	&::before { transition-delay: .5s; }
 	span { transition-delay: .625s; }
-	&:after { transition-delay: .75s; }
+	&::after { transition-delay: .75s; }
 }
 
 #cross {
@@ -65,22 +34,22 @@
     transform: rotate(45deg);
     width: 100%;
 
-	&:before,
-	&:after {
+	&::before,
+	&::after {
   		background: $bronze;
 		content: '';
         position: absolute;
 		transition: .25s ease-in-out;
 	}
 
-	&:before {
+	&::before {
         height: 0%;
         left: 12px;
 		transition-delay: 0s;
         top: 10%;
         width: 2px;
 	}
-	&:after {
+	&::after {
         height: 2px;
         left: 10%;
 		transition-delay: .25s;
@@ -88,6 +57,64 @@
         width: 0%;
 	}
 }
+
+// active styles & transitions
+.trigger {
+	display: block;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	height: 25px;
+	width: 25px;
+
+	&.active {
+		#hamburger {
+			&::before, span, &:after {
+				// animation: none;
+				width: 0% ;
+			}
+
+			&::before { transition-delay: 0s; }
+			span { transition-delay: .125s; }
+			&::after { transition-delay: .25s; }
+		}
+
+		#cross {
+        	&::before {
+				background: $white;
+				height: 80%;
+        		transition-delay: .625s;
+			}
+			&::after {
+				background: $white;
+        		transition-delay: .375s;
+        		width: 80%;
+			}
+		}
+	}
+}
+
+// hamburger hover
+// .trigger {
+// 	&:hover {
+// 		#hamburger {
+// 	        &::before, span, &::after {
+// 				background-color: $gray-dark;
+// 				transition-delay: 0;
+// 			}
+
+	        // &::before { animation: hamburger-hover 1s linear infinite; }
+			// span { animation: hamburger-hover 1s linear infinite .25s; }
+	        // &::after { animation: hamburger-hover 1s linear infinite .5s; }
+// 		}
+// 	}
+// }
+
+// @keyframes hamburger-hover {
+// 	0% { width: 100%; }
+// 	50% { width: 0; }
+// 	100% { width: 100%; }
+// }
 
 
 // top bar fixed items
@@ -101,11 +128,9 @@
 	a {
 		display: block;
 		position: absolute;
-		// top: 0;
 	}
 
 	.tagline { left: 0; }
-	// .trigger { right: 0; }
 
 	.logo {
 		left: 50%;
@@ -125,9 +150,7 @@
 	}
 }
 
-.food-details-page .top-bar {
-	z-index: 2;
-}
+.food-details-page .top-bar { z-index: 2; }
 
 // menu container
 .menu {
@@ -170,21 +193,30 @@
 		#secondary { transition-delay: 1000ms; }
 	}
 
-	a { color: $white; }
+	a {
+		color: $white;
+		display: inline-block;
+	}
 
 	#main {
-		font-size: 7.5vh;
+		font-size: 4.8em;
 		font-weight: 500;
 		opacity: 0;
 		text-transform: uppercase;
-		transform: translateY(5%);
-		transition: transform 250ms, opacity 250ms;
-		letter-spacing: 5px;
+		transform: translateY(5%) skew(-10deg);
+		transition: transform 250ms ease-out, opacity 250ms ease-out;
+		letter-spacing: 0.10em;
 		z-index: 4;
 
-		a:hover,
-		a:focus {
-			font-style: italic;
+		a {
+			backface-visibility: hidden;
+			transform: skewX(0deg);
+			transition: transform 250ms ease-out;
+
+			&:hover,
+			&:focus {
+				transform: skewX(-10deg);
+			}
 		}
 	}
 
@@ -203,14 +235,11 @@
 			left: 0;
 			opacity: 0;
 			top: 0;
-			transition: opacity 100ms linear;
+			transition: opacity 250ms ease-out;
 			width: auto;
 			width: 100%;
 
-			&.active {
-				opacity: 1;
-				z-index: 2;
-			}
+			&.active { opacity: 1; }
 		}
 	}
 
@@ -227,9 +256,27 @@
 			margin-top: $space;
 		}
 
-		a:hover,
-		a:focus {
-			color: $bronze;
+		a {
+			position: relative;
+
+			&::after {
+				border-bottom: 1px solid transparent;
+				content: '';
+				height: 0;
+				left: 0;
+				position: absolute;
+				bottom: 0;
+				transition: width .5s ease-out;
+				width: 0;
+			}
+
+			&:hover,
+			&:focus {
+				&::after {
+					border-bottom-color: $white;
+					width: 100%;
+				}
+			}
 		}
 	}
 
@@ -254,6 +301,7 @@
 @media screen and (min-width: $bp-large) {
 	.menu {
 		#main {
+			font-size: 7.2em;
 			left: 50%;
 			position: absolute;
 			top: 50%;
@@ -283,7 +331,11 @@
 		.edge-menu {
 			position: absolute;
 
-			li { display: inline-block; }
+			li {
+				display: inline-block;
+
+				&:first-child { margin: 0 $space 0 0; }
+			}
 		}
 
 		#language {

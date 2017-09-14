@@ -7,16 +7,20 @@
 
 		<div class="parallax">
 			<section id="intro" class="parallax__group">
-			  	<div class="parallax__layer parallax__layer--back headline">
-					<h2>
-						<span>Spirito</span>
-						<span>Di Milano</span>
-					</h2>
-			  	</div>
+				<div class="intro-container">
 
-			  	<div class="parallax__layer parallax__layer--base hero">
-					<img src="/_ui/img/homepage/hero.jpg" class="title" alt="" />
-			  	</div>
+				  	<div class="parallax__layer parallax__layer--back headline">
+						<h2>
+							<span>Spirito</span>
+							<span>Di Milano</span>
+						</h2>
+				  	</div>
+
+				  	<div class="parallax__layer parallax__layer--base">
+						<div class="hero"></div>
+				  	</div>
+
+				</div>
 			</section> <!-- /#intro -->
 
 
@@ -31,8 +35,18 @@
 				</div>
 
 			  	<div class="parallax__layer parallax__layer--deep video">
-					<h2 class="reveal">Flour. Water. Craft.</h2>
-					<video src="/_ui/video/sample.mp4" autoplay muted poster="/_ui/img/homepage/video.jpg"></video>
+					<h2 class="sequence" id="seq-video">
+						<span class="seq">Flour.</span>
+						<span class="seq">Water.</span>
+						<span class="seq">Craft.</span>
+					</h2>
+
+
+					<video id="inline-video" autoplay="autoplay" loop="loop" muted="true" preload="auto" poster="/_ui/img/homepage/video.jpg" data-width="1280" data-height="720" style="width: 1244px; height: 700px; margin-left: 0px; margin-top: -35px;">
+                    	<source src="/_ui/video/nws-kids.mp4" type="video/mp4">
+                        <source src="/_ui/video/nws-kids.webm" type="video/webm">
+                    	Your browser does not support the video tag
+                	</video>
 				</div>
 			</section>
 
