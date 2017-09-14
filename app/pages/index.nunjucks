@@ -25,14 +25,14 @@
 				<div class="parallax__layer parallax__layer--back introduction">
 					<span class="line"></span>
 					<div class="title">
-						<p>Artisanal food source and served from the heart. Immersive, authentic, and uniquely Italian. This is Rocco Princi's dream, down to the very last detail.</p>
-						<p class="small">Buon Appetito!</p>
+						<p class="reveal">Artisanal food source and served from the heart. Immersive, authentic, and uniquely Italian. This is Rocco Princi's dream, down to the very last detail.</p>
+						<p class="small reveal">Buon Appetito!</p>
 					</div>
 				</div>
 
 			  	<div class="parallax__layer parallax__layer--deep video">
-					<h2>Flour. Water. Craft.</h2>
-					<video src="/_ui/video/sample.mp4" autoplay poster="/_ui/img/homepage/video.jpg"></video>
+					<h2 class="reveal">Flour. Water. Craft.</h2>
+					<video src="/_ui/video/sample.mp4" autoplay muted poster="/_ui/img/homepage/video.jpg"></video>
 				</div>
 			</section>
 
@@ -42,13 +42,13 @@
 				<div class="parallax__layer parallax__layer--back cta-heritage">
 					<div class="flex cta-home">
 						<div class="half left">
-							<img src="/_ui/img/homepage/cta-heritage.jpg" class="portrait" alt="">
+							<img src="/_ui/img/homepage/cta-heritage.jpg" class="portrait reveal" alt="">
 						</div>
-						<div class="half">
+						<div class="half reveal">
 							<p>A story about passion, perfectionism, and the pursuit of extraordinary ingredients.</p>
 
 							<a href="#" class="btn">
-								<span class="line"></span>
+								<span class="lead-line"></span>
 								<span class="fill"></span>
 								<span class="text">Meet Rocco</span>
 							</a>
@@ -58,28 +58,30 @@
 
 				<div class="parallax__layer parallax__layer--back cta-food">
 					<div class="cta-home">
-						<img src="/_ui/img/homepage/cta-food.jpg" class="landscape" alt="">
+						<img src="/_ui/img/homepage/cta-food.jpg" class="landscape reveal" alt="">
 
-						<p>Traditional Italian recipes, crafted by hand and baked fresh throughout the day.</p>
+						<div class="reveal">
+							<p>Traditional Italian recipes, crafted by hand and baked fresh throughout the day.</p>
 
-						<a href="#" class="btn">
-							<span class="line"></span>
-							<span class="fill"></span>
-							<span class="text">Explore the Menu</span>
-						</a>
+							<a href="#" class="btn">
+								<span class="lead-line"></span>
+								<span class="fill"></span>
+								<span class="text">Explore the Menu</span>
+							</a>
+						</div>
 					</div>
 				</div>
 
 				<div class="parallax__layer parallax__layer--back cta-locations">
 					<div class="flex cta-home">
 						<div class="half second right edge">
-							<img src="/_ui/img/homepage/cta-locations.jpg" class="landscape" alt="">
+							<img src="/_ui/img/homepage/cta-locations.jpg" class="landscape reveal" alt="">
 						</div>
-						<div class="half first">
+						<div class="half first reveal">
 							<p>An open invitation for lovers of food and design&mdash;come enjoy a meal in the Milanese style.</p>
 
 							<a href="#" class="btn">
-								<span class="line"></span>
+								<span class="lead-line"></span>
 								<span class="fill"></span>
 								<span class="text">Find a Princi</span>
 							</a>
@@ -92,12 +94,14 @@
 			<section id="" class="bottom-cta heritage-cta">
 				<a href="#" class="bottom-cta-link">
 					<div class="cta-container">
-						<h2>OUR HERITAGE</h2>
+						<div class="reveal">
+							<h2>OUR HERITAGE</h2>
 
-						<div class="btn alt">
-							<span class="line"></span>
-							<span class="fill"></span>
-							<span class="text">Find a Princi</span>
+							<div class="btn alt">
+								<span class="lead-line"></span>
+								<span class="fill"></span>
+								<span class="text">Find a Princi</span>
+							</div>
 						</div>
 					</div>
 				</a>

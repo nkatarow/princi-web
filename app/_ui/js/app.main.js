@@ -23,6 +23,31 @@ window.APP = {
         // Init Components
         APP.nav.init();
 
+		// Scrolling animations
+		window.sr = ScrollReveal({
+			distance: '30px',
+			duration: 750,
+			scale: 1,
+			mobile: true,
+			reset: true,
+		});
+		if ($('.reveal').length) { sr.reveal('.reveal'); }
+
+		// Button Animations
+		$(window).scroll(function (){
+			$('.btn').each(function(){
+				if (self.isScrolledIntoView(this) === true) {
+					$(this).addClass('draw');
+				}
+			});
+
+			$('.line').each(function(){
+				if (self.isScrolledIntoView(this) === true) {
+					$(this).addClass('draw');
+				}
+			});
+		});
+
         // EVENT DELEGATION
         $(window).bind('resize', function(event) {
             self.events.windowResize({width: self.getMediaWidth()});
@@ -73,5 +98,13 @@ window.APP = {
         }
 
         return i;
-    }
+    },
+ 	isScrolledIntoView: function(elem) {
+    	var docViewTop = $(window).scrollTop(),
+    		docViewBottom = docViewTop + $(window).height(),
+			elemTop = $(elem).offset().top,
+	    	elemBottom = elemTop + $(elem).height();
+
+    	return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+	}
 };

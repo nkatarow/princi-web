@@ -20,7 +20,7 @@ button {
   	position: relative;
   	vertical-align: middle;
 
-	.line {
+	.lead-line {
 		display: block;
 		height: 50px;
 		margin: -65px auto 1em;
@@ -82,7 +82,7 @@ button {
   	&.draw {
 		color: $bronze;
 
-		.line::before {
+		.lead-line::before {
 	    	border-left-color: $bronze;
 			height: 100%;
 		}
@@ -129,7 +129,7 @@ button {
   		&.draw {
 			color: $white;
 
-			.line::before { border-left-color: $white; }
+			.lead-line::before { border-left-color: $white; }
 
 		  	&::before {
 		    	border-top-color: $white; // Make borders visible
