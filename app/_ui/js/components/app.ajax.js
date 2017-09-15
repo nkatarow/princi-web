@@ -28,7 +28,7 @@ $(function() {
 			titleLower = newTitle.replace(/\s+/g, '-').toLowerCase(),
 			depth = $(location).prop('pathname').split('/').length - 1;
 
-		$('body').attr('class', '');
+		$('body').attr('class', 'body');
 		$('body').addClass(titleLower);
 
 		if (!$('.new-results-div').length) {

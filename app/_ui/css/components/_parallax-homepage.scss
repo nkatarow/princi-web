@@ -1,0 +1,70 @@
+/* ==========================================================================
+   COMPONENTS/_PARALLAX-HOMEPAGE.SCSS
+   ========================================================================== */
+
+@supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
+	@media screen and (min-width: $bp-large-2) and (min-height: 850px) {
+
+		header {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 500;
+
+			.mobile-grouping {
+				transform-style: flat;
+				position: initial;
+			}
+		}
+
+		@include parallax-init;
+
+		#intro {
+			@include parallax(-.3);
+
+			.headline {
+				@include parallax(-.15);
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+
+				h2 {
+					span {
+						position: relative;
+
+						&:first-child { margin-bottom: 365px; }
+					}
+				}
+			}
+
+			.hero { @include parallax(-.05); }
+		}
+
+
+		#intro-video-group {
+			@include parallax(-.4);
+			height: 60vh;
+			margin-top: 325px;
+			margin-bottom: 140vh;
+
+			.introduction {
+				@include parallax(0);
+
+				.line { @include parallax(.1); }
+				.title { @include parallax(.2); }
+			}
+
+			.video { @include parallax(-.6); }
+		}
+
+
+		#cta-group {
+			@include parallax(-.2);
+			background-color: $white;
+			padding: 100px 0 1px;
+			margin-bottom: 50vh;
+		}
+
+	} // Viewport size
+} // Feature detection

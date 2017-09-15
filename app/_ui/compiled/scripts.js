@@ -2297,10 +2297,11 @@ window.APP = {
 
 		// Scrolling animations
 		window.sr = ScrollReveal({
-			distance: '30px',
+			distance: '0',
 			duration: 750,
 			scale: 1,
 			mobile: true,
+			container: document.querySelector('.parallax'),
 			reset: true,
 		});
 		if ($('.reveal').length) { sr.reveal('.reveal'); }
@@ -2312,7 +2313,7 @@ window.APP = {
 		}
 
 		// Button Animations
-		$(window).scroll(function (){
+		$('.parallax').scroll(function (){
 			$('.btn').each(function(){
 				if (self.isScrolledIntoView(this) === true) {
 					$(this).addClass('draw');
@@ -2426,7 +2427,7 @@ $(function() {
 			titleLower = newTitle.replace(/\s+/g, '-').toLowerCase(),
 			depth = $(location).prop('pathname').split('/').length - 1;
 
-		$('body').attr('class', '');
+		$('body').attr('class', 'body');
 		$('body').addClass(titleLower);
 
 		if (!$('.new-results-div').length) {

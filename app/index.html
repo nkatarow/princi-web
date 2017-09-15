@@ -11,7 +11,7 @@
         <!-- <link rel="stylesheet" href="/_ui/dist/css/main.min.css" type="text/css" media="all"> -->
     </head>
 
-    <body>
+    <body class="body">
         <header>
 			<nav class="offscreen" aria-label="Screen Reader Skip Links">
 				<li><a href="#primary">Primary Nav</a></li>
@@ -155,27 +155,24 @@
 		<h1 class="offscreen">Princi</h1>
 
 		<div class="parallax">
-			<section id="intro" class="parallax__group">
+			<section id="intro">
 				<div class="intro-container">
 
-				  	<div class="parallax__layer parallax__layer--back headline">
+				  	<div class="headline">
 						<h2>
 							<span>Spirito</span>
 							<span>Di Milano</span>
 						</h2>
 				  	</div>
 
-				  	<div class="parallax__layer parallax__layer--base">
-						<div class="hero"></div>
-				  	</div>
-
+					<div class="hero"></div>
 				</div>
 			</section> <!-- /#intro -->
 
 
 
-			<section id="intro-video-group" class="parallax__group">
-				<div class="parallax__layer parallax__layer--back introduction">
+			<section id="intro-video-group">
+				<div class="introduction">
 					<span class="line"></span>
 					<div class="title">
 						<p class="reveal">Artisanal food source and served from the heart. Immersive, authentic, and uniquely Italian. This is Rocco Princi's dream, down to the very last detail.</p>
@@ -183,7 +180,7 @@
 					</div>
 				</div>
 
-			  	<div class="parallax__layer parallax__layer--deep video">
+			  	<div class="video">
 					<h2 class="sequence" id="seq-video">
 						<span class="seq">Flour.</span>
 						<span class="seq">Water.</span>
@@ -191,18 +188,17 @@
 					</h2>
 
 
-					<video id="inline-video" autoplay="autoplay" loop="loop" muted="true" preload="auto" poster="/_ui/img/homepage/video.jpg" data-width="1280" data-height="720" style="width: 1244px; height: 700px; margin-left: 0px; margin-top: -35px;">
+					<video id="inline-video" autoplay="autoplay" loop="loop" muted="true" preload="auto" poster="/_ui/img/homepage/video.jpg">
                     	<source src="/_ui/video/nws-kids.mp4" type="video/mp4">
                         <source src="/_ui/video/nws-kids.webm" type="video/webm">
                     	Your browser does not support the video tag
                 	</video>
 				</div>
-			</section>
+			</section> <!-- /#intro-video-group -->
 
 
-
-			<section id="cta-group" class="parallax__group">
-				<div class="parallax__layer parallax__layer--back cta-heritage">
+			<section id="cta-group">
+				<div class="cta-heritage">
 					<div class="flex cta-home">
 						<div class="half left">
 							<img src="/_ui/img/homepage/cta-heritage.jpg" class="portrait reveal" alt="">
@@ -219,7 +215,7 @@
 					</div>
 				</div>
 
-				<div class="parallax__layer parallax__layer--back cta-food">
+				<div class="cta-food">
 					<div class="cta-home">
 						<img src="/_ui/img/homepage/cta-food.jpg" class="landscape reveal" alt="">
 
@@ -235,7 +231,7 @@
 					</div>
 				</div>
 
-				<div class="parallax__layer parallax__layer--back cta-locations">
+				<div class="cta-locations">
 					<div class="flex cta-home">
 						<div class="half second right edge">
 							<img src="/_ui/img/homepage/cta-locations.jpg" class="landscape reveal" alt="">
@@ -251,10 +247,10 @@
 						</div>
 					</div>
 				</div>
-			</section><!-- /#video-group -->
+			</section><!-- /#cta-group -->
 
 
-			<section id="" class="bottom-cta heritage-cta">
+			<section id="heritage-cta" class="bottom-cta heritage-cta">
 				<a href="#" class="bottom-cta-link">
 					<div class="cta-container">
 						<div class="reveal">
@@ -268,17 +264,8 @@
 						</div>
 					</div>
 				</a>
-			</section>
+			</section> <!-- /#heritage-cta -->
 		</div>
-
-
-
-		<!-- DEBUG INFO -->
-		
-		<!-- END DEBUG -->
-
-
-
 	</div>
 
 

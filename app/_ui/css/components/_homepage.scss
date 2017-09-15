@@ -6,9 +6,8 @@
 
 // Mobile first
 #intro {
+    // height: 500px; /* fallback for older browsers */
 	height: 100vh;
-	position: relative;
-	overflow-x: hidden;
 
 	.intro-container {
 		height: 380px;
@@ -54,8 +53,9 @@
 
 
 #intro-video-group {
+	background: $white;
+
 	.introduction {
-		background: $white;
 
 		.line {
 			display: block;
