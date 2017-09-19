@@ -3,10 +3,10 @@
    ========================================================================== */
 
 .bottom-cta {
-	// background-attachment: fixed;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	position: relative;
 
 	&.heritage-cta { background-image: url(/_ui/img/global/bg-heritage-menu.jpg); }
 }

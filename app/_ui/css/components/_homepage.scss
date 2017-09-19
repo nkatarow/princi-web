@@ -3,11 +3,16 @@
    ========================================================================== */
 
 /* These are the base styles for fonts and sizing that also act as a backup to the parallax styles */
+video {
+	height: 100vh;
+	position: fixed;
+	top: 0;
+}
 
 // Mobile first
 #intro {
     // height: 500px; /* fallback for older browsers */
-	// background-color: pink;
+	background-color: $white;
 	height: 95vh;
 	position: relative;
 
@@ -15,7 +20,6 @@
 		height: 450px;
 		position: absolute;
 		bottom: 5%;
-		// transform: translateY(-50%);
 		width: 100%;
 	}
 
@@ -55,14 +59,15 @@
 
 
 #intro-video-group {
-	background: $white;
+	background-color: $white;
+	padding-bottom: 25%;
+	position: relative;
 
 	.introduction {
-
 		.line {
 			display: block;
 			height: 100px;
-			margin: 0 auto 25%;
+			margin: 0 auto 10%;
 			position: relative;
 			width: 1px;
 
@@ -101,37 +106,36 @@
 			}
 		}
 	}
-
-	.video {
-		margin-top: 25%;
-		position: relative;
-
-		video { width: 100%; }
-
-		h2 {
-			color: $white;
-			font-size: 2em;
-			letter-spacing: 0.10em;
-			position: absolute;
-			text-align: center;
-			text-transform: uppercase;
-			top: 50%;
-			transform: translateY(-50%);
-			width: 100%;
-			z-index: 5;
-		}
-	}
 }
 
 
+.video-text {
+	height: 100vh;
+	position: relative;
+
+	h2 {
+		color: $white;
+		font-size: 2em;
+		letter-spacing: 0.10em;
+		position: absolute;
+		text-align: center;
+		text-transform: uppercase;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
+		z-index: 5;
+	}
+}
+
 #cta-group {
-	margin-top: 25%;
+	background-color: $white;
+	padding-top: 25%;
+	position: relative;
 	text-align: center;
 
-	.cta-home { margin-bottom: 25%; }
-
+	.cta-home { padding-bottom: 25%; }
 	.portrait { max-width: 65%; }
-	.landscape { max-width: 90%; }
+	.landscape { width: 80%; }
 
 	p {
 		color: $bronze;
@@ -145,63 +149,70 @@
 
 // Medium Viewport
 @media screen and (min-width: $bp-med) and (min-height: $bp-small-3) {
-	#intro {
-		.intro-container {
-			height: 485px;
-
-			h2 { font-size: 12em; }
-
-			.hero { margin-top: 85px; }
-		}
-	}
+	// #intro {
+	// 	.intro-container {
+	// 		height: 485px;
+	//
+	// 		h2 { font-size: 12em; }
+	//
+	// 		.hero { margin-top: 85px; }
+	// 	}
+	// }
 }
 
 
 @media screen and (min-width: $bp-large) and (min-height: 850px) {
 	#intro-video-group {
-		.video h2 { font-size: 6em; }
+		.video-text h2 { font-size: 6em; }
 	}
 }
 
 
 // Even Larger viewports
-@media screen and (min-width: $bp-large-2) and (min-height: 850px) {
+@media screen and (min-width: $bp-large) and (min-height: 850px) {
 	#intro {
-		height: 68vh;
+		height: 76vh;
 
 		.intro-container {
-			height: 793px;
-			bottom: 0%;
+			background-color: $white;
+			position: relative;
+			height: 100%;
+			bottom: 0;
+		}
 
-			.headline {
-				h2 {
-					font-size: 18em;
+		.headline {
+			top: 0;
+			height: 100%;
 
-					span {
-						&:first-child {
-							top: 0%;
-							margin-bottom: 400px;
-						}
-						&:last-child { bottom: 8%; }
-					}
+			h2 {
+				font-size: 16em;
+
+				span {
+					&:first-child { top: 155px; }
+					&:last-child { bottom: 0%; }
 				}
 			}
 
-			.hero {
-				height: 574px;
-				margin-top: 123px;
-			}
+		}
+
+		.hero {
+			height: 580px;
+			top: 285px;
+			position: absolute;
+			margin-top: 0;
 		}
 	}
 
 
 	#intro-video-group {
+		padding-bottom: 10%;
+
 		.introduction {
 			.line {
-				height: 100px;
-				margin-bottom: 6%;
+				height: 170px;
+				margin-bottom: 2%;
 
-				&.draw::before { height: 200px; }
+				&.draw::before { height: 170px; }
 			}
 
 			.title {
@@ -214,40 +225,41 @@
 				}
 			}
 		}
+	}
 
-		.video {
-			margin-top: 10%;
-
-			h2 { font-size: 7.5em; }
-		}
+	.video-text {
+		h2 { font-size: 7.5em; }
 	}
 
 	#cta-group {
-		margin-top: 10%;
+		padding-top: 10%;
 
 		.cta-home {
-			margin-bottom: 15%;
+			padding-bottom: 10%;
 
 			.edge {
-				padding-left: 10%;
+				padding-left: 0%;
 				position: absolute;
 				right: 0;
 			}
 		}
 
 		.portrait { max-width: 100%; }
-		.landscape { max-width: 100%; }
+		.landscape { margin-bottom: 7%; }
 
 		p {
 			font-size: 4.8em;
-			max-width: 600px;
+			margin: 0 auto;
+			max-width: 645px;
 		}
+
+		.btn { margin-top: 70px; }
 	}
 }
 
 
 @media screen and (min-width: $bp-xxl) and (min-height: 850px) {
 	#intro-video-group {
-		.video h2 { font-size: 9.6em; }
+		.video-text h2 { font-size: 9.6em; }
 	}
 }

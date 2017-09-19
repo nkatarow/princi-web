@@ -5,6 +5,12 @@
 	<div id="content">
 		<h1 class="offscreen">Princi</h1>
 
+		<video id="inline-video" autoplay="autoplay" loop="loop" muted="true" preload="auto" poster="/_ui/img/homepage/video.jpg">
+        	<source src="/_ui/video/nws-kids.mp4" type="video/mp4">
+            <source src="/_ui/video/nws-kids.webm" type="video/webm">
+        	Your browser does not support the video tag
+    	</video>
+
 		<div class="parallax">
 			<section id="intro">
 				<div class="intro-container">
@@ -21,7 +27,6 @@
 			</section> <!-- /#intro -->
 
 
-
 			<section id="intro-video-group">
 				<div class="introduction">
 					<span class="line"></span>
@@ -31,22 +36,16 @@
 					</div>
 				</div>
 
-			  	<div class="video">
-					<h2 class="sequence" id="seq-video">
-						<span class="seq">Flour.</span>
-						<span class="seq">Water.</span>
-						<span class="seq">Craft.</span>
-					</h2>
 
-
-					<video id="inline-video" autoplay="autoplay" loop="loop" muted="true" preload="auto" poster="/_ui/img/homepage/video.jpg">
-                    	<source src="/_ui/video/nws-kids.mp4" type="video/mp4">
-                        <source src="/_ui/video/nws-kids.webm" type="video/webm">
-                    	Your browser does not support the video tag
-                	</video>
-				</div>
 			</section> <!-- /#intro-video-group -->
 
+		  	<div class="video-text">
+				<h2 class="sequence" id="seq-video">
+					<span class="seq">Flour.</span>
+					<span class="seq">Water.</span>
+					<span class="seq">Craft.</span>
+				</h2>
+			</div>
 
 			<section id="cta-group">
 				<div class="cta-heritage">
@@ -81,7 +80,6 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="cta-locations">
 					<div class="flex cta-home">
 						<div class="half second right edge">
