@@ -2,8 +2,12 @@
    COMPONENTS/_PARALLAX-HOMEPAGE.SCSS
    ========================================================================== */
 
-@supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
-	@media screen and (min-width: $bp-large-2) and (min-height: 850px) {
+@media screen and (min-width: $bp-large-2) and (min-height: 850px) {
+	@supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
+		.parallax::before {
+			content: 'true';
+			visibility: hidden;
+		}
 
 		header {
 			position: fixed;
@@ -21,6 +25,7 @@
 
 		#intro {
 			@include parallax(-.3);
+			position: initial;
 
 			.headline {
 				@include parallax(-.15);

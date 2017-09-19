@@ -62,8 +62,8 @@
 .trigger {
 	display: block;
 	position: absolute;
-	top: 15px;
-	right: 15px;
+	top: 30px;
+	right: 30px;
 	height: 25px;
 	width: 25px;
 
@@ -119,11 +119,15 @@
 
 // top bar fixed items
 .top-bar {
-	height: 60px;
+	background-color: rgba(255,255,255,0.85);
+	height: 70px;
 	position: fixed;
 	top: 0;
 	width: 100%;
 	z-index: 4;
+	transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1), opacity 150ms linear;
+
+	&.hidden { transform: translateY(-100%); }
 
 	a {
 		display: block;
@@ -133,9 +137,11 @@
 	.tagline { left: 0; }
 
 	.logo {
+		height: 66px;
 		left: 50%;
 		top: -$space;
 		transform: translateX(-50%);
+		width: 140px;
 
 		svg {
 			fill: $bronze;
@@ -299,6 +305,25 @@
 
 // above 50em
 @media screen and (min-width: $bp-large) {
+	.trigger {
+		top: 55px;
+		right: 65px;
+	}
+
+	.top-bar {
+		height: 120px;
+
+		.logo {
+			height: 90px;
+			width: 185px;
+
+			svg {
+				height: 90px;
+				width: 185px;
+			}
+		}
+	}
+
 	.menu {
 		#main {
 			font-size: 7.2em;

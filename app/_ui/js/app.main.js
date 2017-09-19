@@ -16,7 +16,11 @@ $(document).ready(function(){
 
 window.APP = {
     init: function () {
-        var self = this;
+        var self = this,
+			prev = 0,
+			perspectiveTest = window.getComputedStyle(document.querySelector('.parallax'),':before').getPropertyValue('content'),
+			animationContainer,
+			scrollContainer;
 
         self.events.parent = this;
 
@@ -24,13 +28,31 @@ window.APP = {
         // Init Components
         APP.nav.init();
 
+		if (perspectiveTest) {
+			animationContainer = ".parallax";
+			scrollContainer = ".parallax";
+		} else {
+			animationContainer = "body";
+			scrollContainer = window;
+		}
+
 		// Scrolling animations
+		$(scrollContainer).on('scroll', function(){
+			var scrollTop = $(scrollContainer).scrollTop();
+
+			if (prev > 0) {
+				$('.top-bar').toggleClass('hidden', scrollTop > prev);
+			}
+			prev = scrollTop;
+		});
+
+
 		window.sr = ScrollReveal({
 			distance: '0',
 			duration: 750,
 			scale: 1,
 			mobile: true,
-			container: document.querySelector('.parallax'),
+			container: document.querySelector(animationContainer),
 			reset: true,
 		});
 		if ($('.reveal').length) { sr.reveal('.reveal'); }
@@ -42,7 +64,7 @@ window.APP = {
 		}
 
 		// Button Animations
-		$('.parallax').scroll(function (){
+		$(animationContainer).scroll(function (){
 			$('.btn').each(function(){
 				if (self.isScrolledIntoView(this) === true) {
 					$(this).addClass('draw');
