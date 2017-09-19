@@ -2612,7 +2612,7 @@ APP.nav = {
 			var target = this.text,
 				target = target.toLowerCase();
 
-			$('.nav-hover img.' + target).toggleClass('active');
+			$('.nav-hover .img.' + target).toggleClass('active');
 		});
     },
     hideNav: function () {

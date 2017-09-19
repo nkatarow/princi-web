@@ -127,6 +127,7 @@
 	z-index: 4;
 	transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1), opacity 150ms linear;
 
+	&.active { background-color: rgba(255,255,255,0); }
 	&.hidden { transform: translateY(-100%); }
 
 	a {
@@ -167,7 +168,7 @@
 	position: fixed;
 	top: 0;
 	text-align: center;
-	transition: opacity 0.5s, visibility 0s 0.5s;
+	transition: opacity 0.5s ease-out, visibility 0s 0.5s;
 	width: 100vw;
 	visibility: hidden;
 	z-index: 3;
@@ -185,18 +186,18 @@
 		#language {
 			font-size: 1.4em;
 			font-weight: 300;
-			transition-delay: 250ms;
+			transition-delay: .5s;
 			margin-bottom: $space-double;
 		}
 
 		#main {
 			opacity: 1;
 			transform: translateY(0%);
-			transition-delay: 500ms;
+			transition-delay: 1s;
 		}
 
-		#social { transition-delay: 750ms; }
-		#secondary { transition-delay: 1000ms; }
+		#social { transition-delay: 1.5s; }
+		#secondary { transition-delay: 2s; }
 	}
 
 	a {
@@ -210,7 +211,7 @@
 		opacity: 0;
 		text-transform: uppercase;
 		transform: translateY(5%) skew(-10deg);
-		transition: transform 250ms ease-out, opacity 250ms ease-out;
+		transition: transform .5s ease-out, opacity .5s ease-out;
 		letter-spacing: 0.10em;
 		z-index: 4;
 
@@ -235,17 +236,24 @@
 		padding: 5vh;
 		z-index: 3;
 
-		img {
+		.img {
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
 			position: absolute;
 			height: 100%;
 			left: 0;
 			opacity: 0;
 			top: 0;
 			transition: opacity 250ms ease-out;
-			width: auto;
+			// width: auto;
 			width: 100%;
 
 			&.active { opacity: 1; }
+
+			&.heritage { background-image: url(/_ui/img/global/bg-heritage-menu.jpg); }
+			&.food { background-image: url(/_ui/img/global/bg-food-menu.jpg); }
+			&.locations { background-image: url(/_ui/img/global/bg-locations-menu.jpg); }
 		}
 	}
 
@@ -254,7 +262,7 @@
 		font-weight: 300;
 		opacity: 0;
 		transform: translateY(25%);
-		transition: transform 250ms, opacity 250ms;
+		transition: transform .5s  ease-out, opacity .5s ease-out;
 		z-index: 4;
 
 		li {
@@ -337,19 +345,19 @@
 		&.active {
 			#main {
 				transform: translateX(-50%) translateY(-50%);
-				transition-delay: 250ms;
+				transition-delay: .5s;
 			}
 			#language {
 				transform: rotate(-90deg) translateY(0%);
-				transition-delay: 500ms;
+				transition-delay: 1.25s;
 			}
 			#secondary {
 				transform: translateX(-50%) translateY(0%);
-				transition-delay: 750ms;
+				transition-delay: 1.5s;
 			}
 			#social {
 				transform: rotate(90deg) translateY(0%);
-				transition-delay: 1000ms;
+				transition-delay: 2s;
 			}
 		}
 
