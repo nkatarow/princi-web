@@ -29,11 +29,9 @@ window.APP = {
         APP.nav.init();
 
 		if (perspectiveTest) {
-			console.log("perspective true");
 			animationContainer = ".parallax";
 			scrollContainer = ".parallax";
 		} else {
-			console.log("perspective false");
 			animationContainer = "html";
 			scrollContainer = window;
 		}
@@ -78,8 +76,8 @@ window.APP = {
 
 
 		window.sr = ScrollReveal({
-			distance: '50px',
-			duration: 750,
+			distance: '35px',
+			duration: 700,
 			scale: 1,
 			mobile: true,
 			container: document.querySelector(animationContainer),

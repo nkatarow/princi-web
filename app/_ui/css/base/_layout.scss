@@ -6,7 +6,7 @@ footer {
 	bottom: 0;
 	color: $white;
 	left: 0;
-	position: fixed;
+	position: absolute;
 	text-align: center;
 	width: 100%;
 
@@ -21,6 +21,8 @@ footer {
 
 @media screen and (min-width: $bp-large) {
 	footer {
+		position: fixed;
+
 		.wordmark {
 			bottom: $space-double;
 			position: absolute;
@@ -40,7 +42,6 @@ footer {
 		align-items: center;
 		display: flex;
 		margin: 0 10%;
-		// max-width: $max-width;
 
 		.half {
 			width: 50%;
