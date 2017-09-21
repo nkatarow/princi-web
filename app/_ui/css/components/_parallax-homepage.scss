@@ -65,9 +65,12 @@
 		}
 
 		.video-text {
+			@include parallax(-.15);
 			#inline-video {
-				@include parallax(-.95);
+				@include parallax(-.5);
 			}
+			//
+			// h2 { @include parallax(-.1); }
 		}
 
 		#cta-group {

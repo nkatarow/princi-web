@@ -21,7 +21,7 @@ APP.nav = {
 			$(this).toggleClass('active');
 
 			$('#primary').toggleClass('active');
-        	$('.top-bar').toggleClass('active');
+        	$('.top-bar').toggleClass('white');
             // if (!$(this).hasClass('active')) {
             //     self.showNav();
             // } else {

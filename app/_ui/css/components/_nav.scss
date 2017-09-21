@@ -151,7 +151,9 @@
 		}
 	}
 
-	&.active {
+	&.white {
+		background-color: rgba(255,255,255,0);
+
 		.logo {
 			svg { fill: $white; }
 		}
@@ -350,15 +352,15 @@
 			}
 			#language {
 				transform: rotate(-90deg) translateY(0%);
-				transition-delay: 1.25s;
+				transition-delay: 1s;
 			}
 			#secondary {
 				transform: translateX(-50%) translateY(0%);
-				transition-delay: 1.5s;
+				transition-delay: 1.25s;
 			}
 			#social {
 				transform: rotate(90deg) translateY(0%);
-				transition-delay: 2s;
+				transition-delay: 1.5s;
 			}
 		}
 

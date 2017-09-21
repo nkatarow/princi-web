@@ -18,9 +18,12 @@ window.APP = {
     init: function () {
         var self = this,
 			prev = 0,
-			perspectiveTest = window.getComputedStyle(document.querySelector('.parallax'),':before').getPropertyValue('content'),
 			animationContainer,
 			scrollContainer;
+
+		if ($('.parallax').length) {
+			var perspectiveTest = window.getComputedStyle(document.querySelector('.parallax'),':before').getPropertyValue('content');
+		}
 
         self.events.parent = this;
 
@@ -60,19 +63,6 @@ window.APP = {
 					$(this).addClass('draw');
 				}
 			});
-			//
-			// $('.btn').each(function(){
-			// 	if (self.isScrolledIntoView(this) === true) {
-			// 		$(this).addClass('draw');
-			// 	}
-			// });
-			//
-			// $('.line').each(function(){
-			// 	if (self.isScrolledIntoView(this) === true) {
-			// 		$(this).addClass('draw');
-			// 	}
-			// });
-
 		});
 
 

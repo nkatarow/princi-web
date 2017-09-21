@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .loading-screen {
-	background-color: $black;
+	background-color: $beige;
 	height: 100vh;
 	opacity: 0;
 	position: fixed;
@@ -12,8 +12,10 @@
 	transition: opacity 250ms, visibility 0s 250ms;
 	visibility: hidden;
 	width: 100vw;
-	z-index: 100;
-	
+	z-index: 3;
+
+	&.initial { z-index: 100; }
+
 	&.active {
 		opacity: 1;
 		visibility: visible;
@@ -21,8 +23,8 @@
 	}
 
 	.progress {
-	    background: $bronze;
-		bottom: 0;
+	    background: $white;
+		top: 0;
 	    display: block;
 	    height: 4px;
 		position: absolute;
@@ -44,7 +46,7 @@
 
 	svg .line {
 		fill-opacity: 0;
-		stroke: $bronze;
+		stroke: $white;
 		stroke-width: 4;
 		stroke-linecap: round;
 		stroke-linejoin: round;
@@ -53,7 +55,7 @@
 
 	svg #dot path,
 	svg #dot2 path {
-		fill: $bronze;
+		fill: $white;
 		fill-opacity: 0;
 	}
 

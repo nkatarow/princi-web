@@ -93,7 +93,7 @@ $(function() {
 				} else if (pageTransitionType == 'detailLoadOut') {
 					APP.pageLoads.detailLoadOut($main, pageContent);
 				} else {
-					APP.pageLoads.defaultLoadIn($main, pageContent);
+					APP.pageLoads.defaultLoadIn($main, pageContent, false);
 
 					APP.pageLoads.defaultLoadOut($main);
 				}
@@ -111,6 +111,10 @@ $(function() {
 
   	/* ----- This runs on the first page load with no ajax ----- */
   	init();
+	APP.pageLoads.initialLoadIn();
+
+  	/* ----- This runs on the first page load with no ajax ----- */
+
 
   	$(window).on("popstate", function(e) {
 		//  	console.log("popstate");
