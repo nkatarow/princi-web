@@ -3,9 +3,7 @@
    ========================================================================== */
 
 @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
-	@media screen and (min-width: $bp-large) and (min-height: 750px) {
-		//VIDEO OVERFLOW
-
+	@media screen and (min-width: $bp-large) and (min-height: 700px) {
 		.parallax::before {
 			content: 'true';
 			display: block;
@@ -24,7 +22,9 @@
 		@include parallax-init;
 
 		#intro {
+			height: 800px;
 			background-color: transparent;
+			z-index: 2;
 
 			.intro-container {
 				background-color: transparent;
@@ -32,22 +32,24 @@
 				.headline {
 					@include parallax(-.15);
 					background-color: $white;
-					height: 95%;
-					margin-top: -30px;
+					// height: 95%;
+					// margin-top: -30px;
 
 					h2 {
-						height: 100%;
+						// font-size: 17em;
+						// height: 100%;
 
 						span {
-							&:first-child { top: 235px; }
-							&:last-child { bottom: 50px; }
+							&:first-child { top: 195px; }
+							&:last-child { top: 950px; }
 						}
 					}
 				}
 
 				.hero {
 					@include parallax(-.05);
-					// margin-top: 28px;
+					// top: 360px;
+					// height: 655px;
 				}
 			}
 
@@ -55,67 +57,30 @@
 
 		#intro-video-group {
 			@include parallax(-.15);
-			margin-top: 50px;
-			padding-bottom: 5%;
+			margin-top: 275px;
+			// padding-bottom: 7.5%;
+			padding-top: 15%;
+			z-index: 1;
+			// overflow-x: hidden;
+		}
+
+		.video-text {
+			#inline-video {
+				@include parallax(-.95);
+			}
 		}
 
 		#cta-group {
+			padding-top: 10%;
+			z-index: 2;
+
 			.cta-home { transform-style: flat; }
 		}
-
 	} // Viewport size
 
 
-	@media screen and (min-width: $bp-large) and (min-height: 800px) {
-		#intro {
-			height: 790px;
-
-			.intro-container {
-				.headline {
-					h2 {
-						font-size: 14em;
-
-						span {
-							&:first-child { top: 165px; }
-							&:last-child { top: 605px; }
-						}
-					}
-				}
-			}
-		}
-
-		#intro-video-group {
-			margin-top: 0;
-		}
-	}
-
 	@media screen and (min-width: $bp-large) and (min-height: 1000px) {
-		#intro {
-			height: 1000px;
-
-			.intro-container {
-				.headline {
-
-					h2 {
-						font-size: 16em;
-
-						span {
-							&:first-child { top: 155px; }
-							&:last-child { top: 800px; }
-						}
-					}
-				}
-			}
-
-			.hero {
-				top: 290px;
-				height: 580px;
-			}
-		}
-
 		#intro-video-group {
-			padding-top: 7%;
-
 			.video-text h2 { font-size: 9.6em; }
 		}
 	}

@@ -5,12 +5,6 @@
 	<div id="content">
 		<h1 class="offscreen">Princi</h1>
 
-		<video id="inline-video" autoplay="autoplay" loop="loop" muted="true" preload="auto" poster="/_ui/img/homepage/video.jpg">
-        	<source src="/_ui/video/nws-kids.mp4" type="video/mp4">
-            <source src="/_ui/video/nws-kids.webm" type="video/webm">
-        	Your browser does not support the video tag
-    	</video>
-
 		<div class="parallax">
 			<section id="intro">
 				<div class="intro-container">
@@ -40,6 +34,12 @@
 			</section> <!-- /#intro-video-group -->
 
 		  	<div class="video-text">
+				<video id="inline-video" autoplay="autoplay" loop="loop" muted="true" preload="auto" poster="/_ui/img/homepage/video.jpg">
+		        	<source src="/_ui/video/nws-kids.mp4" type="video/mp4">
+		            <source src="/_ui/video/nws-kids.webm" type="video/webm">
+		        	Your browser does not support the video tag
+		    	</video>
+
 				<h2 class="sequence" id="seq-video">
 					<span class="seq">Flour.</span>
 					<span class="seq">Water.</span>
@@ -113,6 +113,8 @@
 						</div>
 					</div>
 				</a>
+
+				{% include "footer.nunjucks" %}
 			</section> <!-- /#heritage-cta -->
 		</div>
 	</div>

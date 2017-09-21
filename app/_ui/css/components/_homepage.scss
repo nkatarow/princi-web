@@ -3,12 +3,6 @@
    ========================================================================== */
 
 /* These are the base styles for fonts and sizing that also act as a backup to the parallax styles */
-video {
-	min-height: 100vh;
-	min-width: 100vw;
-	position: fixed;
-	top: 0;
-}
 
 // Mobile first
 #intro {
@@ -114,6 +108,12 @@ video {
 .video-text {
 	height: 100vh;
 	position: relative;
+	overflow: hidden;
+
+	video {
+		object-fit: cover;
+		min-width: 100%;
+	}
 
 	h2 {
 		color: $white;
@@ -126,6 +126,8 @@ video {
 		transform: translateY(-50%);
 		width: 100%;
 		z-index: 5;
+
+		span { display: block; }
 	}
 }
 
@@ -154,27 +156,22 @@ video {
 
 // Medium Viewport
 @media screen and (min-width: $bp-med) and (min-height: $bp-small-3) {
-	#intro-video-group {
-		padding-bottom: 10%;
-
-	}
-
-	.video-text h2 { font-size: 6em; }
-
-	#cta-group {
-		padding-top: 10%;
-
-		.cta-home {
-			padding-bottom: 10%;
-		}
-	}
+	// #intro-video-group {
+	// 	padding-bottom: 10%;
+	//
+	// }
+	//
+	// .video-text h2 { font-size: 6em; }
+	//
+	// #cta-group { padding-top: 10%; }
 }
 
 
 // Larger viewports
-@media screen and (min-width: $bp-large) and (min-height: 750px) {
+@media screen and (min-width: $bp-large) and (min-height: 700px) {
 	#intro {
-		height: 100vh;
+		// height: 100vh;
+		height: 800px;
 
 		.intro-container {
 			background-color: $white;
@@ -185,19 +182,26 @@ video {
 
 		.headline {
 			top: 0;
+			height: 95%;
 			height: 100%;
+			margin-top: -30px;
 
 			h2 {
+				font-size: 17em;
+				height: 100%;
+
 				span {
-					&:first-child { top: 240px; }
-					&:last-child { top: 640px; }
+					&:first-child { top: 220px; }
+					&:last-child { top: 960px; }
 				}
 			}
 
 		}
 
 		.hero {
-			top: 285px;
+			top: 360px;
+			height: 655px;
+			// top: 285px;
 			position: absolute;
 			margin-top: 0;
 		}
@@ -205,12 +209,15 @@ video {
 
 
 	#intro-video-group {
+		margin-top: 355px;
+		padding-bottom: 7.5%;
+
 		.introduction {
 			.line {
-				height: 170px;
-				margin-bottom: 2%;
+				height: 200px;
+				margin-bottom: 3%;
 
-				&.draw::before { height: 170px; }
+				&.draw::before { height: 200px; }
 			}
 
 			.title {
@@ -224,10 +231,16 @@ video {
 	}
 
 	.video-text {
-		h2 { font-size: 7.5em; }
+		h2 {
+			font-size: 7.5em;
+
+			span { display: inline; }
+		}
 	}
 
 	#cta-group {
+		padding-top: 0;
+
 		.cta-home {
 			.edge {
 				padding-left: 0%;

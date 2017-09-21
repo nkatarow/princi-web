@@ -23,7 +23,8 @@ $parallax-ios         : true !default;
     	}
   	}
   	#{$element} {
-    	overflow: auto;
+    	overflow-x: hidden;
+		overflow-y: visible;
     	perspective: $perspective * 1px;
     	transform-style: preserve-3d;
       		width: 100%;
@@ -33,7 +34,7 @@ $parallax-ios         : true !default;
 			right: 0;
 			bottom: 0;
 			left: 0;
-			
+
     	// Allows for smooth scrolling but disables parallax effects.
     	@if $parallax-ios == false {
       		-webkit-overflow-scrolling: touch;
@@ -51,7 +52,8 @@ $parallax-ios         : true !default;
 ){
 	transform:
     	translateZ($distance * $perspective * 1px)
-    	scale(abs($distance - 1));
+    	// scale(abs($distance - 1));
+		scale(abs(1+($distance * -1)/$perspective));
   	z-index: $distance * 1000;
 }
 

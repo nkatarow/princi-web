@@ -44,6 +44,7 @@ window.APP = {
 			if (prev > 0) {
 				$('.top-bar').toggleClass('hidden', scrollTop > prev);
 			}
+
 			prev = scrollTop;
 
 			// buttons
@@ -59,24 +60,24 @@ window.APP = {
 					$(this).addClass('draw');
 				}
 			});
-
-			$('.btn').each(function(){
-				if (self.isScrolledIntoView(this) === true) {
-					$(this).addClass('draw');
-				}
-			});
-
-			$('.line').each(function(){
-				if (self.isScrolledIntoView(this) === true) {
-					$(this).addClass('draw');
-				}
-			});
+			//
+			// $('.btn').each(function(){
+			// 	if (self.isScrolledIntoView(this) === true) {
+			// 		$(this).addClass('draw');
+			// 	}
+			// });
+			//
+			// $('.line').each(function(){
+			// 	if (self.isScrolledIntoView(this) === true) {
+			// 		$(this).addClass('draw');
+			// 	}
+			// });
 
 		});
 
 
 		window.sr = ScrollReveal({
-			distance: '35px',
+			distance: '0',
 			duration: 700,
 			scale: 1,
 			mobile: true,
@@ -152,7 +153,7 @@ window.APP = {
 
         return i;
     },
- 	isScrolledIntoView: function(elem) {
+ 	isScrolledIntoView: function(elem, ) {
     	var docViewTop = $(window).scrollTop(),
     		docViewBottom = docViewTop + $(window).height(),
 			elemTop = $(elem).offset().top,
