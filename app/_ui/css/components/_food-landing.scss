@@ -1,0 +1,158 @@
+/* ==========================================================================
+   COMPONENTS/_FOOD-LANDING.SCSS
+   ========================================================================== */
+
+// For switching between landing and detail
+.new-results-div {
+	height: 100%;
+	opacity: 1;
+	position: relative;
+	transform: translateY(0);
+	transition:
+		opacity .5s ease-out
+		transform .5s ease-out,
+		height .5s ease-out;
+	z-index: 2;
+
+	// &.transition-in { height: 100vh; }
+	// &.transition-out { height: 0; }
+	&.transition-out { transform: translateY(-100%); }
+}
+
+.secondary-results-div {
+	left: 0;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+}
+
+
+// Hero
+.food-hero {
+	color: $bronze;
+	margin: 70px auto;
+	padding-top: 70px;
+	width: 90%;
+
+	h1 {
+		font-size: 5.4em;
+		letter-spacing: 0.10em;
+		padding-bottom: 30px;
+		text-align: center;
+		text-transform: uppercase;
+
+		span { display: block; }
+	}
+
+	p { font-size: 1.6em; }
+}
+
+.foods {
+	color: $bronze;
+
+	.type {
+		background-position: bottom right;
+		background-size: cover;
+		margin-bottom: 25%;
+		transition: background-position .5s ease-out;
+
+		&.center-background { background-position: center center; }
+
+		.name {
+			background-color: $white;
+			font-size: 3.2em;
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: 0.10em;
+			padding-bottom: $space-and-half;
+		}
+
+		.mask {
+			// background-color: $white;
+			border-right: 5vw solid $white;
+			border-left: 5vw solid $white;
+			display: block;
+			height: 250px;
+			transition:
+				height .5s ease-out,
+				border-left-width .5s ease-out,
+				border-right-width .5s ease-out;
+			width: 100%;
+
+			// clip-path: polygon(0% 0%, 0% 100%, 6% 100%, 5% 5%, 95% 5%, 95% 95%, 5% 95%, 0 100%, 100% 100%, 100% 0%);
+			&.transition {
+				border-left-width: 0;
+				border-right-width: 0;
+				height: 100vh;
+			}
+
+
+			.plus {
+				background-color: $bronze;
+				display: block;
+				height: 40px;
+				margin-top: -20px;
+				left: calc(50% - 20px);
+				position: absolute;
+				width: 40px;
+			}
+		}
+	}
+}
+
+
+@media screen and (min-width: $bp-large) {
+	.food-hero {
+		padding-top: 15%;
+
+		h1 {
+			font-size: 9.6em;
+
+			span { display: inline; }
+		}
+
+		p {
+			border-left: 1px solid $bronze;
+			font-size: 2.4em;
+			letter-spacing: 0.015em;
+			padding-left: $space;
+			max-width: 600px;
+		}
+	}
+
+	.foods {
+		.type {
+			align-items: center;
+			display: flex;
+			height: 50vh;
+			margin-bottom: 10%;
+			position: relative;
+
+			.copy { width: 50%; }
+
+			.name {
+				font-size: 6em;
+				text-align: left;
+				padding-left: 20%;
+				margin-bottom: 0;
+			}
+
+			.image-transition {
+
+				.img-link {
+					height: 100%;
+					position: relative;
+
+					&.landscape {
+						height: 100%;
+						width: 100%;
+					}
+				}
+			}
+
+			&:nth-child(even) {
+				.name { padding-left: 0; }
+			}
+		}
+	}
+}

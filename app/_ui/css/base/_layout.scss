@@ -2,6 +2,8 @@
    BASE/_LAYOUT.SCSS
    ========================================================================== */
 
+main { overflow: hidden; }
+
 footer {
 	bottom: 0;
 	color: $white;

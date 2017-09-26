@@ -2429,12 +2429,13 @@ $(function() {
 		changedPage = false,
 
 	/* ----- Return appropriate page transition ----- */
-	assignTransitionType = function(linkClass, href, e) {
+	assignTransitionType = function(linkClass, href, e, link) {
 		// console.log("assignTransitionType");
 		var pageTransitionType = 'default';
 
-		if (linkClass == 'img-link') {
+		if (linkClass == 'mask') {
 			pageTransitionType = 'detailLoadIn';
+
 		} else {
 			if ($('.detail-page').length) {
 				pageTransitionType = 'detailLoadOut';
@@ -2442,7 +2443,7 @@ $(function() {
 		}
 
 		// console.log("pageTransitionType = " + pageTransitionType + " href = " + href);
-		loadPage(pageTransitionType, href, e);
+		loadPage(pageTransitionType, href, e, link);
 	},
 
   	/* ----- Do this when a page loads ----- */
@@ -2489,7 +2490,7 @@ $(function() {
 		changedPage = true;
   	},
 
-  	loadPage = function(pageTransitionType, href, e) {
+  	loadPage = function(pageTransitionType, href, e, link) {
 		// console.log("loadPage");
 
 		$.ajax({
@@ -2515,7 +2516,7 @@ $(function() {
 				var pageContent = $(result).find('#content').html();
 
 				if (pageTransitionType == 'detailLoadIn') {
-					APP.pageLoads.detailLoadIn(e, $main, pageContent);
+					APP.pageLoads.detailLoadIn(e, $main, pageContent, link);
 				} else if (pageTransitionType == 'detailLoadOut') {
 					APP.pageLoads.detailLoadOut($main, pageContent);
 				} else {
@@ -2558,13 +2559,13 @@ $(function() {
     	var href = $(this).attr("href"),
 			linkClass = '';
 
-		if ($(this).hasClass('img-link')) {
-			linkClass = 'img-link';
+		if ($(this).hasClass('mask')) {
+			linkClass = 'mask';
 		}
 
     	if ((href.indexOf(document.domain) > -1 || href.indexOf(':') === -1) && href != '#') {
       		history.pushState({}, '', href);
-			assignTransitionType(linkClass, href, e);
+			assignTransitionType(linkClass, href, e, $(this));
       		return false;
     	}
   	});
@@ -2696,28 +2697,47 @@ APP.pageLoads = {
 		}, 3500);
 	},
 
-	detailLoadIn: function(e, $main, pageContent) {
+	detailLoadIn: function(e, $main, pageContent, link) {
 		var self = this;
 		// console.log("function imageLoadIn");
-
 		// Animate image to cover full screen
-		// will need to abstract to this img-link
-		$('.img-link').css('top', -this.getElemDistance(e.target));
-		$('.img-link').addClass('transition-in');
-		$('.new-results-div').addClass('transition-in');
+
+		// scroll($(window).height(), 0);
+        // $('html,body').animate({
+        //     scrollTop: link.offset().top + link.outerHeight(true) - $(window).height()
+        // }, 250);
+		$(link).parent('.type').addClass('center-background');
+
+		setTimeout(function(){
+			$(link).parent('.type').css('background-attachment', 'fixed');
+	        $('html,body').animate({
+	            scrollTop: link.offset().top
+	        }, 500);
+
+			$(link).addClass('transition');
+		}, 750);
 
 		setTimeout(function(){
 			// Add new content behind current
 			$main.append('<div class="secondary-results-div">' + pageContent + '</div>');
-			$('.new-results-div').css('opacity', '0');
-		}, 250);
+
+			// Hide current and nav
+			$('.new-results-div').addClass('transition-out');
+			$('.top-bar').css('opacity', '0');
+		}, 1250);
 
 		setTimeout(function(){
+			// Remove current
+			$('.new-results-div').css('opacity', '0');
 			$('.new-results-div').remove();
+
+			// Update new container class
 			$('.secondary-results-div').addClass('new-results-div');
 			$('.new-results-div').removeClass('secondary-results-div');
+
+			// Slide in details
 			$('.food-details').addClass('active');
-		}, 500);
+		}, 1750);
 	},
 
 	detailLoadOut: function($main, pageContent) {
@@ -2731,13 +2751,14 @@ APP.pageLoads = {
 			// slide out background
 			$('.food-type').removeClass('active');
 			$('body').removeClass('food-details-page');
-		}, 250);
+			$('.top-bar').removeAttr('style');
+		}, 500);
 
 		setTimeout(function(){
 			$('.new-results-div').remove();
 			$('.secondary-results-div').addClass('new-results-div');
 			$('.new-results-div').removeClass('secondary-results-div');
-		}, 500);
+		}, 1000);
 	},
 
 	getElemDistance: function(elem) {

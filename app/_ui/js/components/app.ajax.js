@@ -3,12 +3,13 @@ $(function() {
 		changedPage = false,
 
 	/* ----- Return appropriate page transition ----- */
-	assignTransitionType = function(linkClass, href, e) {
+	assignTransitionType = function(linkClass, href, e, link) {
 		// console.log("assignTransitionType");
 		var pageTransitionType = 'default';
 
-		if (linkClass == 'img-link') {
+		if (linkClass == 'mask') {
 			pageTransitionType = 'detailLoadIn';
+
 		} else {
 			if ($('.detail-page').length) {
 				pageTransitionType = 'detailLoadOut';
@@ -16,7 +17,7 @@ $(function() {
 		}
 
 		// console.log("pageTransitionType = " + pageTransitionType + " href = " + href);
-		loadPage(pageTransitionType, href, e);
+		loadPage(pageTransitionType, href, e, link);
 	},
 
   	/* ----- Do this when a page loads ----- */
@@ -63,7 +64,7 @@ $(function() {
 		changedPage = true;
   	},
 
-  	loadPage = function(pageTransitionType, href, e) {
+  	loadPage = function(pageTransitionType, href, e, link) {
 		// console.log("loadPage");
 
 		$.ajax({
@@ -89,7 +90,7 @@ $(function() {
 				var pageContent = $(result).find('#content').html();
 
 				if (pageTransitionType == 'detailLoadIn') {
-					APP.pageLoads.detailLoadIn(e, $main, pageContent);
+					APP.pageLoads.detailLoadIn(e, $main, pageContent, link);
 				} else if (pageTransitionType == 'detailLoadOut') {
 					APP.pageLoads.detailLoadOut($main, pageContent);
 				} else {
@@ -132,13 +133,13 @@ $(function() {
     	var href = $(this).attr("href"),
 			linkClass = '';
 
-		if ($(this).hasClass('img-link')) {
-			linkClass = 'img-link';
+		if ($(this).hasClass('mask')) {
+			linkClass = 'mask';
 		}
 
     	if ((href.indexOf(document.domain) > -1 || href.indexOf(':') === -1) && href != '#') {
       		history.pushState({}, '', href);
-			assignTransitionType(linkClass, href, e);
+			assignTransitionType(linkClass, href, e, $(this));
       		return false;
     	}
   	});
