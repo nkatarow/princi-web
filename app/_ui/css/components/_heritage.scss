@@ -1,0 +1,56 @@
+/* ==========================================================================
+   COMPONENTS/_HERITAGE.SCSS
+   ========================================================================== */
+
+
+#heritage-hero {
+	color: $bronze;
+	margin: 70px auto;
+	padding-top: 70px;
+	width: 90%;
+
+	h2 {
+		font-size: 5.4em;
+		letter-spacing: 0.10em;
+		padding-bottom: 30px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	p {
+		font-size: 1.6em;
+		line-height: 1.499em;
+		margin-bottom: $space*3.5;
+	}
+
+	.img {
+		margin: 0 auto;
+		max-width: 65%;
+	}
+}
+
+.split-pic {
+	color: $bronze;
+	padding: 25% 5%;
+
+	.copy {
+		h2 {
+			font-size: 2.4em;
+			letter-spacing: 0.015em;
+			margin-bottom: $space;
+		}
+
+		p {
+			font-size: 1.6em;
+			font-weight: 300;
+			font-style: normal;
+			line-height: 1.31em;
+			letter-spacing: 0.015em;
+			margin-bottom: $space-double;
+		}
+	}
+
+	.img {
+		margin-bottom: $space-double;
+	}
+}

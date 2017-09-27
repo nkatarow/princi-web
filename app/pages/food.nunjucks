@@ -17,18 +17,28 @@
 
 
 					<a href="/food-type.html" class="mask landscape">
-						<span class="plus"></span>
+						<span class="plus-box">
+							<span class="plus animate">
+								<span class="vertical"></span>
+								<span class="horizontal"></span>
+							</span>
+						</span>
 					</a>
 				</div>
 
-				<div class="type" style="background-image: url(/_ui/img/food/bread.jpg);">
+				<div class="type" style="background-image: url(/_ui/img/food/pastries.jpg);">
 					<div class="copy">
-						<h2 class="name">Bread</h2>
+						<h2 class="name">Pastries</h2>
 					</div>
 
 
-					<a href="/food-type.html" class="mask landscape">
-						<span class="plus"></span>
+					<a href="/food-type.html" class="mask portrait">
+						<span class="plus-box">
+							<span class="plus animate">
+								<span class="vertical"></span>
+								<span class="horizontal"></span>
+							</span>
+						</span>
 					</a>
 				</div>
 
