@@ -65,7 +65,8 @@
 		}
 
 		.video-text {
-			@include parallax(-.15);
+			@include parallax(-.25);
+
 			#inline-video {
 				@include parallax(-.5);
 			}

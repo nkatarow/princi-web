@@ -1,0 +1,26 @@
+/* ==========================================================================
+   COMPONENTS/_PARALLAX-HERITAGE.SCSS
+   ========================================================================== */
+
+@supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
+	@media screen and (min-width: $bp-large) and (min-height: 700px) {
+
+		#heritage-hero {
+			background-color: $white;
+			padding-bottom: 10%;
+
+			.copy {
+				h2 { top: 0%; }
+			}
+		}
+
+		#passion {
+			background-color: $white;
+			// padding-top: 35%;
+			z-index: 2;
+
+			// .cta-home { transform-style: flat; }
+		}
+
+	}
+}

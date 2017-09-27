@@ -90,3 +90,23 @@ abbr {
     border-bottom: 1px dotted $gray;
     cursor: help;
 }
+
+@media screen and (min-width: $bp-large) {
+	blockquote {
+		max-width: 60%;
+
+		p {
+			font-size: 7.2em;
+			margin-bottom: $space-quarter;
+		}
+
+		.line {
+			height: 100px;
+			margin-bottom: $space*4;
+
+			&.draw::before { height: 100px; }
+		}
+
+		cite { font-size: 1.4em; }
+	}
+}
