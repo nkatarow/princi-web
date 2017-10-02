@@ -16,113 +16,28 @@ $(document).ready(function(){
 
 window.APP = {
     init: function () {
-        var self = this,
-			prev = 0,
-			animationContainer,
-			scrollContainer;
+        var self = this;
 
-		if ($('.parallax').length) {
-			var perspectiveTest = window.getComputedStyle(document.querySelector('.parallax'),':before').getPropertyValue('content');
-		}
+        // self.events.parent = this;
 
-        self.events.parent = this;
-
-		// INSTANTIATIONS
         // Init Components
         APP.nav.init();
-
-		if (perspectiveTest) {
-			animationContainer = ".parallax";
-			scrollContainer = ".parallax";
-		} else {
-			animationContainer = "html";
-			scrollContainer = window;
-		}
-
-		// Scrolling animations
-		$(scrollContainer).on('scroll', function(){
-
-			//sneaky nav
-			var scrollTop = $(scrollContainer).scrollTop();
-
-			if (prev > 0) {
-				$('.top-bar').toggleClass('hidden', scrollTop > prev);
-			}
-
-			prev = scrollTop;
-
-			// buttons
-			$('.btn').each(function(){
-				if (self.isScrolledIntoView(this) === true) {
-					$(this).addClass('draw');
-				}
-			});
-
-			// lines
-			$('.line').each(function(){
-				if (self.isScrolledIntoView(this) === true) {
-					$(this).addClass('draw');
-				}
-			});
-			$('.split-pic').each(function(){
-				if (self.isScrolledIntoView(this) === true) {
-					$(this).children('.copy').addClass('draw');
-				}
-			});
-		});
-
-		if ($('#heritage-hero').length) {
-			if (self.isScrolledIntoView($('#heritage-hero')) === true) {
-				$('#heritage-hero p').addClass('draw');
-			}
-		}
-
-		window.sr = ScrollReveal({
-			distance: '0',
-			duration: 700,
-			scale: 1,
-			mobile: true,
-			container: document.querySelector(animationContainer),
-			reset: true,
-			viewFactor: 0.4,
-		});
-		if ($('.reveal').length) { sr.reveal('.reveal'); }
-
-		if ($('.sequence').length) {
-			$('.sequence').each(function(){
-				sr.reveal('#' + $(this).attr('id') + ' .seq', 500);
-			})
-		}
-
-		if ($("#inline-video").length) {
-			var video = document.getElementById('inline-video');
-
-			video.addEventListener('loadeddata', function() {
-				if (video.readyState >= 2) { video.play(); }
-			});
-		}
-		// END: INSTANTIATIONS
+		APP.instantiations.init();
 
         // EVENT DELEGATION
-        $(window).bind('resize', function(event) {
-            self.events.windowResize({width: self.getMediaWidth()});
-        });
-
-        $(window).triggerHandler('resize');
+        // $(window).bind('resize', function(event) {
+        //     self.events.windowResize({width: self.getMediaWidth()});
+        // });
+		//
+        // $(window).triggerHandler('resize');
     },
-    events: {
-        windowResize: function (event) {
-            var self = this.parent,
-                i,
-                ii;
-
-            // if (event.width >= 700 && self.nav.isMobile) {
-            //     self.nav.mobileOff();
-            // } else if (event.width < 700 && !self.nav.isMobile) {
-            //     self.nav.mobileOn();
-            // }
-        }
-    },
+    // events: {
+    //     windowResize: function (event) {
+    //         var self = this.parent,
+    //             i,
+    //             ii;
+    //     }
+    // },
     getMediaWidth: function () {
         var self = this,
             width;

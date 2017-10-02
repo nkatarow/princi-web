@@ -2,7 +2,9 @@
    BASE/_LAYOUT.SCSS
    ========================================================================== */
 
-main { overflow: hidden; }
+// main { overflow: hidden; }
+
+.js-main { transition: opacity 500ms ease-out; }
 
 footer {
 	bottom: 0;

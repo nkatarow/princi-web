@@ -4,7 +4,7 @@ $(function() {
 
 	/* ----- Return appropriate page transition ----- */
 	assignTransitionType = function(linkClass, href, e, link) {
-		// console.log("assignTransitionType");
+		console.log("assignTransitionType");
 		var pageTransitionType = 'default';
 
 		if (linkClass == 'mask') {
@@ -17,19 +17,19 @@ $(function() {
 		}
 
 		// console.log("pageTransitionType = " + pageTransitionType + " href = " + href);
-		loadPage(pageTransitionType, href, e, link);
+		loadPage(pageTransitionType, href, link);
 	},
 
   	/* ----- Do this when a page loads ----- */
   	init = function() {
-		// console.log("init");
+		console.log("init");
     	/* ----- This is where I would run any page specific functions ----- */
 
 		var newTitle = $('body').find('h1').text(),
 			titleLower = newTitle.replace(/\s+/g, '-').toLowerCase(),
 			depth = $(location).prop('pathname').split('/').length - 1;
 
-		$('body').attr('class', 'body');
+		$('body').attr('class', '');
 		$('body').addClass(titleLower);
 
 		if (!$('.new-results-div').length) {
@@ -48,7 +48,6 @@ $(function() {
   	/* ----- Do this for ajax page loads ----- */
   	ajaxLoad = function(html) {
 		// console.log("ajaxLoad");
-		init();
 
 		// CHECK THIS
 		var newTitle = $('body').find('h1').text();
@@ -62,57 +61,62 @@ $(function() {
 
 		/* ----- Used for popState event (back/forward browser buttons) ----- */
 		changedPage = true;
+
+		init();
   	},
 
-  	loadPage = function(pageTransitionType, href, e, link) {
+  	loadPage = function(pageTransitionType, href, link) {
 		// console.log("loadPage");
 
-		$.ajax({
-			xhr: function(){
-				var xhr = new window.XMLHttpRequest();
+		setTimeout(function(){
+			if (pageTransitionType == 'default') APP.pageLoads.defaultLoadIn($main);
+			if ($('#primary').hasClass('active')) APP.nav.hideNav();
 
-				//Download progress TRY A NEW METHOD MAYBE?
-    			xhr.addEventListener("progress", function (evt) {
-        			if (evt.lengthComputable) {
-            			var percentComplete = evt.loaded / evt.total;
-            			$('.progress').css({ width: percentComplete * 100 + '%' });
-        			} else {
-            			$('.progress').css({ width: '100%' });
+			$.ajax({
+				xhr: function(){
+					var xhr = new window.XMLHttpRequest();
+
+					//Download progress TRY A NEW METHOD MAYBE?
+	    			xhr.addEventListener("progress", function (evt) {
+	        			if (evt.lengthComputable) {
+	            			var percentComplete = evt.loaded / evt.total;
+	            			$('.progress').css({ width: percentComplete * 100 + '%' });
+	        			} else {
+	            			$('.progress').css({ width: '100%' });
+						}
+	    			}, false);
+	    			return xhr;
+				},
+				type: 'POST',
+				url: href,
+				async: true,
+				data: {},
+				success: function(result){
+					var pageContent = $(result).find('#content').html();
+
+					if (pageTransitionType == 'detailLoadIn') {
+						APP.pageLoads.detailLoadIn($main, pageContent, link);
+					} else if (pageTransitionType == 'detailLoadOut') {
+						APP.pageLoads.detailLoadOut($main, pageContent);
+					} else {
+						APP.pageLoads.successfulLoadIn($main, pageContent);
 					}
-    			}, false);
-    			return xhr;
-			},
-			type: 'POST',
-			url: href,
-			async: true,
-			data: {},
-			success: function(result){
-				var pageContent = $(result).find('#content').html();
-
-				if (pageTransitionType == 'detailLoadIn') {
-					APP.pageLoads.detailLoadIn(e, $main, pageContent, link);
-				} else if (pageTransitionType == 'detailLoadOut') {
-					APP.pageLoads.detailLoadOut($main, pageContent);
-				} else {
-					APP.pageLoads.defaultLoadIn($main, pageContent, false);
-
-					APP.pageLoads.defaultLoadOut($main);
+				},
+				complete: function(){
+					// console.log("complete");
+					ajaxLoad();
+				},
+				error: function(){
+					// console.log("error");
+					location.reload();
 				}
-			},
-			complete: function(){
-				// console.log("complete");
-				ajaxLoad();
-			},
-			error: function(){
-				// console.log("error");
-				location.reload();
-			}
-		});
+			});
+		}, 500);
   	};
 
   	/* ----- This runs on the first page load with no ajax ----- */
   	init();
-	APP.pageLoads.initialLoadIn();
+	// APP.pageLoads.initialLoadIn();
 
   	/* ----- This runs on the first page load with no ajax ----- */
 
@@ -130,11 +134,15 @@ $(function() {
 
   	$(document).on('click', 'a', function(e) {
 		e.preventDefault();
+		console.log('click');
+
     	var href = $(this).attr("href"),
 			linkClass = '';
 
 		if ($(this).hasClass('mask')) {
 			linkClass = 'mask';
+		} else {
+			if (!$(this).hasClass('food-type-toggle')) $main.css('opacity', '0');
 		}
 
     	if ((href.indexOf(document.domain) > -1 || href.indexOf(':') === -1) && href != '#') {
