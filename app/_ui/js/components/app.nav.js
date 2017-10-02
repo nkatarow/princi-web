@@ -18,15 +18,11 @@ APP.nav = {
         $('.trigger').click(function (event) {
             event.preventDefault();
 
-			$(this).toggleClass('active');
-
-			$('#primary').toggleClass('active');
-        	$('.top-bar').toggleClass('white');
-            // if (!$(this).hasClass('active')) {
-            //     self.showNav();
-            // } else {
-            //     self.hideNav();
-            // }
+            if (!$(this).hasClass('active')) {
+                self.showNav();
+            } else {
+                self.hideNav();
+            }
         });
 
 		$('#main a').hover(function(){
@@ -41,14 +37,20 @@ APP.nav = {
         var self = this;
 
         $('#primary').removeClass('active');
-        $('.trigger').removeClass('active');
+		$('.trigger').removeClass('active');
+    	$('.top-bar').removeClass('white');
+
+		setTimeout(function(){
+    		$('.top-bar').removeClass('active');
+		}, 500);
     },
     showNav: function (menu) {
         // fn showNav
         var self = this;
 
-        $('#primary').addClass('active');
-        $('.trigger').addClass('active');
-        $('.top-bar').addClass('active');
+		$('#primary').addClass('active');
+		$('.trigger').addClass('active');
+    	$('.top-bar').addClass('active');
+    	$('.top-bar').addClass('white');
     }
 };

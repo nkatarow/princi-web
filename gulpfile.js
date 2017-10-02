@@ -10,11 +10,15 @@ var gulp = require ('gulp'),
 	del = require('del'),
 	plumber = require('gulp-plumber'),
 	livereload = require('gulp-livereload'),
+	pump = require('pump'),
 	nunjucksRender = require('gulp-nunjucks-render');
 
-function onError(err) {
-	console.log(err);
+function createErrorHandler(name) {
+    return function (err) {
+    	console.error('Error from ' + name + ' in compress task', err.toString());
+    };
 }
+
 
 // nunjucks templating
 gulp.task('nunjucks', function() {
@@ -33,7 +37,7 @@ gulp.task('styles', function(){
 		.pipe(sourcemaps.write())
 		.pipe(autoprefixer({browsers: ['last 2 version', 'safari 5', 'ie 9', 'ios 6', 'android 4', '> 1%']}))
 		.pipe(gulp.dest('app/_ui/compiled'))
-		.pipe(plumber({errorHandler: onError}))
+    	.on('error', createErrorHandler('styles task'))
 		.pipe(livereload());
 });
 
@@ -42,7 +46,7 @@ gulp.task('scripts', function(){
 	return gulp.src(['app/_ui/js/lib/*.js', 'app/_ui/js/app.main.js', 'app/_ui/js/components/*.js'])
 		.pipe(concat('scripts.js'))
 		.pipe(gulp.dest('app/_ui/compiled'))
-		.pipe(plumber({errorHandler: onError}))
+    	.on('error', createErrorHandler('scripts task'))
 		.pipe(livereload());
 });
 
@@ -53,14 +57,14 @@ gulp.task('minify', function(){
 		.pipe(cleanCSS())
 		.pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest('app/_ui/dist'))
-		.pipe(plumber({errorHandler: onError}));
+    	.on('error', createErrorHandler('minify task'))
 });
 gulp.task('uglify', function(){
 	return gulp.src('app/_ui/compiled/scripts.js')
 		.pipe(rename({suffix: '.min'}))
-		.pipe(uglify(''))
+		.pipe(uglify())
+    	.on('error', createErrorHandler('uglify task'))
 		.pipe(gulp.dest('app/_ui/dist'))
-		.pipe(plumber({errorHandler: onError}));
 });
 
 

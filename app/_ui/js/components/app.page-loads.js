@@ -28,16 +28,31 @@ APP.pageLoads = {
 
 		// Attach and display default loading screen
 		$('body').prepend(APP.loadingScreen);
-		$('.top-bar').addClass('white');
 
 		setTimeout(function(){
 			$('.loading-screen').addClass('active');
+
+			$('.trigger').css('display', 'none');
+
+			if ($('.top-bar').hasClass('hidden')) {
+				$('.top-bar').removeClass('hidden');
+			}
+
+			if (!$('.top-bar').hasClass('white')) {
+				$('.top-bar').addClass('white');
+			}
+
+			if (!$('.top-bar').hasClass('active')) {
+				$('.top-bar').addClass('active');
+			}
 		}, 250);
 
 		setTimeout(function(){
 			// If primary menu is open, close it
 			if ($('#primary').hasClass('active')) {
-				APP.nav.hideNav();
+        		$('#primary').removeClass('active');
+				$('.trigger').removeClass('active');
+				// APP.nav.hideNav();
 			}
 
 			// Hide main content area and scroll to top
@@ -59,8 +74,10 @@ APP.pageLoads = {
 		// $main.css('opacity', '1');
 
 		setTimeout(function(){
+			$('.trigger').css('display', 'block');
 			$('.top-bar').removeClass('white');
 			$('.loading-screen').removeClass('active');
+			$('.top-bar').removeClass('active');
 			$('.progress').css('width', '0');
 		}, 2000);
 
@@ -110,6 +127,10 @@ APP.pageLoads = {
 			// Slide in details
 			$('.food-details').addClass('active');
 		}, 1750);
+
+		setTimeout(function(){
+			$('.food-details dl').addClass('draw');			
+		}, 2250);
 	},
 
 	detailLoadOut: function($main, pageContent) {

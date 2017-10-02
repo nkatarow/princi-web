@@ -41,6 +41,7 @@ window.APP = {
 
 		// Scrolling animations
 		$(scrollContainer).on('scroll', function(){
+
 			//sneaky nav
 			var scrollTop = $(scrollContainer).scrollTop();
 
@@ -63,8 +64,18 @@ window.APP = {
 					$(this).addClass('draw');
 				}
 			});
+			$('.split-pic').each(function(){
+				if (self.isScrolledIntoView(this) === true) {
+					$(this).children('.copy').addClass('draw');
+				}
+			});
 		});
 
+		if ($('#heritage-hero').length) {
+			if (self.isScrolledIntoView($('#heritage-hero')) === true) {
+				$('#heritage-hero p').addClass('draw');
+			}
+		}
 
 		window.sr = ScrollReveal({
 			distance: '0',
@@ -143,7 +154,7 @@ window.APP = {
 
         return i;
     },
- 	isScrolledIntoView: function(elem, ) {
+ 	isScrolledIntoView: function(elem) {
     	var docViewTop = $(window).scrollTop(),
     		docViewBottom = docViewTop + $(window).height(),
 			elemTop = $(elem).offset().top,

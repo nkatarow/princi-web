@@ -73,13 +73,29 @@
 				text-align: left;
 				top: 20%;
 				left: 16%;
+				// left: 0;
+				width: 90vw;
+				// text-align: center;
+				z-index: 5;
 			}
 
 			p {
-				border-left: 1px solid $bronze;
 				font-size: 2.4em;
 				margin-top: 25%;
 				padding-left: $space-double;
+
+				&::before {
+					background-color: $bronze;
+					content: '';
+					display: block;
+					height: 0;
+					position: absolute;
+					left: 0;
+					transition: height 500ms ease-out;
+					width: 1px;
+				}
+
+				&.draw::before { height: 100%; }
 			}
 		}
 
@@ -87,6 +103,7 @@
 			text-align: right;
 			margin-right: 5%;
 			width: 50%;
+			z-index: -1;
 
 			img { max-width: 400px; }
 		}
@@ -97,9 +114,22 @@
 		display: flex;
 
 		.copy {
-			border-left: 1px solid $bronze;
 			padding-left: $space*3;
 			width: 33%;
+
+			&::before {
+				background-color: $bronze;
+				content: '';
+				display: block;
+				height: 0;
+				position: absolute;
+				left: 0;
+				transition: height 500ms ease-out;
+				transition-delay: 500ms;
+				width: 1px;
+			}
+
+			&.draw::before { height: 100%; }
 
 			h2 { font-size: 3.6em; }
 			p { margin-bottom: 0; }
