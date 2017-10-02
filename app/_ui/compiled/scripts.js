@@ -5762,7 +5762,7 @@ $(function() {
 
   	$(document).on('click', 'a', function(e) {
 		e.preventDefault();
-		console.log('click');
+		console.log($(this));
 
     	var href = $(this).attr("href"),
 			linkClass = '';
@@ -5770,7 +5770,7 @@ $(function() {
 		if ($(this).hasClass('mask')) {
 			linkClass = 'mask';
 		} else {
-			if (!$(this).hasClass('food-type-toggle')) $main.css('opacity', '0');
+			if ((!$(this).hasClass('food-type-toggle')) && (!$(this).hasClass('trigger'))) $main.css('opacity', '0');
 		}
 
     	if ((href.indexOf(document.domain) > -1 || href.indexOf(':') === -1) && href != '#') {

@@ -14,7 +14,6 @@ button {
 	font-size: 1.6em;
     padding: $space $space-and-half 0.8em;
     text-align: center;
-    transition: color 0.25s;
 
   	// Required, since we're setting absolute on pseudo-elements
   	position: relative;
@@ -36,17 +35,6 @@ button {
 			transition: height 0.25s ease-out;
 			width: 100%;
 		}
-	}
-
-	.fill {
-		background-color: $bronze;
-		height: 0;
-		left: 0;
-		position: absolute;
-		top: 0;
-		transition: height .25s ease-out;
-		width: 100%;
-		z-index: -1;
 	}
 
 	.text { position: relative; }
@@ -112,9 +100,8 @@ button {
 
 		// Hover styles
 		&:hover {
+			background-color: $bronze;
 			color: $white;
-
-			.fill { height: 100%; }
 		}
 
 	}

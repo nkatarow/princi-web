@@ -58,7 +58,6 @@
 
 							<a href="/heritage.html" class="btn">
 								<span class="lead-line"></span>
-								<span class="fill"></span>
 								<span class="text">Vita</span>
 							</a>
 						</div>
@@ -74,7 +73,6 @@
 
 							<a href="#" class="btn">
 								<span class="lead-line"></span>
-								<span class="fill"></span>
 								<span class="text">Offerings</span>
 							</a>
 						</div>
@@ -90,7 +88,6 @@
 
 							<a href="#" class="btn">
 								<span class="lead-line"></span>
-								<span class="fill"></span>
 								<span class="text">Locations</span>
 							</a>
 						</div>
@@ -107,7 +104,6 @@
 
 							<div class="btn alt">
 								<span class="lead-line"></span>
-								<span class="fill"></span>
 								<span class="text">Find a Princi</span>
 							</div>
 						</div>
