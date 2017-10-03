@@ -1,4 +1,4 @@
-<!-- food.nunjucks -->
+<!-- offerings.nunjucks -->
 {% extends "layout.nunjucks" %}
 
 {% block content %}

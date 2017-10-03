@@ -2,7 +2,7 @@
    BASE/_MEDIA.SCSS
    ========================================================================== */
 
-
+// Defaults
 img, object {
     max-width: 100%;
     height: auto;
@@ -20,4 +20,22 @@ figure {
 }
 figcaption {
     font-style: italic;
+}
+
+
+// Custom
+video {
+	height: 100vh;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	z-index: -1;
+}
+
+@media screen and (min-width: $bp-large) {
+	video {
+		min-height: 100vh;
+		width: auto;
+	}
 }

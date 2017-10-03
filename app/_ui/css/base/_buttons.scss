@@ -111,8 +111,6 @@ button {
 	&.alt {
 	    color: $white;
 
-		.fill { background-color: $white; }
-
   		&.draw {
 			color: $white;
 
@@ -129,7 +127,10 @@ button {
 			}
 
 			// Hover styles
-			&:hover { color: $bronze; }
+			&:hover {
+				background-color: $white;
+				color: $bronze;
+			}
 
 		}
 	}

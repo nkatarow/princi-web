@@ -3,21 +3,20 @@
    ========================================================================== */
 
 // For switching between landing and detail
-.new-results-div {
-	height: 100%;
-	opacity: 1;
-	position: relative;
-	transform: translateY(0);
-	transition:
-		opacity .5s ease-out
-		transform .5s ease-out,
-		height .5s ease-out;
-	z-index: 2;
+// .new-results-div {
+// 	height: 100%;
+// 	opacity: 1;
+	// position: relative;
+	// transform: translateY(0);
+	// transition:
+	// 	opacity .5s ease-out
+	// 	transform .5s ease-out,
+	// 	height .5s ease-out;
+	// z-index: 2;
 
 	// &.transition-in { height: 100vh; }
 	// &.transition-out { height: 0; }
-	&.transition-out { transform: translateY(-100%); }
-}
+//}
 
 .secondary-results-div {
 	left: 0;

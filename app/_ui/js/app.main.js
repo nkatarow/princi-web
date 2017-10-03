@@ -22,7 +22,7 @@ window.APP = {
 
         // Init Components
         APP.nav.init();
-		APP.instantiations.init();
+		// APP.instantiations.init();
 
         // EVENT DELEGATION
         // $(window).bind('resize', function(event) {

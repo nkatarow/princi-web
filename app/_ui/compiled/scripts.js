@@ -5569,7 +5569,7 @@ window.APP = {
 
         // Init Components
         APP.nav.init();
-		APP.instantiations.init();
+		// APP.instantiations.init();
 
         // EVENT DELEGATION
         // $(window).bind('resize', function(event) {
@@ -5660,9 +5660,9 @@ $(function() {
 		$('body').attr('class', '');
 		$('body').addClass(titleLower);
 
-		if (!$('.new-results-div').length) {
-			$main.wrapInner('<div class="new-results-div" />');
-		}
+		// if (!$('.new-results-div').length) {
+		// 	$main.wrapInner('<div class="new-results-div" />');
+		// }
 
 		if ($('.food-details').length) {
 			$('body').addClass('food-details-page');
@@ -5671,6 +5671,8 @@ $(function() {
 				$('.food-details').addClass('active');
 			}, 500);
 		}
+
+		APP.instantiations.init();
   	},
 
   	/* ----- Do this for ajax page loads ----- */
@@ -5797,6 +5799,7 @@ $(function() {
 
 APP.instantiations = {
     init: function() {
+		console.log('instantiations');
 		var self = this,
 			prev = 0,
 			animationContainer,
@@ -5876,8 +5879,20 @@ APP.instantiations = {
 				if (video.readyState >= 2) { video.play(); }
 			});
 		}
-		// END: INSTANTIATIONS
 
+		// Carousel
+		$('.owl-carousel').owlCarousel({
+			animateOut: 'fadeOut',
+			autoplay: true,
+			autoplaySpeed: 500,
+			// animateIn: 'fadeIn',
+			center: true,
+			loop: true,
+			dots: false,
+			items: 1
+		});
+
+		// END: INSTANTIATIONS
 	}
 }
 
@@ -5910,6 +5925,7 @@ APP.nav = {
 
 		$('#main a').hover(function(){
 			var target = this.text,
+				target = target.replace(' ', '-');
 				target = target.toLowerCase();
 
 			$('.nav-hover .img.' + target).toggleClass('active');
@@ -5954,7 +5970,10 @@ APP.pageLoads = {
     defaultLoadIn: function($main) {
 		console.log("function defaultLoadIn");
 
+		if ($('.top-bar').hasClass('hidden')) $('.top-bar').removeClass('hidden');
+
 		setTimeout(function(){
+		/* ----- Wrap content in div so we can get it's height ----- */
 			$main.wrapInner('<div class="new-results-div" />');
 
 			/* ----- Set height of $main to ensure the footer doesn't jump up -----  */
@@ -5972,11 +5991,11 @@ APP.pageLoads = {
 		$main.html(pageContent);
 
 		/* ----- Wrap content in div so we can get it's height ----- */
-		$main.wrapInner('<div class="new-results-div" />');
+		// $main.wrapInner('<div class="new-results-div" />');
 
 		/* ----- Get height of new container inside results container and set $main to it so there's no content jumpage -----  */
-		var newResultsHeight = $('.new-results-div').outerHeight();
-		$main.height(newResultsHeight);
+		// var newResultsHeight = $('.new-results-div').outerHeight();
+		// $main.height(newResultsHeight);
 
 		/* ----- Removes the temp height from $main ----- */
 		$main.css('height', '');

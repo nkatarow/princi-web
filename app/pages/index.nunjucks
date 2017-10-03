@@ -4,6 +4,11 @@
 {% block content %}
 	<div id="content">
 		<h1 class="offscreen">Princi</h1>
+		<video id="inline-video" autoplay="autoplay" loop="loop" muted="true" preload="auto" poster="/_ui/img/homepage/video.jpg">
+        	<source src="/_ui/video/nws-kids.mp4" type="video/mp4">
+            <source src="/_ui/video/nws-kids.webm" type="video/webm">
+        	Your browser does not support the video tag
+    	</video>
 
 		<div class="parallax">
 			<section id="intro">
@@ -25,27 +30,14 @@
 				<div class="introduction">
 					<span class="line"></span>
 					<div class="title">
-						<p class="reveal">Artisanal food source and served from the heart. Immersive, authentic, and uniquely Italian. This is Rocco Princi's dream, down to the very last detail.</p>
-						<p class="small reveal">Buon Appetito!</p>
+						<p class="reveal">In the artisan, there is art. And from art comes bread.</p>
 					</div>
 				</div>
 
 
 			</section> <!-- /#intro-video-group -->
 
-		  	<div class="video-text">
-				<video id="inline-video" autoplay="autoplay" loop="loop" muted="true" preload="auto" poster="/_ui/img/homepage/video.jpg">
-		        	<source src="/_ui/video/nws-kids.mp4" type="video/mp4">
-		            <source src="/_ui/video/nws-kids.webm" type="video/webm">
-		        	Your browser does not support the video tag
-		    	</video>
-
-				<h2 class="sequence" id="seq-video">
-					<span class="seq">Flour.</span>
-					<span class="seq">Water.</span>
-					<span class="seq">Craft.</span>
-				</h2>
-			</div>
+		  	<div class="video-text"></div>
 
 			<section id="cta-group">
 				<div class="cta-heritage">
@@ -56,9 +48,9 @@
 						<div class="half reveal">
 							<p>Passion, perfectionism, and the pursuit of extraordinary ingredients.</p>
 
-							<a href="/heritage.html" class="btn">
+							<a href="/rocco-princi.html" class="btn">
 								<span class="lead-line"></span>
-								<span class="text">Vita</span>
+								<span class="text">Rocco Princi</span>
 							</a>
 						</div>
 					</div>
@@ -66,12 +58,16 @@
 
 				<div class="cta-food">
 					<div class="cta-home">
-						<img src="/_ui/img/homepage/cta-food.jpg" class="landscape reveal" alt="">
+						<div class="owl-carousel reveal">
+							<img src="/_ui/img/homepage/cta-food.jpg" class="" alt="">
+							<img src="/_ui/img/homepage/hero.jpg" class="" alt="">
+							<img src="/_ui/img/global/bg-heritage-menu.jpg" class="" alt="">
+						</div>
 
 						<div class="reveal">
-							<p>Fresh, handcrafted food that celebrates the senses and elevates each part of the day.</p>
+							<p>Sourced without compromise. Baked without shortcuts. Enjoyed with all the senses.</p>
 
-							<a href="#" class="btn">
+							<a href="/offerings.html" class="btn">
 								<span class="lead-line"></span>
 								<span class="text">Offerings</span>
 							</a>
@@ -84,9 +80,9 @@
 							<img src="/_ui/img/homepage/cta-locations.jpg" class="landscape reveal" alt="">
 						</div>
 						<div class="half first reveal">
-							<p>An open invitation for lovers of food and design&mdash;come enjoy a meal in the Milanese style.</p>
+							<p>Eat with your nose.<br /> Eat with your eyes.<br /> Eat with your hands.<br /> Eat with us.</p>
 
-							<a href="#" class="btn">
+							<a href="/locations.html" class="btn">
 								<span class="lead-line"></span>
 								<span class="text">Locations</span>
 							</a>
@@ -97,14 +93,14 @@
 
 
 			<section id="heritage-cta" class="bottom-cta heritage-cta">
-				<a href="#" class="bottom-cta-link">
+				<a href="/rocco-princi.html" class="bottom-cta-link">
 					<div class="cta-container">
 						<div class="reveal">
-							<h2>Our Heritage</h2>
+							<h2>Rocco Princi</h2>
 
 							<div class="btn alt">
 								<span class="lead-line"></span>
-								<span class="text">Find a Princi</span>
+								<span class="text">Meet The Founder</span>
 							</div>
 						</div>
 					</div>

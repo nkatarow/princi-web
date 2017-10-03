@@ -27,6 +27,7 @@ APP.nav = {
 
 		$('#main a').hover(function(){
 			var target = this.text,
+				target = target.replace(' ', '-');
 				target = target.toLowerCase();
 
 			$('.nav-hover .img.' + target).toggleClass('active');

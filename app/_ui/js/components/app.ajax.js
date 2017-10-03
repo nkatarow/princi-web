@@ -32,9 +32,9 @@ $(function() {
 		$('body').attr('class', '');
 		$('body').addClass(titleLower);
 
-		if (!$('.new-results-div').length) {
-			$main.wrapInner('<div class="new-results-div" />');
-		}
+		// if (!$('.new-results-div').length) {
+		// 	$main.wrapInner('<div class="new-results-div" />');
+		// }
 
 		if ($('.food-details').length) {
 			$('body').addClass('food-details-page');
@@ -43,6 +43,8 @@ $(function() {
 				$('.food-details').addClass('active');
 			}, 500);
 		}
+
+		APP.instantiations.init();
   	},
 
   	/* ----- Do this for ajax page loads ----- */

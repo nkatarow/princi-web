@@ -14,7 +14,10 @@ APP.pageLoads = {
     defaultLoadIn: function($main) {
 		console.log("function defaultLoadIn");
 
+		if ($('.top-bar').hasClass('hidden')) $('.top-bar').removeClass('hidden');
+
 		setTimeout(function(){
+		/* ----- Wrap content in div so we can get it's height ----- */
 			$main.wrapInner('<div class="new-results-div" />');
 
 			/* ----- Set height of $main to ensure the footer doesn't jump up -----  */
@@ -32,11 +35,11 @@ APP.pageLoads = {
 		$main.html(pageContent);
 
 		/* ----- Wrap content in div so we can get it's height ----- */
-		$main.wrapInner('<div class="new-results-div" />');
+		// $main.wrapInner('<div class="new-results-div" />');
 
 		/* ----- Get height of new container inside results container and set $main to it so there's no content jumpage -----  */
-		var newResultsHeight = $('.new-results-div').outerHeight();
-		$main.height(newResultsHeight);
+		// var newResultsHeight = $('.new-results-div').outerHeight();
+		// $main.height(newResultsHeight);
 
 		/* ----- Removes the temp height from $main ----- */
 		$main.css('height', '');

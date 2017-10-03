@@ -10,6 +10,7 @@
 	background-color: $white;
 	height: 95vh;
 	position: relative;
+	z-index: 2;
 
 	.intro-container {
 		height: 450px;
@@ -104,31 +105,11 @@
 	}
 }
 
-
 .video-text {
-	height: 100vh;
+	display: block;
+	height: 30vh;
 	position: relative;
-	overflow: hidden;
-
-	video {
-		object-fit: cover;
-		min-width: 100%;
-	}
-
-	h2 {
-		color: $white;
-		font-size: 5.4em;
-		letter-spacing: 0.10em;
-		position: absolute;
-		text-align: center;
-		text-transform: uppercase;
-		top: 50%;
-		transform: translateY(-50%);
-		width: 100%;
-		z-index: 5;
-
-		span { display: block; }
-	}
+	width: 100vw;
 }
 
 #cta-group {
@@ -230,13 +211,7 @@
 		}
 	}
 
-	.video-text {
-		h2 {
-			font-size: 7.5em;
-
-			span { display: inline; }
-		}
-	}
+	.video-text { height: 100vh; }
 
 	#cta-group {
 		padding-top: 0;

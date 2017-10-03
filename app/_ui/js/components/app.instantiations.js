@@ -14,6 +14,7 @@
 
 APP.instantiations = {
     init: function() {
+		console.log('instantiations');
 		var self = this,
 			prev = 0,
 			animationContainer,
@@ -93,7 +94,19 @@ APP.instantiations = {
 				if (video.readyState >= 2) { video.play(); }
 			});
 		}
-		// END: INSTANTIATIONS
 
+		// Carousel
+		$('.owl-carousel').owlCarousel({
+			animateOut: 'fadeOut',
+			autoplay: true,
+			autoplaySpeed: 500,
+			// animateIn: 'fadeIn',
+			center: true,
+			loop: true,
+			dots: false,
+			items: 1
+		});
+
+		// END: INSTANTIATIONS
 	}
 }
