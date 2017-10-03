@@ -30,9 +30,9 @@
 				background-color: transparent;
 
 				.headline {
-					@include parallax(-.15);
+					@include parallax(-.35);
 					background-color: $white;
-					// height: 95%;
+					height: 120%;
 					// margin-top: -30px;
 
 					h2 {
@@ -56,8 +56,8 @@
 		}
 
 		#intro-video-group {
-			@include parallax(-.15);
-			margin-top: 275px;
+			@include parallax(-.35);
+			margin-top: 440px;
 			// padding-bottom: 7.5%;
 			padding-top: 15%;
 			z-index: 1;
