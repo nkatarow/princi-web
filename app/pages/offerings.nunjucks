@@ -5,14 +5,26 @@
 	<div id="content">
 		<div class="">
 			<div class="food-hero">
-				<h1>Our <span>Food</span></h1>
-				<p>Thoughtfully crafted recipes. Meticulously sourced ingredients. Menus that elevate each part of the day. No shortcuts, secrets or compromises—just honest, handcrafted food.</p>
+				<h1>Offerings</h1>
+
+				<div class="owl-carousel reveal">
+					<img src="/_ui/img/homepage/cta-food.jpg" class="" alt="">
+					<img src="/_ui/img/homepage/hero.jpg" class="" alt="">
+					<img src="/_ui/img/global/bg-heritage-menu.jpg" class="" alt="">
+				</div>
+
+				<p>Sourced and served from the heart.</p>
+				<span class="line"></span>
+				<p class="small">Buon Appetito!</p>
 			</div>
 
 			<div class="foods">
 				<div class="type" style="background-image: url(/_ui/img/food/bread.jpg);">
 					<div class="copy">
-						<h2 class="name">Bread</h2>
+						<div>
+							<h2 class="name">Pane</h2>
+							<p class="caption">Artisan breads</p>
+						</div>
 					</div>
 
 
@@ -28,9 +40,11 @@
 
 				<div class="type" style="background-image: url(/_ui/img/food/pastries.jpg);">
 					<div class="copy">
-						<h2 class="name">Pastries</h2>
+						<div>
+							<h2 class="name">Pasticcini</h2>
+							<p class="caption">Fresh Pastries</p>
+						</div>
 					</div>
-
 
 					<a href="/food-type.html" class="mask portrait">
 						<span class="plus-box">
@@ -42,23 +56,25 @@
 					</a>
 				</div>
 
-				{# <div class="type">
+				<div class="type" style="background-image: url(/_ui/img/food/bread.jpg);">
 					<div class="copy">
-						<h2 class="name">Pastries</h2>
+						<div>
+							<h2 class="name">Mattina</h2>
+							<p class="caption">Breakfast fare</p>
+						</div>
 					</div>
 
-					<div class="image-transition">
-						<a href="/food-type.html" class="img-link portrait">
-							<div class="plus"></div>
-							<div class="mask">
-								<div class="img" style="background-image: url(/_ui/img/food/pastries.jpg);"></div>
-							</div>
-						</a>
-					</div>
+
+					<a href="/food-type.html" class="mask landscape">
+						<span class="plus-box">
+							<span class="plus animate">
+								<span class="vertical"></span>
+								<span class="horizontal"></span>
+							</span>
+						</span>
+					</a>
 				</div>
-			</div> #}
-
-
+			</div> <!-- /.foods -->
 
 
 			<section id="heritage-cta" class="bottom-cta heritage-cta">

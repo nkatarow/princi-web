@@ -1,5 +1,5 @@
 /* ==========================================================================
-   COMPONENTS/_FOOD-LANDING.SCSS
+   COMPONENTS/_OFFERINGS.SCSS
    ========================================================================== */
 
 // For switching between landing and detail
@@ -29,24 +29,52 @@
 // Hero
 .food-hero {
 	color: $bronze;
-	margin: 70px auto;
-	padding-top: 70px;
-	width: 90%;
+	margin: 120px auto;
+	text-align: center;
 
 	h1 {
-		font-size: 5.4em;
+		font-size: 5em;
 		letter-spacing: 0.10em;
 		padding-bottom: 30px;
-		text-align: center;
 		text-transform: uppercase;
-
-		span { display: block; }
 	}
 
 	p {
-		font-size: 1.6em;
+		font-size: 3em;
 		line-height: 1.499em;
+		margin-top: $space;
+
+		&.small {
+			font-family: $tradegothic;
+			font-size: 1.4em;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+		}
 	}
+
+	.line {
+		display: block;
+		height: 100px;
+		margin: 0 auto 10%;
+		position: relative;
+		width: 1px;
+
+		&::before {
+			border-left: 1px solid transparent;
+			content: '';
+			height: 0;
+			left: 0;
+			position: absolute;
+			top: 0;
+			transition: height .5s ease-out;
+		}
+
+		&.draw::before {
+			border-left-color: $bronze;
+			height: 100px;
+		}
+	}
+
 }
 
 
@@ -61,13 +89,20 @@
 
 		&.center-background { background-position: center center; }
 
-		.name {
+		.copy {
 			background-color: $white;
-			font-size: 3.2em;
 			text-align: center;
-			text-transform: uppercase;
-			letter-spacing: 0.10em;
-			padding-bottom: $space-and-half;
+
+			.name {
+				font-size: 3.2em;
+				text-transform: uppercase;
+				letter-spacing: 0.10em;
+			}
+
+			.caption {
+				margin-bottom: 0;
+				padding-bottom: $space*3;
+			}
 		}
 
 		.mask {
@@ -234,55 +269,82 @@
 }
 
 
-// @media screen and (min-width: $bp-large) {
-// 	.food-hero {
-// 		padding-top: 15%;
-//
-// 		h1 {
-// 			font-size: 9.6em;
-//
-// 			span { display: inline; }
-// 		}
-//
-// 		p {
-// 			border-left: 1px solid $bronze;
-// 			font-size: 2.4em;
-// 			letter-spacing: 0.015em;
-// 			padding-left: $space;
-// 			max-width: 600px;
-// 		}
-// 	}
-//
-// 	.foods {
-// 		.type {
-// 			align-items: center;
-// 			display: flex;
-// 			margin-bottom: 10%;
-//
-// 			.copy {
-// 				background-color: $white;
-// 				height: 50vh;
-// 				width: 50%;
-//
-// 				.name {
-// 					color: $bronze;
-// 					font-size: 6em;
-// 					text-transform: uppercase;
-// 					letter-spacing: 0.10em;
-// 					padding-left: 20%;
-// 				}
-// 			}
-//
-// 			.mask { width: 50%; }
-//
-// 			&:nth-child(even) {
-// 				.copy { order: 2; }
-// 			}
-// 		}
-// 	}
-//
-//
-// }
+@media screen and (min-width: $bp-large) {
+	.food-hero {
+		padding-top: 15%;
+
+		h1 {
+			font-size: 9.6em;
+		}
+
+		p { }
+	}
+
+	.foods {
+		.type {
+			align-items: center;
+			display: flex;
+			margin-bottom: 10%;
+			
+			.copy {
+				background-color: $white;
+				height: 50vh;
+				padding-left: 5%;
+				position: relative;
+				text-align: left;
+				width: 50%;
+
+				> div {
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+
+				.name {
+					color: $bronze;
+					font-size: 6em;
+					letter-spacing: 0.10em;
+				}
+			}
+
+			.mask {
+				border-left: 0;
+				border-right: 0;
+				position: relative;
+				width: 50%;
+
+				.plus-box {
+					left: -3%;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+			}
+
+			&:nth-child(even) {
+				.copy {
+					order: 2;
+					padding-left: 0;
+
+					.name { }
+				}
+
+				.mask {
+					border-left: 0;
+					border-right: 10vw solid $white;
+
+					&.portrait {
+						height: 471px;
+
+						.plus-box { left: 96%; }
+					}
+				}
+			}
+
+		} // .type
+	}
+}
+
+
 
 // .foods {
 // 	.type {
