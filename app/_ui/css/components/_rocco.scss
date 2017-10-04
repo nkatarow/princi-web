@@ -13,30 +13,30 @@
 
 	.copy {
 		position: relative;
+		text-align: center;
 		z-index: 4;
 	}
 
 	h1 {
 		font-size: 5.4em;
 		letter-spacing: 0.10em;
-		padding-bottom: 30px;
-		// text-align: center;
+		padding-bottom: $space-quarter;
 		text-transform: uppercase;
 	}
 
 	.intro {
 		font-size: 2.8em;
 		line-height: 1.499em;
-		margin-top: 60px;
+		margin-top: 320px;
 		text-align: center;
 	}
 
 	.img {
 		// margin: 0 auto;
-		max-width: 65%;
+		max-width: 100%;
 		position: absolute;
-		top: 160px;
-		// top: 260px;
+		// top: 160px;
+		top: 320px;
 		right: 0;
 		z-index: 1;
 	}
@@ -57,6 +57,7 @@
 		font-size: 2.4em;
 		letter-spacing: 0.015em;
 		margin-bottom: $space;
+		text-decoration: underline;
 	}
 
 	.copy {
@@ -98,9 +99,18 @@
 			.intro {
 				font-size: 4.8em;
 				line-height: 1.499em;
-				margin: 160px auto 0;
+				margin: 450px auto 0;
 				text-align: center;
 				width: 70%;
+			}
+
+			.caption {
+				text-align: left;
+
+				span {
+					display: block;
+					margin-bottom: $space;
+				}
 			}
 
 			p {
@@ -111,7 +121,7 @@
 
 		.img {
 			text-align: right;
-			margin-right: 5%;
+			margin-right: 0;
 			max-width: 100%;
 			top: 190px;
 			width: 75%;
@@ -124,45 +134,58 @@
 	.split-pic {
 		align-items: center;
 		display: flex;
+		padding: 18% 5% 10%;
 
 		h2 {
-			font-size: 6.8em;
+			font-size: 8.4em;
 			position: absolute;
-			top: 3%;
+			top: 10%;
 			left: 30%;
-			max-width: 30%;
+			max-width: 40%;
 			text-align: center;
-			text-decoration: underline;
+			z-index: 2;
 		}
 
 		.copy {
 			order: 1;
-			width: 60%;
+			margin-right: 10%;
+			width: 50%;
 
-			p { margin-bottom: 0; }
+			p {
+				font-size: 1.8em;
+				line-height: 1.6em;
+				margin-bottom: 0;
+			}
 		}
 
 		.img {
 			order: 2;
-			padding-left: 7%;
-			margin-top: -10%;
+			// margin-top: -10%;
+			max-width: 40%;
 		}
 
 		&.flip {
 			.copy {
 				order: 2;
 				margin-left: 10%;
-				width: 30%;
+				margin-right: 0;
 			}
 
 			.img {
 				order: 1;
-				padding-left: 0;
-				max-width: 40%;
-				margin-top: 0;
+				margin-top: 15%;
+
+				&.edge {
+					margin: 15% 0 0 -6%;
+
+					img { max-width: 133%; }
+					.caption { margin-left: 15%; }
+				}
 			}
 		}
 
 		&:nth-child(6) { padding-top: 18%; }
+
+		&#pursuit .copy { margin: 30% 0 0 20%; max-width: 40%; }
 	}
 }
