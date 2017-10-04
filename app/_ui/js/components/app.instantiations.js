@@ -14,7 +14,7 @@
 
 APP.instantiations = {
     init: function() {
-		console.log('instantiations');
+		// console.log('instantiations');
 		var self = this,
 			prev = 0,
 			animationContainer,

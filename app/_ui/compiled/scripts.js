@@ -5632,7 +5632,7 @@ $(function() {
 
 	/* ----- Return appropriate page transition ----- */
 	assignTransitionType = function(linkClass, href, e, link) {
-		console.log("assignTransitionType");
+		// console.log("assignTransitionType");
 		var pageTransitionType = 'default';
 
 		if (linkClass == 'mask') {
@@ -5650,7 +5650,7 @@ $(function() {
 
   	/* ----- Do this when a page loads ----- */
   	init = function() {
-		console.log("init");
+		// console.log("init");
     	/* ----- This is where I would run any page specific functions ----- */
 
 		var newTitle = $('body').find('h1').text(),
@@ -5764,7 +5764,7 @@ $(function() {
 
   	$(document).on('click', 'a', function(e) {
 		e.preventDefault();
-		console.log($(this));
+		// console.log($(this));
 
     	var href = $(this).attr("href"),
 			linkClass = '';
@@ -5799,7 +5799,7 @@ $(function() {
 
 APP.instantiations = {
     init: function() {
-		console.log('instantiations');
+		// console.log('instantiations');
 		var self = this,
 			prev = 0,
 			animationContainer,
