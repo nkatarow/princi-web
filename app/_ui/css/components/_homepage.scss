@@ -223,4 +223,9 @@
 			margin: 0 auto;
 		}
 	}
+
+	#cta-food {
+		.owl-carousel { margin-bottom: 10%; }
+		.cta-home { margin: 0; }
+	}
 }

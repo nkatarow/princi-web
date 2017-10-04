@@ -43,7 +43,7 @@
 				<div class="cta-heritage">
 					<div class="flex cta-home">
 						<div class="half left">
-							<img src="/_ui/img/homepage/cta-heritage.jpg" class="portrait reveal" alt="">
+							<img src="/_ui/img/homepage/princi-home-rocco-1.jpg" class="portrait reveal" alt="">
 						</div>
 						<div class="half reveal">
 							<p>Passion, perfectionism, and the pursuit of extraordinary ingredients.</p>
@@ -56,12 +56,14 @@
 					</div>
 				</div>
 
-				<div class="cta-food">
+				<div id="cta-food">
 					<div class="cta-home">
 						<div class="owl-carousel reveal">
-							<img src="/_ui/img/homepage/cta-food.jpg" class="" alt="">
-							<img src="/_ui/img/homepage/hero.jpg" class="" alt="">
-							<img src="/_ui/img/global/bg-heritage-menu.jpg" class="" alt="">
+							<img src="/_ui/img/homepage/princi-home-carousel-1.jpg" class="" alt="">
+							<img src="/_ui/img/homepage/princi-home-carousel-2.jpg" class="" alt="">
+							<img src="/_ui/img/homepage/princi-home-carousel-3.jpg" class="" alt="">
+							<img src="/_ui/img/homepage/princi-home-carousel-4.jpg" class="" alt="">
+							<img src="/_ui/img/homepage/princi-home-carousel-5.jpg" class="" alt="">
 						</div>
 
 						<div class="reveal">
@@ -74,10 +76,11 @@
 						</div>
 					</div>
 				</div>
+
 				<div class="cta-locations">
 					<div class="flex cta-home">
 						<div class="half second right edge">
-							<img src="/_ui/img/homepage/cta-locations.jpg" class="landscape reveal" alt="">
+							<img src="/_ui/img/homepage/princi-home-locations-1.jpg" class="landscape reveal" alt="">
 						</div>
 						<div class="half first reveal">
 							<p>Eat with your nose.<br /> Eat with your eyes.<br /> Eat with your hands.<br /> Eat with us.</p>
