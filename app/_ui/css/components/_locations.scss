@@ -1,0 +1,62 @@
+/* ==========================================================================
+   COMPONENTS/_LOCATIONS.SCSS
+   ========================================================================== */
+
+.city {
+	color: $bronze;
+	text-align: center;
+	margin-bottom: 25%;
+
+	h2 {
+		font-size: 3.2em;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		line-height: 0.8em;
+		margin-bottom: $space;
+
+		.caption { font-size: 0.4em; }
+	}
+
+	> div { margin-bottom: 10%; }
+
+	address,
+	.contained-within {
+		font-size: 1.6em;
+		font-style: normal;
+		margin-bottom: $space-half;
+	}
+
+	.tel {
+		display: block;
+		font-size: 1.4em;
+		font-weight: 300;
+
+		a { color: $bronze; }
+	}
+}
+
+
+@media screen and (min-width: $bp-large) {
+	.city {
+		margin-bottom: 18%;
+
+		h2 { font-size: 6em; }
+
+		address,
+		.contained-within {
+			font-size: 2.4em;
+		}
+
+		.tel { font-size: 1.6em; }
+
+		.location-group {
+			display: flex;
+			padding: 0 2.5%;
+
+			.quarter {
+				padding: 0 2.5%;
+				width: 25%;
+			}
+		}
+	}
+}

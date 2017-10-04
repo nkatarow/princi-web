@@ -1,5 +1,5 @@
 /* ==========================================================================
-   COMPONENTS/_PARALLAX-HERITAGE.SCSS
+   COMPONENTS/_PARALLAX-ROCCO.SCSS
    ========================================================================== */
 
 @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
@@ -16,17 +16,7 @@
 
 		#passion {
 			background-color: $white;
-			// padding-top: 35%;
 			z-index: 2;
-
-			// .copy {
-			// 	@include parallax(-.15);
-			// }
-			//
-			// .img {
-			// 	@include parallax(-.35);
-			// }
-			// .cta-home { transform-style: flat; }
 		}
 
 	}

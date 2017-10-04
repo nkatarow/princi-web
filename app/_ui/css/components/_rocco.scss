@@ -25,9 +25,9 @@
 	}
 
 	.intro {
-		font-size: 2em;
+		font-size: 2.8em;
 		line-height: 1.499em;
-		margin-top: 160px;
+		margin-top: 60px;
 		text-align: center;
 	}
 
@@ -36,6 +36,7 @@
 		max-width: 65%;
 		position: absolute;
 		top: 160px;
+		// top: 260px;
 		right: 0;
 		z-index: 1;
 	}
@@ -45,17 +46,20 @@
 	background-color: $white;
 	color: $bronze;
 	display: block;
-	padding: 25% 5%;
+	padding: 18% 5%;
 	width: 100%;
 	height: auto;
-		z-index: 100;
+	z-index: 100;
+
+	&:nth-child(6) { padding-top: 0; }
+
+	h2 {
+		font-size: 2.4em;
+		letter-spacing: 0.015em;
+		margin-bottom: $space;
+	}
 
 	.copy {
-		h2 {
-			font-size: 2.4em;
-			letter-spacing: 0.015em;
-			margin-bottom: $space;
-		}
 
 		p {
 			font-size: 1.6em;
@@ -68,6 +72,7 @@
 	}
 
 	.img { margin-bottom: $space-double; }
+	.caption { padding-top: $space; }
 }
 
 .owl-carousel { background-color: $white; }
@@ -82,22 +87,16 @@
 		width: 100%;
 
 		.copy {
-
 			h1 {
 				font-size: 9.6em;
 				letter-spacing: 0.1em;
-				// position: absolute;
 				text-align: left;
-				// top: 20%;
-				// left: 16%;
-				// left: 0;
 				width: 50vw;
-				// text-align: center;
 				z-index: 5;
 			}
 
 			.intro {
-				font-size: 3.6em;
+				font-size: 4.8em;
 				line-height: 1.499em;
 				margin: 160px auto 0;
 				text-align: center;
@@ -113,10 +112,12 @@
 		.img {
 			text-align: right;
 			margin-right: 5%;
-			width: 50%;
+			max-width: 100%;
+			top: 190px;
+			width: 75%;
 			z-index: -1;
 
-			img { max-width: 400px; }
+			img {  }
 		}
 	}
 
@@ -124,36 +125,44 @@
 		align-items: center;
 		display: flex;
 
-		.copy {
-			width: 33%;
+		h2 {
+			font-size: 6.8em;
+			position: absolute;
+			top: 3%;
+			left: 30%;
+			max-width: 30%;
+			text-align: center;
+			text-decoration: underline;
+		}
 
-			h2 { font-size: 3.6em; }
+		.copy {
+			order: 1;
+			width: 60%;
+
 			p { margin-bottom: 0; }
 		}
 
 		.img {
+			order: 2;
 			padding-left: 7%;
-			max-width: 60%;
-			position: absolute;
-			right: 0;
-
-			&.portrait {
-				right: 10%;
-				max-width: 45%;
-			}
+			margin-top: -10%;
 		}
 
 		&.flip {
-			.copy {	margin-left: 67%; }
+			.copy {
+				order: 2;
+				margin-left: 10%;
+				width: 30%;
+			}
 
 			.img {
-				left: 0;
 				order: 1;
 				padding-left: 0;
-				max-width: 56%;
+				max-width: 40%;
+				margin-top: 0;
 			}
 		}
-	}
 
-	#pursuit { margin: 10% 0; }
+		&:nth-child(6) { padding-top: 18%; }
+	}
 }

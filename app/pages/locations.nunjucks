@@ -1,0 +1,123 @@
+<!-- index.nunjucks -->
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+	<div id="content">
+		<div class="">
+
+			<div class="food-hero">
+				<h1>Locations</h1>
+
+				<div class="owl-carousel reveal">
+					<img src="/_ui/img/homepage/cta-food.jpg" class="" alt="">
+					<img src="/_ui/img/homepage/hero.jpg" class="" alt="">
+					<img src="/_ui/img/global/bg-heritage-menu.jpg" class="" alt="">
+				</div>
+
+				<p>Eat, drink, and live Italian</p>
+			</div>
+
+			<section class="city">
+				<h2>London</h2>
+				<div itemscope itemtype="http://schema.org/Place">
+					<span class="offscreen" itemprop="containedInPlace"></span>
+					<address itemprop="address">135 Wardour Street W1F 0UT</address>
+					<span itemprop="telephone" class="tel">
+						Tel <a href="tel:+4402074788888">+44 (0)20 7478 8888</a>
+					</span>
+					{# <span class="offscreen" itemprop="branchCode"></span> #}
+				</div>
+			</section>
+
+
+			<section class="city">
+				<h2>Milan</h2>
+				<div class="location-group">
+					<div class="quarter" itemscope itemtype="http://schema.org/Place">
+						<span class="offscreen" itemprop="containedInPlace"></span>
+						<address itemprop="address">Piazza XXV Aprile, 5</address>
+						<span itemprop="telephone" class="tel">
+							Tel <a href="tel:+390229060832">+39 (0)2 29060832</a>
+						</span>
+						{# <span class="offscreen" itemprop="branchCode"></span> #}
+					</div>
+
+					<div class="quarter" itemscope itemtype="http://schema.org/Place">
+						<span class="offscreen" itemprop="containedInPlace"></span>
+						<address itemprop="address">Via Speronari, 6</address>
+						<span itemprop="telephone" class="tel">
+							Tel <a href="tel:+3902874797">+39 (0)2 874797</a>
+						</span>
+						{# <span class="offscreen" itemprop="branchCode"></span> #}
+					</div>
+
+					<div class="quarter" itemscope itemtype="http://schema.org/Place">
+						<span class="offscreen" itemprop="containedInPlace"></span>
+						<address itemprop="address">Largo La Foppa, 2</address>
+						<span itemprop="telephone" class="tel">
+							Tel <a href="tel:+39026599013">+39 (0)2 6599013</a>
+						</span>
+						{# <span class="offscreen" itemprop="branchCode"></span> #}
+					</div>
+
+					<div class="quarter" itemscope itemtype="http://schema.org/Place">
+						<span class="offscreen" itemprop="containedInPlace"></span>
+						<address itemprop="address">Via Ponte Vetero, 10</address>
+						<span itemprop="telephone" class="tel">
+							Tel <a href="tel:+390272016067">+39 (0)2 72016067</a>
+						</span>
+						{# <span class="offscreen" itemprop="branchCode"></span> #}
+					</div>
+				</div>
+			</section>
+
+			<section class="city">
+				<h2>
+					Seattle <br />
+					<span class="caption">Coming Soon</span>
+				</h2>
+
+				<div itemscope itemtype="http://schema.org/Place">
+					<span itemprop="containedInPlace" class="contained-within">At the Starbucks Reserve Roastery</span>
+					<address itemprop="address">1124 Pike St, Seattle, WA 98101</address>
+					<span itemprop="telephone" class="tel">
+						Tel <a href="tel:+12066240173">+1 (206) 624-0173</a>
+					</span>
+					{# <span class="offscreen" itemprop="branchCode"></span> #}
+				</div>
+			</section>
+
+			<section class="city">
+				<h2>
+					Shanghai <br />
+					<span class="caption">Coming Soon</span>
+				</h2>
+
+				<div itemscope itemtype="http://schema.org/Place">
+					<span itemprop="containedInPlace" class="contained-within">At the Starbucks Reserve Roastery</span>
+					<address itemprop="address">123 West Nanjing Road</address>
+					{# <span itemprop="telephone" class="tel" >
+						Tel <a href="tel:+390229060832">+39 (0)2 29060832</a>
+					</span> #}
+					{# <span class="offscreen" itemprop="branchCode"></span> #}
+				</div>
+			</section>
+
+			<section id="heritage-cta" class="bottom-cta heritage-cta">
+				<a href="/rocco-princi.html" class="bottom-cta-link">
+					<div class="cta-container">
+						<div class="reveal">
+							<h2>Rocco Princi</h2>
+
+							<div class="btn alt">
+								<span class="lead-line"></span>
+								<span class="text">Meet The Founder</span>
+							</div>
+						</div>
+					</div>
+				</a>
+
+				{% include "footer.nunjucks" %}
+			</section> <!-- /#heritage-cta -->
+		</div>
+{% endblock %}
