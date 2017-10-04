@@ -8,7 +8,10 @@
 	background-size: cover;
 	position: relative;
 
-	&.heritage-cta { background-image: url(/_ui/img/global/bg-heritage-menu.jpg); }
+
+	&.rocco-cta { background-image: url(/_ui/img/global/princi-nav-rocco.jpg); }
+	&.offerings-cta { background-image: url(/_ui/img/global/princi-nav-offerings.jpg); }
+	&.locations-cta { background-image: url(/_ui/img/global/princi-nav-locations.jpg); }
 }
 
 .bottom-cta-link {
