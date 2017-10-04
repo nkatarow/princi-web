@@ -21,7 +21,7 @@
 					<p class="intro">Rocco Princi started making bread in Italy in 1985&mdash;artisanally, by hand, with high-quality flour. Today he does it exactly the same way. Because for him, there is no other way.</p>
 				</div>
 				<div class="img">
-					<img src="/_ui/img/heritage/passion.jpg" alt="Bread dough being dusted with flour.">
+					<img src="/_ui/img/rocco/princi-rocco-1.jpg" alt="Rocco working dough.">
 				</div>
 			</section><!-- /#heritage-hero -->
 
@@ -34,7 +34,7 @@
 					<p>A small Calabrian village yielded a rich education. When Rocco's grandmother showed him the best places to gather fresh fruits and vegetables, she opened his eyes to the richness of nature. When he traded with neighbors, he got to know the farms and families behind his food. And when he apprenticed at the local bakery, he became enamored with the art of bread.</p>
 				</div>
 				<div class="img portrait">
-					<img src="/_ui/img/heritage/rocco-1.jpg" alt="Milan Italy, 1985">
+					<img src="/_ui/img/rocco/princi-rocco-2.jpg" alt="">
 					<p class="caption">
 						Shopping for squash blossoms at 3 a.m.<br />
 						Mercalo Agroalimentare<br />
@@ -44,14 +44,15 @@
 			</section>
 
 			<div class="owl-carousel">
-				<img src="/_ui/img/homepage/cta-food.jpg" class="" alt="">
-				<img src="/_ui/img/homepage/hero.jpg" class="" alt="">
-				<img src="/_ui/img/global/bg-heritage-menu.jpg" class="" alt="">
+				<img src="/_ui/img/rocco/princi-rocco-carousel-1.jpg" class="" alt="">
+				<img src="/_ui/img/rocco/princi-rocco-carousel-2.jpg" class="" alt="">
+				<img src="/_ui/img/rocco/princi-rocco-carousel-3.jpg" class="" alt="">
+				<img src="/_ui/img/rocco/princi-rocco-carousel-4.jpg" class="" alt="">
 			</div>
 
 			<section id="perfection" class="split-pic">
 				<div class="img portrait">
-					<img src="/_ui/img/heritage/pursuit.jpg" alt="Rocco holding fresh ingredients.">
+					<img src="/_ui/img/rocco/princi-rocco-3.jpg" alt="">
 					<p class="caption">
 						Sipping the first espresso of the day.<br />
 						Milan, Italy
@@ -65,7 +66,7 @@
 
 			<section id="pursuit" class="split-pic flip">
 				<div class="img">
-					<img src="/_ui/img/heritage/perfection.jpg" alt="Colorful buildings of Milan.">
+					<img src="/_ui/img/rocco/princi-rocco-4.jpg" alt="">
 					<p class="caption">
 						Inspecting 10-year aged
 						Parmigiano Reggiano.<br />
