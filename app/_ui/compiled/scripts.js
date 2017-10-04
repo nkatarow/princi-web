@@ -5862,7 +5862,7 @@ APP.instantiations = {
 			mobile: true,
 			container: document.querySelector(animationContainer),
 			reset: true,
-			viewFactor: 0.4,
+			viewFactor: 0.2,
 		});
 		if ($('.reveal').length) { sr.reveal('.reveal'); }
 

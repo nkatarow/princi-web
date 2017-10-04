@@ -124,7 +124,7 @@
 
 	p {
 		color: $bronze;
-		font-size: 2.4em;
+		font-size: 2.8em;
 		font-weight: 500;
 		margin: 10% auto 0;
 		width: 90%;
@@ -202,10 +202,12 @@
 	.video-text { height: 100vh; }
 
 	#cta-group {
-		padding-top: 0;
+		padding-top: 18%;
 
 		.cta-home {
-			padding-bottom: 10%;
+			padding-bottom: 18%;
+			margin: 0 5%;
+
 			.edge {
 				padding-left: 0%;
 				position: absolute;

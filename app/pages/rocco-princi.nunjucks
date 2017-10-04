@@ -15,13 +15,13 @@
 					<h1>Rocco Princi</h1>
 
 					<p class="caption">Founder.</p>
-					{# <p class="caption">Visionary.</p>
-					<p class="caption">Opera Lover.</p> #}
+					<p class="caption">Visionary.</p>
+					<p class="caption">Opera Lover.</p>
 
 					<p class="intro">Rocco Princi started making bread in Italy in 1985&mdash;artisanally, by hand, with high-quality flour. Today he does it exactly the same way. Because for him, there is no other way.</p>
 				</div>
 				<div class="img">
-					<img src="/_ui/img/heritage/rocco-1.jpg" alt="Milan Italy, 1985">
+					<img src="/_ui/img/heritage/passion.jpg" alt="Bread dough being dusted with flour.">
 				</div>
 			</section><!-- /#heritage-hero -->
 
@@ -32,8 +32,8 @@
 					<h2>L'Artigiano del Pane</h2>
 					<p>A small Calabrian village yielded a rich education. When Rocco's grandmother showed him the best places to gather fresh fruits and vegetables, she opened his eyes to the richness of nature. When he traded with neighbors, he got to know the farms and families behind his food. And when he apprenticed at the local bakery, he became enamored with the art of bread.</p>
 				</div>
-				<div class="img">
-					<img src="/_ui/img/heritage/passion.jpg" alt="Bread dough being dusted with flour.">
+				<div class="img portrait">
+					<img src="/_ui/img/heritage/rocco-1.jpg" alt="Milan Italy, 1985">
 					<p class="caption">
 						Shopping for squash blossoms at 3 a.m.<br />
 						Mercalo Agroalimentare<br />
@@ -49,8 +49,8 @@
 			</div>
 
 			<section id="perfection" class="split-pic">
-				<div class="img">
-					<img src="/_ui/img/heritage/perfection.jpg" alt="Colorful buildings of Milan.">
+				<div class="img portrait">
+					<img src="/_ui/img/heritage/pursuit.jpg" alt="Rocco holding fresh ingredients.">
 					<p class="caption">
 						Sipping the first espresso of the day.<br />
 						Milan, Italy
@@ -63,8 +63,8 @@
 			</section>
 
 			<section id="pursuit" class="split-pic flip">
-				<div class="img portrait ">
-					<img src="/_ui/img/heritage/pursuit.jpg" alt="Rocco holding fresh ingredients.">
+				<div class="img">
+					<img src="/_ui/img/heritage/perfection.jpg" alt="Colorful buildings of Milan.">
 					<p class="caption">
 						Inspecting 10-year aged
 						Parmigiano Reggiano.<br />
@@ -79,7 +79,7 @@
 
 
 			<section id="food-cta" class="bottom-cta heritage-cta">
-				<a href="/food.html" class="bottom-cta-link">
+				<a href="/offerings.html" class="bottom-cta-link">
 					<div class="cta-container">
 						<div class="">
 							<h2>Offerings</h2>

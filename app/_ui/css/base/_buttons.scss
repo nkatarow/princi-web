@@ -11,9 +11,11 @@ button {
     color: $bronze;
     cursor: pointer;
     display: inline-block;
-	font-size: 1.6em;
+	font-size: 1.4em;
+	letter-spacing: 0.1em;
     padding: $space $space-and-half 0.8em;
     text-align: center;
+	text-transform: uppercase;
 
   	// Required, since we're setting absolute on pseudo-elements
   	position: relative;
@@ -22,7 +24,7 @@ button {
 	.lead-line {
 		display: block;
 		height: 50px;
-		margin: -65px auto 1em;
+		margin: -64px auto 1em;
 		position: relative;
 		width: 1px;
 

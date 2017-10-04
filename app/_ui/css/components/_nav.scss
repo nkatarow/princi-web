@@ -184,13 +184,15 @@
 	}
 
 	#main {
-		font-size: 4.4em;
+		font-size: 4.2em;
 		font-weight: 500;
 		opacity: 0;
 		text-transform: uppercase;
 		transform: translateY(5%) skew(-10deg);
 		transition: transform .5s ease-out, opacity .5s ease-out;
 		letter-spacing: 0.10em;
+		line-height: 1.4em;
+		width: 100%;
 		z-index: 4;
 
 		a {
@@ -251,6 +253,7 @@
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%) translateX(-50%);
+			width: 90%;
 		}
 		#main { transform: translateY(5%); }
 	}
@@ -308,6 +311,7 @@
 		}
 
 		.nav-hover {
+			display: block;
 			position: absolute;
 			height: 100%;
 			top: 0;
