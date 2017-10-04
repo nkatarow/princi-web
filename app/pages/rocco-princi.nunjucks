@@ -3,7 +3,7 @@
 
 {% block content %}
 	<div id="content">
-		<video id="inline-video" autoplay="autoplay" loop="loop" muted="true" preload="auto" poster="/_ui/img/homepage/video.jpg">
+		<video id="inline-video" autoplay="autoplay" class="wow fadeIn" data-wow-delay="3s" loop="loop" muted="true" preload="auto" poster="/_ui/img/homepage/video.jpg">
 	    	<source src="/_ui/video/nws-kids.mp4" type="video/mp4">
 	        <source src="/_ui/video/nws-kids.webm" type="video/webm">
 	    	Your browser does not support the video tag
@@ -12,17 +12,19 @@
 		<div class="parallax">
 			<section id="heritage-hero">
 				<div class="copy">
-					<h1>Rocco Princi</h1>
+					<h1 class="wow fadeInLeft">Rocco Princi</h1>
 
 					<p class="caption">
-						<span>Founder.</span>
-						<span>Visionary.</span>
-						<span>Opera Lover.</span>
+						<span class="wow fadeIn" data-wow-delay="1s">Founder.</span>
+						<span class="wow fadeIn" data-wow-delay="1.5s">Visionary.</span>
+						<span class="wow fadeIn" data-wow-delay="2s">Opera Lover.</span>
 					</p>
 
-					<p class="intro">Rocco Princi started making bread in Italy in 1985&mdash;artisanally, by hand, with high-quality flour. Today he does it exactly the same way. Because for him, there is no other way.</p>
+					<span class="line"></span>
+
+					<p class="intro wow fadeIn">Rocco Princi started making bread in Italy in 1985&mdash;artisanally, by hand, with high-quality flour. Today he does it exactly the same way. Because for him, there is no other way.</p>
 				</div>
-				<div class="img">
+				<div class="img wow fadeIn">
 					<img src="/_ui/img/rocco/princi-rocco-1.jpg" alt="Rocco working dough.">
 				</div>
 			</section><!-- /#heritage-hero -->
@@ -32,10 +34,10 @@
 			<section id="passion" class="split-pic flip">
 				<h2>L'Artigiano del Pane</h2>
 
-				<div class="copy">
+				<div class="copy wow fadeIn">
 					<p>A small Calabrian village yielded a rich education. When Rocco's grandmother showed him the best places to gather fresh fruits and vegetables, she opened his eyes to the richness of nature. When he traded with neighbors, he got to know the farms and families behind his food. And when he apprenticed at the local bakery, he became enamored with the art of bread.</p>
 				</div>
-				<div class="img portrait">
+				<div class="img portrait wow fadeInLeft">
 					<img src="/_ui/img/rocco/princi-rocco-2.jpg" alt="">
 					<p class="caption">
 						Shopping for squash blossoms at 3 a.m.<br />
@@ -53,11 +55,11 @@
 			</div>
 
 			<section id="perfection" class="split-pic">
-				<h2>Da Milano con Amore</h2>
-				<div class="copy ">
+				<h2 class="wow fadeIn">Da Milano con Amore</h2>
+				<div class="copy wow fadeIn">
 					<p>If bread is Rocco's true love, the city of Milan is his muse&mdash;an endless source of inspiration, light, and engery. At his first shop in Istria Square, he worked long hours, drew massive crowds, and expanded his menu. In 1986, he added an espresso bar so customers could enjoy fresh, hot cornetti with coffee. Every detail of the bakery was carefully designed to create a rich sensorial experience.</p>
 				</div>
-				<div class="img portrait">
+				<div class="img portrait wow fadeInRight">
 					<img src="/_ui/img/rocco/princi-rocco-3.jpg" alt="">
 					<p class="caption">
 						Sipping the first espresso of the day.<br />
@@ -66,12 +68,16 @@
 				</div>
 			</section>
 
+			<div class="white">
+				<span class="line"></span>
+			</div>
+
 			<section id="pursuit" class="split-pic flip">
-				<h2>Ingredienti Importante</h2>
-				<div class="copy">
+				<h2 class="wow fadeIn">Ingredienti Importante</h2>
+				<div class="copy wow fadeIn">
 					<p>Rocco is obsessed with perfection&mdash;in the ingredients he sources, the food he makes, and the bakeries that bear his name. So he travels through Italy to befriend artisan butchers, farmers, and cheesemakers. He scratches, squeezes, and sniffs his way through a pile of lemons to find the best one. He conducts his kitchen like an opera and treats every day like opening night. He rarely smiles while baking, but it doesn't mean he's not feeling joy.</p>
 				</div>
-				<div class="img edge">
+				<div class="img edge wow fadeInLeft">
 					<img src="/_ui/img/rocco/princi-rocco-4.jpg" alt="">
 					<p class="caption">
 						Inspecting 10-year aged

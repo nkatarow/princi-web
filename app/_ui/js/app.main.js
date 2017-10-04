@@ -17,7 +17,7 @@ $(document).ready(function(){
 window.APP = {
     init: function () {
         var self = this;
-
+		
         // self.events.parent = this;
 
         // Init Components

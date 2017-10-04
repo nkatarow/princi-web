@@ -24,10 +24,14 @@
 		text-transform: uppercase;
 	}
 
+	.line {
+		margin-top: 330px;
+	}
+
 	.intro {
 		font-size: 2.8em;
 		line-height: 1.499em;
-		margin-top: 320px;
+		margin-top: 0;
 		text-align: center;
 	}
 
@@ -51,6 +55,7 @@
 	height: auto;
 	z-index: 100;
 
+	&:nth-child(5) { padding-bottom: 5%; }
 	&:nth-child(6) { padding-top: 0; }
 
 	h2 {
@@ -78,6 +83,7 @@
 
 .owl-carousel { background-color: $white; }
 
+.rocco-princi .white .line { margin-bottom: 0; }
 @media screen and (min-width: $bp-large) {
 	#heritage-hero {
 		align-items: center;
@@ -99,7 +105,7 @@
 			.intro {
 				font-size: 4.8em;
 				line-height: 1.499em;
-				margin: 450px auto 0;
+				margin: 100px auto 0;
 				text-align: center;
 				width: 70%;
 			}
@@ -186,6 +192,11 @@
 
 		&:nth-child(6) { padding-top: 18%; }
 
-		&#pursuit .copy { margin: 30% 0 0 20%; max-width: 40%; }
+		&#pursuit {
+			.copy {
+				margin: 30% 0 0 20%;
+				max-width: 40%;
+			}
+		}
 	}
 }

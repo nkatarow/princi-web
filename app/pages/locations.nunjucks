@@ -8,7 +8,7 @@
 			<div class="food-hero">
 				<h1>Locations</h1>
 
-				<div class="owl-carousel reveal">
+				<div class="owl-carousel">
 					<img src="/_ui/img/locations/princi-locations-carousel-1.jpg" class="" alt="">
 				</div>
 
@@ -104,7 +104,7 @@
 			<section id="heritage-cta" class="bottom-cta rocco-cta">
 				<a href="/rocco-princi.html" class="bottom-cta-link">
 					<div class="cta-container">
-						<div class="reveal">
+						<div class="">
 							<h2>Rocco Princi</h2>
 
 							<div class="btn alt">

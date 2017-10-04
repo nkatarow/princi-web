@@ -3,19 +3,16 @@
    ========================================================================== */
 
 // Display
-.block {
-    display: block;
-}
-.hide {
-    display: none;
-}
+.block { display: block; }
+.hide { display: none; }
+.visibility-hidden { visibility: hidden; }
 .offscreen {
     display: block;
     left: -999999px;
     position: absolute;
     top: -999999px;
 }
-
+.white { background-color: $white; }
 
 // Clearfix
 .clearfix {
@@ -39,4 +36,36 @@
     hr {
         display: none;
     }
+}
+
+.line {
+	display: block;
+	height: 100px;
+	margin: 0 auto 10%;
+	position: relative;
+	width: 1px;
+
+	&::before {
+		border-left: 1px solid transparent;
+		content: '';
+		height: 0;
+		left: 0;
+		position: absolute;
+		top: 0;
+		transition: height .5s ease-out;
+	}
+
+	&.draw::before {
+		border-left-color: $bronze;
+		height: 100px;
+	}
+}
+
+@media screen and (min-width: $bp-large) {
+	.line {
+		height: 200px;
+		margin-bottom: 2%;
+
+		&.draw::before { height: 200px; }
+	}
 }

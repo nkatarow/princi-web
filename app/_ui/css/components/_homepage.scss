@@ -60,29 +60,6 @@
 	position: relative;
 
 	.introduction {
-		.line {
-			display: block;
-			height: 100px;
-			margin: 0 auto 10%;
-			position: relative;
-			width: 1px;
-
-			&::before {
-				border-left: 1px solid transparent;
-				content: '';
-				height: 0;
-				left: 0;
-				position: absolute;
-				top: 0;
-				transition: height .5s ease-out;
-			}
-
-			&.draw::before {
-				border-left-color: $bronze;
-				height: 100px;
-			}
-		}
-
 		.title {
 			margin: 0 auto;
 			text-align: center;
@@ -182,13 +159,6 @@
 		padding-bottom: 5%;
 
 		.introduction {
-			.line {
-				height: 200px;
-				margin-bottom: 2%;
-
-				&.draw::before { height: 200px; }
-			}
-
 			.title {
 				p {
 					font-size: 6.8em;

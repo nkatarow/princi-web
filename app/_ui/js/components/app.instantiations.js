@@ -32,6 +32,11 @@ APP.instantiations = {
 			scrollContainer = window;
 		}
 
+		wow = new WOW({
+      		scrollContainer: scrollContainer
+		});
+		wow.init();
+
 		// Scrolling animations
 		$(scrollContainer).on('scroll', function(){
 
@@ -57,35 +62,7 @@ APP.instantiations = {
 					$(this).addClass('draw');
 				}
 			});
-			$('.split-pic').each(function(){
-				if (APP.isScrolledIntoView(this) === true) {
-					$(this).children('.copy').addClass('draw');
-				}
-			});
 		});
-
-		if ($('#heritage-hero').length) {
-			if (APP.isScrolledIntoView($('#heritage-hero')) === true) {
-				$('#heritage-hero p').addClass('draw');
-			}
-		}
-
-		window.sr = ScrollReveal({
-			distance: '0',
-			duration: 700,
-			scale: 1,
-			mobile: true,
-			container: document.querySelector(animationContainer),
-			reset: true,
-			viewFactor: 0.2,
-		});
-		if ($('.reveal').length) { sr.reveal('.reveal'); }
-
-		if ($('.sequence').length) {
-			$('.sequence').each(function(){
-				sr.reveal('#' + $(this).attr('id') + ' .seq', 500);
-			})
-		}
 
 		if ($("#inline-video").length) {
 			var video = document.getElementById('inline-video');
