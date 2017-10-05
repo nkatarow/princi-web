@@ -17,7 +17,7 @@ APP.pageLoads = {
 		if ($('.top-bar').hasClass('hidden')) $('.top-bar').removeClass('hidden');
 
 		setTimeout(function(){
-		/* ----- Wrap content in div so we can get it's height ----- */
+			/* ----- Wrap content in div so we can get it's height ----- */
 			$main.wrapInner('<div class="new-results-div" />');
 
 			/* ----- Set height of $main to ensure the footer doesn't jump up -----  */
@@ -34,13 +34,6 @@ APP.pageLoads = {
 		/* ----- Where the new content is added ----- */
 		$main.html(pageContent);
 
-		/* ----- Wrap content in div so we can get it's height ----- */
-		// $main.wrapInner('<div class="new-results-div" />');
-
-		/* ----- Get height of new container inside results container and set $main to it so there's no content jumpage -----  */
-		// var newResultsHeight = $('.new-results-div').outerHeight();
-		// $main.height(newResultsHeight);
-
 		/* ----- Removes the temp height from $main ----- */
 		$main.css('height', '');
 
@@ -52,40 +45,44 @@ APP.pageLoads = {
 	detailLoadIn: function($main, pageContent, link) {
 		var self = this;
 		console.log("function detailLoadIn");
-		// Animate image to cover full screen
 
 		// scroll($(window).height(), 0);
-        // $('html,body').animate({
+
+		// $('html,body').animate({
         //     scrollTop: link.offset().top + link.outerHeight(true) - $(window).height()
         // }, 250);
+
+		// Animate image to cover full screen
 		$(link).parent('.type').addClass('center-background');
 
 		setTimeout(function(){
+			console.log("setTimeout 1");
 			$(link).parent('.type').css('background-attachment', 'fixed');
-	        $('html,body').animate({
+
+			$('html,body').animate({
 	            scrollTop: link.offset().top
 	        }, 500);
 
 			$(link).addClass('transition');
-		}, 750);
+		}, 500);
 
 		setTimeout(function(){
+			console.log("setTimeout 2");
 			// Add new content behind current
 			$main.append('<div class="secondary-results-div">' + pageContent + '</div>');
 
 			/* ----- Set height of $main to ensure the footer doesn't jump up -----  */
-			// NEEDS WORK
 			var newResultsHeight = $('.secondary-results-div').outerHeight();
 			$main.height(newResultsHeight);
 
 			scroll(0,0);
 
-			// Hide current and nav
+			// Hide current
 			$('.new-results-div').addClass('transition-out');
-			$('.top-bar').css('opacity', '0');
-		}, 1250);
+		}, 750);
 
 		setTimeout(function(){
+			console.log("setTimeout 3");
 			// Remove current
 			$('.new-results-div').css('opacity', '0');
 			$('.new-results-div').remove();
@@ -97,15 +94,17 @@ APP.pageLoads = {
 			// Slide in details
 			$('.food-details').addClass('active');
 		}, 1750);
-
-		setTimeout(function(){
-			$('.food-details dl').addClass('draw');
-		}, 2250);
 	},
 
 	detailLoadOut: function($main, pageContent) {
 		// Add new content behind current
 		$main.append('<div class="secondary-results-div">' + pageContent + '</div>');
+
+		/* ----- Set height of $main to ensure the footer doesn't jump up -----  */
+		var newResultsHeight = $('.secondary-results-div').outerHeight();
+		$main.height(newResultsHeight);
+
+		scroll(0,0);
 
 		// Slide out detail pane
 		$('.food-details').removeClass('active');
@@ -113,11 +112,12 @@ APP.pageLoads = {
 		setTimeout(function(){
 			// slide out background
 			$('.food-type').removeClass('active');
-			$('body').removeClass('food-details-page');
-			$('.top-bar').removeAttr('style');
+			// $('body').removeClass('food-details-page');
+			// $('.top-bar').removeAttr('style');
 		}, 500);
 
 		setTimeout(function(){
+			$('.food-type').remove();
 			$('.new-results-div').remove();
 			$('.secondary-results-div').addClass('new-results-div');
 			$('.new-results-div').removeClass('secondary-results-div');

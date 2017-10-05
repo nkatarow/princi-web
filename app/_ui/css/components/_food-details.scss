@@ -10,14 +10,14 @@
 	width: 100vw;
 	position: relative;
 	overflow: hidden;
-	z-index: 3;
+	z-index: 7;
 }
 
 .food-details {
 	background-color: $bronze;
 	color: $white;
 	height: 60vh;
-	bottom: 0;
+	top: 0;
 	overflow-y: scroll;
 	overflow-x: hidden;
 	position: absolute;
@@ -26,7 +26,7 @@
 
 	&::-webkit-scrollbar { display: none; }
 
-	&.active { bottom: 0; }
+	&.active { top: 0; }
 
 	#cross {
 		color: $white;
@@ -92,14 +92,14 @@
 
 @media screen and (max-width: $bp-large) {
 	.food-type {
-		transform: translateY(100%);
+		transform: translateY(-100%);
 		transition: transform .5s ease-in-out;
 
 		&.active { transform: translateY(0); }
 	}
 
 	.food-details {
-		transform: translateY(100%);
+		transform: translateY(-100%);
 		transition: transform .5s ease-in-out;
 
 		&.active { transform: translateY(0); }

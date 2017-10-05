@@ -17,12 +17,16 @@ $(document).ready(function(){
 window.APP = {
     init: function () {
         var self = this;
-		
+
         // self.events.parent = this;
 
         // Init Components
         APP.nav.init();
 		// APP.instantiations.init();
+
+		if (!$('.new-results-div').length) {
+			$('.js-main').wrapInner('<div class="new-results-div" />');
+		}
 
         // EVENT DELEGATION
         // $(window).bind('resize', function(event) {

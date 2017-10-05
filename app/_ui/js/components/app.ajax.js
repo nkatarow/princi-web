@@ -32,10 +32,6 @@ $(function() {
 		$('body').attr('class', '');
 		$('body').addClass(titleLower);
 
-		// if (!$('.new-results-div').length) {
-		// 	$main.wrapInner('<div class="new-results-div" />');
-		// }
-
 		if ($('.food-details').length) {
 			$('body').addClass('food-details-page');
 

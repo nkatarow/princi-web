@@ -6,7 +6,7 @@
 		<div class="food-type detail-page active" style="background-image: url(/_ui/img/offerings/food/princi-offerings-pasticinni-1.jpg);">
 			<section class="food-details">
 				<div class="">
-  					<a href="/food.html" id="cross" class="food-type-toggle"></a>
+  					<a href="/offerings.html" id="cross" class="food-type-toggle"></a>
 
 					<h1>Pasticcini</h1>
 					<h2>Fresh Pastries</h2>
