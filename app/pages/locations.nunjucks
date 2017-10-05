@@ -3,21 +3,23 @@
 
 {% block content %}
 	<div id="content">
-		<div class="">
+		<div class="parallax">
 
 			<div class="food-hero">
-				<h1>Locations</h1>
-
-				<div class="owl-carousel">
-					<img src="/_ui/img/locations/princi-locations-carousel-1.jpg" class="" alt="">
+				<div class="wow fadeIn">
+					<h1>Locations</h1>
+					<span class="line draw"></span>
+					<p>Eat, drink, and live Italian</p>
 				</div>
 
-				<p>Eat, drink, and live Italian</p>
+				<div class="owl-carousel wow fadeInUp">
+					<img src="/_ui/img/locations/princi-locations-carousel-1.jpg" class="" alt="">
+				</div>
 			</div>
 
-			<section class="city">
+			<section class="city wow fadeIn">
 				<h2>London</h2>
-				<div itemscope itemtype="http://schema.org/Place">
+				<div class="location" itemscope itemtype="http://schema.org/Place">
 					<span class="offscreen" itemprop="containedInPlace"></span>
 					<address itemprop="address">135 Wardour Street W1F 0UT</address>
 					<span itemprop="telephone" class="tel">
@@ -28,10 +30,10 @@
 			</section>
 
 
-			<section class="city">
+			<section class="city wow fadeIn">
 				<h2>Milan</h2>
 				<div class="location-group">
-					<div class="quarter" itemscope itemtype="http://schema.org/Place">
+					<div class="location quarter" itemscope itemtype="http://schema.org/Place">
 						<span class="offscreen" itemprop="containedInPlace"></span>
 						<address itemprop="address">Piazza XXV Aprile, 5</address>
 						<span itemprop="telephone" class="tel">
@@ -40,7 +42,7 @@
 						{# <span class="offscreen" itemprop="branchCode"></span> #}
 					</div>
 
-					<div class="quarter" itemscope itemtype="http://schema.org/Place">
+					<div class="location quarter" itemscope itemtype="http://schema.org/Place">
 						<span class="offscreen" itemprop="containedInPlace"></span>
 						<address itemprop="address">Via Speronari, 6</address>
 						<span itemprop="telephone" class="tel">
@@ -49,7 +51,7 @@
 						{# <span class="offscreen" itemprop="branchCode"></span> #}
 					</div>
 
-					<div class="quarter" itemscope itemtype="http://schema.org/Place">
+					<div class="location quarter" itemscope itemtype="http://schema.org/Place">
 						<span class="offscreen" itemprop="containedInPlace"></span>
 						<address itemprop="address">Largo La Foppa, 2</address>
 						<span itemprop="telephone" class="tel">
@@ -58,7 +60,7 @@
 						{# <span class="offscreen" itemprop="branchCode"></span> #}
 					</div>
 
-					<div class="quarter" itemscope itemtype="http://schema.org/Place">
+					<div class="location quarter" itemscope itemtype="http://schema.org/Place">
 						<span class="offscreen" itemprop="containedInPlace"></span>
 						<address itemprop="address">Via Ponte Vetero, 10</address>
 						<span itemprop="telephone" class="tel">
@@ -69,13 +71,13 @@
 				</div>
 			</section>
 
-			<section class="city">
+			<section class="city wow fadeIn">
 				<h2>
 					Seattle <br />
 					<span class="caption">Coming Soon</span>
 				</h2>
 
-				<div itemscope itemtype="http://schema.org/Place">
+				<div class="location" itemscope itemtype="http://schema.org/Place">
 					<span itemprop="containedInPlace" class="contained-within">At the Starbucks Reserve Roastery</span>
 					<address itemprop="address">1124 Pike St, Seattle, WA 98101</address>
 					<span itemprop="telephone" class="tel">
@@ -85,13 +87,13 @@
 				</div>
 			</section>
 
-			<section class="city">
+			<section class="city wow fadeIn">
 				<h2>
 					Shanghai <br />
 					<span class="caption">Coming Soon</span>
 				</h2>
 
-				<div itemscope itemtype="http://schema.org/Place">
+				<div class="location" itemscope itemtype="http://schema.org/Place">
 					<span itemprop="containedInPlace" class="contained-within">At the Starbucks Reserve Roastery</span>
 					<address itemprop="address">123 West Nanjing Road</address>
 					{# <span itemprop="telephone" class="tel" >

@@ -1,0 +1,31 @@
+<!-- food.nunjucks -->
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+	<div id="content">
+		<div class="food-type detail-page active" style="background-image: url(/_ui/img/offerings/food/princi-offerings-aperitivo-1.jpg);">
+			<section class="food-details">
+				<div class="">
+  					<a href="/offerings.html" id="cross" class="food-type-toggle"></a>
+
+					<h1>Aperitivo</h1>
+					<h2>Cocktails and small plates</h2>
+
+					<p class="intro">A celebration of good food, good drinks and good company. A chance to whet the appetite with aromatic Italian cocktails. An inspired menu of beer, wine, spirits and small bites, including crispy focaccia with nduja and gorgonzola dulce, cerignola olives and 24-month parmigiano.</p>
+
+					<dl>
+						<dt>The Princi Loaf</dt>
+						<dd>Lorem ipsum dolar sit amet, consecutetor.</dd>
+
+						<dt>Walnut &amp; Fig Loaf</dt>
+						<dd>Lorem ipsum dolar sit amet, consecutetor.</dd>
+
+						<dt>Olive Sfilatini</dt>
+						<dd>Lorem ipsum dolar sit amet, consecutetor.</dd>
+					</dl>
+				</div>
+			</section>
+
+		</div>
+	</div>
+{% endblock %}

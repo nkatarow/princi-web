@@ -271,13 +271,16 @@
 
 @media screen and (min-width: $bp-large) {
 	.food-hero {
-		padding-top: 15%;
+		padding-top: 4%;
+		padding-bottom: 4%;
 
-		h1 {
-			font-size: 9.6em;
+		h1 { font-size: 9.6em; }
+		.line { margin-bottom: 0; }
+
+		p {
+			font-size: 4.8em;
+			padding-bottom: 5%;
 		}
-
-		p { }
 	}
 
 	.foods {

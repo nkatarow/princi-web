@@ -5516,10 +5516,11 @@ APP.instantiations = {
 			animateOut: 'fadeOut',
 			autoplay: true,
 			autoplaySpeed: 200,
-			// animateIn: 'fadeIn',
+			mouseDrag: false,
 			center: true,
 			loop: true,
 			dots: false,
+			nav: true,
 			items: 1
 		});
 
