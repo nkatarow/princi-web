@@ -29,11 +29,12 @@ APP.instantiations = {
 			scrollContainer = ".parallax";
 		} else {
 			animationContainer = "html";
-			scrollContainer = window;
+			scrollContainer = "window";
 		}
 
 		wow = new WOW({
-      		scrollContainer: scrollContainer
+      		scrollContainer: scrollContainer,
+			mobile: false
 		});
 		wow.init();
 

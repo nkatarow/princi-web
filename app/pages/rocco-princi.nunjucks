@@ -12,7 +12,7 @@
 		<div class="parallax">
 			<section id="heritage-hero">
 				<div class="copy">
-					<h1 class="wow fadeInLeft">Rocco Princi</h1>
+					<h1 class="wow fadeInLeft">Rocco<br /> Princi</h1>
 
 					<p class="caption">
 						<span class="wow fadeIn" data-wow-delay="1s">Founder.</span>
@@ -68,7 +68,7 @@
 				</div>
 			</section>
 
-			<div class="white">
+			<div class="bg-white">
 				<span class="line"></span>
 			</div>
 

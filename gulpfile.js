@@ -89,7 +89,9 @@ gulp.task('watch', function(){
 	gulp.watch('app/_ui/css/**/*.scss', ['styles']);
 	gulp.watch('app/_ui/js/**/*.js', ['scripts']);
 	gulp.watch('app/pages/*.nunjucks', ['nunjucks']);
+	gulp.watch('app/pages/**/*.nunjucks', ['nunjucks']);
 	gulp.watch('app/templates/*.nunjucks', ['nunjucks']);
+	gulp.watch('app/templates/**/*.nunjucks', ['nunjucks']);
 });
 
 // Build task
