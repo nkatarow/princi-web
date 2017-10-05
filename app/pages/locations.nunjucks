@@ -9,7 +9,7 @@
 				<div class="wow fadeIn">
 					<h1>Locations</h1>
 					<span class="line draw"></span>
-					<p>Eat, drink, and live Italian</p>
+					<p class="top">Eat, drink, and live Italian</p>
 				</div>
 
 				<div class="owl-carousel wow fadeInUp">

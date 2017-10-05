@@ -38,6 +38,14 @@ APP.instantiations = {
 		});
 		wow.init();
 
+		offerwow = new WOW({
+			boxClass: 'offerwow',
+      		scrollContainer: scrollContainer,
+			mobile: false,
+			offset: -50
+		});
+		offerwow.init();
+
 		// Scrolling animations
 		$(scrollContainer).on('scroll', function(){
 

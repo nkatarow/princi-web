@@ -275,11 +275,20 @@
 		padding-bottom: 4%;
 
 		h1 { font-size: 9.6em; }
-		.line { margin-bottom: 0; }
+
+		.line {
+			margin-top: 0;
+			margin-bottom: 5%;
+		}
+
 
 		p {
 			font-size: 4.8em;
-			padding-bottom: 5%;
+
+			&.top { padding-bottom: 5%; }
+			&.bottom {
+				padding: 5% 0 0;
+			}
 		}
 	}
 
@@ -291,7 +300,7 @@
 
 			.copy {
 				background-color: $white;
-				height: 50vh;
+				height: 500px;
 				padding-left: 5%;
 				position: relative;
 				text-align: left;
@@ -314,6 +323,7 @@
 				border-left: 0;
 				border-right: 0;
 				position: relative;
+				height: 500px;
 				width: 50%;
 
 				.plus-box {
@@ -327,7 +337,7 @@
 				.copy {
 					order: 2;
 					padding-left: 0;
-						height: 471px;
+					height: 700px;
 
 					.name { }
 				}
@@ -337,7 +347,7 @@
 					border-right: 10vw solid $white;
 
 					&.portrait {
-						height: 471px;
+						height: 700px;
 
 						.plus-box { left: 96%; }
 					}
