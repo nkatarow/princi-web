@@ -43,10 +43,10 @@
 				<div class="cta-heritage">
 					<div class="flex cta-home">
 						<div class="half left wow fadeInLeft">
-							<img src="/_ui/img/homepage/princi-home-rocco-1.jpg" class="" alt="">
+							<img src="/_ui/img/homepage/princi-home-rocco-1.jpg" class="portrait" alt="">
 						</div>
 						<div class="half wow fadeIn">
-							<p>Passion, perfectionism, and the pursuit of extraordinary ingredients.</p>
+							<p>Passion, perfectionism, and the pursuit of <span class="nobreak">extraordinary ingredients.</span></p>
 
 							<a href="/rocco-princi.html" class="btn">
 								<span class="lead-line"></span>
@@ -67,7 +67,7 @@
 						</div>
 
 						<div class="wow fadeIn">
-							<p>Sourced without compromise. Baked without shortcuts. Enjoyed with all the senses.</p>
+							<p>Sourced without compromise. Baked without shortcuts. Enjoyed with all <span class="nobreak">the senses.</span></p>
 
 							<a href="/offerings.html" class="btn">
 								<span class="lead-line"></span>

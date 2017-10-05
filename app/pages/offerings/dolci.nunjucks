@@ -11,7 +11,7 @@
 					<h1>Dolci</h1>
 					<h2>Handmade desserts</h2>
 
-					<p class="intro">Princi desserts are edible art; deliciously indulgent, beautifully crafted and impossible to resist. Offerings include fresh-baked cookies, rich tarts and chilled delights like tiramisu, delizia al limone and crostata fregola.</p>
+					<p class="intro">Princi desserts are edible art; deliciously indulgent, beautifully crafted and impossible to resist. Offerings include fresh-baked cookies, rich tarts and chilled delights like tiramisu, delizia al limone and <span class="nobreak">crostata fregola.</span></p>
 				</div>
 			</section>
 

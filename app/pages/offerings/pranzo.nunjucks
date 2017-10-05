@@ -11,7 +11,7 @@
 					<h1>Pranzo</h1>
 					<h2>Lunch selections</h2>
 
-					<p class="intro">Colorful salads. Seasonal soups. Focaccia sandwiches filled with bresaola and artichoke cream, salami Milano and bufala mozzarella, roasted vegetables or pistachio mortadello.</p>
+					<p class="intro">Colorful salads. Seasonal soups. Focaccia sandwiches filled with bresaola and artichoke cream, salami Milano and bufala mozzarella, roasted vegetables or <span class="nobreak">pistachio mortadello.</span></p>
 				</div>
 			</section>
 

@@ -17,7 +17,7 @@ APP.instantiations = {
 		// console.log('instantiations');
 		var self = this,
 			prev = 0,
-			animationContainer,
+			wowContainer,
 			scrollContainer;
 
 		if ($('.parallax').length) {
@@ -25,22 +25,24 @@ APP.instantiations = {
 		}
 
 		if (perspectiveTest) {
-			animationContainer = ".parallax";
+			// animationContainer = ".parallax";
 			scrollContainer = ".parallax";
+			wowContainer = ".parallax";
 		} else {
-			animationContainer = "html";
-			scrollContainer = "window";
+			// animationContainer = "html";
+			scrollContainer = window;
+			wowContainer = null;
 		}
 
 		wow = new WOW({
-      		scrollContainer: scrollContainer,
+      		scrollContainer: wowContainer,
 			mobile: false
 		});
 		wow.init();
 
 		offerwow = new WOW({
 			boxClass: 'offerwow',
-      		scrollContainer: scrollContainer,
+      		scrollContainer: wowContainer,
 			mobile: false,
 			offset: -50
 		});
@@ -48,7 +50,6 @@ APP.instantiations = {
 
 		// Scrolling animations
 		$(scrollContainer).on('scroll', function(){
-
 			//sneaky nav
 			var scrollTop = $(scrollContainer).scrollTop();
 

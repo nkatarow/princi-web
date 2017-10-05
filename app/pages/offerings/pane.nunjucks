@@ -11,7 +11,7 @@
 					<h1>Pane</h1>
 					<h2>Artisan breads</h2>
 
-					<p class="intro">Fresh, earthy, aromatic breads are the heart and soul of Princi. Naturally leavened loaves, ciabatta and sfilatini crafted from premium Italian-milled flour with no additives.</p>
+					<p class="intro">Fresh, earthy, aromatic breads are the heart and soul of Princi. Naturally leavened loaves, ciabatta and sfilatini crafted from premium Italian-milled flour with <span class="nobreak">no additives.</span></p>
 				</div>
 			</section>
 

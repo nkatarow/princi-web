@@ -33,6 +33,8 @@ h3, .h3   {
 // Paragraphs
 p {
     margin-bottom: $space;
+
+	.nobreak { white-space: nowrap; }
 }
 
 .caption {
