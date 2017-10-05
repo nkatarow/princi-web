@@ -12,17 +12,6 @@
 					<h2>Fresh Pastries</h2>
 
 					<p class="intro">Handcrafted pastries made with European-style butter and Italian fillings. Delicious on their own; even better when paired with espresso. Favorites include flaky cornetti, custard brioche and traditional panettone.</p>
-
-					<dl>
-						<dt>The Princi Loaf</dt>
-						<dd>Lorem ipsum dolar sit amet, consecutetor.</dd>
-
-						<dt>Walnut &amp; Fig Loaf</dt>
-						<dd>Lorem ipsum dolar sit amet, consecutetor.</dd>
-
-						<dt>Olive Sfilatini</dt>
-						<dd>Lorem ipsum dolar sit amet, consecutetor.</dd>
-					</dl>
 				</div>
 			</section>
 
