@@ -84,9 +84,10 @@ APP.instantiations = {
 
 		// Carousel
 		$('.owl-carousel').owlCarousel({
+			animateIn: 'fadeIn',
 			animateOut: 'fadeOut',
 			autoplay: true,
-			autoplaySpeed: 130,
+			autoplayTimeout: 3000,
 			mouseDrag: false,
 			center: true,
 			loop: true,

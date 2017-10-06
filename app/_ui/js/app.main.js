@@ -22,12 +22,14 @@ window.APP = {
 
         // Init Components
         APP.nav.init();
-		// APP.instantiations.init();
 
 		if (!$('.new-results-div').length) {
 			$('.js-main').wrapInner('<div class="new-results-div" />');
 		}
 
+		// if ($('.food-copy').length && (self.getMediaWidth() >= 800)) {
+		// 	self.re
+		// }
         // EVENT DELEGATION
         // $(window).bind('resize', function(event) {
         //     self.events.windowResize({width: self.getMediaWidth()});

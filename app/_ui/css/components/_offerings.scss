@@ -2,22 +2,6 @@
    COMPONENTS/_OFFERINGS.SCSS
    ========================================================================== */
 
-// For switching between landing and detail
-// .new-results-div {
-// 	height: 100%;
-// 	opacity: 1;
-	// position: relative;
-	// transform: translateY(0);
-	// transition:
-	// 	opacity .5s ease-out
-	// 	transform .5s ease-out,
-	// 	height .5s ease-out;
-	// z-index: 2;
-
-	// &.transition-in { height: 100vh; }
-	// &.transition-out { height: 0; }
-//}
-
 .secondary-results-div {
 	left: 0;
 	position: fixed;
@@ -88,6 +72,8 @@
 		transition: background-position .5s ease-out;
 
 		&.center-background { background-position: center center; }
+		&.pastries { background-position: -350px 100%; }
+		&.breakfast { background-position: 570px 0; }
 
 		.copy {
 			background-color: $white;
@@ -321,10 +307,12 @@
 
 			.mask {
 				border-left: 0;
-				border-right: 0;
+				border-right: 5vw solid $white;
 				position: relative;
 				height: 500px;
 				width: 50%;
+
+				&.edge { border-right: none; }
 
 				.plus-box {
 					left: -3%;
@@ -338,8 +326,6 @@
 					order: 2;
 					padding-left: 0;
 					height: 700px;
-
-					.name { }
 				}
 
 				.mask {
@@ -347,7 +333,10 @@
 					border-right: 10vw solid $white;
 
 					&.portrait {
+						border-left: 5vw solid $white;
 						height: 700px;
+
+						&.edge { border-left: none; }
 
 						.plus-box { left: 96%; }
 					}

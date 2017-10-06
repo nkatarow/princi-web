@@ -196,7 +196,20 @@
 	}
 
 	#cta-food {
-		.owl-carousel { margin-bottom: 10%; }
-		.cta-home { margin: 0; }
+		.cta-home {
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+
+			.owl-carousel {
+				order: 2;
+			}
+
+			.food-copy {
+				margin-bottom: 10%;
+				order: 1; 
+			}
+		}
+
 	}
 }
