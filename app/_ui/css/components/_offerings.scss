@@ -73,7 +73,7 @@
 
 		&.center-background { background-position: center center; }
 		&.pastries { background-position: -350px 100%; }
-		&.breakfast { background-position: 570px 0; }
+		&.breakfast { background-position: 545px 0; }
 
 		.copy {
 			background-color: $white;
@@ -115,143 +115,31 @@
 				border-left: 20vw solid $white;
 				height: 350px;
 			}
+
+			&:hover,
+			&:focus {
+				.plus-box {
+					background-color: $white;
+					border: 1px solid $bronze;
+
+					.vertical,
+					.horizontal {
+						&::before,
+						&::after {
+							background-color: $bronze;
+						}
+					}
+				}
+			}
 		}
 	}
 }
 
 
 .plus-box {
-	background-color: $bronze;
-	display: block;
-	height: 40px;
 	margin-top: -20px;
 	left: calc(50% - 20px);
 	position: absolute;
-	width: 40px;
-
-	.plus {
-		display: block;
-		height: 20px;
-		position: relative;
-		width: 20px;
-		margin: 10px;
-
-		.vertical {
-			background-color: transparent;
-			display: block;
-			height: 21px;
-			position: absolute;
-			top: 0px;
-			left: 10px;
-			width: 1px;
-
-			&::before {
-				content: '';
-				background-color: $white;
-				height: 50%;
-				position: absolute;
-				width: 1px;
-			}
-
-			&::after {
-				bottom: 0;
-				content: '';
-				background-color: $white;
-				height: 50%;
-				position: absolute;
-				width: 1px;
-			}
-		}
-
-		.horizontal {
-			background-color: transparent;
-			display: block;
-			height: 1px;
-			margin: 0 auto;
-			width: 21px;
-			position: absolute;
-			top: 10px;
-			left: 0;
-
-			&::before {
-				content: '';
-				background-color: $white;
-				height: 1px;
-				position: absolute;
-				width: 50%;
-			}
-
-			&::after {
-				content: '';
-				background-color: $white;
-				right: 0;
-				position: absolute;
-				height: 1px;
-				width: 50%;
-			}
-		}
-
-		&.animate {
-			animation: spin 10s infinite;
-
-			.horizontal::before,
-			.horizontal::after { animation: horizontal 10s infinite; }
-
-			.vertical::before,
-			.vertical::after { animation: vertical 10s infinite; }
-		}
-	}
-}
-
-@keyframes spin {
-	0% { transform: rotate(0deg); }
-	15% { transform: rotate(0deg); }
-	16% { transform: rotate(90deg); }
-
-	49% { transform: rotate(90deg); }
-	50% { transform: rotate(180deg); }
-
-	74% { transform: rotate(180deg); }
-	75% { transform: rotate(270deg); }
-
-	99% { transform: rotate(270deg); }
-	100% { transform: rotate(360deg); }
-}
-
-@keyframes horizontal {
-	11% { width: 50%; }
-	13% { width: 0%; }
-	15% { width: 50%; }
-
-	46% { width: 50%; }
-	48% { width: 0%; }
-	50% { width: 50%; }
-
-	71% { width: 50%; }
-	73% { width: 0%; }
-	75% { width: 50%; }
-
-	96% { width: 50%; }
-	98% { width: 0%; }
-	100% { width: 50%; }
-}
-
-@keyframes vertical {
-	11% { height: 50%; }
-	13% { height: 0%; }
-	15% { height: 50%; }
-
-	46% { height: 50%; }
-	48% { height: 0%; }
-	50% { height: 50%; }
-
-	71% { height: 50%; }
-	73% { height: 0%; }
-	75% { height: 50%; }
-
-	96% { height: 50%; }
-	98% { height: 0%; }
-	100% { height: 50%; }
 }
 
 
@@ -315,9 +203,9 @@
 				&.edge { border-right: none; }
 
 				.plus-box {
-					left: -3%;
+					left: 0;
 					top: 50%;
-					transform: translateY(-50%);
+					transform: translateX(-50%) translateY(-50%);
 				}
 			}
 
@@ -338,7 +226,7 @@
 
 						&.edge { border-left: none; }
 
-						.plus-box { left: 96%; }
+						.plus-box { left: 100%; }
 					}
 				}
 			}
@@ -346,41 +234,3 @@
 		} // .type
 	}
 }
-
-
-
-// .foods {
-// 	.type {
-// 		align-items: center;
-// 		display: flex;
-// 		height: 50vh;
-// 		margin-bottom: 10%;
-// 		position: relative;
-//
-// 		.copy { width: 50%; }
-//
-// 		.name {
-// 			font-size: 6em;
-// 			text-align: left;
-// 			padding-left: 20%;
-// 			margin-bottom: 0;
-// 		}
-//
-// 		.image-transition {
-//
-// 			.img-link {
-// 				height: 100%;
-// 				position: relative;
-//
-// 				&.landscape {
-// 					height: 100%;
-// 					width: 100%;
-// 				}
-// 			}
-// 		}
-//
-// 		&:nth-child(even) {
-// 			.name { padding-left: 0; }
-// 		}
-// 	}
-// }

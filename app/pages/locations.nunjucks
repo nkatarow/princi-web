@@ -12,7 +12,7 @@
 					<p class="top">Eat, drink, and live Italian</p>
 				</div>
 
-				<div class="owl-carousel wow fadeInUp">
+				<div class="owl-carousel wow fadeIn">
 					<img src="/_ui/img/locations/princi-locations-carousel-1.jpg" class="" alt="">
 				</div>
 			</div>

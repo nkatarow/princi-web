@@ -137,3 +137,94 @@ button {
 		}
 	}
 }
+
+
+.plus-box {
+	background-color: $bronze;
+	border: 1px solid $bronze;
+	display: block;
+	height: 40px;
+	padding: 9px;
+	width: 40px;
+
+	.plus {
+		display: block;
+		height: 20px;
+		position: relative;
+		width: 20px;
+
+		.vertical {
+			background-color: transparent;
+			display: block;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 9px;
+			width: 2px;
+
+			&::before {
+				content: '';
+				background-color: $white;
+				height: 0%;
+				position: absolute;
+				transition: height 250ms ease-out 1250ms;
+				width: 2px;
+			}
+		}
+
+		.horizontal {
+			background-color: transparent;
+			display: block;
+			height: 2px;
+			margin: 0 auto;
+			width: 100%;
+			position: absolute;
+			top: 9px;
+			left: 0;
+
+			&::before {
+				content: '';
+				background-color: $white;
+				height: 2px;
+				position: absolute;
+				transition: width 250ms ease-out 1500ms;
+				width: 0%;
+			}
+		}
+
+
+
+		&.animate {
+			.horizontal::before { width: 100%; }
+			.vertical::before { height: 100%; }
+		}
+	}
+
+	&:hover,
+	&:focus {
+		background-color: $white;
+		border: 1px solid $bronze;
+
+		.vertical,
+		.horizontal {
+			&::before,
+			&::after {
+				background-color: $bronze;
+			}
+		}
+	}
+}
+
+
+
+@keyframes horizontal {
+	0% { width: 0%; }
+	10% { width: 100%; }
+	100% { width: 100%; }
+}
+
+@keyframes vertical {
+	0% { height: 0%; }
+	10% { height: 100%; }
+	100% { height: 100%; }
+}

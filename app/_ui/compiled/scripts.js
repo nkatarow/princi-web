@@ -5473,15 +5473,15 @@ APP.instantiations = {
 
 		wow = new WOW({
       		scrollContainer: wowContainer,
-			mobile: false
+			// mobile: false
 		});
 		wow.init();
 
 		offerwow = new WOW({
 			boxClass: 'offerwow',
       		scrollContainer: wowContainer,
-			mobile: false,
-			offset: -50
+			// mobile: false,
+			offset: -25
 		});
 		offerwow.init();
 
@@ -5490,7 +5490,7 @@ APP.instantiations = {
 			//sneaky nav
 			var scrollTop = $(scrollContainer).scrollTop();
 
-			if (prev > 0) {
+			if (prev > 100) {
 				$('.top-bar').toggleClass('hidden', scrollTop > prev);
 			}
 
@@ -5500,6 +5500,11 @@ APP.instantiations = {
 			$('.btn').each(function(){
 				if (APP.isScrolledIntoView(this) === true) {
 					$(this).addClass('draw');
+				}
+			});
+			$('.plus-box .plus').each(function(){
+				if (APP.isScrolledIntoView(this) === true) {
+					$(this).addClass('animate');
 				}
 			});
 
