@@ -20,7 +20,7 @@
 			</div>
 
 			<div class="foods">
-				<div class="type offerwow fadeInRight" style="background-image: url(/_ui/img/offerings/food/princi-offerings-pane-1.jpg);">
+				<div class="type offerwow fadeIn" style="background-image: url(/_ui/img/offerings/food/princi-offerings-pane-1.jpg);">
 					<div class="copy">
 						<div class="wow fadeIn" data-wow-delay="500ms">
 							<h2 class="name">Pane</h2>
@@ -39,7 +39,7 @@
 					</a>
 				</div>
 
-				<div class="type pastries offerwow fadeInLeft" style="background-image: url(/_ui/img/offerings/food/princi-offerings-pasticinni-1.jpg);">
+				<div class="type pastries offerwow fadeIn" style="background-image: url(/_ui/img/offerings/food/princi-offerings-pasticinni-1.jpg);">
 					<div class="copy">
 						<div class="wow fadeIn" data-wow-delay="500ms">
 							<h2 class="name">Pasticcini</h2>
@@ -57,7 +57,7 @@
 					</a>
 				</div>
 
-				<div class="type breakfast offerwow fadeInRight" style="background-image: url(/_ui/img/offerings/food/princi-offerings-mattina-1.jpg);">
+				<div class="type breakfast offerwow fadeIn" style="background-image: url(/_ui/img/offerings/food/princi-offerings-mattina-1.jpg);">
 					<div class="copy">
 						<div class="wow fadeIn" data-wow-delay="500ms">
 							<h2 class="name">Mattina</h2>
@@ -76,7 +76,7 @@
 					</a>
 				</div>
 
-				<div class="type offerwow fadeInLeft" style="background-image: url(/_ui/img/offerings/food/princi-offerings-pranzo-1.jpg);">
+				<div class="type offerwow fadeIn" style="background-image: url(/_ui/img/offerings/food/princi-offerings-pranzo-1.jpg);">
 					<div class="copy">
 						<div class="wow fadeIn" data-wow-delay="500ms">
 							<h2 class="name">Pranzo</h2>
@@ -94,7 +94,7 @@
 					</a>
 				</div>
 
-				<div class="type offerwow fadeInRight" style="background-image: url(/_ui/img/offerings/food/princi-offerings-pizza-1.jpg);">
+				<div class="type offerwow fadeIn" style="background-image: url(/_ui/img/offerings/food/princi-offerings-pizza-1.jpg);">
 					<div class="copy">
 						<div class="wow fadeIn" data-wow-delay="500ms">
 							<h2 class="name">Pizza</h2>
@@ -114,7 +114,7 @@
 				</div>
 
 
-				<div class="type offerwow fadeInLeft" style="background-image: url(/_ui/img/offerings/food/princi-offerings-aperitivo-1.jpg);">
+				<div class="type offerwow fadeIn" style="background-image: url(/_ui/img/offerings/food/princi-offerings-aperitivo-1.jpg);">
 					<div class="copy">
 						<div class="wow fadeIn" data-wow-delay="500ms">
 							<h2 class="name">Aperitivo</h2>
@@ -132,7 +132,7 @@
 					</a>
 				</div>
 
-				<div class="type offerwow fadeInRight" style="background-image: url(/_ui/img/offerings/food/princi-offerings-dolci-1.jpg);">
+				<div class="type offerwow fadeIn" style="background-image: url(/_ui/img/offerings/food/princi-offerings-dolci-1.jpg);">
 					<div class="copy">
 						<div class="wow fadeIn" data-wow-delay="500ms">
 							<h2 class="name">Dolci</h2>

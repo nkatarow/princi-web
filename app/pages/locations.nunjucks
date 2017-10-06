@@ -78,11 +78,11 @@
 				</h2>
 
 				<div class="location" itemscope itemtype="http://schema.org/Place">
-					<span itemprop="containedInPlace" class="contained-within">At the Starbucks Reserve Roastery</span>
+					{# <span itemprop="containedInPlace" class="contained-within">At the Starbucks Reserve Roastery</span>
 					<address itemprop="address">1124 Pike St, Seattle, WA 98101</address>
 					<span itemprop="telephone" class="tel">
 						Tel <a href="tel:+12066240173">+1 (206) 624-0173</a>
-					</span>
+					</span> #}
 					{# <span class="offscreen" itemprop="branchCode"></span> #}
 				</div>
 			</section>
@@ -94,8 +94,8 @@
 				</h2>
 
 				<div class="location" itemscope itemtype="http://schema.org/Place">
-					<span itemprop="containedInPlace" class="contained-within">At the Starbucks Reserve Roastery</span>
-					<address itemprop="address">123 West Nanjing Road</address>
+					{# <span itemprop="containedInPlace" class="contained-within">At the Starbucks Reserve Roastery</span>
+					<address itemprop="address">123 West Nanjing Road</address> #}
 					{# <span itemprop="telephone" class="tel" >
 						Tel <a href="tel:+390229060832">+39 (0)2 29060832</a>
 					</span> #}
