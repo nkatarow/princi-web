@@ -30,7 +30,7 @@
 				width: 100%;
 
 				&:first-child { top: 0%; }
-				&:last-child { top: 390px; }
+				&:last-child { top: 400px; }
 			}
 		}
 	}
@@ -89,6 +89,8 @@
 
 // Larger viewports
 @media screen and (min-width: $bp-large) and (min-height: 700px) {
+	.video-text.homepage { height: 140vh; }
+
 	#intro {
 		height: 800px;
 
