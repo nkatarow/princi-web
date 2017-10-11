@@ -22,7 +22,6 @@
 			</div>
 
 			<div class="foods">
-
 				<div class="type wow fadeIn" style="background-image: url(/_ui/img/offerings/food/princi-offerings-pane-1.jpg);">
 					<div class="copy">
 						<div class="wow fadeIn" data-wow-delay="500ms">
@@ -30,7 +29,6 @@
 							<p class="caption large">Artisan breads</p>
 						</div>
 					</div>
-
 
 					<a href="/offerings/pane.html" class="mask edge landscape">
 						<span class="plus-box wow fadeIn" data-wow-delay="750ms">
@@ -41,6 +39,7 @@
 						</span>
 					</a>
 				</div>
+
 
 				<div class="type pastries wow fadeIn" style="background-image: url(/_ui/img/offerings/food/princi-offerings-pasticinni-1.jpg);">
 					<div class="copy">

@@ -3,17 +3,18 @@
    ========================================================================== */
 
 @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
-	@media screen and (min-width: $bp-large) and (min-height: 700px) {
+	@media screen and (min-width: $bp-large) {
 
 		#heritage-hero {
-			background-color: $white;
+			// background-color: $white;
 			padding-bottom: 10%;
-
-			.copy {
-				h2 { top: 0%; }
-			}
 		}
-
+		//
+		// 	.copy {
+		// 		h2 { top: 0%; }
+		// 	}
+		// }
+		//
 		#passion {
 			background-color: $white;
 			z-index: 2;

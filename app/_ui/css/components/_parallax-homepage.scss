@@ -33,24 +33,16 @@
 					@include parallax(-.35);
 					background-color: $white;
 					height: 120%;
-					// margin-top: -30px;
 
-					h2 {
-						// font-size: 17em;
-						// height: 100%;
-
+					.h1 {
 						span {
-							&:first-child { top: 200px; }
+							&:first-child { top: 230px; }
 							&:last-child { top: 950px; }
 						}
 					}
 				}
 
-				.hero {
-					@include parallax(-.05);
-					// top: 360px;
-					// height: 655px;
-				}
+				.hero { @include parallax(-.05); }
 			}
 
 		}
@@ -58,21 +50,11 @@
 		#intro-video-group {
 			@include parallax(-.35);
 			margin-top: 440px;
-			// padding-bottom: 7.5%;
 			padding-top: 15%;
 			z-index: 1;
-			// overflow-x: hidden;
 		}
 
-		.video-text {
-			@include parallax(-.25);
-
-			#inline-video {
-				@include parallax(-.5);
-			}
-			//
-			// h2 { @include parallax(-.1); }
-		}
+		.video-text { @include parallax(-.25); }
 
 		#cta-group {
 			padding-top: 18%;
@@ -81,11 +63,4 @@
 			.cta-home { transform-style: flat; }
 		}
 	} // Viewport size
-
-
-	@media screen and (min-width: $bp-large) and (min-height: 1000px) {
-		#intro-video-group {
-			.video-text h2 { font-size: 9.6em; }
-		}
-	}
 } // Feature detection

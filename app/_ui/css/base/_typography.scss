@@ -79,7 +79,7 @@ p {
 }
 
 
-@media screen and (min-width: $bp-large) and (min-height: 700px) {
+@media screen and (min-width: $bp-large) {
 	.h1 { font-size: 12em; }
 
 	.large-underline { font-size: 8.4em; }
@@ -105,6 +105,6 @@ p {
 }
 
 
-@media screen and (min-width: $bp-large-2) and (min-height: 700px) {
+@media screen and (min-width: $bp-large-2) {
 	.h1 { font-size: 16em; }
 }

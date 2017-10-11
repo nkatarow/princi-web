@@ -86,16 +86,21 @@
 			max-width: 100%;
 			top: 190px;
 			width: 75%;
-			z-index: -1;
+			z-index: 1;
 		}
 	}
 
-	.split-pic {
-		align-items: center;
-		display: flex;
-		padding: 18% 5% 10%;
 
-		h2 {
+	.split-pic {
+		padding: 18% 5% 10%;
+		position: relative;
+
+		.split-flex {
+			align-items: center;
+			display: flex;
+		}
+
+		.large-underline {
 			position: absolute;
 			top: 10%;
 			left: 30%;

@@ -64,12 +64,6 @@
 	}
 }
 
-.video-text {
-	display: block;
-	height: 30vh;
-	position: relative;
-	width: 100vw;
-}
 
 #cta-group {
 	background-color: $white;
@@ -135,8 +129,6 @@
 		padding-bottom: 5%;
 	}
 
-	.video-text { height: 100vh; }
-
 	#cta-group {
 		padding-top: 18%;
 
@@ -187,4 +179,8 @@
 			.food-copy { margin-top: 10%; }
 		}
 	}
+}
+
+@media screen and (min-width: $bp-large) and (min-height: 1100px) {
+	#intro .headline { margin-top: -80px; }
 }
