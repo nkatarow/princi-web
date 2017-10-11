@@ -7,13 +7,17 @@
 
 			<div class="food-hero">
 				<div class="wow fadeIn">
-					<h1>Locations</h1>
+					<h1 class="h1">Locations</h1>
 					<span class="line draw"></span>
-					<p class="top">Eat, drink, and live Italian</p>
+					<p class="intro">Eat, drink, and live Italian</p>
 				</div>
 
 				<div class="owl-carousel wow fadeIn">
 					<img src="/_ui/img/locations/princi-locations-carousel-1.jpg" class="" alt="">
+					<img src="/_ui/img/locations/princi-locations-carousel-2.jpg" class="" alt="">
+					<img src="/_ui/img/locations/princi-locations-carousel-3.jpg" class="" alt="">
+					<img src="/_ui/img/locations/princi-locations-carousel-4.jpg" class="" alt="">
+					<img src="/_ui/img/locations/princi-locations-carousel-5.jpg" class="" alt="">
 				</div>
 			</div>
 

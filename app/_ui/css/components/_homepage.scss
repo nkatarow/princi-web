@@ -6,7 +6,6 @@
 
 // Mobile first
 #intro {
-    // height: 500px; /* fallback for older browsers */
 	background-color: $white;
 	height: 95vh;
 	position: relative;
@@ -20,15 +19,11 @@
 	}
 
 	.headline {
-		color: $bronze;
 		font-weight: 500;
 		text-align: center;
 		text-transform: uppercase;
 
-		h2 {
-			font-size: 5.4em;
-			letter-spacing: 0.10em;
-
+		.h1 {
 			span {
 				display: block;
 				position: absolute;
@@ -53,9 +48,9 @@
 	}
 }
 
-
 #intro-video-group {
 	background-color: $white;
+	// margin-top: -2px;
 	padding-bottom: 25%;
 	position: relative;
 
@@ -65,19 +60,6 @@
 			text-align: center;
 			max-width: 800px;
 			width: 80%;
-		}
-
-		p {
-			color: $bronze;
-			font-size: 2.4em;
-			font-weight: 500;
-
-			&.small {
-				font-family: $tradegothic;
-				font-size: 1.4em;
-				text-transform: uppercase;
-				letter-spacing: 0.05em;
-			}
 		}
 	}
 }
@@ -95,19 +77,17 @@
 	position: relative;
 	text-align: center;
 
-	.cta-home { padding-bottom: 25%; }
-	.portrait { max-width: 65%; }
-	.landscape { width: 80%; }
-
-	p {
-		color: $bronze;
-		font-size: 2.8em;
-		font-weight: 500;
+	.glamour {
 		margin: 10% auto 0;
 		width: 90%;
 		max-width: 645px;
 	}
 
+	.cta-home { padding-bottom: 25%; }
+	.portrait { max-width: 65%; }
+	.landscape { width: 80%; }
+	.caption { margin-top: $space; }
+	.large-underline { margin-bottom: $space; }
 	.btn { margin-top: 70px; }
 }
 
@@ -116,7 +96,6 @@
 // Larger viewports
 @media screen and (min-width: $bp-large) and (min-height: 700px) {
 	#intro {
-		// height: 100vh;
 		height: 800px;
 
 		.intro-container {
@@ -132,8 +111,7 @@
 			height: 100%;
 			margin-top: -30px;
 
-			h2 {
-				font-size: 17em;
+			.h1 {
 				height: 100%;
 
 				span {
@@ -147,32 +125,28 @@
 		.hero {
 			top: 360px;
 			height: 655px;
-			// top: 285px;
 			position: absolute;
 			margin-top: 0;
 		}
 	}
 
-
 	#intro-video-group {
 		margin-top: 355px;
 		padding-bottom: 5%;
-
-		.introduction {
-			.title {
-				p {
-					font-size: 6.8em;
-
-					&.small { font-size: 1.4em; }
-				}
-			}
-		}
 	}
 
 	.video-text { height: 100vh; }
 
 	#cta-group {
 		padding-top: 18%;
+
+		.large-underline {
+			left: 50%;
+			position: absolute;
+			top: -1.2em;
+			transform: translateX(-50%);
+			z-index: 100;
+		}
 
 		.cta-home {
 			padding-bottom: 18%;
@@ -189,9 +163,18 @@
 		.portrait { max-width: 100%; }
 		.landscape { margin-bottom: 7%; }
 
-		p {
-			font-size: 4.8em;
-			margin: 0 auto;
+		.glamour { margin: 0 auto; }
+
+		.cta-locations {
+			padding-top: 20%;
+
+			.landscape { margin-bottom: 0; }
+
+			.caption {
+				text-align: left;
+				margin-left: 25%;
+				max-width: 80%;
+			}
 		}
 	}
 
@@ -201,15 +184,7 @@
 			display: flex;
 			flex-direction: column;
 
-			.owl-carousel {
-				order: 2;
-			}
-
-			.food-copy {
-				margin-bottom: 10%;
-				order: 1; 
-			}
+			.food-copy { margin-top: 10%; }
 		}
-
 	}
 }

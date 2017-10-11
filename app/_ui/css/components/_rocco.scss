@@ -5,8 +5,6 @@
 
 #heritage-hero {
 	background-color: $white;
-	color: $bronze;
-	// margin-bottom: 100vh;
 	padding: 120px 5% 10%;
 	position: relative;
 	width: 100%;
@@ -17,27 +15,13 @@
 		z-index: 4;
 	}
 
-	h1 {
-		font-size: 5.4em;
-		letter-spacing: 0.10em;
-		padding-bottom: $space-quarter;
-		text-transform: uppercase;
-	}
-
+	.h1 { padding-bottom: $space-quarter; }
 	.line { margin-top: 330px; }
-
-	.intro {
-		font-size: 2.8em;
-		line-height: 1.499em;
-		margin-top: 0;
-		text-align: center;
-	}
+	.intro { margin-top: 0; }
 
 	.img {
-		// margin: 0 auto;
 		max-width: 100%;
 		position: absolute;
-		// top: 160px;
 		top: 320px;
 		right: 0;
 		z-index: 1;
@@ -46,7 +30,6 @@
 
 .split-pic {
 	background-color: $white;
-	color: $bronze;
 	display: block;
 	padding: 18% 5%;
 	width: 100%;
@@ -56,33 +39,15 @@
 	&:nth-child(5) { padding-bottom: 5%; }
 	&:nth-child(6) { padding-top: 0; }
 
-	h2 {
-		font-size: 2.4em;
-		letter-spacing: 0.015em;
-		margin-bottom: $space;
-
-		span { border-bottom: 1px solid $bronze; }
-	}
-
-	.copy {
-
-		p {
-			font-size: 1.6em;
-			font-weight: 300;
-			font-style: normal;
-			line-height: 1.31em;
-			letter-spacing: 0.015em;
-			margin-bottom: $space-double;
-		}
-	}
-
-	.img { margin-bottom: $space-double; }
+	.large-underline { margin-bottom: $space; }
 	.caption { padding-top: $space; }
+	.copy p { margin-bottom: $space-double; }
+	.img { margin-bottom: $space-double; }
 }
 
 .owl-carousel { background-color: $white; }
-
 .rocco-princi .bg-white .line { margin-bottom: 0; }
+
 
 @media screen and (min-width: $bp-large) {
 	#heritage-hero {
@@ -95,18 +60,13 @@
 
 		.copy {
 			h1 {
-				font-size: 9.6em;
-				letter-spacing: 0.1em;
 				text-align: left;
 				width: 50vw;
 				z-index: 5;
 			}
 
 			.intro {
-				font-size: 4.8em;
-				line-height: 1.499em;
 				margin: 100px auto 0;
-				text-align: center;
 				width: 70%;
 			}
 
@@ -118,11 +78,6 @@
 					margin-bottom: $space;
 				}
 			}
-
-			p {
-				font-size: 2.4em;
-				margin-top: 0;
-			}
 		}
 
 		.img {
@@ -132,8 +87,6 @@
 			top: 190px;
 			width: 75%;
 			z-index: -1;
-
-			img {  }
 		}
 	}
 
@@ -143,7 +96,6 @@
 		padding: 18% 5% 10%;
 
 		h2 {
-			font-size: 8.4em;
 			position: absolute;
 			top: 10%;
 			left: 30%;
@@ -157,16 +109,11 @@
 			margin-right: 10%;
 			width: 50%;
 
-			p {
-				font-size: 1.8em;
-				line-height: 1.6em;
-				margin-bottom: 0;
-			}
+			p { margin-bottom: 0; }
 		}
 
 		.img {
 			order: 2;
-			// margin-top: -10%;
 			max-width: 40%;
 		}
 

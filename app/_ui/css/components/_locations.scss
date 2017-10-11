@@ -3,7 +3,6 @@
    ========================================================================== */
 
 .city {
-	color: $bronze;
 	text-align: center;
 	margin-bottom: 25%;
 
@@ -33,7 +32,10 @@
 		font-size: 1.4em;
 		font-weight: 300;
 
-		a { color: $bronze; }
+		a {
+			color: $bronze;
+			text-decoration: none;
+		}
 	}
 }
 

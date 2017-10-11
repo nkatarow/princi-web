@@ -4,7 +4,7 @@
 {% block content %}
 	<div id="content">
 		<h1 class="offscreen">Princi</h1>
-		<video id="inline-video" class="wow fadeIn" data-wow-delay="2s" autoplay="autoplay" loop="loop" muted="true" preload="auto" poster="/_ui/img/homepage/video.jpg">
+		<video id="inline-video" class="wow fadeIn" data-wow-delay="2s" autoplay="autoplay" loop="loop" muted preload="auto" poster="/_ui/img/homepage/video.jpg">
         	<source src="/_ui/video/nws-kids.mp4" type="video/mp4">
             <source src="/_ui/video/nws-kids.webm" type="video/webm">
         	Your browser does not support the video tag
@@ -15,7 +15,7 @@
 				<div class="intro-container">
 
 				  	<div class="headline wow fadeIn">
-						<h2>
+						<h2 class="h1">
 							<span>Spirito</span>
 							<span>Di Milano</span>
 						</h2>
@@ -30,23 +30,24 @@
 				<div class="introduction">
 					<span class="line"></span>
 					<div class="title">
-						<p class="">In the artisan, there is art. And from art comes bread.</p>
+						<p class="intro">In the artisan, there is art. And from art comes bread.</p>
 					</div>
 				</div>
-
-
 			</section> <!-- /#intro-video-group -->
 
 		  	<div class="video-text"></div>
 
 			<section id="cta-group">
 				<div class="cta-heritage">
+					<h2 class="large-underline wow fadeIn"><span>Flour<br />Water<br />Craft</span></h2>
+
 					<div class="flex cta-home">
 						<div class="half left wow fadeIn">
 							<img src="/_ui/img/homepage/princi-home-rocco-1.jpg" class="portrait" alt="">
+							<p class="caption">Rocco Princi<br />Via Speronari, Milano</p>
 						</div>
 						<div class="half wow fadeIn">
-							<p>Passion, perfectionism, and the pursuit of <span class="nobreak">extraordinary ingredients.</span></p>
+							<p class="glamour">Passion, perfectionism, and the pursuit of <span class="nobreak">extraordinary ingredients.</span></p>
 
 							<a href="/rocco-princi.html" class="btn">
 								<span class="lead-line"></span>
@@ -67,7 +68,7 @@
 						</div>
 
 						<div class="food-copy wow fadeIn">
-							<p>Sourced without compromise. Baked without shortcuts. Enjoyed with all <span class="nobreak">the senses.</span></p>
+							<p class="glamour">Sourced without compromise. Baked without shortcuts. Enjoyed with all <span class="nobreak">the senses.</span></p>
 
 							<a href="/offerings.html" class="btn">
 								<span class="lead-line"></span>
@@ -78,12 +79,15 @@
 				</div>
 
 				<div class="cta-locations">
+					<h2 class="large-underline wow fadeIn"><span>Da Milano<br />con Amore</span></h2>
+
 					<div class="flex cta-home">
 						<div class="half second right edge wow fadeIn">
 							<img src="/_ui/img/homepage/princi-home-locations-1.jpg" class="landscape" alt="">
+							<p class="caption">Baking Pizza<br /> Via Ponte Vetero, Milano</p>
 						</div>
 						<div class="half first wow fadeIn">
-							<p>Eat with your nose.<br /> Eat with your eyes.<br /> Eat with your hands.<br /> Eat with us.</p>
+							<p class="glamour">Eat with your nose.<br /> Eat with your eyes.<br /> Eat with your hands.<br /> Eat with us.</p>
 
 							<a href="/locations.html" class="btn">
 								<span class="lead-line"></span>

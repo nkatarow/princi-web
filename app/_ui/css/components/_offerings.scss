@@ -12,29 +12,15 @@
 
 // Hero
 .food-hero {
-	color: $bronze;
-	margin: 120px auto;
+	margin: 120px auto 60px;
 	text-align: center;
 
-	h1 {
-		font-size: 5em;
-		letter-spacing: 0.10em;
+	.h1 {
 		padding-bottom: 30px;
 		text-transform: uppercase;
 	}
 
-	p {
-		font-size: 3em;
-		line-height: 1.499em;
-		margin-top: $space;
-
-		&.small {
-			font-family: $tradegothic;
-			font-size: 1.4em;
-			text-transform: uppercase;
-			letter-spacing: 0.05em;
-		}
-	}
+	.intro { margin-top: $space; }
 
 	.line {
 		display: block;
@@ -58,13 +44,10 @@
 			height: 100px;
 		}
 	}
-
 }
 
 
 .foods {
-	color: $bronze;
-
 	.type {
 		background-position: bottom right;
 		background-size: cover;
@@ -79,20 +62,13 @@
 			background-color: $white;
 			text-align: center;
 
-			.name {
-				font-size: 3.2em;
-				text-transform: uppercase;
-				letter-spacing: 0.10em;
-			}
-
 			.caption {
 				margin-bottom: 0;
-				padding-bottom: $space*3;
+				padding: $space 0 $space*3 0;
 			}
 		}
 
 		.mask {
-			// background-color: $white;
 			border-right: 5vw solid $white;
 			border-left: 5vw solid $white;
 			display: block;
@@ -148,25 +124,20 @@
 		padding-top: 4%;
 		padding-bottom: 4%;
 
-		h1 { font-size: 9.6em; }
-
 		.line {
 			margin-top: 0;
 			margin-bottom: 5%;
 		}
 
-
-		p {
-			font-size: 4.8em;
-
-			&.top { padding-bottom: 5%; }
-			&.bottom {
-				padding: 5% 0 0;
-			}
+		.standard {
+			text-align: left;
+			margin: 0 0 $space*3 5%;
+			max-width: 22.5%;
 		}
 	}
 
 	.foods {
+
 		.type {
 			align-items: center;
 			display: flex;
@@ -175,6 +146,7 @@
 			.copy {
 				background-color: $white;
 				height: 500px;
+				order: 1;
 				padding-left: 5%;
 				position: relative;
 				text-align: left;
@@ -185,17 +157,12 @@
 					top: 50%;
 					transform: translateY(-50%);
 				}
-
-				.name {
-					color: $bronze;
-					font-size: 6em;
-					letter-spacing: 0.10em;
-				}
 			}
 
 			.mask {
 				border-left: 0;
 				border-right: 5vw solid $white;
+				order: 2;
 				position: relative;
 				height: 500px;
 				width: 50%;
@@ -217,6 +184,7 @@
 				}
 
 				.mask {
+					order: 1;
 					border-left: 0;
 					border-right: 10vw solid $white;
 

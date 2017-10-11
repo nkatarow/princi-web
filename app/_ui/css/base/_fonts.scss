@@ -5,6 +5,7 @@
 /* @import must be at top of file, otherwise CSS will not work */
 @import url("//hello.myfonts.net/count/34a758");
 @import url("//hello.myfonts.net/count/34aa7c");
+@import url("//hello.myfonts.net/count/34d0e0");
 
 
 @font-face {
@@ -48,6 +49,28 @@
 		url('/_ui/fonts/34A758_2_0.woff') format('woff'),
 		url('/_ui/fonts/34A758_2_0.ttf') format('truetype');
     font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+	font-family: 'Futura';
+	src:url('/_ui/fonts/34D0E0_0_0.eot');
+	src:url('/_ui/fonts/34D0E0_0_0.eot?#iefix') format('embedded-opentype'),
+		url('/_ui/fonts/34D0E0_0_0.woff2') format('woff2'),
+		url('/_ui/fonts/34D0E0_0_0.woff') format('woff'),
+		url('/_ui/fonts/34D0E0_0_0.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'Futura';
+	src:url('/_ui/fonts/34D0E0_1_0.eot');
+	src:url('/_ui/fonts/34D0E0_1_0.eot?#iefix') format('embedded-opentype'),
+		url('/_ui/fonts/34D0E0_1_0.woff2') format('woff2'),
+		url('/_ui/fonts/34D0E0_1_0.woff') format('woff'),
+		url('/_ui/fonts/34D0E0_1_0.ttf') format('truetype');
+    font-weight: 700;
     font-style: italic;
 }
 
@@ -114,4 +137,19 @@
  *
  * License: https://www.myfonts.com/viewlicense?type=web&buildid=3451516
  * © 2017 MyFonts Inc
+ *
+ * @license
+ * MyFonts Webfont Build ID 3461344, 2017-10-06T17:35:13-0400
+ *
+ * Webfont: FuturaStd-Bold by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/futura/bold/
+ *
+ * Webfont: FuturaStd-BoldOblique by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/futura/bold-oblique/
+ *
+ *
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3461344
+ * Licensed pageviews: 2,500,000
+ * Webfonts copyright: Copyright &#x00A9; 1987, 1991, 1993, 2002 Adobe Systems Incorporated.  All Rights Reserved.
+ *
 */

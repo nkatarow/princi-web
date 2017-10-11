@@ -5293,6 +5293,7 @@ $(function() {
 
 		if (linkClass == 'mask') {
 			pageTransitionType = 'detailLoadIn';
+			console.log("crash");
 
 		} else {
 			if ($('.detail-page').length) {
@@ -5314,9 +5315,9 @@ $(function() {
 			depth = $(location).prop('pathname').split('/').length - 1;
 
 		$('body').attr('class', '');
-		$('body').addClass(titleLower);
+		$('body').addClass(' ' + titleLower);
 
-		if ($('.food-details').length) {
+		if (($('.food-details').length) && !($('.food-details').hasClass('active'))) {
 			$('body').addClass('food-details-page');
 
 			setTimeout(function(){
@@ -5362,9 +5363,9 @@ $(function() {
 	    			xhr.addEventListener("progress", function (evt) {
 	        			if (evt.lengthComputable) {
 	            			var percentComplete = evt.loaded / evt.total;
-	            			$('.progress').css({ width: percentComplete * 100 + '%' });
+	            			// $('.progress').css({ width: percentComplete * 100 + '%' });
 	        			} else {
-	            			$('.progress').css({ width: '100%' });
+	            			// $('.progress').css({ width: '100%' });
 						}
 	    			}, false);
 	    			return xhr;
@@ -5404,14 +5405,16 @@ $(function() {
 
 
   	$(window).on("popstate", function(e) {
-		//  	console.log("popstate");
 		var linkClass = '';
+
+		console.log("pop");
     	// -------------------------------------
     	//   If there was an AJAX page transition already,
     	//   then AJAX page load the requested page from the back or forwards button click.
     	//   Variable initially set after the $main variable.
     	// -------------------------------------
-		if (changedPage) assignTransitionType(linkClass, location.href);
+		// if (changedPage) assignTransitionType(linkClass, location.href, e, $(this));
+		assignTransitionType(linkClass, location.href, e, $(this));
   	});
 
   	$(document).on('click', 'a', function(e) {
@@ -5647,12 +5650,6 @@ APP.pageLoads = {
 	detailLoadIn: function($main, pageContent, link) {
 		var self = this;
 		console.log("function detailLoadIn");
-
-		// scroll($(window).height(), 0);
-
-		// $('html,body').animate({
-        //     scrollTop: link.offset().top + link.outerHeight(true) - $(window).height()
-        // }, 250);
 
 		// Animate image to cover full screen
 		$(link).parent('.type').addClass('center-background');

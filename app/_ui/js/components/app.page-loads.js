@@ -46,12 +46,6 @@ APP.pageLoads = {
 		var self = this;
 		console.log("function detailLoadIn");
 
-		// scroll($(window).height(), 0);
-
-		// $('html,body').animate({
-        //     scrollTop: link.offset().top + link.outerHeight(true) - $(window).height()
-        // }, 250);
-
 		// Animate image to cover full screen
 		$(link).parent('.type').addClass('center-background');
 
