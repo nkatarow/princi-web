@@ -10,6 +10,38 @@
 // 	width: 100%;
 // }
 
+.new-results-div {
+	height: 100%;
+	opacity: 1;
+	// position: relative;
+	transition:
+		opacity 250ms linear,
+		height 250ms linear;
+	z-index: 2;
+
+	&.transition-in { height: 100vh; }
+	&.transition-out { opacity: 0; }
+}
+
+// .secondary-results-div {
+// 	left: 0;
+// 	position: absolute;
+// 	top: 0;
+// 	z-index: 1;
+// }
+
+.secondary-results-div {
+	left: 0;
+	position: fixed;
+	top: 0;
+	opacity: 0;
+	transition: opacity 250ms linear;
+	z-index: 1;
+
+	&.transition-in { opacity: 1; }
+}
+
+
 .js-main { transition: opacity 500ms ease-out; }
 
 footer {

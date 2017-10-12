@@ -9,8 +9,6 @@ $(function() {
 
 		if (linkClass == 'mask') {
 			pageTransitionType = 'detailLoadIn';
-			console.log("crash");
-
 		} else {
 			if ($('.detail-page').length) {
 				pageTransitionType = 'detailLoadOut';

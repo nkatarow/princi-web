@@ -2,13 +2,6 @@
    COMPONENTS/_OFFERINGS.SCSS
    ========================================================================== */
 
-.secondary-results-div {
-	left: 0;
-	position: fixed;
-	top: 0;
-	z-index: 1;
-}
-
 
 // Hero
 .food-hero {
@@ -44,19 +37,17 @@
 			height: 100px;
 		}
 	}
+
+	.standard { padding: 0 5%; }
 }
 
 
 .foods {
 	.type {
-		background-position: bottom right;
-		background-size: cover;
 		margin-bottom: 25%;
-		transition: background-position .5s ease-out;
 
-		&.center-background { background-position: center center; }
-		&.pastries { background-position: -350px 100%; }
-		&.breakfast { background-position: 545px 0; }
+		// &.pastries { background-position: -350px 100%; }
+		// &.breakfast { background-position: 545px 0; }
 
 		.copy {
 			background-color: $white;
@@ -69,28 +60,8 @@
 		}
 
 		.mask {
-			border-right: 5vw solid $white;
-			border-left: 5vw solid $white;
 			display: block;
-			height: 250px;
-			transition:
-				height .5s ease-out,
-				border-left-width .5s ease-out,
-				border-right-width .5s ease-out;
-			width: 100%;
-
-			// clip-path: polygon(0% 0%, 0% 100%, 6% 100%, 5% 5%, 95% 5%, 95% 95%, 5% 95%, 0 100%, 100% 100%, 100% 0%);
-			&.transition {
-				border-left-width: 0;
-				border-right-width: 0;
-				height: 100vh;
-			}
-
-			&.portrait {
-				border-right: 20vw solid $white;
-				border-left: 20vw solid $white;
-				height: 350px;
-			}
+			width: 100vw;
 
 			&:hover,
 			&:focus {
@@ -119,6 +90,41 @@
 }
 
 
+@media screen and (max-width: $bp-large) {
+	.foods {
+		.type {
+			background-position: bottom right;
+			background-size: auto 100vh;
+			transition: background-position 1s ease-out;
+
+			&.center-background { background-position: center bottom; }
+		}
+
+		.mask {
+			border-right: 5vw solid $white;
+			border-left: 5vw solid $white;
+			height: 250px;
+			transition:
+				height .5s ease-out,
+				border-left-width .5s ease-out,
+				border-right-width .5s ease-out;
+
+			&.portrait {
+				border-right: 20vw solid $white;
+				border-left: 20vw solid $white;
+				height: 350px;
+			}
+
+			&.transition {
+				border-left-width: 0;
+				border-right-width: 0;
+				height: 100vh;
+			}
+		}
+	}
+}
+
+
 @media screen and (min-width: $bp-large) {
 	.food-hero {
 		padding-top: 4%;
@@ -133,6 +139,7 @@
 			text-align: left;
 			margin: 0 0 $space*3 5%;
 			max-width: 22.5%;
+			padding: 0;
 		}
 	}
 
@@ -140,8 +147,12 @@
 
 		.type {
 			align-items: center;
+			background-position: center center;
+			background-size: cover;
 			display: flex;
 			margin-bottom: 10%;
+			transition: height 1s ease-out, transform 1s ease-out;
+			height: 500px; // ADD PORTRAIT CLASS
 
 			.copy {
 				background-color: $white;
@@ -150,6 +161,7 @@
 				padding-left: 5%;
 				position: relative;
 				text-align: left;
+				transition: transform 250ms ease-out;
 				width: 50%;
 
 				> div {
@@ -157,6 +169,13 @@
 					top: 50%;
 					transform: translateY(-50%);
 				}
+			}
+
+			&.center-background {
+				height: 100vh;
+				transform: translateY(0);
+
+				.copy { transform: translateX(-100%); }
 			}
 
 			.mask {

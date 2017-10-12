@@ -5293,8 +5293,6 @@ $(function() {
 
 		if (linkClass == 'mask') {
 			pageTransitionType = 'detailLoadIn';
-			console.log("crash");
-
 		} else {
 			if ($('.detail-page').length) {
 				pageTransitionType = 'detailLoadOut';
@@ -5315,7 +5313,7 @@ $(function() {
 			depth = $(location).prop('pathname').split('/').length - 1;
 
 		$('body').attr('class', '');
-		$('body').addClass(' ' + titleLower);
+		$('body').addClass(titleLower);
 
 		if (($('.food-details').length) && !($('.food-details').hasClass('active'))) {
 			$('body').addClass('food-details-page');
@@ -5453,7 +5451,7 @@ $(function() {
 */
 
 APP.instantiations = {
-    init: function() {
+    init: function(foodDetails) {
 		// console.log('instantiations');
 		var self = this,
 			prev = 0,
@@ -5474,19 +5472,21 @@ APP.instantiations = {
 			wowContainer = null;
 		}
 
-		wow = new WOW({
-      		scrollContainer: wowContainer,
-			// mobile: false
-		});
-		wow.init();
+		if (!$('.food-details-page').length) {
+			wow = new WOW({
+	      		scrollContainer: wowContainer,
+				// mobile: false
+			});
+			wow.init();
 
-		offerwow = new WOW({
-			boxClass: 'offerwow',
-      		scrollContainer: wowContainer,
-			// mobile: false,
-			offset: -25
-		});
-		offerwow.init();
+			offerwow = new WOW({
+				boxClass: 'offerwow',
+	      		scrollContainer: wowContainer,
+				// mobile: false,
+				offset: -25
+			});
+			offerwow.init();
+		}
 
 		// Scrolling animations
 		$(scrollContainer).on('scroll', function(){
@@ -5649,50 +5649,48 @@ APP.pageLoads = {
 
 	detailLoadIn: function($main, pageContent, link) {
 		var self = this;
-		console.log("function detailLoadIn");
 
-		// Animate image to cover full screen
+		// Add new content behind current
+		$main.append('<div class="secondary-results-div">' + pageContent + '</div>');
+
+		// Animate image to cover full screen - 1s
 		$(link).parent('.type').addClass('center-background');
 
+		// Bring image to top
+		$('html,body').animate({
+            scrollTop: link.offset().top
+        }, 1000);
+
 		setTimeout(function(){
-			console.log("setTimeout 1");
-			$(link).parent('.type').css('background-attachment', 'fixed');
-
-			$('html,body').animate({
-	            scrollTop: link.offset().top
-	        }, 500);
-
 			$(link).addClass('transition');
-		}, 500);
+		}, 1000);
 
-		setTimeout(function(){
-			console.log("setTimeout 2");
-			// Add new content behind current
-			$main.append('<div class="secondary-results-div">' + pageContent + '</div>');
-
-			/* ----- Set height of $main to ensure the footer doesn't jump up -----  */
-			var newResultsHeight = $('.secondary-results-div').outerHeight();
-			$main.height(newResultsHeight);
-
-			scroll(0,0);
-
-			// Hide current
-			$('.new-results-div').addClass('transition-out');
-		}, 750);
-
-		setTimeout(function(){
-			console.log("setTimeout 3");
-			// Remove current
-			$('.new-results-div').css('opacity', '0');
-			$('.new-results-div').remove();
-
-			// Update new container class
-			$('.secondary-results-div').addClass('new-results-div');
-			$('.new-results-div').removeClass('secondary-results-div');
-
-			// Slide in details
-			$('.food-details').addClass('active');
-		}, 1750);
+		// setTimeout(function(){
+		// 	$('.secondary-results-div').addClass('transition-in');
+		//
+		// 	/* ----- Set height of $main to ensure the footer doesn't jump up -----  */
+		// 	var newResultsHeight = $('.secondary-results-div').outerHeight();
+		// 	$main.height(newResultsHeight);
+		//
+		// 	// scroll(0,0);
+		// }, 1500);
+		//
+		// setTimeout(function(){
+		// 	// Hide current / Show new
+		// 	$('.new-results-div').addClass('transition-out');
+		// }, 1750);
+		//
+		// setTimeout(function(){
+		// 	// Remove current
+		// 	$('.new-results-div').remove();
+		//
+		// 	// Update new container class
+		// 	$('.secondary-results-div').addClass('new-results-div');
+		// 	$('.new-results-div').removeClass('secondary-results-div');
+		//
+		// 	// Slide in details
+		// 	$('.food-details').addClass('active');
+		// }, 2000);
 	},
 
 	detailLoadOut: function($main, pageContent) {
@@ -5711,8 +5709,6 @@ APP.pageLoads = {
 		setTimeout(function(){
 			// slide out background
 			$('.food-type').removeClass('active');
-			// $('body').removeClass('food-details-page');
-			// $('.top-bar').removeAttr('style');
 		}, 500);
 
 		setTimeout(function(){

@@ -13,7 +13,7 @@
 */
 
 APP.instantiations = {
-    init: function() {
+    init: function(foodDetails) {
 		// console.log('instantiations');
 		var self = this,
 			prev = 0,
@@ -34,19 +34,21 @@ APP.instantiations = {
 			wowContainer = null;
 		}
 
-		wow = new WOW({
-      		scrollContainer: wowContainer,
-			// mobile: false
-		});
-		wow.init();
+		if (!$('.food-details-page').length) {
+			wow = new WOW({
+	      		scrollContainer: wowContainer,
+				// mobile: false
+			});
+			wow.init();
 
-		offerwow = new WOW({
-			boxClass: 'offerwow',
-      		scrollContainer: wowContainer,
-			// mobile: false,
-			offset: -25
-		});
-		offerwow.init();
+			offerwow = new WOW({
+				boxClass: 'offerwow',
+	      		scrollContainer: wowContainer,
+				// mobile: false,
+				offset: -25
+			});
+			offerwow.init();
+		}
 
 		// Scrolling animations
 		$(scrollContainer).on('scroll', function(){
