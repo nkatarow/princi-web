@@ -36,7 +36,6 @@ APP.instantiations = {
 		}
 
 
-
 		if (pageTransitionType != 'detailLoadIn') {
 			wow = new WOW({
 	      		scrollContainer: wowContainer,
@@ -51,6 +50,14 @@ APP.instantiations = {
 				offset: -25
 			});
 			offerwow.init();
+
+			if (($('.food-details').length) && !($('.food-details').hasClass('active'))) {
+				$('body').addClass('food-details-page');
+
+				setTimeout(function(){
+					$('.food-details').addClass('active');
+				}, 500);
+			}
 		}
 
 		// Scrolling animations

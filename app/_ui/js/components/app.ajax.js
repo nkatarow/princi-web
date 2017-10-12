@@ -31,14 +31,6 @@ $(function() {
 		$('body').attr('class', '');
 		$('body').addClass(' ' + titleLower);
 
-		if (($('.food-details').length) && !($('.food-details').hasClass('active'))) {
-			$('body').addClass('food-details-page');
-
-			setTimeout(function(){
-				$('.food-details').addClass('active');
-			}, 500);
-		}
-
 		APP.instantiations.init(pageTransitionType);
   	},
 
@@ -113,7 +105,6 @@ $(function() {
 
   	/* ----- This runs on the first page load with no ajax ----- */
   	init();
-	// APP.pageLoads.initialLoadIn();
 
   	/* ----- This runs on the first page load with no ajax ----- */
 

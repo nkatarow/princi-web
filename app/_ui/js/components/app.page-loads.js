@@ -63,24 +63,24 @@ APP.pageLoads = {
 		}
 
 		setTimeout(function(){
-			$(link).addClass('transition');
+			$(link).addClass('transition'); //.5s
 		}, 1000);
 
 		setTimeout(function(){
-			$('.secondary-results-div').addClass('transition-in');
+			$('.secondary-results-div').addClass('transition-in'); // 250ms
 
 			/* ----- Set height of $main to ensure the footer doesn't jump up -----  */
 			var newResultsHeight = $('.secondary-results-div').outerHeight();
 			$main.height(newResultsHeight);
 
 			// ?
-			scroll(0,0);
-		}, 1500);
+			// scroll(0,0);
+		}, 1750);
 
 		setTimeout(function(){
 			// Hide current / Show new
 			$('.new-results-div').addClass('transition-out');
-		}, 1750);
+		}, 2000);
 
 		setTimeout(function(){
 			// Remove current

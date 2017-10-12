@@ -97,7 +97,7 @@
 			background-size: auto 100vh;
 			transition: background-position 1s ease-out;
 
-			&.center-background { background-position: center bottom; }
+			&.center-background { background-position: bottom center; }
 		}
 
 		.mask {

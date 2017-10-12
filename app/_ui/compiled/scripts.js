@@ -5315,14 +5315,6 @@ $(function() {
 		$('body').attr('class', '');
 		$('body').addClass(' ' + titleLower);
 
-		if (($('.food-details').length) && !($('.food-details').hasClass('active'))) {
-			$('body').addClass('food-details-page');
-
-			setTimeout(function(){
-				$('.food-details').addClass('active');
-			}, 500);
-		}
-
 		APP.instantiations.init(pageTransitionType);
   	},
 
@@ -5397,7 +5389,6 @@ $(function() {
 
   	/* ----- This runs on the first page load with no ajax ----- */
   	init();
-	// APP.pageLoads.initialLoadIn();
 
   	/* ----- This runs on the first page load with no ajax ----- */
 
@@ -5474,7 +5465,6 @@ APP.instantiations = {
 		}
 
 
-
 		if (pageTransitionType != 'detailLoadIn') {
 			wow = new WOW({
 	      		scrollContainer: wowContainer,
@@ -5489,6 +5479,14 @@ APP.instantiations = {
 				offset: -25
 			});
 			offerwow.init();
+
+			if (($('.food-details').length) && !($('.food-details').hasClass('active'))) {
+				$('body').addClass('food-details-page');
+
+				setTimeout(function(){
+					$('.food-details').addClass('active');
+				}, 500);
+			}
 		}
 
 		// Scrolling animations
@@ -5671,24 +5669,24 @@ APP.pageLoads = {
 		}
 
 		setTimeout(function(){
-			$(link).addClass('transition');
+			$(link).addClass('transition'); //.5s
 		}, 1000);
 
 		setTimeout(function(){
-			$('.secondary-results-div').addClass('transition-in');
+			$('.secondary-results-div').addClass('transition-in'); // 250ms
 
 			/* ----- Set height of $main to ensure the footer doesn't jump up -----  */
 			var newResultsHeight = $('.secondary-results-div').outerHeight();
 			$main.height(newResultsHeight);
 
 			// ?
-			scroll(0,0);
-		}, 1500);
+			// scroll(0,0);
+		}, 1750);
 
 		setTimeout(function(){
 			// Hide current / Show new
 			$('.new-results-div').addClass('transition-out');
-		}, 1750);
+		}, 2000);
 
 		setTimeout(function(){
 			// Remove current
