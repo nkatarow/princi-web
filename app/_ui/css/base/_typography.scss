@@ -30,7 +30,8 @@ h3, .h3   {
 	font-size: 5em;
 	font-weight: 700;
 	letter-spacing: 0.015em;
-
+	text-transform: capitalize;
+	
 	span { border-bottom: 1px solid $bronze; }
 }
 
@@ -82,10 +83,12 @@ p {
 @media screen and (min-width: $bp-large) {
 	.h1 { font-size: 12em; }
 
-	.large-underline { font-size: 8.4em; }
+	.large-underline { font-size: 7.8em; }
 
 	.intro {
 		font-size: 8.5em;
+		margin: 0 auto;
+		max-width: 75%;
 
 		&.small {
 			font-size: 4.8em;
@@ -106,5 +109,6 @@ p {
 
 
 @media screen and (min-width: $bp-large-2) {
-	.h1 { font-size: 16em; }
+	.h1 { font-size: 15em; }
+	.large-underline { font-size: 10.4em; }
 }

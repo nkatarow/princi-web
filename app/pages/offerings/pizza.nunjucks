@@ -8,10 +8,10 @@
 				<div class="">
   					<a href="/offerings.html" id="cross" class="food-type-toggle"></a>
 
-					<h1>Pizza</h1>
+					<h1 class="large-underline">Pizza</h1>
 					<h2>Served altaglio</h2>
 
-					<p class="intro">Pizza al taglio crafted on a focaccia base, brushed with housemade pomodoro sauce and topped with premium ingredients like bufala mozzarella, speck and scarmoza, roasted eggplant and <span class="nobreak">colorful peppers.</span></p>
+					<p class="airy">Pizza al taglio crafted on a focaccia base, brushed with housemade pomodoro sauce and topped with premium ingredients like bufala mozzarella, speck and scarmoza, roasted eggplant and <span class="nobreak">colorful peppers.</span></p>
 				</div>
 			</section>
 

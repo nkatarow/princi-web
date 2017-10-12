@@ -22,7 +22,7 @@
 			</div>
 
 			<section class="city wow fadeIn">
-				<h2>London</h2>
+				<h2 class="large-underline"><span>London</span></h2>
 				<div class="location" itemscope itemtype="http://schema.org/Place">
 					<span class="offscreen" itemprop="containedInPlace"></span>
 					<address itemprop="address">135 Wardour Street W1F 0UT</address>

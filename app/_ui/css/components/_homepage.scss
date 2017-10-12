@@ -50,7 +50,6 @@
 
 #intro-video-group {
 	background-color: $white;
-	// margin-top: -2px;
 	padding-bottom: 25%;
 	position: relative;
 
@@ -88,7 +87,7 @@
 
 
 // Larger viewports
-@media screen and (min-width: $bp-large) and (min-height: 700px) {
+@media screen and (min-width: $bp-large-2) and (min-height: 700px) {
 	.video-text.homepage { height: 140vh; }
 
 	#intro {
@@ -129,6 +128,8 @@
 	#intro-video-group {
 		margin-top: 355px;
 		padding-bottom: 5%;
+
+		.introduction .title { max-width: 100%; }
 	}
 
 	#cta-group {
@@ -140,6 +141,7 @@
 			top: -1.2em;
 			transform: translateX(-50%);
 			z-index: 100;
+			width: 80%;
 		}
 
 		.cta-home {
@@ -178,7 +180,14 @@
 			display: flex;
 			flex-direction: column;
 
-			.food-copy { margin-top: 10%; }
+			.food-copy {
+				order: 1;
+			}
+
+			.owl-carousel {
+				order: 2;
+				margin-top: 10%;
+			}
 		}
 	}
 }

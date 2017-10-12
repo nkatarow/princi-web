@@ -9,10 +9,6 @@
 	.location { margin-bottom: $space-double; }
 
 	h2 {
-		font-size: 3.2em;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		line-height: 0.8em;
 		margin-bottom: $space;
 
 		.caption { font-size: 0.4em; }
@@ -43,8 +39,6 @@
 @media screen and (min-width: $bp-large) {
 	.city {
 		margin-bottom: 18%;
-
-		h2 { font-size: 6em; }
 
 		address,
 		.contained-within {

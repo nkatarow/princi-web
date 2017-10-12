@@ -54,11 +54,10 @@
 	}
 
 	h1 {
-		font-size: 3.2em;
-		letter-spacing: 0.1em;
 		margin-bottom: $space-half;
 		text-align: center;
-		text-transform: uppercase;
+
+		span { border-bottom: 1px solid $white; }
 	}
 
 	h2 {
@@ -127,12 +126,12 @@
 		&.active { transform: translateX(0); }
 
 		> div {
-			margin: 75px auto;
-			max-width: 70%;
+			margin: 150px auto;
+			max-width: 80%;
 		}
 
 		h1 {
-			font-size: 6em;
+			// font-size: 6em;
 			margin-bottom: $space-quarter;
 		}
 
