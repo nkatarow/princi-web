@@ -5304,7 +5304,7 @@ $(function() {
 	},
 
   	/* ----- Do this when a page loads ----- */
-  	init = function() {
+  	init = function(pageTransitionType) {
 		// console.log("init");
     	/* ----- This is where I would run any page specific functions ----- */
 
@@ -5313,7 +5313,7 @@ $(function() {
 			depth = $(location).prop('pathname').split('/').length - 1;
 
 		$('body').attr('class', '');
-		$('body').addClass(titleLower);
+		$('body').addClass(' ' + titleLower);
 
 		if (($('.food-details').length) && !($('.food-details').hasClass('active'))) {
 			$('body').addClass('food-details-page');
@@ -5323,12 +5323,11 @@ $(function() {
 			}, 500);
 		}
 
-		APP.instantiations.init();
+		APP.instantiations.init(pageTransitionType);
   	},
 
   	/* ----- Do this for ajax page loads ----- */
-  	ajaxLoad = function(html) {
-		// console.log("ajaxLoad");
+  	ajaxLoad = function(pageTransitionType) {
 
 		// CHECK THIS
 		var newTitle = $('body').find('h1').text();
@@ -5343,7 +5342,7 @@ $(function() {
 		/* ----- Used for popState event (back/forward browser buttons) ----- */
 		changedPage = true;
 
-		init();
+		init(pageTransitionType);
   	},
 
   	loadPage = function(pageTransitionType, href, link) {
@@ -5382,10 +5381,11 @@ $(function() {
 					} else {
 						APP.pageLoads.successfulLoadIn($main, pageContent);
 					}
+
+					ajaxLoad(pageTransitionType);
 				},
 				complete: function(){
 					// console.log("complete");
-					ajaxLoad();
 				},
 				error: function(){
 					// console.log("error");
@@ -5451,8 +5451,9 @@ $(function() {
 */
 
 APP.instantiations = {
-    init: function(foodDetails) {
+    init: function(pageTransitionType) {
 		// console.log('instantiations');
+
 		var self = this,
 			prev = 0,
 			wowContainer,
@@ -5472,7 +5473,9 @@ APP.instantiations = {
 			wowContainer = null;
 		}
 
-		if (!$('.food-details-page').length) {
+
+
+		if (pageTransitionType != 'detailLoadIn') {
 			wow = new WOW({
 	      		scrollContainer: wowContainer,
 				// mobile: false
@@ -5657,9 +5660,15 @@ APP.pageLoads = {
 		$(link).parent('.type').addClass('center-background');
 
 		// Bring image to top
-		$('html,body').animate({
-            scrollTop: link.offset().top
-        }, 1000);
+		if (APP.getMediaWidth() < 800) {
+			$('html,body').animate({
+	            scrollTop: link.offset().top
+	        }, 1000);
+		} else {
+			$('.parallax').animate({
+	            scrollTop: link.offset().top + 1 + $('.parallax').scrollTop()
+			}, 1000);
+		}
 
 		setTimeout(function(){
 			$(link).addClass('transition');
@@ -5672,7 +5681,8 @@ APP.pageLoads = {
 			var newResultsHeight = $('.secondary-results-div').outerHeight();
 			$main.height(newResultsHeight);
 
-			// scroll(0,0);
+			// ?
+			scroll(0,0);
 		}, 1500);
 
 		setTimeout(function(){

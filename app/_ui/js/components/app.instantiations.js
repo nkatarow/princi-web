@@ -13,8 +13,9 @@
 */
 
 APP.instantiations = {
-    init: function(foodDetails) {
+    init: function(pageTransitionType) {
 		// console.log('instantiations');
+
 		var self = this,
 			prev = 0,
 			wowContainer,
@@ -34,7 +35,9 @@ APP.instantiations = {
 			wowContainer = null;
 		}
 
-		if (!$('.food-details-page').length) {
+
+
+		if (pageTransitionType != 'detailLoadIn') {
 			wow = new WOW({
 	      		scrollContainer: wowContainer,
 				// mobile: false

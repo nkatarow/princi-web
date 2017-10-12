@@ -20,7 +20,7 @@ $(function() {
 	},
 
   	/* ----- Do this when a page loads ----- */
-  	init = function() {
+  	init = function(pageTransitionType) {
 		// console.log("init");
     	/* ----- This is where I would run any page specific functions ----- */
 
@@ -29,7 +29,7 @@ $(function() {
 			depth = $(location).prop('pathname').split('/').length - 1;
 
 		$('body').attr('class', '');
-		$('body').addClass(titleLower);
+		$('body').addClass(' ' + titleLower);
 
 		if (($('.food-details').length) && !($('.food-details').hasClass('active'))) {
 			$('body').addClass('food-details-page');
@@ -39,12 +39,11 @@ $(function() {
 			}, 500);
 		}
 
-		APP.instantiations.init();
+		APP.instantiations.init(pageTransitionType);
   	},
 
   	/* ----- Do this for ajax page loads ----- */
-  	ajaxLoad = function(html) {
-		// console.log("ajaxLoad");
+  	ajaxLoad = function(pageTransitionType) {
 
 		// CHECK THIS
 		var newTitle = $('body').find('h1').text();
@@ -59,7 +58,7 @@ $(function() {
 		/* ----- Used for popState event (back/forward browser buttons) ----- */
 		changedPage = true;
 
-		init();
+		init(pageTransitionType);
   	},
 
   	loadPage = function(pageTransitionType, href, link) {
@@ -98,10 +97,11 @@ $(function() {
 					} else {
 						APP.pageLoads.successfulLoadIn($main, pageContent);
 					}
+
+					ajaxLoad(pageTransitionType);
 				},
 				complete: function(){
 					// console.log("complete");
-					ajaxLoad();
 				},
 				error: function(){
 					// console.log("error");

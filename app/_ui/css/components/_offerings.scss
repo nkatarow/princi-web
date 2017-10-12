@@ -171,13 +171,6 @@
 				}
 			}
 
-			&.center-background {
-				height: 100vh;
-				transform: translateY(0);
-
-				.copy { transform: translateX(-100%); }
-			}
-
 			.mask {
 				border-left: 0;
 				border-right: 5vw solid $white;
@@ -193,6 +186,33 @@
 					top: 50%;
 					transform: translateX(-50%) translateY(-50%);
 				}
+			}
+
+			&.portrait {
+				height: 700px;
+
+				&.center-background {
+					border-left-width: 0;
+
+					.copy { transform: translateX(100%); }
+
+					.mask {
+						border-right-width: 0;
+
+						&.portrait {
+							border-left-width: 0;
+
+							.plus-box { left: 210%; }
+						}
+					}
+				}
+			}
+
+			&.center-background {
+				height: 100vh;
+
+				.copy { transform: translateX(-100%); }
+				.mask .plus-box { left: -110%; }
 			}
 
 			&:nth-child(even) {

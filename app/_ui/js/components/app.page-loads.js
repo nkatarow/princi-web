@@ -52,9 +52,15 @@ APP.pageLoads = {
 		$(link).parent('.type').addClass('center-background');
 
 		// Bring image to top
-		$('html,body').animate({
-            scrollTop: link.offset().top
-        }, 1000);
+		if (APP.getMediaWidth() < 800) {
+			$('html,body').animate({
+	            scrollTop: link.offset().top
+	        }, 1000);
+		} else {
+			$('.parallax').animate({
+	            scrollTop: link.offset().top + 1 + $('.parallax').scrollTop()
+			}, 1000);
+		}
 
 		setTimeout(function(){
 			$(link).addClass('transition');
@@ -67,7 +73,8 @@ APP.pageLoads = {
 			var newResultsHeight = $('.secondary-results-div').outerHeight();
 			$main.height(newResultsHeight);
 
-			// scroll(0,0);
+			// ?
+			scroll(0,0);
 		}, 1500);
 
 		setTimeout(function(){
