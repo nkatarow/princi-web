@@ -4,8 +4,9 @@
 {% block content %}
 	<div id="content">
 		<video id="inline-video" autoplay="autoplay" class="wow fadeIn" data-wow-delay="2s" loop="loop" muted="true" preload="auto" poster="/_ui/img/homepage/video.jpg">
-	    	<source src="/_ui/video/nws-kids.mp4" type="video/mp4">
-	        <source src="/_ui/video/nws-kids.webm" type="video/webm">
+        	<source src="/_ui/video/rocco-low-res.mp4" type="video/mp4">
+            <source src="/_ui/video/rocco-low-res.webm" type="video/webm">
+            <source src="/_ui/video/rocco-low-res.ogv" type="video/ogg">
 	    	Your browser does not support the video tag
 		</video>
 
