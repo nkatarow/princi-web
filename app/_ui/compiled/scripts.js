@@ -5665,32 +5665,32 @@ APP.pageLoads = {
 			$(link).addClass('transition');
 		}, 1000);
 
-		// setTimeout(function(){
-		// 	$('.secondary-results-div').addClass('transition-in');
-		//
-		// 	/* ----- Set height of $main to ensure the footer doesn't jump up -----  */
-		// 	var newResultsHeight = $('.secondary-results-div').outerHeight();
-		// 	$main.height(newResultsHeight);
-		//
-		// 	// scroll(0,0);
-		// }, 1500);
-		//
-		// setTimeout(function(){
-		// 	// Hide current / Show new
-		// 	$('.new-results-div').addClass('transition-out');
-		// }, 1750);
-		//
-		// setTimeout(function(){
-		// 	// Remove current
-		// 	$('.new-results-div').remove();
-		//
-		// 	// Update new container class
-		// 	$('.secondary-results-div').addClass('new-results-div');
-		// 	$('.new-results-div').removeClass('secondary-results-div');
-		//
-		// 	// Slide in details
-		// 	$('.food-details').addClass('active');
-		// }, 2000);
+		setTimeout(function(){
+			$('.secondary-results-div').addClass('transition-in');
+
+			/* ----- Set height of $main to ensure the footer doesn't jump up -----  */
+			var newResultsHeight = $('.secondary-results-div').outerHeight();
+			$main.height(newResultsHeight);
+
+			// scroll(0,0);
+		}, 1500);
+
+		setTimeout(function(){
+			// Hide current / Show new
+			$('.new-results-div').addClass('transition-out');
+		}, 1750);
+
+		setTimeout(function(){
+			// Remove current
+			$('.new-results-div').remove();
+
+			// Update new container class
+			$('.secondary-results-div').addClass('new-results-div');
+			$('.new-results-div').removeClass('secondary-results-div');
+
+			// Slide in details
+			$('.food-details').addClass('active');
+		}, 2000);
 	},
 
 	detailLoadOut: function($main, pageContent) {
