@@ -5,10 +5,10 @@
 	<div id="content">
 		<div class="food-type detail-page active" style="background-image: url(/_ui/img/offerings/food/princi-offerings-mattina-1.jpg);">
 			<section class="food-details">
-				<div class="">
-  					<a href="/offerings.html" id="cross" class="food-type-toggle"></a>
+  				<a href="/offerings.html" id="cross" class="food-type-toggle"></a>
 
-					<h1 class="large-underline">Mattina</h1>
+				<div class="">
+					<h1 class="large-underline"><span>Mattina</span></h1>
 					<h2>Breakfast fare</h2>
 
 					<p class="airy">Mornings bring a range of light and hearty offerings. Menus may include Princi granola in Greek yogurt; steel-cut oats with Italian jam; baked eggs in a spicy tomato or rich porcini sauce; and cornetti breakfast sandwiches made with prosciutto <span class="nobreak">cotto and fontina.</span></p>

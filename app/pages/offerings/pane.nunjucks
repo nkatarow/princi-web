@@ -5,9 +5,9 @@
 	<div id="content">
 		<div class="food-type detail-page active" style="background-image: url(/_ui/img/offerings/food/princi-offerings-pane-1.jpg);">
 			<section class="food-details">
-				<div class="">
-  					<a href="/offerings.html" id="cross" class="food-type-toggle"></a>
+  				<a href="/offerings.html" id="cross" class="food-type-toggle"></a>
 
+				<div class="">
 					<h1 class="large-underline"><span>Pane</span></h1>
 					<h2>Artisan breads</h2>
 

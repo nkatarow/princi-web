@@ -46,8 +46,8 @@
 	.type {
 		margin-bottom: 25%;
 
-		&.pastries { background-position: -350px 100%; }
-		&.breakfast { background-position: 545px 0; }
+		// &.pastries { background-position: -350px 100%; }
+		// &.breakfast { background-position: 545px 0; }
 
 		.copy {
 			background-color: $white;
@@ -62,22 +62,6 @@
 		.mask {
 			display: block;
 			width: 100vw;
-
-			// &:hover,
-			// &:focus {
-			// 	.plus-box {
-			// 		background-color: $white;
-			// 		border: 1px solid $bronze;
-			//
-			// 		.vertical,
-			// 		.horizontal {
-			// 			&::before,
-			// 			&::after {
-			// 				background-color: $bronze;
-			// 			}
-			// 		}
-			// 	}
-			// }
 		}
 	}
 }
@@ -144,7 +128,6 @@
 	}
 
 	.foods {
-
 		.type {
 			align-items: center;
 			background-position: center center;
@@ -192,9 +175,7 @@
 					transform: translateX(-50%) translateY(-50%);
 				}
 
-
-				&:hover,
-				&:focus {
+				&:hover {
 					border-top-width: 2.5vw;
 					border-right-width: 2.5vw;
 					border-bottom-width: 2.5vw;
@@ -241,8 +222,7 @@
 					border-left: 0;
 					border-right: 10vw solid $white;
 
-				&:hover,
-				&:focus {
+				&:hover {
 					border-top-width: 2.5vw;
 					border-right-width: 7.5vw;
 					border-bottom-width: 2.5vw;

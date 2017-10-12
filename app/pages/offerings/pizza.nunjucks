@@ -5,10 +5,9 @@
 	<div id="content">
 		<div class="food-type detail-page active" style="background-image: url(/_ui/img/offerings/food/princi-offerings-pizza-1.jpg);">
 			<section class="food-details">
+  				<a href="/offerings.html" id="cross" class="food-type-toggle"></a>
 				<div class="">
-  					<a href="/offerings.html" id="cross" class="food-type-toggle"></a>
-
-					<h1 class="large-underline">Pizza</h1>
+					<h1 class="large-underline"><span>Pizza</span></h1>
 					<h2>Served altaglio</h2>
 
 					<p class="airy">Pizza al taglio crafted on a focaccia base, brushed with housemade pomodoro sauce and topped with premium ingredients like bufala mozzarella, speck and scarmoza, roasted eggplant and <span class="nobreak">colorful peppers.</span></p>
