@@ -46,8 +46,8 @@
 	.type {
 		margin-bottom: 25%;
 
-		// &.pastries { background-position: -350px 100%; }
-		// &.breakfast { background-position: 545px 0; }
+		&.pastries { background-position: -350px 100%; }
+		&.breakfast { background-position: 545px 0; }
 
 		.copy {
 			background-color: $white;
@@ -63,21 +63,21 @@
 			display: block;
 			width: 100vw;
 
-			&:hover,
-			&:focus {
-				.plus-box {
-					background-color: $white;
-					border: 1px solid $bronze;
-
-					.vertical,
-					.horizontal {
-						&::before,
-						&::after {
-							background-color: $bronze;
-						}
-					}
-				}
-			}
+			// &:hover,
+			// &:focus {
+			// 	.plus-box {
+			// 		background-color: $white;
+			// 		border: 1px solid $bronze;
+			//
+			// 		.vertical,
+			// 		.horizontal {
+			// 			&::before,
+			// 			&::after {
+			// 				background-color: $bronze;
+			// 			}
+			// 		}
+			// 	}
+			// }
 		}
 	}
 }
@@ -152,7 +152,7 @@
 			display: flex;
 			margin-bottom: 10%;
 			transition: height 1s ease-out, transform 1s ease-out;
-			height: 500px; // ADD PORTRAIT CLASS
+			height: 500px;
 
 			.copy {
 				background-color: $white;
@@ -172,19 +172,33 @@
 			}
 
 			.mask {
-				border-left: 0;
-				border-right: 5vw solid $white;
+				border-left-width: 0;
+				border-bottom-width: 0;
+				border-top-width: 0;
+				border-right-width: 5vw;
+				border-color: $white;
+				border-style: solid;
 				order: 2;
 				position: relative;
 				height: 500px;
+				transition: border-width 250ms ease-out;
 				width: 50%;
 
-				&.edge { border-right: none; }
+				&.edge { border-right: 0; }
 
 				.plus-box {
 					left: 0;
 					top: 50%;
 					transform: translateX(-50%) translateY(-50%);
+				}
+
+
+				&:hover,
+				&:focus {
+					border-top-width: 2.5vw;
+					border-right-width: 2.5vw;
+					border-bottom-width: 2.5vw;
+					border-left-width: 2.5vw;
 				}
 			}
 
@@ -227,6 +241,13 @@
 					border-left: 0;
 					border-right: 10vw solid $white;
 
+				&:hover,
+				&:focus {
+					border-top-width: 2.5vw;
+					border-right-width: 7.5vw;
+					border-bottom-width: 2.5vw;
+					border-left-width: 2.5vw;
+				}
 					&.portrait {
 						border-left: 5vw solid $white;
 						height: 700px;
