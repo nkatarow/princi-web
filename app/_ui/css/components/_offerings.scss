@@ -43,11 +43,13 @@
 
 
 .foods {
+	.accent-header { display: none; }
+
 	.type {
 		margin-bottom: 25%;
 
-		// &.pastries { background-position: -350px 100%; }
-		// &.breakfast { background-position: 545px 0; }
+		&.breakfast { background-position: 70% top; }
+		&.pizza { background-position: right top; }
 
 		.copy {
 			background-color: $white;
@@ -128,6 +130,19 @@
 	}
 
 	.foods {
+		// .accent-header {
+		// 	@include parallax(.25);
+		// 	display: block;
+		// 	position: absolute;
+		// 	top: 0;
+		//
+		// 	&.left { left: 25%; }
+		// 	&.right { left: 45%; }
+		// 	&.one { top: 14%; }
+		// 	&.two { top: 73%; }
+		// 	&.three { top: 89%; }
+		// }
+
 		.type {
 			align-items: center;
 			background-position: center center;
@@ -140,7 +155,6 @@
 			.copy {
 				background-color: $white;
 				height: 100%;
-				// height: 500px;
 				order: 1;
 				padding-left: 5%;
 				position: relative;
@@ -156,6 +170,7 @@
 			}
 
 			.mask {
+				background-color: rgba(152,105,76,0);
 				border-left-width: 0;
 				border-bottom-width: 0;
 				border-top-width: 0;
@@ -165,9 +180,10 @@
 				order: 2;
 				position: relative;
 				height: 100%;
-				// height: 500px;
-				transition: border-width 250ms ease-out;
+				transition: background-color 500ms ease-out;
 				width: 50%;
+
+				&:hover { background-color: rgba(152,105,76,0.65); }
 
 				.plus-box {
 					left: 0;
@@ -175,17 +191,10 @@
 					transform: translateX(-50%) translateY(-50%);
 				}
 
-				&.animate { animation: .5s ease-out 1 offeringHover; }
-
-				&.edge {
-					border-right-width: 0;
-
-					&.animate { animation: .5s ease-out 1 offeringHoverEdge; }
-				}
+				&.edge { border-right-width: 0; }
 			}
 
 			&.portrait {
-				// height: 100%;
 				height: 700px;
 
 				&.center-background {
@@ -207,7 +216,6 @@
 					order: 2;
 					padding-left: 0;
 					height: 100%;
-					// height: 700px;
 				}
 
 				.mask {
@@ -217,16 +225,9 @@
 
 					&.portrait {
 						border-left-width: 5vw;
-						// height: 100%;
 						height: 700px;
 
-						&.animate { animation: .5s ease-out 1 offeringHoverPortrait; }
-
-						&.edge {
-							border-left-width: 0;
-
-							&.animate { animation: .5s ease-out 1 offeringHoverPortraitEdge; }
-						}
+						&.edge { border-left-width: 0; }
 
 						.plus-box { left: 100%; }
 					}
@@ -250,87 +251,19 @@
 	}
 }
 
+@media screen and (min-width: $bp-large) and (min-height: 700px) {
+	.foods {
+		.accent-header {
+			@include parallax(.25);
+			display: block;
+			position: absolute;
+			top: 0;
 
-@keyframes offeringHover {
-	0% {
-		border-top-width: 0;
-		border-right-width: 5vw;
-		border-bottom-width: 0;
-		border-left-width: 0;
-	}
-	50% {
-		border-top-width: 10px;
-		border-right-width: calc(5vw + 10px);
-		border-bottom-width: 10px;
-		border-left-width: 10px;
-	}
-	100% {
-		border-top-width: 0;
-		border-right-width: 5vw;
-		border-bottom-width: 0;
-		border-left-width: 0;
-	}
-}
-
-@keyframes offeringHoverEdge {
-	0% {
-		border-top-width: 0;
-		border-right-width: 0;
-		border-bottom-width: 0;
-		border-left-width: 0;
-	}
-	50% {
-		border-top-width: 10px;
-		border-right-width: 20px;
-		border-bottom-width: 10px;
-		border-left-width: 10px;
-	}
-	100% {
-		border-top-width: 0;
-		border-right-width: 0;
-		border-bottom-width: 0;
-		border-left-width: 0;
-	}
-}
-
-@keyframes offeringHoverPortrait {
-	0% {
-		border-top-width: 0;
-		border-right-width: 10vw;
-		border-bottom-width: 0;
-		border-left-width: 5vw;
-	}
-	50% {
-		border-top-width: 10px;
-		border-right-width: calc(10vw + 10px);
-		border-bottom-width: 10px;
-		border-left-width: calc(5vw + 10px);
-	}
-	100% {
-		border-top-width: 0;
-		border-right-width: 10vw;
-		border-bottom-width: 0;
-		border-left-width: 5vw;
-	}
-}
-
-@keyframes offeringHoverPortraitEdge {
-	0% {
-		border-top-width: 0;
-		border-right-width: 10vw;
-		border-bottom-width: 0;
-		border-left-width: 0;
-	}
-	50% {
-		border-top-width: 10px;
-		border-right-width: calc(10vw + 10px);
-		border-bottom-width: 10px;
-		border-left-width: 10px;
-	}
-	100% {
-		border-top-width: 0;
-		border-right-width: 10vw;
-		border-bottom-width: 0;
-		border-left-width: 0;
+			&.left { left: 25%; }
+			&.right { left: 45%; }
+			&.one { top: 14%; }
+			&.two { top: 73%; }
+			&.three { top: 89%; }
+		}
 	}
 }

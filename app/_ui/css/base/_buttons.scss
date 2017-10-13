@@ -166,7 +166,7 @@ button { font-size: 1em; }
 				background-color: $white;
 				height: 0%;
 				position: absolute;
-				transition: height 250ms ease-out 1250ms;
+				transition: height 250ms ease-out 1000ms;
 				width: 2px;
 			}
 		}
@@ -186,7 +186,7 @@ button { font-size: 1em; }
 				background-color: $white;
 				height: 2px;
 				position: absolute;
-				transition: width 250ms ease-out 1500ms;
+				transition: width 250ms ease-out 1250ms;
 				width: 0%;
 			}
 		}
