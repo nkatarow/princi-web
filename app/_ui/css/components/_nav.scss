@@ -169,6 +169,7 @@
 		}
 
 		#main {
+			margin-bottom: $space;
 			opacity: 1;
 			transform: translateY(0%);
 			transition-delay: 1s;
@@ -209,7 +210,7 @@
 		font-size: 1.4em;
 		font-weight: 300;
 		opacity: 0;
-		transform: translateY(25%);
+		transform: translateY(25px);
 		transition: transform .5s ease-out, opacity .5s ease-out;
 		z-index: 4;
 

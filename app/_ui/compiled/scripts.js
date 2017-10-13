@@ -5654,21 +5654,21 @@ APP.pageLoads = {
 		// Add new content behind current
 		$main.append('<div class="secondary-results-div">' + pageContent + '</div>');
 
-		// Animate image to cover full screen - 1s
-		$(link).parent('.type').addClass('center-background');
-
 		// Bring image to top
 		if (APP.getMediaWidth() < 800) {
 			$('html,body').animate({
 	            scrollTop: link.offset().top
-	        }, 1000);
+	        }, 500);
 		} else {
 			$('.parallax').animate({
 	            scrollTop: link.offset().top + 1 + $('.parallax').scrollTop()
-			}, 1000);
+			}, 500);
 		}
 
 		setTimeout(function(){
+			// Animate image to cover full screen - 1s
+			$(link).parent('.type').addClass('center-background');
+
 			$(link).addClass('transition'); //.5s
 		}, 1000);
 

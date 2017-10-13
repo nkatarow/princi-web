@@ -50,7 +50,7 @@
 
 #intro-video-group {
 	background-color: $white;
-	padding-bottom: 25%;
+	padding-bottom: 10%;
 	position: relative;
 
 	.introduction {
@@ -66,7 +66,7 @@
 
 #cta-group {
 	background-color: $white;
-	padding-top: 25%;
+	padding-top: 20%;
 	position: relative;
 	text-align: center;
 
@@ -88,7 +88,7 @@
 
 // Larger viewports
 @media screen and (min-width: $bp-large-2) and (min-height: 700px) {
-	.video-text.homepage { height: 140vh; }
+	.video-text.homepage-video { height: calc(100vh * 1.25); }
 
 	#intro {
 		height: 800px;
@@ -145,7 +145,7 @@
 		}
 
 		.cta-home {
-			padding-bottom: 18%;
+			padding-bottom: 13%;
 			margin: 0 5%;
 
 			.edge {

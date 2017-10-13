@@ -39,7 +39,11 @@
 	&:nth-child(5) { padding-bottom: 5%; }
 	&:nth-child(6) { padding-top: 0; }
 
-	.large-underline { margin-bottom: $space; }
+	.large-underline {
+		margin-bottom: $space;
+		text-align: center;
+	}
+
 	.caption { padding-top: $space; }
 	.copy p { margin-bottom: $space-double; }
 	.img { margin-bottom: $space-double; }

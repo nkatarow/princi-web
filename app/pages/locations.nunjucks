@@ -35,7 +35,7 @@
 
 
 			<section class="city wow fadeIn">
-				<h2>Milan</h2>
+				<h2 class="large-underline"><span>Milan</span></h2>
 				<div class="location-group">
 					<div class="location quarter" itemscope itemtype="http://schema.org/Place">
 						<span class="offscreen" itemprop="containedInPlace"></span>
@@ -76,10 +76,8 @@
 			</section>
 
 			<section class="city wow fadeIn">
-				<h2>
-					Seattle <br />
-					<span class="caption">Coming Soon</span>
-				</h2>
+				<h2 class="large-underline"><span>Seattle</span></h2>
+				<p class="caption large">Coming Soon</p>
 
 				<div class="location" itemscope itemtype="http://schema.org/Place">
 					{# <span itemprop="containedInPlace" class="contained-within">At the Starbucks Reserve Roastery</span>
@@ -92,10 +90,8 @@
 			</section>
 
 			<section class="city wow fadeIn">
-				<h2>
-					Shanghai <br />
-					<span class="caption">Coming Soon</span>
-				</h2>
+				<h2 class="large-underline"><span>Shanghai</span></h2>
+				<p class="caption large">Coming Soon</p>
 
 				<div class="location" itemscope itemtype="http://schema.org/Place">
 					{# <span itemprop="containedInPlace" class="contained-within">At the Starbucks Reserve Roastery</span>

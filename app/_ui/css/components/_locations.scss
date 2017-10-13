@@ -8,13 +8,9 @@
 
 	.location { margin-bottom: $space-double; }
 
-	h2 {
-		margin-bottom: $space;
+	.caption { margin-top: $space; }
 
-		.caption { font-size: 0.4em; }
-	}
-
-	> div { margin-bottom: 10%; }
+	> div { margin: 10% auto; }
 
 	address,
 	.contained-within {
@@ -37,8 +33,12 @@
 
 
 @media screen and (min-width: $bp-large) {
+	.locations .food-hero .intro { margin-bottom: 5%; }
+
 	.city {
-		margin-bottom: 18%;
+		margin-bottom: 13%;
+
+		> div { margin: 5% auto;}
 
 		address,
 		.contained-within {
