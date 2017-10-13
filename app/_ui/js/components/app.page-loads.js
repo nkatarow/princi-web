@@ -64,7 +64,7 @@ APP.pageLoads = {
 			$(link).parent('.type').addClass('center-background');
 
 			$(link).addClass('transition'); //.5s
-		}, 1000);
+		}, 500);
 
 		setTimeout(function(){
 			$('.secondary-results-div').addClass('transition-in'); // 250ms
@@ -114,6 +114,7 @@ APP.pageLoads = {
 		}, 500);
 
 		setTimeout(function(){
+			if ($('.top-bar').hasClass('hidden')) $('.top-bar').removeClass('hidden');
 			$('.food-type').remove();
 			$('.new-results-div').remove();
 			$('.secondary-results-div').addClass('new-results-div');

@@ -202,29 +202,23 @@
 				}
 			}
 
-			&.center-background {
-				height: 100vh;
-
-				.copy { transform: translateX(-100%); }
-				.mask .plus-box { left: -110%; }
-			}
-
 			&:nth-child(even) {
 				.copy {
 					order: 2;
 					padding-left: 0;
-					height: 700px;
+					height: 100%;
+					// height: 700px;
 				}
 
 				.mask {
 					order: 1;
 					border-left: 0;
-					border-right: 10vw solid $white;
+					border-right-width: 10vw;
 
 					&.portrait {
-						border-left: 5vw solid $white;
-						height: 100%;
-						// height: 700px;
+						border-left-width: 5vw;
+						// height: 100%;
+						height: 700px;
 
 						&.animate { animation: .5s ease-out 1 offeringHoverPortrait; }
 
@@ -238,6 +232,19 @@
 					}
 				}
 			}
+
+			&.center-background {
+				height: 100vh;
+
+				.copy { transform: translateX(-100%); }
+				.mask .plus-box { left: -110%; }
+
+				&:nth-child(even).portrait {
+					.copy { transform: translateX(100%); }
+					.mask .plus-box { left: 210%; }
+				}
+			}
+
 
 		} // .type
 	}
