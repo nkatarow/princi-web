@@ -30,7 +30,7 @@
 						</div>
 					</div>
 
-					<a href="/offerings/pane.html" class="mask edge landscape">
+					<a href="/offerings/pane/" class="mask edge landscape">
 						<span class="plus-box wow fadeIn" data-wow-delay="750ms">
 							<span class="plus">
 								<span class="vertical"></span>
@@ -50,7 +50,7 @@
 						</div>
 					</div>
 
-					<a href="/offerings/pasticcini.html" class="mask portrait">
+					<a href="/offerings/pasticcini/" class="mask portrait">
 						<span class="plus-box wow fadeIn" data-wow-delay="750ms">
 							<span class="plus">
 								<span class="vertical"></span>
@@ -69,7 +69,7 @@
 					</div>
 
 
-					<a href="/offerings/mattina.html" class="mask landscape">
+					<a href="/offerings/mattina/" class="mask landscape">
 						<span class="plus-box wow fadeIn" data-wow-delay="750ms">
 							<span class="plus">
 								<span class="vertical"></span>
@@ -87,7 +87,7 @@
 						</div>
 					</div>
 
-					<a href="/offerings/pranzo.html" class="mask portrait">
+					<a href="/offerings/pranzo/" class="mask portrait">
 						<span class="plus-box wow fadeIn" data-wow-delay="750ms">
 							<span class="plus">
 								<span class="vertical"></span>
@@ -106,7 +106,7 @@
 					</div>
 
 
-					<a href="/offerings/pizza.html" class="mask edge landscape">
+					<a href="/offerings/pizza/" class="mask edge landscape">
 						<span class="plus-box wow fadeIn" data-wow-delay="750ms">
 							<span class="plus">
 								<span class="vertical"></span>
@@ -126,7 +126,7 @@
 						</div>
 					</div>
 
-					<a href="/offerings/aperitivo.html" class="mask portrait edge">
+					<a href="/offerings/aperitivo/" class="mask portrait edge">
 						<span class="plus-box wow fadeIn" data-wow-delay="750ms">
 							<span class="plus">
 								<span class="vertical"></span>
@@ -146,7 +146,7 @@
 					</div>
 
 
-					<a href="/offerings/dolci.html" class="mask landscape">
+					<a href="/offerings/dolci/" class="mask landscape">
 						<span class="plus-box wow fadeIn" data-wow-delay="750ms">
 							<span class="plus">
 								<span class="vertical"></span>
@@ -159,7 +159,7 @@
 			</div> <!-- /.foods -->
 
 			<section id="heritage-cta" class="bottom-cta locations-cta">
-				<a href="/locations.html" class="bottom-cta-link">
+				<a href="/locations/" class="bottom-cta-link">
 					<div class="cta-container">
 						<div class="">
 							<h2>Our Locations</h2>

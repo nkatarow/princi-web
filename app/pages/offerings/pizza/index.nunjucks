@@ -5,7 +5,7 @@
 	<div id="content">
 		<div class="food-type detail-page active" style="background-image: url(/_ui/img/offerings/food/princi-offerings-pizza-1.jpg);">
 			<section class="food-details">
-  				<a href="/offerings.html" id="cross" class="food-type-toggle"></a>
+  				<a href="/offerings/" id="cross" class="food-type-toggle"></a>
 				<div class="">
 					<h1 class="large-underline"><span>Pizza</span></h1>
 					<h2>Served altaglio</h2>

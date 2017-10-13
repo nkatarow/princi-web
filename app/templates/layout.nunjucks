@@ -140,9 +140,9 @@
 
 					<nav id="main" role="navigation" aria-label="Primary Navigation">
 						<ul>
-							<li><a href="/rocco-princi.html">Rocco Princi</a></li>
-							<li><a href="/offerings.html">Offerings</a></li>
-							<li><a href="/locations.html">Locations</a></li>
+							<li><a href="/rocco-princi/">Rocco Princi</a></li>
+							<li><a href="/offerings/">Offerings</a></li>
+							<li><a href="/locations/">Locations</a></li>
 						</ul>
 					</nav>
 
@@ -156,7 +156,7 @@
 					<nav id="secondary" class="edge-menu" role="navigation" aria-label="Secondary Navigation">
 						<ul>
 							{# <li><a href="/contact-us">Contact Us</a></li> #}
-							<li><a href="/careers">Careers</a></li>
+							<li><a href="#">Careers</a></li>
 						</ul>
 					</nav>
 

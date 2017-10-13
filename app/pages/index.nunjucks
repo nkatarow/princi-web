@@ -52,7 +52,7 @@
 						<div class="half wow fadeIn">
 							<p class="glamour">Passion, perfectionism, and the pursuit of extraordinary ingredients.</p>
 
-							<a href="/rocco-princi.html" class="btn">
+							<a href="/rocco-princi/" class="btn">
 								<span class="lead-line"></span>
 								<span class="text">Rocco Princi</span>
 							</a>
@@ -73,7 +73,7 @@
 						<div class="food-copy wow fadeIn">
 							<p class="glamour">Sourced without compromise. Baked without shortcuts. Enjoyed with all the senses.</p>
 
-							<a href="/offerings.html" class="btn">
+							<a href="/offerings/" class="btn">
 								<span class="lead-line"></span>
 								<span class="text">Offerings</span>
 							</a>
@@ -92,7 +92,7 @@
 						<div class="half first wow fadeIn">
 							<p class="glamour">Eat with your nose.<br /> Eat with your eyes.<br /> Eat with your hands.<br /> Eat with us.</p>
 
-							<a href="/locations.html" class="btn">
+							<a href="/locations/" class="btn">
 								<span class="lead-line"></span>
 								<span class="text">Locations</span>
 							</a>
@@ -103,7 +103,7 @@
 
 
 			<section id="heritage-cta" class="bottom-cta rocco-cta">
-				<a href="/rocco-princi.html" class="bottom-cta-link">
+				<a href="/rocco-princi/" class="bottom-cta-link">
 					<div class="cta-container">
 						<div class="">
 							<h2>Rocco Princi</h2>

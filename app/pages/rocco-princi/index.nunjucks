@@ -104,7 +104,7 @@
 
 
 			<section id="food-cta" class="bottom-cta offerings-cta">
-				<a href="/offerings.html" class="bottom-cta-link">
+				<a href="/offerings/" class="bottom-cta-link">
 					<div class="cta-container">
 						<div class="">
 							<h2>Offerings</h2>
