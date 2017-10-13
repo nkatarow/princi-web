@@ -238,14 +238,17 @@
 				height: 100vh;
 
 				.copy { transform: translateX(-100%); }
-				.mask .plus-box { left: -110%; }
+				.mask {
+					&:hover  { background-color: rgba(152,105,76,0); }
+
+					.plus-box { left: -110%; }
+				}
 
 				&:nth-child(even).portrait {
 					.copy { transform: translateX(100%); }
 					.mask .plus-box { left: 210%; }
 				}
 			}
-
 
 		} // .type
 	}

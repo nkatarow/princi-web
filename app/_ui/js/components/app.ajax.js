@@ -24,21 +24,14 @@ $(function() {
 		// console.log("init");
     	/* ----- This is where I would run any page specific functions ----- */
 
+		setTimeout(function(){
 		var newTitle = $('body').find('h1').text(),
 			titleLower = newTitle.replace(/\s+/g, '-').toLowerCase(),
 			depth = $(location).prop('pathname').split('/').length - 1;
 
+		document.title = "";
 		$('body').attr('class', '');
 		$('body').addClass(' ' + titleLower);
-
-		APP.instantiations.init(pageTransitionType);
-  	},
-
-  	/* ----- Do this for ajax page loads ----- */
-  	ajaxLoad = function(pageTransitionType) {
-
-		// CHECK THIS
-		var newTitle = $('body').find('h1').text();
 
 		if (newTitle != "Princi") {
 			document.title = newTitle + ' | Princi';
@@ -47,6 +40,13 @@ $(function() {
 			document.title = newTitle;
 		}
 
+		}, 2000);
+
+		APP.instantiations.init(pageTransitionType);
+  	},
+
+  	/* ----- Do this for ajax page loads ----- */
+  	ajaxLoad = function(pageTransitionType) {
 		/* ----- Used for popState event (back/forward browser buttons) ----- */
 		changedPage = true;
 

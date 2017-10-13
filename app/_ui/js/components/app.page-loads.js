@@ -80,9 +80,7 @@ APP.pageLoads = {
 		setTimeout(function(){
 			// Hide current / Show new
 			$('.new-results-div').addClass('transition-out');
-		}, 2000);
 
-		setTimeout(function(){
 			// Remove current
 			$('.new-results-div').remove();
 
