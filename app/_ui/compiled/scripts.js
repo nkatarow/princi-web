@@ -5542,6 +5542,15 @@ APP.instantiations = {
 			items: 1
 		});
 
+		if ($('.mask').length) {
+			$(".mask").bind("webkitAnimationEnd mozAnimationEnd animationEnd", function(){
+				$(this).removeClass("animate")  
+			})
+
+			$(".mask").hover(function(){
+				$(this).addClass("animate");
+			})
+		}
 		// END: INSTANTIATIONS
 	}
 }

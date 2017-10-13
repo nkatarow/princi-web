@@ -15,7 +15,7 @@ button { font-size: 1em; }
     text-align: center;
 	text-transform: uppercase;
 	text-decoration: none;
-	
+
   	// Required, since we're setting absolute on pseudo-elements
   	position: relative;
   	vertical-align: middle;
@@ -199,19 +199,19 @@ button { font-size: 1em; }
 		}
 	}
 
-	&:hover,
-	&:focus {
-		background-color: $white;
-		border: 1px solid $bronze;
-
-		.vertical,
-		.horizontal {
-			&::before,
-			&::after {
-				background-color: $bronze;
-			}
-		}
-	}
+	// &:hover,
+	// &:focus {
+	// 	background-color: $white;
+	// 	border: 1px solid $bronze;
+	//
+	// 	.vertical,
+	// 	.horizontal {
+	// 		&::before,
+	// 		&::after {
+	// 			background-color: $bronze;
+	// 		}
+	// 	}
+	// }
 }
 
 

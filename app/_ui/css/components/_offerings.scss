@@ -169,25 +169,24 @@
 				transition: border-width 250ms ease-out;
 				width: 50%;
 
-				&.edge { border-right: 0; }
-
 				.plus-box {
 					left: 0;
 					top: 50%;
 					transform: translateX(-50%) translateY(-50%);
 				}
 
-				&:hover {
-					border-top-width: 2.5vw;
-					border-right-width: 2.5vw;
-					border-bottom-width: 2.5vw;
-					border-left-width: 2.5vw;
+				&.animate { animation: .5s ease-out 1 offeringHover; }
+
+				&.edge {
+					border-right-width: 0;
+
+					&.animate { animation: .5s ease-out 1 offeringHoverEdge; }
 				}
 			}
 
 			&.portrait {
-				height: 100%;
-				// height: 700px;
+				// height: 100%;
+				height: 700px;
 
 				&.center-background {
 					border-left-width: 0;
@@ -196,12 +195,9 @@
 
 					.mask {
 						border-right-width: 0;
+						border-left-width: 0;
 
-						&.portrait {
-							border-left-width: 0;
-
-							.plus-box { left: 210%; }
-						}
+						.plus-box { left: 210%; }
 					}
 				}
 			}
@@ -225,17 +221,18 @@
 					border-left: 0;
 					border-right: 10vw solid $white;
 
-				&:hover {
-					border-top-width: 2.5vw;
-					border-right-width: 7.5vw;
-					border-bottom-width: 2.5vw;
-					border-left-width: 2.5vw;
-				}
 					&.portrait {
 						border-left: 5vw solid $white;
-						height: 700px;
+						height: 100%;
+						// height: 700px;
 
-						&.edge { border-left: none; }
+						&.animate { animation: .5s ease-out 1 offeringHoverPortrait; }
+
+						&.edge {
+							border-left-width: 0;
+
+							&.animate { animation: .5s ease-out 1 offeringHoverPortraitEdge; }
+						}
 
 						.plus-box { left: 100%; }
 					}
@@ -243,5 +240,90 @@
 			}
 
 		} // .type
+	}
+}
+
+
+@keyframes offeringHover {
+	0% {
+		border-top-width: 0;
+		border-right-width: 5vw;
+		border-bottom-width: 0;
+		border-left-width: 0;
+	}
+	50% {
+		border-top-width: 10px;
+		border-right-width: calc(5vw + 10px);
+		border-bottom-width: 10px;
+		border-left-width: 10px;
+	}
+	100% {
+		border-top-width: 0;
+		border-right-width: 5vw;
+		border-bottom-width: 0;
+		border-left-width: 0;
+	}
+}
+
+@keyframes offeringHoverEdge {
+	0% {
+		border-top-width: 0;
+		border-right-width: 0;
+		border-bottom-width: 0;
+		border-left-width: 0;
+	}
+	50% {
+		border-top-width: 10px;
+		border-right-width: 20px;
+		border-bottom-width: 10px;
+		border-left-width: 10px;
+	}
+	100% {
+		border-top-width: 0;
+		border-right-width: 0;
+		border-bottom-width: 0;
+		border-left-width: 0;
+	}
+}
+
+@keyframes offeringHoverPortrait {
+	0% {
+		border-top-width: 0;
+		border-right-width: 10vw;
+		border-bottom-width: 0;
+		border-left-width: 5vw;
+	}
+	50% {
+		border-top-width: 10px;
+		border-right-width: calc(10vw + 10px);
+		border-bottom-width: 10px;
+		border-left-width: calc(5vw + 10px);
+	}
+	100% {
+		border-top-width: 0;
+		border-right-width: 10vw;
+		border-bottom-width: 0;
+		border-left-width: 5vw;
+	}
+}
+
+@keyframes offeringHoverPortraitEdge {
+	0% {
+		border-top-width: 0;
+		border-right-width: 10vw;
+		border-bottom-width: 0;
+		border-left-width: 0;
+	}
+	50% {
+		border-top-width: 10px;
+		border-right-width: calc(10vw + 10px);
+		border-bottom-width: 10px;
+		border-left-width: 10px;
+	}
+	100% {
+		border-top-width: 0;
+		border-right-width: 10vw;
+		border-bottom-width: 0;
+		border-left-width: 0;
 	}
 }
