@@ -130,18 +130,7 @@
 	}
 
 	.foods {
-		// .accent-header {
-		// 	@include parallax(.25);
-		// 	display: block;
-		// 	position: absolute;
-		// 	top: 0;
-		//
-		// 	&.left { left: 25%; }
-		// 	&.right { left: 45%; }
-		// 	&.one { top: 14%; }
-		// 	&.two { top: 73%; }
-		// 	&.three { top: 89%; }
-		// }
+
 
 		.type {
 			align-items: center;
@@ -156,7 +145,7 @@
 				background-color: $white;
 				height: 100%;
 				order: 1;
-				padding-left: 5%;
+				padding-left: 10%;
 				position: relative;
 				text-align: left;
 				transition: transform 250ms ease-out;
@@ -170,7 +159,7 @@
 			}
 
 			.mask {
-				background-color: rgba(152,105,76,0);
+				background-color: $white;
 				border-left-width: 0;
 				border-bottom-width: 0;
 				border-top-width: 0;
@@ -183,6 +172,7 @@
 				transition: background-color 500ms ease-out;
 				width: 50%;
 
+				&.reveal { background-color: rgba(152,105,76,0); }
 				&:hover { background-color: rgba(152,105,76,0.65); }
 
 				.plus-box {
@@ -267,6 +257,29 @@
 			&.one { top: 14%; }
 			&.two { top: 73%; }
 			&.three { top: 89%; }
+		}
+	}
+}
+
+@supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
+	@media screen and (min-width: $bp-large-2) {
+		.foods {
+			.type {
+				&:nth-child(odd) .copy {
+					// .large-underline { margin-left: 15%; }
+					.caption {
+						@include parallax(.1);
+						// margin-left: 15%;
+					}
+				}
+				&:nth-child(even) .copy {
+					// .large-underline { margin-left: -5%; }
+					.caption {
+						@include parallax(.1);
+						// margin-left: -5%;
+					}
+				}
+			}
 		}
 	}
 }

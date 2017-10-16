@@ -72,11 +72,12 @@ window.APP = {
 
         return i;
     },
- 	isScrolledIntoView: function(elem) {
+ 	isScrolledIntoView: function(elem, scrollOffset) {
+		if (scrollOffset == null) scrollOffset = 0;
     	var docViewTop = $(window).scrollTop(),
     		docViewBottom = docViewTop + $(window).height(),
-			elemTop = $(elem).offset().top,
-	    	elemBottom = elemTop + $(elem).height();
+			elemTop = $(elem).offset().top - scrollOffset,
+	    	elemBottom = elemTop + $(elem).height() - scrollOffset;
 
     	return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 	}

@@ -15100,11 +15100,12 @@ window.APP = {
 
         return i;
     },
- 	isScrolledIntoView: function(elem) {
+ 	isScrolledIntoView: function(elem, scrollOffset) {
+		if (scrollOffset == null) scrollOffset = 0;
     	var docViewTop = $(window).scrollTop(),
     		docViewBottom = docViewTop + $(window).height(),
-			elemTop = $(elem).offset().top,
-	    	elemBottom = elemTop + $(elem).height();
+			elemTop = $(elem).offset().top - scrollOffset,
+	    	elemBottom = elemTop + $(elem).height() - scrollOffset;
 
     	return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 	}
@@ -15299,14 +15300,6 @@ APP.instantiations = {
 			});
 			wow.init();
 
-			// offerwow = new WOW({
-			// 	boxClass: 'offerwow',
-	     //  		scrollContainer: wowContainer,
-			// 	// mobile: false,
-			// 	offset: -25
-			// });
-			// offerwow.init();
-
 			if (($('.food-details').length) && !($('.food-details').hasClass('active'))) {
 				$('body').addClass('food-details-page');
 
@@ -15345,6 +15338,13 @@ APP.instantiations = {
 					$(this).addClass('draw');
 				}
 			});
+
+			// masks
+			$('.mask').each(function(){
+				if (APP.isScrolledIntoView(this, '200') === true) {
+					$(this).addClass('reveal');
+				}
+			});
 		});
 
 		if ($("#inline-video").length) {
@@ -15368,17 +15368,6 @@ APP.instantiations = {
 			nav: true,
 			items: 1
 		});
-
-		// if ($('.mask').length) {
-		// 	$(".mask").bind("webkitAnimationEnd mozAnimationEnd animationEnd", function(){
-		// 		$(this).removeClass("animate")
-		// 	})
-		//
-		// 	$(".mask").hover(function(){
-		// 		$(this).addClass("animate");
-		// 	})
-		// }
-		// END: INSTANTIATIONS
 	}
 }
 

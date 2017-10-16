@@ -43,12 +43,8 @@
 
 	> div {
 		margin: 25px 0 25px;
-		// height: calc(60vh - 75px);
 		max-width: 100vw;
-		// overflow: scroll;
 		padding: 0 5%;
-
-		// &::-webkit-scrollbar { display: none; }
 	}
 
 	h1 {
@@ -65,24 +61,6 @@
 		margin-bottom: $space-double;
 		text-align: center;
 		text-transform: uppercase;
-	}
-
-	.intro {
-		font-size: 2.4em;
-		letter-spacing: 0.015em;
-	}
-
-	dl {
-		font-size: 1.4em;
-
-		dt { font-weight: 500; }
-
-		dd {
-			font-weight: 300;
-			margin-bottom: $space-double;
-
-			&:last-of-type { margin-bottom: 0; }
-		}
 	}
 }
 
@@ -125,7 +103,7 @@
 
 		> div {
 			margin: 150px auto;
-			max-width: 80%;
+			max-width: 90%;
 		}
 
 		h1 {
@@ -133,31 +111,24 @@
 			margin-bottom: $space-quarter;
 		}
 
-		.intro {
-			font-size: 3.6em;
+		.airy {
+			// border-left: 1px solid $white;
+			// padding-left: 5%;
+
+			// &::before {
+			// 	background-color: $white;
+			// 	content: '';
+			// 	display: block;
+			// 	height: 0;
+			// 	position: absolute;
+			// 	left: 0;
+			// 	transition: height 500ms ease-out;
+			// 	transition-delay: 500ms;
+			// 	width: 1px;
+			// }
+			//
+			// &.draw::before { height: 100%; }
 		}
 
-		dl {
-			font-size: 1.6em;
-
-			padding-left: 7%;
-			position: relative;
-
-			&::before {
-				background-color: $white;
-				content: '';
-				display: block;
-				height: 0;
-				position: absolute;
-				left: 0;
-				transition: height 500ms ease-out;
-				transition-delay: 500ms;
-				width: 1px;
-			}
-
-			&.draw::before { height: 100%; }
-
-			dt { margin-bottom: $space-quarter; }
-		}
 	}
 }

@@ -52,7 +52,7 @@
 		left: 0;
 		position: absolute;
 		top: 0;
-		transition: height .5s ease-out;
+		transition: height 750ms ease-out;
 	}
 
 	&.draw::before {
