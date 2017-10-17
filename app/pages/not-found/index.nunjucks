@@ -1,0 +1,8 @@
+<!-- 404.nunjucks -->
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+	<div id="content">
+		<h1>404</h1>
+	</div>
+{% endblock %}

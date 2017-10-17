@@ -13,7 +13,7 @@
 
 		<div class="parallax">
 			<section id="intro">
-				<div class="intro-container">
+				{# <div class="intro-container"> #}
 
 				  	<div class="headline wow fadeIn">
 						<h2 class="h1">
@@ -23,18 +23,15 @@
 				  	</div>
 
 					<div class="hero wow fadeIn"></div>
-				</div>
-			</section> <!-- /#intro -->
+				{# </div> #}
 
-
-			<section id="intro-video-group">
 				<div class="introduction">
 					<span class="line"></span>
 					<div class="title">
 						<p class="intro">In the artisan, there is art. And from art comes bread.</p>
 					</div>
 				</div>
-			</section> <!-- /#intro-video-group -->
+			</section> <!-- /#intro -->
 
 		  	<div class="video-text homepage-video">
 				<img src="/_ui/img/homepage/video-gif.gif" alt="">
@@ -85,11 +82,11 @@
 					<h2 class="large-underline"><span>Da Milano<br />con Amore</span></h2>
 
 					<div class="flex cta-home">
-						<div class="half second right edge wow fadeIn">
+						<div class="half second right edge wow fadeIn" data-wow-delay=".75s">
 							<img src="/_ui/img/homepage/princi-home-locations-1.jpg" class="landscape" alt="">
 							<p class="caption">Baking Pizza<br /> Via Ponte Vetero, Milano</p>
 						</div>
-						<div class="half first wow fadeIn">
+						<div class="half first wow fadeIn" data-wow-delay=".25s">
 							<p class="glamour">Eat with your nose.<br /> Eat with your eyes.<br /> Eat with your hands.<br /> Eat with us.</p>
 
 							<a href="/locations/" class="btn">

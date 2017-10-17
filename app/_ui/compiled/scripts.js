@@ -15345,6 +15345,11 @@ APP.instantiations = {
 					$(this).addClass('reveal');
 				}
 			});
+
+			//
+			if ($('#intro').length) {
+				parallax();
+			}
 		});
 
 		if ($("#inline-video").length) {
@@ -15353,6 +15358,11 @@ APP.instantiations = {
 			video.addEventListener('loadeddata', function() {
 				if (video.readyState >= 2) { video.play(); }
 			});
+		}
+
+		function parallax(){
+		    var scrolled = $('.parallax').scrollTop();
+		    $('.hero').css('top', -(scrolled * 0.2) + 'px');
 		}
 
 		// Carousel

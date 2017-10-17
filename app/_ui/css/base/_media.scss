@@ -32,8 +32,8 @@ video { display: none; }
 		left: 0;
 		position: fixed;
 		top: 0;
-		height: 100vh;
-		width: auto;
+		min-height: 100vh;
+		min-width: 100vw;
 	}
 
 	.video-text {

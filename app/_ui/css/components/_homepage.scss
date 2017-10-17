@@ -7,16 +7,9 @@
 // Mobile first
 #intro {
 	background-color: $white;
-	height: 95vh;
 	position: relative;
+	padding-top: 100px;
 	z-index: 2;
-
-	.intro-container {
-		height: 450px;
-		position: absolute;
-		bottom: 5%;
-		width: 100%;
-	}
 
 	.headline {
 		font-weight: 500;
@@ -26,11 +19,9 @@
 		.h1 {
 			span {
 				display: block;
-				position: absolute;
 				width: 100%;
 
-				&:first-child { top: 0%; }
-				&:last-child { top: 400px; }
+				&:last-child { margin-top: 340px; }
 			}
 		}
 	}
@@ -42,18 +33,17 @@
 		background-size: cover;
 		display: block;
 		height: 370px;
-		margin-top: 37.5px;
 		width: 100%;
-		position: relative;
+		position: absolute;
+		top: 0;
+		margin-top: 135px;
 	}
-}
-
-#intro-video-group {
-	background-color: $white;
-	padding-bottom: 10%;
-	position: relative;
 
 	.introduction {
+		background-color: $white;
+		padding-bottom: 10%;
+		position: relative;
+
 		.title {
 			margin: 0 auto;
 			text-align: center;
@@ -84,53 +74,33 @@
 	.btn { margin-top: 70px; }
 }
 
+@media screen and (min-width: $bp-large) {
+	#intro {
+		padding-top: 150px;
+
+		.headline .h1 span:last-child { margin-top: 500px; }
+
+		.hero {
+			height: 600px;
+			margin-top: 250px;
+		}
+	}
+}
 
 
 // Larger viewports
-@media screen and (min-width: $bp-large-2) and (min-height: 700px) {
-	.video-text.homepage-video { height: calc(100vh * 1.25); }
-
+@media screen and (min-width: $bp-large-2) {
 	#intro {
-		height: 800px;
+		padding-top: 200px;
 
-		.intro-container {
-			background-color: $white;
-			position: relative;
-			height: 100%;
-			bottom: 0;
-		}
-
-		.headline {
-			top: 0;
-			height: 95%;
-			height: 100%;
-			margin-top: -30px;
-
-			.h1 {
-				height: 100%;
-
-				span {
-					&:first-child { top: 220px; }
-					&:last-child { top: 960px; }
-				}
-			}
-
-		}
+		.headline .h1 span:last-child { margin-top: 560px; }
 
 		.hero {
-			top: 360px;
 			height: 655px;
-			position: absolute;
-			margin-top: 0;
+			margin-top: 320px;
 		}
 	}
 
-	#intro-video-group {
-		margin-top: 355px;
-		padding-bottom: 5%;
-
-		.introduction .title { max-width: 100%; }
-	}
 
 	#cta-group {
 		padding-top: 18%;
@@ -194,6 +164,21 @@
 	}
 }
 
-@media screen and (min-width: $bp-large) and (min-height: 1100px) {
-	#intro .headline { margin-top: -80px; }
+@supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
+	.parallax::before {
+		content: 'true';
+		display: block;
+		height: 0;
+		width: 0;
+		visibility: hidden;
+	}
+
+	header {
+		.mobile-grouping {
+			transform-style: flat;
+			position: initial;
+		}
+	}
+
+	@include parallax-init;
 }
