@@ -32,7 +32,7 @@ gulp.task('nunjucks', function() {
 
 // Concat/autoprefix CSS
 gulp.task('styles', function(){
-	return sass('app/_ui/scss/main.scss', { style: 'expanded'})
+	return sass('src/_ui/scss/main.scss', { style: 'expanded'})
 		.pipe(sourcemaps.init())
 		.pipe(sourcemaps.write())
 		.pipe(autoprefixer({browsers: ['last 2 version', 'safari 5', 'ie 9', 'ios 6', 'android 4', '> 1%']}))
@@ -43,7 +43,7 @@ gulp.task('styles', function(){
 
 // Concat JS
 gulp.task('scripts', function(){
-	return gulp.src(['app/_ui/js/lib/*.js', 'app/_ui/js/app.main.js', 'app/_ui/js/components/*.js'])
+	return gulp.src(['src/_ui/js/lib/*.js', 'src/_ui/js/app.main.js', 'src/_ui/js/components/*.js'])
 		.pipe(concat('scripts.js'))
 		.pipe(gulp.dest('app/_ui/compiled'))
     	.on('error', createErrorHandler('scripts task'))
@@ -87,8 +87,8 @@ gulp.task('watch', function(){
 	livereload.listen();
 
 	// SCSS/JS
-	gulp.watch('app/_ui/scss/**/*.scss', ['styles']);
-	gulp.watch('app/_ui/js/**/*.js', ['scripts']);
+	gulp.watch('src/_ui/scss/**/*.scss', ['styles']);
+	gulp.watch('src/_ui/js/**/*.js', ['scripts']);
 
 	// Partials
 	gulp.watch('src/templates/partials/*.nunjucks', ['nunjucks']);
