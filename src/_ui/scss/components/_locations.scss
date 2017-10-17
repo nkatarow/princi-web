@@ -6,7 +6,7 @@
 	text-align: center;
 	margin-bottom: 25%;
 
-	.location { margin-bottom: $space-double; }
+	.location { margin-bottom: $space*4; }
 
 	.caption { margin-top: $space; }
 
@@ -29,6 +29,11 @@
 			text-decoration: none;
 		}
 	}
+
+	 p {
+		 font-size: 1.4em;
+		 margin-top: $space;
+	 }
 }
 
 
@@ -56,5 +61,8 @@
 				width: 25%;
 			}
 		}
+
+	 	p { font-size: 1.6em; }
+
 	}
 }

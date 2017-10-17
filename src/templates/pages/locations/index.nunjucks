@@ -29,6 +29,9 @@
 						<span itemprop="telephone" class="tel">
 							Tel <a href="tel:+390229060832">+39 (0)2 29060832</a>
 						</span>
+
+						<p>Monday – Wednesday:<br /> 7:00 a.m to 9:00 p.m.</p>
+						<p>Thursday – Sunday:<br /> open 24 hours</p>
 					</div>
 
 					<div class="location quarter" itemscope itemtype="http://schema.org/Place">
@@ -37,6 +40,8 @@
 						<span itemprop="telephone" class="tel">
 							Tel <a href="tel:+3902874797">+39 (0)2 874797</a>
 						</span>
+
+						<p>7:00 a.m. to 8:00 p.m.</p>
 					</div>
 
 					<div class="location quarter" itemscope itemtype="http://schema.org/Place">
@@ -45,6 +50,8 @@
 						<span itemprop="telephone" class="tel">
 							Tel <a href="tel:+39026599013">+39 (0)2 6599013</a>
 						</span>
+
+						<p>7:00 a.m. to 11:00 p.m.</p>
 					</div>
 
 					<div class="location quarter" itemscope itemtype="http://schema.org/Place">
@@ -53,6 +60,8 @@
 						<span itemprop="telephone" class="tel">
 							Tel <a href="tel:+390272016067">+39 (0)2 72016067</a>
 						</span>
+
+						<p>7:00 a.m. to 11:00 p.m.</p>
 					</div>
 				</div>
 			</section>
@@ -65,6 +74,13 @@
 					<span itemprop="telephone" class="tel">
 						Tel <a href="tel:+4402074788888">+44 (0)20 7478 8888</a>
 					</span>
+
+					<p>
+						Monday – Saturday: 8:00 a.m. to 12:00 a.m.<br />
+						Sunday: 8:30 a.m. to 10:00 p.m.
+					</p>
+
+					<a href="https://deliveroo.co.uk/menu/london/soho/princi" target="_blank" class="btn">Delivery</a>
 				</div>
 			</section>
 
