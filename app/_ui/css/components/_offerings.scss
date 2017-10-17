@@ -8,36 +8,8 @@
 	margin: 120px auto 60px;
 	text-align: center;
 
-	.h1 {
-		padding-bottom: 30px;
-		text-transform: uppercase;
-	}
-
+	.h1 { text-transform: uppercase; }
 	.intro { margin-top: $space; }
-
-	.line {
-		display: block;
-		height: 100px;
-		margin: 0 auto 10%;
-		position: relative;
-		width: 1px;
-
-		&::before {
-			border-left: 1px solid transparent;
-			content: '';
-			height: 0;
-			left: 0;
-			position: absolute;
-			top: 0;
-			transition: height .5s ease-out;
-		}
-
-		&.draw::before {
-			border-left-color: $bronze;
-			height: 100px;
-		}
-	}
-
 	.standard { padding: 0 5%; }
 }
 
@@ -116,11 +88,6 @@
 		padding-top: 4%;
 		padding-bottom: 4%;
 
-		.line {
-			margin-top: 0;
-			margin-bottom: 5%;
-		}
-
 		.standard {
 			text-align: left;
 			margin: $space*4 0 $space 5%;
@@ -130,8 +97,6 @@
 	}
 
 	.foods {
-
-
 		.type {
 			align-items: center;
 			background-position: center center;
@@ -174,6 +139,7 @@
 
 				&.reveal { background-color: rgba(152,105,76,0); }
 				&:hover { background-color: rgba(152,105,76,0.65); }
+				&.no-hover { background-color: rgba(152,105,76,0) !important; }
 
 				.plus-box {
 					left: 0;
@@ -229,8 +195,6 @@
 
 				.copy { transform: translateX(-100%); }
 				.mask {
-					&:hover  { background-color: rgba(152,105,76,0); }
-
 					.plus-box { left: -110%; }
 				}
 

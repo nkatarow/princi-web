@@ -5,14 +5,14 @@
 	<div id="content">
 		<div class="parallax">
 
-			<div class="food-hero">
-				<div class="wow fadeIn">
+			<div class="food-hero wow fadeIn">
+				<div class="">
 					<h1 class="h1">Locations</h1>
-					<span class="line draw"></span>
+					<span class="line"></span>
 					<p class="intro">Eat, drink, and live Italian</p>
 				</div>
 
-				<div class="owl-carousel wow fadeIn">
+				<div class="owl-carousel">
 					<img src="/_ui/img/locations/princi-locations-carousel-1.jpg" class="" alt="">
 					<img src="/_ui/img/locations/princi-locations-carousel-2.jpg" class="" alt="">
 					<img src="/_ui/img/locations/princi-locations-carousel-3.jpg" class="" alt="">

@@ -88,24 +88,29 @@ APP.instantiations = {
 				}
 			});
 
-			//
+			// hero parallax
 			if ($('#intro').length) {
-				parallax();
+			    var scrolled = $('.parallax').scrollTop();
+			    $('.hero').css('top', -(scrolled * 0.2) + 'px');
+			}
+			if ($('.food-hero').length) {
+			    var scrolled = $('.parallax').scrollTop();
+			    $('.owl-carousel').css('top', -(scrolled * 0.2) + 'px');
+			}
+			if ($('#heritage-hero').length) {
+			    var scrolled = $('.parallax').scrollTop();
+			    $('#heritage-hero .img').css('top', -(scrolled * 0.2) + 'px');
 			}
 		});
 
-		if ($("#inline-video").length) {
-			var video = document.getElementById('inline-video');
-
-			video.addEventListener('loadeddata', function() {
-				if (video.readyState >= 2) { video.play(); }
-			});
-		}
-
-		function parallax(){
-		    var scrolled = $('.parallax').scrollTop();
-		    $('.hero').css('top', -(scrolled * 0.2) + 'px');
-		}
+		// if ($("#inline-video").length) {
+		// 	var video = document.getElementById('inline-video');
+		//
+		// 	video.addEventListener('loadeddata', function() {
+		// 		console.log(video.readyState);
+		// 		if (video.readyState > 2) { video.play(); }
+		// 	});
+		// }
 
 		// Carousel
 		$('.owl-carousel').owlCarousel({

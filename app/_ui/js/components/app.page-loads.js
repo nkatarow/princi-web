@@ -12,7 +12,7 @@
 
 APP.pageLoads = {
     defaultLoadIn: function($main) {
-		console.log("function defaultLoadIn");
+		// console.log("function defaultLoadIn");
 
 		if ($('.top-bar').hasClass('hidden')) $('.top-bar').removeClass('hidden');
 
@@ -29,7 +29,7 @@ APP.pageLoads = {
 	},
 
 	successfulLoadIn: function($main, pageContent) {
-		console.log("successfulLoadIn");
+		// console.log("successfulLoadIn");
 
 		/* ----- Where the new content is added ----- */
 		$main.html(pageContent);
@@ -58,6 +58,8 @@ APP.pageLoads = {
 	            scrollTop: link.offset().top + 1 + $('.parallax').scrollTop()
 			}, 500);
 		}
+
+		$(link).addClass('no-hover');
 
 		setTimeout(function(){
 			// Animate image to cover full screen - 1s

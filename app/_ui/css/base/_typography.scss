@@ -8,6 +8,12 @@ body {
 	color: $bronze;
 }
 
+::selection {
+	background: rgba(142,130,121,0.4); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+	background: rgba(142,130,121,0.4); /* Gecko Browsers */
+}
 
 // Headings
 h1, .h1   {

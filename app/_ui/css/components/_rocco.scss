@@ -16,13 +16,14 @@
 	}
 
 	.h1 { padding-bottom: $space-quarter; }
-	.line { margin-top: 330px; }
+	.line { margin-top: 230px; }
 	.intro { margin-top: 0; }
 
 	.img {
 		max-width: 100%;
 		position: absolute;
-		top: 320px;
+		top: 0;
+		margin-top: 320px;
 		right: 0;
 		z-index: 1;
 	}
@@ -50,7 +51,6 @@
 }
 
 .owl-carousel { background-color: $white; }
-.rocco-princi .bg-white .line { margin-bottom: 0; }
 
 
 @media screen and (min-width: $bp-large-2) {
@@ -58,7 +58,7 @@
 		align-items: center;
 		display: flex;
 		margin: 0 auto 120px;
-		padding: 120px 5% 0;
+		padding: 170px 5% 10%;
 		position: relative;
 		width: 100%;
 
@@ -88,7 +88,8 @@
 			text-align: right;
 			margin-right: 0;
 			max-width: 100%;
-			top: 190px;
+			margin-top: 240px;
+			top: 0;
 			width: 75%;
 			z-index: 1;
 		}
@@ -110,7 +111,6 @@
 			left: 10%;
 			width: 80%;
 			text-align: center;
-			// transform: translateX(-50%);
 			z-index: 2;
 		}
 

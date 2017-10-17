@@ -15,31 +15,29 @@ $(function() {
 			}
 		}
 
-		// console.log("pageTransitionType = " + pageTransitionType + " href = " + href);
 		loadPage(pageTransitionType, href, link);
 	},
 
   	/* ----- Do this when a page loads ----- */
   	init = function(pageTransitionType) {
 		// console.log("init");
+
     	/* ----- This is where I would run any page specific functions ----- */
-
 		setTimeout(function(){
-		var newTitle = $('body').find('h1').text(),
-			titleLower = newTitle.replace(/\s+/g, '-').toLowerCase(),
-			depth = $(location).prop('pathname').split('/').length - 1;
+			var newTitle = $('body').find('h1').text(),
+				titleLower = newTitle.replace(/\s+/g, '-').toLowerCase(),
+				depth = $(location).prop('pathname').split('/').length - 1;
 
-		document.title = "";
-		$('body').attr('class', '');
-		$('body').addClass(' ' + titleLower);
+			document.title = "";
+			$('body').attr('class', '');
+			$('body').addClass(' ' + titleLower);
 
-		if (newTitle != "Princi") {
-			document.title = newTitle + ' | Princi';
-		} else {
-			titleLower = 'homepage';
-			document.title = newTitle;
-		}
-
+			if (newTitle != "Princi") {
+				document.title = newTitle + ' | Princi';
+			} else {
+				titleLower = 'homepage';
+				document.title = newTitle;
+			}
 		}, 2000);
 
 		APP.instantiations.init(pageTransitionType);
