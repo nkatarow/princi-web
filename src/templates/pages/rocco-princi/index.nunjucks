@@ -1,5 +1,5 @@
 <!-- rocco-princi.nunjucks -->
-{% extends "layout.nunjucks" %}
+{% extends "partials/layout.nunjucks" %}
 
 {% block content %}
 	<div id="content">
@@ -100,7 +100,6 @@
 				</div>
 			</section>
 
-
 			<section id="food-cta" class="bottom-cta offerings-cta">
 				<a href="/offerings/" class="bottom-cta-link">
 					<div class="cta-container">
@@ -115,7 +114,7 @@
 					</div>
 				</a>
 
-				{% include "footer.nunjucks" %}
+				{% include "partials/footer.nunjucks" %}
 			</section> <!-- /#heritage-cta -->
 
 		</div><!-- /.parallax -->

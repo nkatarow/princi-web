@@ -22,9 +22,9 @@ function createErrorHandler(name) {
 
 // nunjucks templating
 gulp.task('nunjucks', function() {
-	return gulp.src('app/pages/**/*.+(html|nunjucks)')
+	return gulp.src('src/templates/pages/**/*.+(html|nunjucks)')
 		.pipe(nunjucksRender({
-			path: ['app/templates']
+			path: ['src/templates/']
 		}))
 		.pipe(gulp.dest('app'))
 		.pipe(livereload());
@@ -32,7 +32,7 @@ gulp.task('nunjucks', function() {
 
 // Concat/autoprefix CSS
 gulp.task('styles', function(){
-	return sass('app/_ui/css/main.scss', { style: 'expanded'})
+	return sass('app/_ui/scss/main.scss', { style: 'expanded'})
 		.pipe(sourcemaps.init())
 		.pipe(sourcemaps.write())
 		.pipe(autoprefixer({browsers: ['last 2 version', 'safari 5', 'ie 9', 'ios 6', 'android 4', '> 1%']}))
@@ -86,12 +86,17 @@ gulp.task('default', ['cleancompiled'], function(){
 gulp.task('watch', function(){
 	livereload.listen();
 
-	gulp.watch('app/_ui/css/**/*.scss', ['styles']);
+	// SCSS/JS
+	gulp.watch('app/_ui/scss/**/*.scss', ['styles']);
 	gulp.watch('app/_ui/js/**/*.js', ['scripts']);
-	gulp.watch('app/pages/*.nunjucks', ['nunjucks']);
-	gulp.watch('app/pages/**/*.nunjucks', ['nunjucks']);
-	gulp.watch('app/templates/*.nunjucks', ['nunjucks']);
-	gulp.watch('app/templates/**/*.nunjucks', ['nunjucks']);
+
+	// Partials
+	gulp.watch('src/templates/partials/*.nunjucks', ['nunjucks']);
+
+	// Pages
+	gulp.watch('src/templates/pages/*.nunjucks', ['nunjucks']);
+	gulp.watch('src/templates/pages/**/*.nunjucks', ['nunjucks']);
+	gulp.watch('src/templates/pages/**/**/*.nunjucks', ['nunjucks']);
 });
 
 // Build task

@@ -1,5 +1,5 @@
 <!-- offerings.nunjucks -->
-{% extends "layout.nunjucks" %}
+{% extends "partials/layout.nunjucks" %}
 
 {% block content %}
 	<div id="content">
@@ -173,7 +173,7 @@
 					</div>
 				</a>
 
-				{% include "footer.nunjucks" %}
+				{% include "partials/footer.nunjucks" %}
 			</section> <!-- /#heritage-cta -->
 		</div>
 

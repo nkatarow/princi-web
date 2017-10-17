@@ -1,5 +1,5 @@
 <!-- 404.nunjucks -->
-{% extends "layout.nunjucks" %}
+{% extends "partials/layout.nunjucks" %}
 
 {% block content %}
 	<div id="content">
