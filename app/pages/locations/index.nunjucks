@@ -9,7 +9,7 @@
 				<div class="">
 					<h1 class="h1">Locations</h1>
 					<span class="line"></span>
-					<p class="intro">Eat, drink, and live Italian</p>
+					<p class="intro">Eat, drink, and live Italian.</p>
 				</div>
 
 				<div class="owl-carousel">
@@ -21,19 +21,6 @@
 			</div>
 
 			<section class="city wow fadeIn">
-				<h2 class="large-underline"><span>London</span></h2>
-				<div class="location" itemscope itemtype="http://schema.org/Place">
-					<span class="offscreen" itemprop="containedInPlace"></span>
-					<address itemprop="address">135 Wardour Street W1F 0UT</address>
-					<span itemprop="telephone" class="tel">
-						Tel <a href="tel:+4402074788888">+44 (0)20 7478 8888</a>
-					</span>
-					{# <span class="offscreen" itemprop="branchCode"></span> #}
-				</div>
-			</section>
-
-
-			<section class="city wow fadeIn">
 				<h2 class="large-underline"><span>Milan</span></h2>
 				<div class="location-group">
 					<div class="location quarter" itemscope itemtype="http://schema.org/Place">
@@ -42,7 +29,6 @@
 						<span itemprop="telephone" class="tel">
 							Tel <a href="tel:+390229060832">+39 (0)2 29060832</a>
 						</span>
-						{# <span class="offscreen" itemprop="branchCode"></span> #}
 					</div>
 
 					<div class="location quarter" itemscope itemtype="http://schema.org/Place">
@@ -51,7 +37,6 @@
 						<span itemprop="telephone" class="tel">
 							Tel <a href="tel:+3902874797">+39 (0)2 874797</a>
 						</span>
-						{# <span class="offscreen" itemprop="branchCode"></span> #}
 					</div>
 
 					<div class="location quarter" itemscope itemtype="http://schema.org/Place">
@@ -60,7 +45,6 @@
 						<span itemprop="telephone" class="tel">
 							Tel <a href="tel:+39026599013">+39 (0)2 6599013</a>
 						</span>
-						{# <span class="offscreen" itemprop="branchCode"></span> #}
 					</div>
 
 					<div class="location quarter" itemscope itemtype="http://schema.org/Place">
@@ -69,8 +53,18 @@
 						<span itemprop="telephone" class="tel">
 							Tel <a href="tel:+390272016067">+39 (0)2 72016067</a>
 						</span>
-						{# <span class="offscreen" itemprop="branchCode"></span> #}
 					</div>
+				</div>
+			</section>
+
+			<section class="city wow fadeIn">
+				<h2 class="large-underline"><span>London</span></h2>
+				<div class="location" itemscope itemtype="http://schema.org/Place">
+					<span class="offscreen" itemprop="containedInPlace"></span>
+					<address itemprop="address">135 Wardour Street W1F 0UT</address>
+					<span itemprop="telephone" class="tel">
+						Tel <a href="tel:+4402074788888">+44 (0)20 7478 8888</a>
+					</span>
 				</div>
 			</section>
 
@@ -84,7 +78,6 @@
 					<span itemprop="telephone" class="tel">
 						Tel <a href="tel:+12066240173">+1 (206) 624-0173</a>
 					</span> #}
-					{# <span class="offscreen" itemprop="branchCode"></span> #}
 				</div>
 			</section>
 
@@ -98,7 +91,6 @@
 					{# <span itemprop="telephone" class="tel" >
 						Tel <a href="tel:+390229060832">+39 (0)2 29060832</a>
 					</span> #}
-					{# <span class="offscreen" itemprop="branchCode"></span> #}
 				</div>
 			</section>
 

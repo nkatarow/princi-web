@@ -54,13 +54,11 @@
 		span { border-bottom: 1px solid $white; }
 	}
 
-	h2 {
-		font-family: $tradegothic;
-		font-size: 1.4em;
-		letter-spacing: 0.05em;
+	.airy { margin: 0 auto; }
+
+	.caption {
 		margin-bottom: $space-double;
 		text-align: center;
-		text-transform: uppercase;
 	}
 }
 
@@ -106,29 +104,6 @@
 			max-width: 90%;
 		}
 
-		h1 {
-			// font-size: 6em;
-			margin-bottom: $space-quarter;
-		}
-
-		.airy {
-			// border-left: 1px solid $white;
-			// padding-left: 5%;
-
-			// &::before {
-			// 	background-color: $white;
-			// 	content: '';
-			// 	display: block;
-			// 	height: 0;
-			// 	position: absolute;
-			// 	left: 0;
-			// 	transition: height 500ms ease-out;
-			// 	transition-delay: 500ms;
-			// 	width: 1px;
-			// }
-			//
-			// &.draw::before { height: 100%; }
-		}
-
+		h1 { margin-bottom: $space-quarter; }
 	}
 }
