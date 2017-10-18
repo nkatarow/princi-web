@@ -33,7 +33,7 @@
 					<div class="copy">
 						<div class="">
 							<h2 class="large-underline"><span>Pane</span></h2>
-							<p class="caption large">Artisan breads</p>
+							<p class="caption large">Artisan<br />breads</p>
 						</div>
 					</div>
 
@@ -52,7 +52,7 @@
 					<div class="copy">
 						<div class="">
 							<h2 class="large-underline"><span>Pasticcini</span></h2>
-							<p class="caption large">Fresh pastries</p>
+							<p class="caption large">Fresh<br />pastries</p>
 						</div>
 					</div>
 
@@ -70,7 +70,7 @@
 					<div class="copy">
 						<div class="">
 							<h2 class="large-underline"><span>Mattina</span></h2>
-							<p class="caption large">Breakfast fare</p>
+							<p class="caption large">Breakfast<br />fare</p>
 						</div>
 					</div>
 
@@ -89,7 +89,7 @@
 					<div class="copy">
 						<div class="">
 							<h2 class="large-underline"><span>Pranzo</span></h2>
-							<p class="caption large">Lunch selections</p>
+							<p class="caption large">Lunch<br />selections</p>
 						</div>
 					</div>
 
@@ -107,7 +107,7 @@
 					<div class="copy">
 						<div class="">
 							<h2 class="large-underline"><span>Pizza</span></h2>
-							<p class="caption large">Served al taglio</p>
+							<p class="caption large">Served<br />al taglio</p>
 						</div>
 					</div>
 
@@ -127,7 +127,7 @@
 					<div class="copy">
 						<div class="">
 							<h2 class="large-underline"><span>Aperitivo</span></h2>
-							<p class="caption large">Cocktails and small plates</p>
+							<p class="caption large">Cocktails and<br />small plates</p>
 						</div>
 					</div>
 
@@ -145,7 +145,7 @@
 					<div class="copy">
 						<div class="">
 							<h2 class="large-underline"><span>Dolci</span></h2>
-							<p class="caption large">Handmade desserts</p>
+							<p class="caption large">Handmade<br />desserts</p>
 						</div>
 					</div>
 

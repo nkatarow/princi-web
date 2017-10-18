@@ -54,7 +54,10 @@
 		span { border-bottom: 1px solid $white; }
 	}
 
-	.airy { margin: 0 auto; }
+	.airy {
+		margin: 0 auto;
+		text-align: center;
+	}
 
 	.caption {
 		margin-bottom: $space-double;
