@@ -170,15 +170,15 @@
 
 					<nav id="social" class="edge-menu" role="navigation" aria-label="Social Channels">
 						<ul>
-							<li><a href="https://www.facebook.com/PrinciMilano/" target="_blank">Facebook</a></li>
-							<li><a href="https://www.instagram.com/princi_milano/" target="_blank">Instagram</a></li>
+							<li><a href="https://www.facebook.com/PrinciBread/" target="_blank">Facebook</a></li>
+							<li><a href="https://www.instagram.com/princi/" target="_blank">Instagram</a></li>
 						</ul>
 					</nav>
 
 					<nav id="secondary" class="edge-menu" role="navigation" aria-label="Secondary Navigation">
 						<ul>
-							<li><a href="#">Contact Us</a></li>
-							<li><a href="https://starbucks.taleo.net/" target="_blank">Careers</a></li>
+							<li><a href="mailto:info@princi.com">Contact Us</a></li>
+							<li><a href="https://www.starbucks.com/careers" target="_blank">Careers</a></li>
 						</ul>
 					</nav>
 
