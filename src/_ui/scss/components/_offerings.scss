@@ -208,43 +208,33 @@
 	}
 }
 
-@media screen and (min-width: $bp-med) and (min-height: 700px) {
-	.foods {
-		.accent-header {
-			@include parallax(.25);
-			display: block;
-			opacity: 1;
-			position: absolute;
-			top: 0;
-			transition: opacity 250ms ease-out;
-			z-index: 1 !important;
-
-			&.left { left: 25%; }
-			&.right { left: 45%; }
-			&.one { top: 14%; }
-			&.two { top: 73%; }
-			&.three { top: 89%; }
-			&.hide { opacity: 0; }
-		}
-	}
-}
-
 @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
 	@media screen and (min-width: $bp-large-2) {
 		.foods {
 			.type {
 				&:nth-child(odd) .copy {
-
-					.caption {
-						@include parallax(.1);
-					}
+					.caption { @include parallax(.1); }
 				}
 				&:nth-child(even) .copy {
-
-					.caption {
-						@include parallax(.1);
-					}
+					.caption { @include parallax(.1); }
 				}
+			}
+
+			.accent-header {
+				@include parallax(.25);
+				display: block;
+				opacity: 1;
+				position: absolute;
+				top: 0;
+				transition: opacity 250ms ease-out;
+				z-index: 1 !important;
+
+				&.left { left: 25%; }
+				&.right { left: 45%; }
+				&.one { top: 14%; }
+				&.two { top: 73%; }
+				&.three { top: 89%; }
+				&.hide { opacity: 0; }
 			}
 		}
 	}

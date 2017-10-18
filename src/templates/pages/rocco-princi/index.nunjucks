@@ -13,7 +13,6 @@
 		<video id="inline-video" poster="/_ui/img/homepage/video.jpg" autoplay loop muted>
             <source src="/_ui/video/rocco-low-res.webm" type="video/webm">
         	<source src="/_ui/video/rocco-low-res.mp4" type="video/mp4">
-            <source src="/_ui/video/rocco-low-res.ogv" type="video/ogg">
 	    	Your browser does not support the video tag
 		</video>
 
@@ -38,7 +37,7 @@
 			</section><!-- /#heritage-hero -->
 
 		  	<div class="video-text">
-				<img src="/_ui/img/rocco/video-gif.gif" alt="">
+				<img src="/_ui/img/homepage/bread.gif" alt="">
 			</div>
 
 			<section id="passion" class="split-pic flip">
