@@ -61,9 +61,18 @@
 		<!-- Stylesheet -->
     	<link rel="stylesheet" href="/_ui/compiled/main.css" type="text/css" media="all">
         <!-- <link rel="stylesheet" href="/_ui/dist/main.min.css" type="text/css" media="all"> -->
+
+		<script type="text/javascript">
+			var uo_data = uo_data || {};
+			uo_data.pageInfo = { // All Pages
+			    "siteExperience": "Tablet", // Mobile Desktop
+			    "siteName": "Princi",
+			    "siteLanguage": "en"
+			};
+		</script>
     </head>
 
-    <body class="body">
+    <body class="body" data-page-template="">
         <header>
 			<nav class="offscreen" aria-label="Screen Reader Skip Links">
 				<ul>
@@ -208,6 +217,13 @@
 
 			
 	<div id="content">
+		<script type="text/javascript">
+			uo_data.pageInfo = { // All Pages
+				"pageTemplate": "About", // Offerings About Locations
+			    "pageUrl": "http://www.princi.com/rocco-princi/", // Full URL
+			}
+		</script>
+
 		<video id="inline-video" poster="/_ui/img/homepage/video.jpg" autoplay loop muted>
             <source src="/_ui/video/rocco-low-res.webm" type="video/webm">
         	<source src="/_ui/video/rocco-low-res.mp4" type="video/mp4">

@@ -3,6 +3,13 @@
 
 {% block content %}
 	<div id="content">
+		<script type="text/javascript">
+			uo_data.pageInfo = { // All Pages
+				"pageTemplate": "Homepage", // Offerings About Locations
+			    "pageUrl": "http://www.princi.com/", // Full URL
+			}
+		</script>
+
 		<h1 class="offscreen">Princi</h1>
 		<video id="inline-video" poster="/_ui/img/homepage/video.jpg" autoplay loop muted>
             <source src="/_ui/video/homepage-low-res.webm" type="video/webm">

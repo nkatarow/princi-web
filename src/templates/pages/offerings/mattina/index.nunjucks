@@ -3,8 +3,18 @@
 
 {% block content %}
 	<div id="content">
+		<script type="text/javascript">
+			uo_data.pageInfo = { // All Pages
+				"pageTemplate": "Offerings", // Offerings About Locations
+			    "pageUrl": "http://www.princi.com/offerings/mattina/", // Full URL
+			}
+			uo_data.offeringInfo = { // Offerings Page
+            	"offeringName": "Mattina" // When an offering is selected, push the name to the object
+			};
+		</script>
+
 		<div class="food-type detail-page active" style="background-image: url(/_ui/img/offerings/food/princi-offerings-mattina-1.jpg);">
-			<section class="food-details">
+			<section class="food-details" data-offering-name="Mattina">
   				<a href="/offerings/" id="cross" class="food-type-toggle"></a>
 
 				<div class="">
