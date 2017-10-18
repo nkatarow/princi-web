@@ -2,7 +2,7 @@
 
     Main JavaScript
     VERSION 1.0.0
-    AUTHORS: Nick Katarow, Gavin Suntop
+    AUTHORS: Nick Katarow
 
     DEPENDENCIES:
     - jQuery 1.7.2

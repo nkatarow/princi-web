@@ -49,7 +49,7 @@ APP.pageLoads = {
 		$main.append('<div class="secondary-results-div">' + pageContent + '</div>');
 
 		// Bring image to top
-		if (APP.getMediaWidth() < 800) {
+		if (APP.getMediaWidth() < 748.8) {
 			$('html,body').animate({
 	            scrollTop: link.offset().top
 	        }, 500);
@@ -60,7 +60,8 @@ APP.pageLoads = {
 		}
 
 		$(link).addClass('no-hover');
-
+		$('.accent-header').addClass('hide');
+		
 		setTimeout(function(){
 			// Animate image to cover full screen - 1s
 			$(link).parent('.type').addClass('center-background');

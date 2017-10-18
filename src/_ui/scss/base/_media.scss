@@ -26,6 +26,8 @@ figcaption {
 // Custom
 video { display: none; }
 
+.video-text img { width: 100%; }
+
 @media screen and (min-width: $bp-large){
 	video {
 		display: block;

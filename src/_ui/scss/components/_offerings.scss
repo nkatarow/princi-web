@@ -54,7 +54,7 @@
 }
 
 
-@media screen and (max-width: $bp-large) {
+@media screen and (max-width: $bp-med) {
 	.foods {
 		.type {
 			background-position: bottom right;
@@ -83,7 +83,7 @@
 }
 
 
-@media screen and (min-width: $bp-large) {
+@media screen and (min-width: $bp-med) {
 	.food-hero {
 		padding-top: 4%;
 		padding-bottom: 4%;
@@ -208,19 +208,23 @@
 	}
 }
 
-@media screen and (min-width: $bp-large) and (min-height: 700px) {
+@media screen and (min-width: $bp-med) and (min-height: 700px) {
 	.foods {
 		.accent-header {
 			@include parallax(.25);
 			display: block;
+			opacity: 1;
 			position: absolute;
 			top: 0;
+			transition: opacity 250ms ease-out;
+			z-index: 1 !important;
 
 			&.left { left: 25%; }
 			&.right { left: 45%; }
 			&.one { top: 14%; }
 			&.two { top: 73%; }
 			&.three { top: 89%; }
+			&.hide { opacity: 0; }
 		}
 	}
 }
@@ -230,17 +234,15 @@
 		.foods {
 			.type {
 				&:nth-child(odd) .copy {
-					// .large-underline { margin-left: 15%; }
+
 					.caption {
 						@include parallax(.1);
-						// margin-left: 15%;
 					}
 				}
 				&:nth-child(even) .copy {
-					// .large-underline { margin-left: -5%; }
+
 					.caption {
 						@include parallax(.1);
-						// margin-left: -5%;
 					}
 				}
 			}

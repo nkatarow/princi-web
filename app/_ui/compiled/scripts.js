@@ -15030,7 +15030,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
     Main JavaScript
     VERSION 1.0.0
-    AUTHORS: Nick Katarow, Gavin Suntop
+    AUTHORS: Nick Katarow
 
     DEPENDENCIES:
     - jQuery 1.7.2
@@ -15493,7 +15493,7 @@ APP.pageLoads = {
 		$main.append('<div class="secondary-results-div">' + pageContent + '</div>');
 
 		// Bring image to top
-		if (APP.getMediaWidth() < 800) {
+		if (APP.getMediaWidth() < 748.8) {
 			$('html,body').animate({
 	            scrollTop: link.offset().top
 	        }, 500);
@@ -15504,7 +15504,8 @@ APP.pageLoads = {
 		}
 
 		$(link).addClass('no-hover');
-
+		$('.accent-header').addClass('hide');
+		
 		setTimeout(function(){
 			// Animate image to cover full screen - 1s
 			$(link).parent('.type').addClass('center-background');
