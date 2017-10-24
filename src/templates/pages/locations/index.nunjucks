@@ -18,7 +18,7 @@
 					<p class="intro">Eat, drink, and live Italian.</p>
 				</div>
 
-				<div class="owl-carousel">
+				<div class="owl-carousel locations">
 					<img src="/_ui/img/locations/princi-locations-carousel-1.jpg" class="" alt="">
 					<img src="/_ui/img/locations/princi-locations-carousel-2.jpg" class="" alt="">
 					<img src="/_ui/img/locations/princi-locations-carousel-3.jpg" class="" alt="">

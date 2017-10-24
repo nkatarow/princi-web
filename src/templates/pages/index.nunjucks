@@ -2,6 +2,23 @@
 {% extends "partials/layout.nunjucks" %}
 
 {% block content %}
+	<!--
+	Start of DoubleClick Floodlight Tag: Please do not remove
+	Activity name of this tag: Princi Homepage
+	URL of the webpage where the tag is expected to be placed: http://www.princi.com/
+	This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+	Creation Date: 10/20/2017
+	-->
+		<script type=""text/javascript"">
+			var axel = Math.random() + """";
+			var a = axel * 10000000000000;
+			document.write('<iframe src=""https://4487060.fls.doubleclick.net/activityi;src=4487060;type=princi;cat=princi0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?"" width=""1"" height=""1"" frameborder=""0"" style=""display:none""></iframe>');
+		</script>
+		<noscript>
+			<iframe src=""https://4487060.fls.doubleclick.net/activityi;src=4487060;type=princi;cat=princi0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?"" width=""1"" height=""1"" frameborder=""0"" style=""display:none""></iframe>
+		</noscript>
+	<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+
 	<div id="content">
 		<script type="text/javascript">
 			uo_data.pageInfo = { // All Pages
