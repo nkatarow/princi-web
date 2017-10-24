@@ -24,19 +24,29 @@ figcaption {
 
 
 // Custom
-// video { display: none; }
-// .video-text img { width: 100%; }
 video {
+	background-size: 100% auto;
 	display: block;
+	height: auto;
 	left: 0;
 	position: fixed;
-	top: 0;
-	min-height: 100vh;
-	min-width: 100vw;
+	top: 50%;
+	width: 100vw;
+	transform: translateY(-50%);
 }
 
-.video-text {
-	height: 85vh;
-
-	// img { display: none; }
+@media screen and (min-width: $bp-large) {
+	video {
+		left: 50%;
+		background-size: cover;
+		background-position: center center;
+		height: 100vh;
+		width: auto;
+		min-height: 100vh;
+		min-width: 100vw;
+		top: 50%;
+		transform:
+			translateY(-50%)
+			translateX(-50%);
+	}
 }

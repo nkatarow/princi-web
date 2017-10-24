@@ -18,7 +18,7 @@ window.APP = {
     init: function () {
         var self = this;
 
-        // self.events.parent = this;
+        self.events.parent = this;
 
         // Init Components
         APP.nav.init();
@@ -32,19 +32,21 @@ window.APP = {
 		}
 
         // EVENT DELEGATION
-        // $(window).bind('resize', function(event) {
-        //     self.events.windowResize({width: self.getMediaWidth()});
-        // });
-		//
-        // $(window).triggerHandler('resize');
+        $(window).bind('resize', function(event) {
+            self.events.windowResize({width: self.getMediaWidth()});
+        });
+
+        $(window).triggerHandler('resize');
     },
-    // events: {
-    //     windowResize: function (event) {
-    //         var self = this.parent,
-    //             i,
-    //             ii;
-    //     }
-    // },
+    events: {
+        windowResize: function (event) {
+            var self = this.parent,
+                i,
+                ii;
+
+			APP.instantiations.init('default');
+        }
+    },
     getMediaWidth: function () {
         var self = this,
             width;

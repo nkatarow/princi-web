@@ -13640,7 +13640,7 @@ window.APP = {
     init: function () {
         var self = this;
 
-        // self.events.parent = this;
+        self.events.parent = this;
 
         // Init Components
         APP.nav.init();
@@ -13654,19 +13654,21 @@ window.APP = {
 		}
 
         // EVENT DELEGATION
-        // $(window).bind('resize', function(event) {
-        //     self.events.windowResize({width: self.getMediaWidth()});
-        // });
-		//
-        // $(window).triggerHandler('resize');
+        $(window).bind('resize', function(event) {
+            self.events.windowResize({width: self.getMediaWidth()});
+        });
+
+        $(window).triggerHandler('resize');
     },
-    // events: {
-    //     windowResize: function (event) {
-    //         var self = this.parent,
-    //             i,
-    //             ii;
-    //     }
-    // },
+    events: {
+        windowResize: function (event) {
+            var self = this.parent,
+                i,
+                ii;
+
+			APP.instantiations.init('default');
+        }
+    },
     getMediaWidth: function () {
         var self = this,
             width;
@@ -13925,12 +13927,16 @@ APP.instantiations = {
 		});
 
 		if ($("#inline-video").length) {
-			var video = document.getElementById('inline-video');
+			var video = document.getElementById('inline-video'),
+				windowHeight = $(window).height(),
+				videoOffset = $(video).offset().top * 2,
+				videoHeight = (windowHeight - videoOffset) * .85;
 
-			video.addEventListener('loadeddata', function() {
-				// console.log(video.readyState);
-				if (video.readyState > 2) { video.play(); }
-			});
+			$('.video-text').css('height', videoHeight);
+
+			setTimeout(function(){
+				video.play();
+			}, 1000);
 		}
 
 		// Carousel
