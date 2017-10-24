@@ -85,8 +85,13 @@
 					<p>Sunday<br />8:30 AM&mdash;10:00 PM</p>
 
 					<a href="https://deliveroo.co.uk/menu/london/soho/princi" target="_blank" class="btn">
-						<span class="lead-line"></span>
+						{# <span class="lead-line"></span> #}
 						<span class="text">Delivery</span>
+					</a>
+					<br />
+					<a href="/downloads/princi_orderform_29_05_17_1.pdf" target="_blank" class="btn">
+						{# <span class="lead-line"></span> #}
+						<span class="text">Order Form</span>
 					</a>
 				</div>
 			</section>
@@ -107,7 +112,7 @@
 			<section class="city wow fadeIn">
 				<h2 class="large-underline"><span>Shanghai</span></h2>
 				<p class="caption large">Coming Soon</p>
-
+				<p>Our menus and ingredients vary by location, but our commitment to great ingredients remains true.</p>
 				<div class="location" itemscope itemtype="http://schema.org/Place">
 					{# <span itemprop="containedInPlace" class="contained-within">At the Starbucks Reserve Roastery</span>
 					<address itemprop="address">123 West Nanjing Road</address> #}
