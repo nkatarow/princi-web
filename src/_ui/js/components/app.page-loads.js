@@ -11,9 +11,38 @@
 */
 
 APP.pageLoads = {
-    defaultLoadIn: function($main) {
-		// console.log("function defaultLoadIn");
+	updatePageData: function(newTitle, newDescription) {
+		var trackingTitle = "",
+			depth = $(location).prop('pathname').split('/').length - 1,
+			titleLower = newTitle.replace(/\s+/g, '-').toLowerCase(),
+			offeringLocation = titleLower;
 
+		if (newTitle == 'Princi') {
+			trackingTitle = "Homepage";
+		} else if (newTitle == "Rocco Princi") {
+			trackingTitle = "About"
+		} else {
+			trackingTitle = newTitle;
+		}
+
+		document.title = "";
+		$('body').attr('class', ' ');
+		$('body').attr('data-page-template', trackingTitle);
+		$('body').addClass(titleLower);
+
+		if (newTitle != "Princi") {
+			document.title = newTitle + ' | Princi';
+		} else {
+			titleLower = 'homepage';
+			document.title = newTitle;
+		}
+
+    	$('meta[name=description]').attr('content', newDescription);
+    	$('meta[property="og:description"]').attr('content', newDescription);
+    	$('meta[name="twitter:description"]').attr('content', newDescription);
+	},
+
+    defaultLoadIn: function($main) {
 		if ($('.top-bar').hasClass('hidden')) $('.top-bar').removeClass('hidden');
 
 		setTimeout(function(){
@@ -29,10 +58,14 @@ APP.pageLoads = {
 	},
 
 	successfulLoadIn: function($main, pageContent) {
-		// console.log("successfulLoadIn");
+		var self = this;
 
 		/* ----- Where the new content is added ----- */
 		$main.html(pageContent);
+
+		var newTitle = $main.find('h1').text();
+
+		self.updatePageData(newTitle, metaDescription);
 
 		/* ----- Removes the temp height from $main ----- */
 		$main.css('height', '');
@@ -53,7 +86,7 @@ APP.pageLoads = {
 		if (APP.getMediaWidth() < 748.8) {
 			animOffset = 48;
 		} else {
-			animOffset = 65;
+			animOffset = 63;
 		}
 
 		$('.parallax').animate({
@@ -74,12 +107,12 @@ APP.pageLoads = {
 		setTimeout(function(){
 			$('.secondary-results-div').addClass('transition-in'); // 250ms
 
+			var newTitle = $('.secondary-results-div').find('h1').text();
+			self.updatePageData(newTitle, metaDescription);
+
 			/* ----- Set height of $main to ensure the footer doesn't jump up -----  */
 			var newResultsHeight = $('.secondary-results-div').outerHeight();
 			$main.height(newResultsHeight);
-
-			// ?
-			// scroll(0,0);
 		}, 1750);
 
 		setTimeout(function(){
@@ -100,11 +133,16 @@ APP.pageLoads = {
 	},
 
 	detailLoadOut: function($main, pageContent) {
-		var offeringLocation = $('body').attr('class');
+		var self = this,
+			title = $('body').find('h1').text(),
+			titleLower = title.replace(/\s+/g, '-').toLowerCase(),
+			offeringLocation = titleLower;
 
-		console.log(offeringLocation);
 		// Add new content behind current
 		$main.append('<div class="secondary-results-div">' + pageContent + '</div>');
+
+		var newTitle = $('.secondary-results-div').find('h1').text();
+		self.updatePageData(newTitle, metaDescription);
 
 		/* ----- Set height of $main to ensure the footer doesn't jump up -----  */
 		var newResultsHeight = $('.secondary-results-div').outerHeight();

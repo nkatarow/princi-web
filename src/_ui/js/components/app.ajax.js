@@ -23,33 +23,33 @@ $(function() {
 		// console.log("init");
 
     	/* ----- This is where I would run any page specific functions ----- */
-		setTimeout(function(){
-			var trackingTitle = "",
-				newTitle = $('body').find('h1').text(),
-				titleLower = newTitle.replace(/\s+/g, '-').toLowerCase(),
-				depth = $(location).prop('pathname').split('/').length - 1;
-
-			console.log(newTitle);
-			if (newTitle == 'Princi') {
-				trackingTitle = "Homepage";
-			} else if (newTitle == "Rocco Princi") {
-				trackingTitle = "About"
-			} else {
-				trackingTitle = newTitle;
-			}
-
-			document.title = "";
-			$('body').attr('class', ' ');
-			$('body').attr('data-page-template', trackingTitle);
-			$('body').addClass(titleLower);
-
-			if (newTitle != "Princi") {
-				document.title = newTitle + ' | Princi';
-			} else {
-				titleLower = 'homepage';
-				document.title = newTitle;
-			}
-		}, 2000);
+		// setTimeout(function(){
+		// 	var trackingTitle = "",
+		// 		newTitle = $('body').find('h1').text(),
+		// 		titleLower = newTitle.replace(/\s+/g, '-').toLowerCase(),
+		// 		depth = $(location).prop('pathname').split('/').length - 1;
+		//
+		// 	console.log(newTitle);
+		// 	if (newTitle == 'Princi') {
+		// 		trackingTitle = "Homepage";
+		// 	} else if (newTitle == "Rocco Princi") {
+		// 		trackingTitle = "About"
+		// 	} else {
+		// 		trackingTitle = newTitle;
+		// 	}
+		//
+		// 	document.title = "";
+		// 	$('body').attr('class', ' ');
+		// 	$('body').attr('data-page-template', trackingTitle);
+		// 	$('body').addClass(titleLower);
+		//
+		// 	if (newTitle != "Princi") {
+		// 		document.title = newTitle + ' | Princi';
+		// 	} else {
+		// 		titleLower = 'homepage';
+		// 		document.title = newTitle;
+		// 	}
+		// }, 2000);
 
 		APP.instantiations.init(pageTransitionType);
   	},

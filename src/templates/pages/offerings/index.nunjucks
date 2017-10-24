@@ -8,6 +8,8 @@
 				"pageTemplate": "Offerings", // Offerings About Locations
 			    "pageUrl": "http://www.princi.com/offerings/", // Full URL
 			}
+
+			var metaDescription = "Princi offers inspired menus for every moment, from early morning to aperitivo. Everything is made with exceptional ingredients and an obsessive attention to detail.";
 		</script>
 
 		<div class="parallax">
@@ -15,11 +17,11 @@
 				<h1 class="h1">Offerings</h1>
 
 				<div class="owl-carousel">
-					<img src="/_ui/img/offerings/princi-offerings-carousel-1.jpg" class="" alt="">
-					<img src="/_ui/img/offerings/princi-offerings-carousel-2.jpg" class="" alt="">
-					<img src="/_ui/img/offerings/princi-offerings-carousel-3.jpg" class="" alt="">
-					<img src="/_ui/img/offerings/princi-offerings-carousel-4.jpg" class="" alt="">
-					<img src="/_ui/img/offerings/princi-offerings-carousel-5.jpg" class="" alt="">
+					<img src="/_ui/img/offerings/princi-offerings-carousel-1.jpg" alt="Tomatoes, mozzarella cheese, basil and oregano sit on a wood surface">
+					<img src="/_ui/img/offerings/princi-offerings-carousel-2.jpg" alt="Hands forming bread dough">
+					<img src="/_ui/img/offerings/princi-offerings-carousel-3.jpg" alt="Slices of pizza sit on top of wood surface">
+					<img src="/_ui/img/offerings/princi-offerings-carousel-4.jpg" alt="A stencil that reads Princi is held over bread dough">
+					<img src="/_ui/img/offerings/princi-offerings-carousel-5.jpg" alt="Rocco Princi holds a tray of strawberries">
 				</div>
 
 				<p class="intro">Sourced and served from the heart.</p>
@@ -38,6 +40,7 @@
 					</div>
 
 					<a href="/offerings/pane/" class="mask edge landscape">
+						<span class="offscreen">Image Caption: A variety of baked breads</span>
 						<span class="plus-box">
 							<span class="plus">
 								<span class="vertical"></span>
@@ -57,6 +60,7 @@
 					</div>
 
 					<a href="/offerings/pasticcini/" class="mask portrait">
+						<span class="offscreen">Image Caption: A variety of baked pastries</span>
 						<span class="plus-box">
 							<span class="plus">
 								<span class="vertical"></span>
@@ -76,6 +80,7 @@
 
 
 					<a href="/offerings/mattina/" class="mask landscape">
+						<span class="offscreen">Image Caption: A variety of morning offerings including granola, bread and coffee</span>
 						<span class="plus-box">
 							<span class="plus">
 								<span class="vertical"></span>
@@ -94,6 +99,7 @@
 					</div>
 
 					<a href="/offerings/pranzo/" class="mask portrait">
+						<span class="offscreen">Image Caption: A variety of lunch offerings including sandwiches and salads</span>
 						<span class="plus-box">
 							<span class="plus">
 								<span class="vertical"></span>
@@ -113,6 +119,7 @@
 
 
 					<a href="/offerings/pizza/" class="mask edge landscape">
+						<span class="offscreen">Image Caption: A variety of pizza offerings</span>
 						<span class="plus-box">
 							<span class="plus">
 								<span class="vertical"></span>
@@ -132,6 +139,7 @@
 					</div>
 
 					<a href="/offerings/aperitivo/" class="mask portrait edge">
+						<span class="offscreen">Image Caption: A variety of cocktails and snacks on a table</span>
 						<span class="plus-box">
 							<span class="plus">
 								<span class="vertical"></span>
@@ -151,6 +159,7 @@
 
 
 					<a href="/offerings/dolci/" class="mask landscape">
+						<span class="offscreen">Image Caption: A variety of sweet dessert offerings including several pies and a coffee</span>
 						<span class="plus-box">
 							<span class="plus">
 								<span class="vertical"></span>

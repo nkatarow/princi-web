@@ -8,6 +8,8 @@
 				"pageTemplate": "Locations", // Offerings About Locations
 			    "pageUrl": "http://www.princi.com/locations/", // Full URL
 			}
+
+			var metaDescription = "Princi bakeries are located in Milan and London, with Seattle and Shanghai coming soon. Come enjoy a meal in the Milanese style.";
 		</script>
 
 		<div class="parallax">
@@ -19,10 +21,10 @@
 				</div>
 
 				<div class="owl-carousel locations">
-					<img src="/_ui/img/locations/princi-locations-carousel-1.jpg" class="" alt="">
-					<img src="/_ui/img/locations/princi-locations-carousel-2.jpg" class="" alt="">
-					<img src="/_ui/img/locations/princi-locations-carousel-3.jpg" class="" alt="">
-					<img src="/_ui/img/locations/princi-locations-carousel-4.jpg" class="" alt="">
+					<img src="/_ui/img/locations/princi-locations-carousel-1.jpg" alt="A hand sprinkles flour over dough">
+					<img src="/_ui/img/locations/princi-locations-carousel-2.jpg" alt="Close up of a closed oven door">
+					<img src="/_ui/img/locations/princi-locations-carousel-3.jpg" alt="Fresh loaf of bread being pulled out of an oven on a wood paddle">
+					<img src="/_ui/img/locations/princi-locations-carousel-4.jpg" alt="A paper stencil that reads Princi sits on top of flour">
 				</div>
 			</div>
 

@@ -9,14 +9,14 @@
 	This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
 	Creation Date: 10/20/2017
 	-->
-		<script type="text/javascript">
-			var axel = Math.random() + "";
-			var a = axel * 10000000000000;
-			document.write('<iframe src=""https://4487060.fls.doubleclick.net/activityi;src=4487060;type=princi;cat=princi0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
-		</script>
-		<noscript>
-			<iframe src="https://4487060.fls.doubleclick.net/activityi;src=4487060;type=princi;cat=princi0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
-		</noscript>
+	<script type="text/javascript">
+		var axel = Math.random() + "";
+		var a = axel * 10000000000000;
+		document.write('<iframe src=""https://4487060.fls.doubleclick.net/activityi;src=4487060;type=princi;cat=princi0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+	</script>
+	<noscript>
+		<iframe src="https://4487060.fls.doubleclick.net/activityi;src=4487060;type=princi;cat=princi0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+	</noscript>
 	<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
 
 	<div id="content">
@@ -25,6 +25,8 @@
 				"pageTemplate": "Homepage", // Offerings About Locations
 			    "pageUrl": "http://www.princi.com/", // Full URL
 			}
+
+			var metaDescription = "Princi offers artisan breads, Italian pastries, pizza al taglio and aperitivo. Our food is sourced without compromise, baked to perfection and enjoyed with all the senses.";
 		</script>
 
 		<h1 class="offscreen">Princi</h1>
@@ -45,7 +47,9 @@
 					</h2>
 			  	</div>
 
-				<div class="hero wow fadeIn"></div>
+				<div class="hero wow fadeIn">
+					<p class="offscreen">Image Caption: Rocco Princi throws flour over bread dough</p>
+				</div>
 
 				<div class="introduction">
 					<span class="line"></span>
@@ -63,7 +67,7 @@
 
 					<div class="flex cta-home">
 						<div class="half left wow fadeIn">
-							<img src="/_ui/img/homepage/princi-home-rocco-1.jpg" class="portrait" alt="">
+							<img src="/_ui/img/homepage/princi-home-rocco-1.jpg" class="portrait" alt="Black and white image of Rocco Princi">
 							<p class="caption">Rocco Princi<br />Via Speronari, Milano</p>
 						</div>
 						<div class="half wow fadeIn">
@@ -80,11 +84,11 @@
 				<div id="cta-food">
 					<div class="cta-home">
 						<div class="owl-carousel wow fadeIn">
-							<img src="/_ui/img/homepage/princi-home-carousel-1.jpg" class="" alt="">
-							<img src="/_ui/img/homepage/princi-home-carousel-2.jpg" class="" alt="">
-							<img src="/_ui/img/homepage/princi-home-carousel-3.jpg" class="" alt="">
-							<img src="/_ui/img/homepage/princi-home-carousel-4.jpg" class="" alt="">
-							<img src="/_ui/img/homepage/princi-home-carousel-5.jpg" class="" alt="">
+							<img src="/_ui/img/homepage/princi-home-carousel-1.jpg" alt="Baked bread with roasted tomatoes and olives">
+							<img src="/_ui/img/homepage/princi-home-carousel-2.jpg" alt="Baked focaccia with olives">
+							<img src="/_ui/img/homepage/princi-home-carousel-3.jpg" alt="Baked pastry with jam with sugar sprinkled on top">
+							<img src="/_ui/img/homepage/princi-home-carousel-4.jpg" alt="Baked focaccia with olives">
+							<img src="/_ui/img/homepage/princi-home-carousel-5.jpg" alt="Baked pastries">
 						</div>
 
 						<div class="food-copy wow fadeIn">

@@ -25,6 +25,10 @@ window.APP = {
 
 		if (!$('.new-results-div').length) {
 			$('.js-main').wrapInner('<div class="new-results-div" />');
+
+			var newTitle = $('.new-results-div').find('h1').text();
+
+			self.pageLoads.updatePageData(newTitle, metaDescription);
 		}
 
         // EVENT DELEGATION
