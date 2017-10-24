@@ -28,9 +28,10 @@
 		</script>
 
 		<h1 class="offscreen">Princi</h1>
-		<video id="inline-video" poster="/_ui/img/homepage/video.jpg" autoplay loop muted>
-            <source src="/_ui/video/homepage-low-res.webm" type="video/webm">
-        	<source src="/_ui/video/homepage-low-res.mp4" type="video/mp4">
+		<video id="inline-video" poster="/_ui/img/homepage/video.jpg" autoplay loop muted playsinline>
+            <source src="/_ui/video/homepage.webm" type="video/webm">
+        	<source src="/_ui/video/homepage.mp4" type="video/mp4">
+        	<source src="/_ui/video/homepage.ogv" type="video/ogg">
 	    	Your browser does not support the video tag
 		</video>
 
@@ -54,9 +55,7 @@
 				</div>
 			</section> <!-- /#intro -->
 
-		  	<div class="video-text homepage-video">
-				<img src="/_ui/img/homepage/bread.gif" alt="">
-			</div>
+		  	<div class="video-text homepage-video"></div>
 
 			<section id="cta-group">
 				<div class="cta-heritage">
