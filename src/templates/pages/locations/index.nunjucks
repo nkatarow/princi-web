@@ -91,7 +91,7 @@
 						<span class="text">Delivery</span>
 					</a>
 					<br />
-					<a href="/downloads/princi_orderform_29_05_17_1.pdf" target="_blank" class="btn">
+					<a href="/downloads/princi_orderform_29_05_17_1.pdf" target="_blank" class="btn download">
 						{# <span class="lead-line"></span> #}
 						<span class="text">Order Form</span>
 					</a>

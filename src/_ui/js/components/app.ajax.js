@@ -20,37 +20,6 @@ $(function() {
 
   	/* ----- Do this when a page loads ----- */
   	init = function(pageTransitionType) {
-		// console.log("init");
-
-    	/* ----- This is where I would run any page specific functions ----- */
-		// setTimeout(function(){
-		// 	var trackingTitle = "",
-		// 		newTitle = $('body').find('h1').text(),
-		// 		titleLower = newTitle.replace(/\s+/g, '-').toLowerCase(),
-		// 		depth = $(location).prop('pathname').split('/').length - 1;
-		//
-		// 	console.log(newTitle);
-		// 	if (newTitle == 'Princi') {
-		// 		trackingTitle = "Homepage";
-		// 	} else if (newTitle == "Rocco Princi") {
-		// 		trackingTitle = "About"
-		// 	} else {
-		// 		trackingTitle = newTitle;
-		// 	}
-		//
-		// 	document.title = "";
-		// 	$('body').attr('class', ' ');
-		// 	$('body').attr('data-page-template', trackingTitle);
-		// 	$('body').addClass(titleLower);
-		//
-		// 	if (newTitle != "Princi") {
-		// 		document.title = newTitle + ' | Princi';
-		// 	} else {
-		// 		titleLower = 'homepage';
-		// 		document.title = newTitle;
-		// 	}
-		// }, 2000);
-
 		APP.instantiations.init(pageTransitionType);
   	},
 
@@ -63,8 +32,6 @@ $(function() {
   	},
 
   	loadPage = function(pageTransitionType, href, link) {
-		// console.log("loadPage");
-
 		setTimeout(function(){
 			if (pageTransitionType == 'default') APP.pageLoads.defaultLoadIn($main);
 			if ($('#primary').hasClass('active')) APP.nav.hideNav();
@@ -101,11 +68,7 @@ $(function() {
 
 					ajaxLoad(pageTransitionType);
 				},
-				complete: function(){
-					// console.log("complete");
-				},
 				error: function(){
-					// console.log("error");
 					location.reload();
 				}
 			});
@@ -114,9 +77,6 @@ $(function() {
 
   	/* ----- This runs on the first page load with no ajax ----- */
   	init();
-
-  	/* ----- This runs on the first page load with no ajax ----- */
-
 
   	$(window).on("popstate", function(e) {
 		var linkClass = '';
@@ -132,19 +92,18 @@ $(function() {
   	});
 
   	$(document).on('click', 'a', function(e) {
-		// e.preventDefault();
-		// console.log($(this));
-
     	var href = $(this).attr("href"),
 			linkClass = '';
 
 		if ($(this).hasClass('mask')) {
 			linkClass = 'mask';
 		} else {
-			if ((!$(this).hasClass('food-type-toggle')) && (!$(this).hasClass('trigger'))) $main.css('opacity', '0');
+			if ((!$(this).hasClass('food-type-toggle')) && (!$(this).hasClass('download')) && (!$(this).hasClass('trigger')) && ($(this).attr('target') != "_blank")) {
+				$main.css('opacity', '0');
+			}
 		}
 
-    	if ((href.indexOf(document.domain) > -1 || href.indexOf(':') === -1) && href != '#') {
+    	if ((href.indexOf(document.domain) > -1 || href.indexOf(':') === -1) && (!$(this).hasClass('download')) && href != '#') {
       		history.pushState({}, '', href);
 			assignTransitionType(linkClass, href, e, $(this));
       		return false;

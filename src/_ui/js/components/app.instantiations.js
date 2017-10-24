@@ -14,8 +14,6 @@
 
 APP.instantiations = {
     init: function(pageTransitionType) {
-		// console.log('instantiations');
-
 		var self = this,
 			prev = 0,
 			wowContainer,
@@ -26,11 +24,9 @@ APP.instantiations = {
 		}
 
 		if (perspectiveTest) {
-			// animationContainer = ".parallax";
 			scrollContainer = ".parallax";
 			wowContainer = ".parallax";
 		} else {
-			// animationContainer = "html";
 			scrollContainer = window;
 			wowContainer = null;
 		}
@@ -104,14 +100,14 @@ APP.instantiations = {
 			}
 		});
 
-		// if ($("#inline-video").length) {
-		// 	var video = document.getElementById('inline-video');
-		//
-		// 	video.addEventListener('loadeddata', function() {
-		// 		console.log(video.readyState);
-		// 		if (video.readyState > 2) { video.play(); }
-		// 	});
-		// }
+		if ($("#inline-video").length) {
+			var video = document.getElementById('inline-video');
+
+			video.addEventListener('loadeddata', function() {
+				// console.log(video.readyState);
+				if (video.readyState > 2) { video.play(); }
+			});
+		}
 
 		// Carousel
 		$('.owl-carousel').owlCarousel({

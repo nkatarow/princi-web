@@ -148,7 +148,6 @@ APP.pageLoads = {
 		var newResultsHeight = $('.secondary-results-div').outerHeight();
 		$main.height(newResultsHeight);
 
-		// scroll(0,0);
 		if (APP.getMediaWidth() < 748.8) {
 			$('.parallax').animate({
 	        	scrollTop: $('#' + offeringLocation).offset().top

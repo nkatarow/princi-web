@@ -36,7 +36,6 @@ APP.nav = {
 		});
     },
     hideNav: function () {
-        // fn hideNav
         var self = this;
 
         $('#primary').removeClass('active');
@@ -48,7 +47,6 @@ APP.nav = {
 		}, 500);
     },
     showNav: function (menu) {
-        // fn showNav
         var self = this;
 
 		$('#primary').addClass('active');
