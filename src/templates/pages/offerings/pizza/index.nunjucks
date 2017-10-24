@@ -24,6 +24,10 @@
 				</div>
 			</section>
 
+			<button id="zoom-btn">
+			    <div class="zoom-bottom"></div>
+			    <div class="zoom-top"></div>
+			</button>
 		</div>
 	</div>
 {% endblock %}

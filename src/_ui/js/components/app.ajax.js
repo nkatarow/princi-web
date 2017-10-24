@@ -39,9 +39,9 @@ $(function() {
 			}
 
 			document.title = "";
-			$('body').attr('class', '');
+			$('body').attr('class', ' ');
 			$('body').attr('data-page-template', trackingTitle);
-			$('body').addClass(' ' + titleLower);
+			$('body').addClass(titleLower);
 
 			if (newTitle != "Princi") {
 				document.title = newTitle + ' | Princi';

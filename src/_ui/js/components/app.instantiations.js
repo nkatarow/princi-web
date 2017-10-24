@@ -47,6 +47,7 @@ APP.instantiations = {
 
 				setTimeout(function(){
 					$('.food-details').addClass('active');
+					$('#zoom-btn').css('opacity', '1');
 				}, 500);
 			}
 		}
@@ -125,5 +126,11 @@ APP.instantiations = {
 			nav: true,
 			items: 1
 		});
+
+		$("#zoom-btn").click(function(){
+			$(this).toggleClass('active');
+			$('.food-details').toggleClass('active');
+		});
+
 	}
 }

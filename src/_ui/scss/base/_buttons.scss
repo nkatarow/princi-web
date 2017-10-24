@@ -144,6 +144,7 @@ button { font-size: 1em; }
 	display: block;
 	height: 40px;
 	padding: 9px;
+	transition: opacity 250ms ease-out;
 	width: 40px;
 
 	.plus {
@@ -201,15 +202,84 @@ button { font-size: 1em; }
 }
 
 
+#zoom-btn {
+	padding: 0;
+    width: 25px;
+    height: 25px;
+	opacity: 0;
+    position: fixed;
+    top: 25px;
+    left: 25px;
+	transition:
+		height 250ms ease-out,
+		width 250ms ease-out,
+		transform 250ms ease-out,
+		opacity 250ms ease-out;
+    z-index: 150;
 
-// @keyframes horizontal {
-// 	0% { width: 0%; }
-// 	10% { width: 100%; }
-// 	100% { width: 100%; }
-// }
-//
-// @keyframes vertical {
-// 	0% { height: 0%; }
-// 	10% { height: 100%; }
-// 	100% { height: 100%; }
-// }
+	&:hover,
+	&:focus {
+		height: 31px;
+		width: 31px;
+		cursor: pointer;
+	}
+
+	.zoom-bottom, .zoom-top {
+	    height: 50%;
+	    position: absolute;
+	}
+
+	.zoom-top {
+	    top: 0;
+		bottom: 50%;
+	    left: 0;
+		right: 50%;
+	    width: 50%;
+	    border-top: 1px solid #fff;
+	    border-left: 1px solid #fff;
+	    transition:
+			top 250ms ease-out,
+			right 250ms ease-out,
+			bottom 250ms ease-out,
+			left 250ms ease-out;
+	}
+
+	.zoom-bottom {
+	    bottom: 0;
+		top: 50%;
+	    right: 0;
+		left: 50%;
+	    width: 50%;
+	    border-bottom: 1px solid #fff;
+	    border-right: 1px solid #fff;
+	    transition:
+			top 250ms ease-out,
+			right 250ms ease-out,
+			bottom 250ms ease-out,
+			left 250ms ease-out;
+	}
+
+	&.active {
+		transform: rotate(45deg);
+
+		.zoom-top {
+		    bottom: 0;
+			top: 49%;
+		    right: 0;
+			left: 49%;
+		}
+		.zoom-bottom {
+		    top: 0;
+			bottom: 50%;
+		    left: 0;
+			right: 50%;
+		}
+	}
+}
+
+@media screen and (min-width: $bp-large) {
+	#zoom-btn {
+	    bottom: 25px;
+	    right: 30px;
+	}
+}

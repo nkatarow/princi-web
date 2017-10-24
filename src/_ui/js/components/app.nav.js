@@ -26,11 +26,13 @@ APP.nav = {
         });
 
 		$('#main a').hover(function(){
-			var target = this.text,
-				target = target.replace(' ', '-');
-				target = target.toLowerCase();
+			if ($('#primary').hasClass('active')) {
+				var target = this.text,
+					target = target.replace(' ', '-');
+					target = target.toLowerCase();
 
-			$('.nav-hover .img.' + target).toggleClass('active');
+				$('.nav-hover .img.' + target).toggleClass('active');
+			}
 		});
     },
     hideNav: function () {

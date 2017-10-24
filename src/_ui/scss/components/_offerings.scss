@@ -104,7 +104,10 @@
 			background-size: cover;
 			display: flex;
 			margin-bottom: 10%;
-			transition: height 1s ease-out, transform 1s ease-out;
+			transition:
+				height 1s ease-out,
+				margin-bottom 1s ease-out, 
+				transform 1s ease-out;
 			height: 500px;
 
 			.copy {
@@ -193,6 +196,7 @@
 
 			&.center-background {
 				height: 100vh;
+				margin-bottom: 0;
 
 				.copy { transform: translateX(-100%); }
 				.mask {
