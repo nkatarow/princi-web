@@ -117,7 +117,7 @@ APP.instantiations = {
 			animateIn: 'fadeIn',
 			animateOut: 'fadeOut',
 			autoplay: true,
-			autoplayTimeout: 3000,
+			autoplayTimeout: 2500,
 			mouseDrag: false,
 			center: true,
 			loop: true,

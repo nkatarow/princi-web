@@ -15245,7 +15245,7 @@ $(function() {
   	});
 
   	$(document).on('click', 'a', function(e) {
-		e.preventDefault();
+		// e.preventDefault();
 		// console.log($(this));
 
     	var href = $(this).attr("href"),
@@ -15384,7 +15384,7 @@ APP.instantiations = {
 			animateIn: 'fadeIn',
 			animateOut: 'fadeOut',
 			autoplay: true,
-			autoplayTimeout: 3000,
+			autoplayTimeout: 2500,
 			mouseDrag: false,
 			center: true,
 			loop: true,

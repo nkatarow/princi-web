@@ -132,7 +132,7 @@ $(function() {
   	});
 
   	$(document).on('click', 'a', function(e) {
-		e.preventDefault();
+		// e.preventDefault();
 		// console.log($(this));
 
     	var href = $(this).attr("href"),
