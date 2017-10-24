@@ -22,6 +22,7 @@
 				width: 100%;
 
 				&:last-child { margin-top: 340px; }
+				sup { font-size: 10%; top: -25px; }
 			}
 		}
 	}
@@ -78,7 +79,11 @@
 	#intro {
 		padding-top: 150px;
 
-		.headline .h1 span:last-child { margin-top: 500px; }
+		.headline .h1 span:last-child {
+			margin-top: 500px;
+
+			sup { top: -75px; }
+		}
 
 		.hero {
 			height: 600px;
@@ -93,7 +98,11 @@
 	#intro {
 		padding-top: 170px;
 
-		.headline .h1 span:last-child { margin-top: 560px; }
+		.headline .h1 span:last-child {
+			margin-top: 560px;
+
+			sup { top: -100px; }
+		}
 
 		.hero {
 			height: 655px;
