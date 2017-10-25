@@ -102,26 +102,13 @@
 				<h2 class="large-underline"><span>Seattle</span></h2>
 				<p class="caption large">Coming Soon</p>
 
-				<div class="location" itemscope itemtype="http://schema.org/Place">
-					{# <span itemprop="containedInPlace" class="contained-within">At the Starbucks Reserve Roastery</span>
-					<address itemprop="address">1124 Pike St, Seattle, WA 98101</address>
-					<span itemprop="telephone" class="tel">
-						Tel <a href="tel:+12066240173">+1 (206) 624-0173</a>
-					</span> #}
-				</div>
 			</section>
 
 			<section class="city wow fadeIn">
 				<h2 class="large-underline"><span>Shanghai</span></h2>
 				<p class="caption large">Coming Soon</p>
-				<p>Our menus and ingredients vary by location, but our commitment to great ingredients remains true.</p>
-				<div class="location" itemscope itemtype="http://schema.org/Place">
-					{# <span itemprop="containedInPlace" class="contained-within">At the Starbucks Reserve Roastery</span>
-					<address itemprop="address">123 West Nanjing Road</address> #}
-					{# <span itemprop="telephone" class="tel" >
-						Tel <a href="tel:+390229060832">+39 (0)2 29060832</a>
-					</span> #}
-				</div>
+				<p class="disclaimer">Our menus and ingredients vary by location, but our commitment to great ingredients remains true.</p>
+
 			</section>
 
 			<section id="heritage-cta" class="bottom-cta rocco-cta">

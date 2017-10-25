@@ -196,7 +196,7 @@
 
 					<nav id="social" class="edge-menu" role="navigation" aria-label="Social Channels">
 						<ul>
-							<li><a href="http://facebook.com/thisisprinci" target="_blank">Facebook</a></li>
+							{# <li><a href="http://facebook.com/thisisprinci" target="_blank">Facebook</a></li> #}
 							<li><a href="https://www.instagram.com/princi/" target="_blank">Instagram</a></li>
 						</ul>
 					</nav>
