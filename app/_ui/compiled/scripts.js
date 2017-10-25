@@ -13817,7 +13817,7 @@ $(function() {
 			}
 		}
 
-    	if ((href.indexOf(document.domain) > -1 || href.indexOf(':') === -1) && (!$(this).hasClass('download')) && href != '#') {
+    	if ((href.indexOf(document.domain) > -1 || href.indexOf(':') === -1) && ($(this).attr('target') != "_blank") && (!$(this).hasClass('download')) && href != '#') {
       		history.pushState({}, '', href);
 			assignTransitionType(linkClass, href, e, $(this));
       		return false;
@@ -14194,6 +14194,7 @@ APP.pageLoads = {
 				$('.new-results-div').removeClass('transition-out');
 				if ($('.top-bar').hasClass('hidden')) $('.top-bar').removeClass('hidden');
 				$('.secondary-results-div').remove();
+				if ($('.top-bar').hasClass('hidden')) $('.top-bar').removeClass('hidden');
 			}
 		}, 1000);
 	},

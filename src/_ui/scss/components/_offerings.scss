@@ -142,7 +142,11 @@
 				order: 2;
 				position: relative;
 				height: 100%;
-				transition: background-color 500ms ease-out;
+				transition:
+					background-color 500ms ease-out,
+					height .5s ease-out,
+					border-left-width .5s ease-out,
+					border-right-width .5s ease-out;
 				width: 50%;
 
 				&.reveal { background-color: rgba(152,105,76,0); }

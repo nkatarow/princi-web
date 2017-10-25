@@ -41,13 +41,14 @@ video {
 		left: 50%;
 		background-size: cover;
 		background-position: center center;
-		height: 100vh;
-		width: auto;
+		height: 100vw;
+		width: 100vw;
 		min-height: 100vh;
 		min-width: 100vw;
 		top: 50%;
 		transform:
 			translateY(-50%)
 			translateX(-50%);
+		object-fit: cover;
 	}
 }

@@ -101,7 +101,7 @@ $(function() {
 			}
 		}
 
-    	if ((href.indexOf(document.domain) > -1 || href.indexOf(':') === -1) && (!$(this).hasClass('download')) && href != '#') {
+    	if ((href.indexOf(document.domain) > -1 || href.indexOf(':') === -1) && ($(this).attr('target') != "_blank") && (!$(this).hasClass('download')) && href != '#') {
       		history.pushState({}, '', href);
 			assignTransitionType(linkClass, href, e, $(this));
       		return false;

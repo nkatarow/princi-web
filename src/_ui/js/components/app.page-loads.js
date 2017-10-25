@@ -172,6 +172,7 @@ APP.pageLoads = {
 				$('.new-results-div').removeClass('transition-out');
 				if ($('.top-bar').hasClass('hidden')) $('.top-bar').removeClass('hidden');
 				$('.secondary-results-div').remove();
+				if ($('.top-bar').hasClass('hidden')) $('.top-bar').removeClass('hidden');
 			}
 		}, 1000);
 	},
