@@ -39,13 +39,12 @@ $(function() {
 				xhr: function(){
 					var xhr = new window.XMLHttpRequest();
 
-					//Download progress TRY A NEW METHOD MAYBE?
 	    			xhr.addEventListener("progress", function (evt) {
 	        			if (evt.lengthComputable) {
 	            			var percentComplete = evt.loaded / evt.total;
-	            			// $('.progress').css({ width: percentComplete * 100 + '%' });
+	            			$('.progress').css({ width: percentComplete * 100 + '%' });
 	        			} else {
-	            			// $('.progress').css({ width: '100%' });
+	            			$('.progress').css({ width: '100%' });
 						}
 	    			}, false);
 	    			return xhr;

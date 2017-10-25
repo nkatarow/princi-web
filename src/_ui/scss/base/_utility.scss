@@ -29,13 +29,15 @@
 
 
 // LINES, HRS, BORDERS
-.hr {
-    border-top: 1px solid $gray;
+.progress {
+    background: $bronze;
+	bottom: 0;
     display: block;
-
-    hr {
-        display: none;
-    }
+    height: 4px;
+	position: absolute;
+    text-align: center;
+    transition: width 250ms;
+    width: 0;
 }
 
 .line {
@@ -74,6 +76,8 @@
 }
 
 @media screen and (min-width: $bp-large) {
+	.progress { height: 8px; }
+
 	.line {
 		height: 200px;
 		margin: 2% auto;
