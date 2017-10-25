@@ -14115,6 +14115,7 @@ APP.pageLoads = {
 	        }, 500);
 		}
 
+		$('.top-bar').addClass('hidden');
 		$('.plus-box').css('opacity', '0');
 		$(link).addClass('no-hover');
 		$('.foods .accent-header').addClass('hide');

@@ -219,8 +219,8 @@ button { font-size: 1em; }
 
 	&:hover,
 	&:focus {
-		height: 31px;
-		width: 31px;
+		height: 30px;
+		width: 30px;
 		cursor: pointer;
 		outline: 0;
 	}
@@ -265,15 +265,15 @@ button { font-size: 1em; }
 
 		.zoom-top {
 		    bottom: 0;
-			top: 49%;
+			top: 48%;
 		    right: 0;
-			left: 49%;
+			left: 48%;
 		}
 		.zoom-bottom {
 		    top: 0;
-			bottom: 50%;
+			bottom: 51%;
 		    left: 0;
-			right: 50%;
+			right: 51%;
 		}
 	}
 }
