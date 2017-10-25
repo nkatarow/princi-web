@@ -25,7 +25,7 @@ window.APP = {
 
 		// Since new IE versions don't even accept conditional comment, we have to sniff if it's IE via JS
 		if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./) || ua.match(/Edge/i)) {
-			$('body').append('<link rel="stylesheet" href="/_ui/dist/IE.css" media="all">');
+			$('body').append('<link rel="stylesheet" href="/_ui/ie/IE.css" media="all">');
             $('html').addClass('ie');
         }
 
