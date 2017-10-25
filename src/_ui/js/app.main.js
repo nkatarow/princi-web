@@ -7,6 +7,9 @@
     DEPENDENCIES:
     - jQuery 1.7.2
 
+	TO DO:
+		- Find out why scrolling in iOS is triggering resize handler
+			- Add instantiations back into resize after resolving
 */
 var APP = window.APP || {};
 
@@ -44,7 +47,7 @@ window.APP = {
                 i,
                 ii;
 
-			APP.instantiations.init('default');
+			// APP.instantiations.init('default');
         }
     },
     getMediaWidth: function () {

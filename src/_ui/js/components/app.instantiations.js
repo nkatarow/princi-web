@@ -39,7 +39,7 @@ APP.instantiations = {
 			wow.init();
 
 			if (($('.food-details').length) && !($('.food-details').hasClass('active'))) {
-				$('body').addClass('food-details-page');
+				// $('body').addClass('food-details-page');
 
 				setTimeout(function(){
 					$('.food-details').addClass('active');
@@ -104,7 +104,7 @@ APP.instantiations = {
 			var video = document.getElementById('inline-video'),
 				windowHeight = $(window).height(),
 				videoOffset = $(video).offset().top * 2,
-				videoHeight = (windowHeight - videoOffset) * .85;
+				videoHeight = (windowHeight - videoOffset);
 
 			$('.video-text').css('height', videoHeight);
 

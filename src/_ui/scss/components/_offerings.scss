@@ -19,10 +19,15 @@
 	.accent-header { display: none; }
 
 	.type {
+		background-repeat: no-repeat;
 		margin-bottom: 25%;
+		transition: background-position 1s ease-out;
 
 		&.breakfast { background-position: 70% top; }
 		&.pizza { background-position: right top; }
+
+		&.breakfast.center-background,
+		&.pizza.center-background { background-position: center center; }
 
 		.copy {
 			background-color: $white;
@@ -37,6 +42,10 @@
 		.mask {
 			display: block;
 			width: 100vw;
+			transition:
+				height .5s ease-out,
+				border-left-width .5s ease-out,
+				border-right-width .5s ease-out;
 
 			&.transition {
 				border-left-width: 0;
@@ -60,7 +69,6 @@
 		.type {
 			background-position: bottom right;
 			background-size: auto 100vh;
-			transition: background-position 1s ease-out;
 
 			&.center-background { background-position: bottom center; }
 		}
@@ -69,10 +77,6 @@
 			border-right: 5vw solid $white;
 			border-left: 5vw solid $white;
 			height: 250px;
-			transition:
-				height .5s ease-out,
-				border-left-width .5s ease-out,
-				border-right-width .5s ease-out;
 
 			&.portrait {
 				border-right: 20vw solid $white;
@@ -106,7 +110,7 @@
 			margin-bottom: 10%;
 			transition:
 				height 1s ease-out,
-				margin-bottom 1s ease-out, 
+				margin-bottom 1s ease-out,
 				transform 1s ease-out;
 			height: 500px;
 
@@ -196,7 +200,7 @@
 
 			&.center-background {
 				height: 100vh;
-				margin-bottom: 0;
+				// margin-bottom: 0;
 
 				.copy { transform: translateX(-100%); }
 				.mask {

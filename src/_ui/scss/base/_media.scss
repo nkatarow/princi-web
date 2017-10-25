@@ -33,6 +33,7 @@ video {
 	top: 50%;
 	width: 100vw;
 	transform: translateY(-50%);
+	z-index: -1;
 }
 
 @media screen and (min-width: $bp-large) {

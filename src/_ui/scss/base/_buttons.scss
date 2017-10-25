@@ -167,7 +167,7 @@ button { font-size: 1em; }
 				background-color: $white;
 				height: 0%;
 				position: absolute;
-				transition: height 250ms ease-out 1000ms;
+				transition: height 250ms ease-out 500ms;
 				width: 2px;
 			}
 		}
@@ -187,12 +187,10 @@ button { font-size: 1em; }
 				background-color: $white;
 				height: 2px;
 				position: absolute;
-				transition: width 250ms ease-out 1250ms;
+				transition: width 250ms ease-out 750ms;
 				width: 0%;
 			}
 		}
-
-
 
 		&.animate {
 			.horizontal::before { width: 100%; }
@@ -238,8 +236,8 @@ button { font-size: 1em; }
 	    left: 0;
 		right: 50%;
 	    width: 50%;
-	    border-top: 1px solid #fff;
-	    border-left: 1px solid #fff;
+	    border-top: 2px solid #fff;
+	    border-left: 2px solid #fff;
 	    transition:
 			top 250ms ease-out,
 			right 250ms ease-out,
@@ -253,8 +251,8 @@ button { font-size: 1em; }
 	    right: 0;
 		left: 50%;
 	    width: 50%;
-	    border-bottom: 1px solid #fff;
-	    border-right: 1px solid #fff;
+	    border-bottom: 2px solid #fff;
+	    border-right: 2px solid #fff;
 	    transition:
 			top 250ms ease-out,
 			right 250ms ease-out,

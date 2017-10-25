@@ -77,8 +77,10 @@ p {
 }
 
 .caption {
+	backface-visibility: hidden;
 	font-family: $didot;
 	font-size: 1.4em;
+	font-smoothing: antialiased;
 	letter-spacing: 0.05em;
 	line-height: 1.6em;
 }
@@ -87,7 +89,7 @@ p {
 @media screen and (min-width: $bp-med) {
 	.intro {
 		margin: 0 auto;
-		max-width: 50%; 
+		max-width: 50%;
 	}
 }
 

@@ -4,7 +4,6 @@ $(function() {
 
 	/* ----- Return appropriate page transition ----- */
 	assignTransitionType = function(linkClass, href, e, link) {
-		// console.log("assignTransitionType");
 		var pageTransitionType = 'default';
 
 		if (linkClass == 'mask') {
@@ -81,7 +80,6 @@ $(function() {
   	$(window).on("popstate", function(e) {
 		var linkClass = '';
 
-		console.log("pop");
     	// -------------------------------------
     	//   If there was an AJAX page transition already,
     	//   then AJAX page load the requested page from the back or forwards button click.

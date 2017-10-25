@@ -173,7 +173,7 @@
 	}
 }
 
-@supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
+@supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch)) and (min-width: $bp-large)) {
 	.parallax::before {
 		content: 'true';
 		display: block;

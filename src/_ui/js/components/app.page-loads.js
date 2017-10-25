@@ -25,7 +25,7 @@ APP.pageLoads = {
 			trackingTitle = newTitle;
 		}
 
-		document.title = "";
+		document.title = " ";
 		$('body').attr('class', ' ');
 		$('body').attr('data-page-template', trackingTitle);
 		$('body').addClass(titleLower);
@@ -79,23 +79,23 @@ APP.pageLoads = {
 		var self = this,
 			animOffset;
 
-		// Add new content behind current
+		// Add new content behind currentf
 		$main.append('<div class="secondary-results-div">' + pageContent + '</div>');
 
 		// Bring image to top
 		if (APP.getMediaWidth() < 748.8) {
-			animOffset = 48;
+			$('html,body').animate({
+	            scrollTop: link.offset().top  + $('.parallax').scrollTop()
+	        }, 500);
 		} else {
-			animOffset = 63;
+			$('.parallax').animate({
+	            scrollTop: link.offset().top + $('.parallax').scrollTop()
+	        }, 500);
 		}
-
-		$('.parallax').animate({
-            scrollTop: link.offset().top + $('.parallax').scrollTop() - animOffset
-        }, 500);
 
 		$('.plus-box').css('opacity', '0');
 		$(link).addClass('no-hover');
-		$('.accent-header').addClass('hide');
+		$('.foods .accent-header').addClass('hide');
 
 		setTimeout(function(){
 			// Animate image to cover full screen - 1s
@@ -111,8 +111,8 @@ APP.pageLoads = {
 			self.updatePageData(newTitle, metaDescription);
 
 			/* ----- Set height of $main to ensure the footer doesn't jump up -----  */
-			var newResultsHeight = $('.secondary-results-div').outerHeight();
-			$main.height(newResultsHeight);
+			// var newResultsHeight = $('.secondary-results-div').outerHeight();
+			// $main.height(newResultsHeight);
 		}, 1750);
 
 		setTimeout(function(){
@@ -120,11 +120,10 @@ APP.pageLoads = {
 			$('.new-results-div').addClass('transition-out');
 
 			// Remove current
-			$('.new-results-div').remove();
+			$(link).removeClass('transition'); //.5s
 
 			// Update new container class
-			$('.secondary-results-div').addClass('new-results-div');
-			$('.new-results-div').removeClass('secondary-results-div');
+			$('.center-background').removeClass('center-background');
 
 			// Slide in details
 			$('.food-details').addClass('active');
@@ -134,29 +133,23 @@ APP.pageLoads = {
 
 	detailLoadOut: function($main, pageContent) {
 		var self = this,
+			freshLoad = false;
 			title = $('body').find('h1').text(),
 			titleLower = title.replace(/\s+/g, '-').toLowerCase(),
 			offeringLocation = titleLower;
 
-		// Add new content behind current
-		$main.append('<div class="secondary-results-div">' + pageContent + '</div>');
+		if(($('.new-results-div').length) && (!$('.secondary-results-div').length)) {
+			freshLoad = true;
+			// Add new content behind current
+			$main.append('<div class="secondary-results-div">' + pageContent + '</div>');
+		}
 
 		var newTitle = $('.secondary-results-div').find('h1').text();
-		self.updatePageData(newTitle, metaDescription);
+		self.updatePageData('Offerings', metaDescription);
 
 		/* ----- Set height of $main to ensure the footer doesn't jump up -----  */
-		var newResultsHeight = $('.secondary-results-div').outerHeight();
-		$main.height(newResultsHeight);
-
-		if (APP.getMediaWidth() < 748.8) {
-			$('.parallax').animate({
-	        	scrollTop: $('#' + offeringLocation).offset().top
-	        });
-		} else {
-			$('.parallax').animate({
-	        	scrollTop: ($('#' + offeringLocation).offset().top) + ($('#' + offeringLocation).height())
-	        });
-		}
+		// var newResultsHeight = $('.secondary-results-div').outerHeight();
+		// $main.height(newResultsHeight);
 
 		// Slide out detail pane
 		$('.food-details').removeClass('active');
@@ -167,11 +160,18 @@ APP.pageLoads = {
 		}, 500);
 
 		setTimeout(function(){
-			if ($('.top-bar').hasClass('hidden')) $('.top-bar').removeClass('hidden');
-			$('.food-type').remove();
-			$('.new-results-div').remove();
-			$('.secondary-results-div').addClass('new-results-div');
-			$('.new-results-div').removeClass('secondary-results-div');
+			if(freshLoad) {
+				$('.food-type').remove();
+				$('.new-results-div').remove();
+				$('.secondary-results-div').addClass('new-results-div');
+				$('.new-results-div').removeClass('secondary-results-div');
+			} else {
+				$('.accent-header').removeClass('hide');
+				$('.plus-box').css('opacity', '1');
+				$('.new-results-div').removeClass('transition-out');
+				if ($('.top-bar').hasClass('hidden')) $('.top-bar').removeClass('hidden');
+				$('.secondary-results-div').remove();
+			}
 		}, 1000);
 	},
 
