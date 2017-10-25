@@ -13629,9 +13629,6 @@ return jQuery;
     DEPENDENCIES:
     - jQuery 1.7.2
 
-	TO DO:
-		- Find out why scrolling in iOS is triggering resize handler
-			- Add instantiations back into resize after resolving
 */
 var APP = window.APP || {};
 
@@ -13643,7 +13640,8 @@ window.APP = {
     init: function () {
         var self = this,
 			ua = window.navigator.userAgent,
-			msie = ua.indexOf("MSIE ");
+			msie = ua.indexOf("MSIE "),
+			windowWidth = self.getMediaWidth();
 
 		// Since new IE versions don't even accept conditional comment, we have to sniff if it's IE via JS
 		if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./) || ua.match(/Edge/i)) {
@@ -13666,18 +13664,20 @@ window.APP = {
 
         // EVENT DELEGATION
         $(window).bind('resize', function(event) {
-            self.events.windowResize({width: self.getMediaWidth()});
+            self.events.windowResize({width: self.getMediaWidth()}, windowWidth);
         });
 
         $(window).triggerHandler('resize');
     },
     events: {
-        windowResize: function (event) {
-            var self = this.parent,
-                i,
-                ii;
+        windowResize: function (event, windowWidth) {
+            var self = this.parent;
 
-			// APP.instantiations.init('default');
+			if (event.width != windowWidth) {
+				windowWidth = event.width;
+
+				APP.instantiations.init('default');
+			}
         }
     },
     getMediaWidth: function () {
