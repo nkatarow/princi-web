@@ -173,21 +173,23 @@
 	}
 }
 
-@supports ((perspective: 1px) and (not (overflow-scrolling: touch)) and (min-width: $bp-large)) {
-	.parallax::before {
-		content: 'true';
-		display: block;
-		height: 0;
-		width: 0;
-		visibility: hidden;
-	}
-
-	header {
-		.mobile-grouping {
-			transform-style: flat;
-			position: initial;
+@supports ((perspective: 1px) and (not (overflow-scrolling: touch))) {
+	@media screen and (min-width: $bp-large) {
+		.parallax::before {
+			content: 'true';
+			display: block;
+			height: 0;
+			width: 0;
+			visibility: hidden;
 		}
-	}
 
-	@include parallax-init;
+		header {
+			.mobile-grouping {
+				transform-style: flat;
+				position: initial;
+			}
+		}
+
+		@include parallax-init;
+	}
 }

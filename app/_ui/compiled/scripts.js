@@ -13641,7 +13641,15 @@ $(document).ready(function(){
 
 window.APP = {
     init: function () {
-        var self = this;
+        var self = this,
+			ua = window.navigator.userAgent,
+			msie = ua.indexOf("MSIE ");
+
+		// Since new IE versions don't even accept conditional comment, we have to sniff if it's IE via JS
+		if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./) || ua.match(/Edge/i)) {
+			$('body').append('<link rel="stylesheet" href="/_ui/dist/IE.css" media="all">');
+            $('html').addClass('ie');
+        }
 
         self.events.parent = this;
 
@@ -13817,6 +13825,10 @@ $(function() {
 			}
 		}
 
+		if (($("#inline-video").length) && $('html').hasClass('ie')) {
+			$("#inline-video").css('opacity', '0');
+		}
+
     	if ((href.indexOf(document.domain) > -1 || href.indexOf(':') === -1) && ($(this).attr('target') != "_blank") && (!$(this).hasClass('download')) && href != '#') {
       		history.pushState({}, '', href);
 			assignTransitionType(linkClass, href, e, $(this));
@@ -13866,8 +13878,6 @@ APP.instantiations = {
 			wow.init();
 
 			if (($('.food-details').length) && !($('.food-details').hasClass('active'))) {
-				// $('body').addClass('food-details-page');
-
 				setTimeout(function(){
 					$('.food-details').addClass('active');
 					$('#zoom-btn').css('opacity', '1');
@@ -13913,17 +13923,19 @@ APP.instantiations = {
 			});
 
 			// hero parallax
-			if ($('#intro').length) {
-			    var scrolled = $('.parallax').scrollTop();
-			    $('.hero').css('top', -(scrolled * 0.2) + 'px');
-			}
-			if ($('.food-hero').length) {
-			    var scrolled = $('.parallax').scrollTop();
-			    $('.owl-carousel').css('top', -(scrolled * 0.2) + 'px');
-			}
-			if ($('#heritage-hero').length) {
-			    var scrolled = $('.parallax').scrollTop();
-			    $('#heritage-hero .img').css('top', -(scrolled * 0.2) + 'px');
+			if (!$('html').hasClass('ie')) {
+				if ($('#intro').length) {
+				    var scrolled = $('.parallax').scrollTop();
+				    $('.hero').css('top', -(scrolled * 0.2) + 'px');
+				}
+				if ($('.food-hero').length) {
+				    var scrolled = $('.parallax').scrollTop();
+				    $('.owl-carousel').css('top', -(scrolled * 0.2) + 'px');
+				}
+				if ($('#heritage-hero').length) {
+				    var scrolled = $('.parallax').scrollTop();
+				    $('#heritage-hero .img').css('top', -(scrolled * 0.2) + 'px');
+				}
 			}
 		});
 
@@ -13936,7 +13948,15 @@ APP.instantiations = {
 			$('.video-text').css('height', videoHeight);
 
 			setTimeout(function(){
-				video.play();
+				if (!$('html').hasClass('ie')) {
+					video.play();
+				} else {
+					$('#inline-video').css('opacity', '1');
+
+					setTimeout(function(){
+						video.play();
+				}, 500);
+				}
 			}, 1000);
 		}
 

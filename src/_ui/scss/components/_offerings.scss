@@ -190,6 +190,10 @@
 					order: 1;
 					border-left: 0;
 					border-right-width: 10vw;
+					transition:
+						background-color 500ms ease-out,
+						height .5s ease-out,
+						border-left-width .5s ease-out;
 
 					&.portrait {
 						border-left-width: 5vw;

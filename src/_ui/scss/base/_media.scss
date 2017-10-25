@@ -49,6 +49,9 @@ video {
 		transform:
 			translateY(-50%)
 			translateX(-50%);
-		object-fit: cover;
+	}
+
+	@supports (object-fit: cover) {
+		video { object-fit: cover; }
 	}
 }

@@ -1,0 +1,25 @@
+.ie #inline-video { opacity: 0; }
+.ie .owl-carousel { background-color: white; }
+.ie .wow { visibility: visible !important; }
+.ie .parallax { overflow: hidden; }
+.ie .btn { border: 1px solid #98694c; }
+.ie .btn.alt { border: 1px solid #ffffff; }
+
+/*.ie .parallax, .ie .parallax * { transform-style: flat; }*/
+
+@media screen and (min-width: 66em) {
+	.ie .princi .large-underline,
+	.ie .offerings .large-underline,
+	.ie .rocco-princi .large-underline,
+	.ie	.foods .type .copy .caption,
+	.ie .foods .accent-header {
+		transform: translateZ(0);
+	}
+
+	.ie #cta-group { padding-bottom: 18%; }
+	.ie #cta-group > div { position: relative; }
+	.ie .foods .type .mask { background-color: transparent; }
+	.ie .food-details { position: relative; }
+	.ie .food-details #cross { position: absolute; }
+
+}
