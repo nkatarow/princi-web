@@ -17,19 +17,14 @@ $(document).ready(function(){
 window.APP = {
     init: function () {
         var self = this,
-			ua = window.navigator.userAgent,
-			msie = ua.indexOf("MSIE "),
 			windowWidth = self.getMediaWidth();
-
-		// Since new IE versions don't even accept conditional comment, we have to sniff if it's IE via JS
-		if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./) || ua.match(/Edge/i)) {
-			$('body').append('<link rel="stylesheet" href="/_ui/ie/IE.css" media="all">');
-            $('html').addClass('ie');
-        }
 
         self.events.parent = this;
 
+		console.log("init");
+
         // Init Components
+		self.detectIE();
         APP.nav.init();
 
 		if (!$('.new-results-div').length) {
@@ -97,5 +92,30 @@ window.APP = {
 	    	elemBottom = elemTop + $(elem).height() - scrollOffset;
 
     	return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+	},
+	detectIE: function() {
+		console.log("detectIE");
+	    var ieV,
+			ua = window.navigator.userAgent,
+			msie = ua.indexOf('MSIE '),
+			trident = ua.indexOf('Trident/'),
+			edge = ua.indexOf('Edge/');
+
+	    if (msie > 0) ieV = parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+	    if (edge > 0) ieV = parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+	    if (trident > 0) {
+	        var rv = ua.indexOf('rv:');
+			ieV = parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+	    }
+
+
+		if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./) || ua.match(/Edge/i)) {
+			$('body').append('<link rel="stylesheet" href="/_ui/ie/IE.css" media="all">');
+        }
+
+        $('html').addClass(' ie ie' + ieV);
+
+	    // other browser
+	    return false;
 	}
 };

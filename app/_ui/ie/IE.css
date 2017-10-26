@@ -1,11 +1,13 @@
 .ie #inline-video { opacity: 0; }
 .ie .owl-carousel { background-color: white; }
 .ie .wow { visibility: visible !important; }
-/*.ie .parallax { overflow: hidden; }*/
 .ie .btn { border: 1px solid #98694c; }
 .ie .btn.alt { border: 1px solid #ffffff; }
 
-/*.ie .parallax, .ie .parallax * { transform-style: flat; }*/
+.ie11 .parallax {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
 
 @media screen and (min-width: 66em) {
 	.ie .princi .large-underline,
