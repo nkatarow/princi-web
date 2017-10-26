@@ -30,8 +30,38 @@
 
 			<section class="city wow fadeIn">
 				<h2 class="large-underline"><span>Milan</span></h2>
-				<div class="location-group">
-					<div class="location quarter" itemscope itemtype="http://schema.org/Place">
+				<div class="location-group milan">
+					<div class="location" itemscope itemtype="http://schema.org/Place">
+						<span class="offscreen" itemprop="containedInPlace"></span>
+						<address itemprop="address">Via Speronari, 6</address>
+						<span itemprop="telephone" class="tel">
+							Tel <a href="tel:+3902874797">+39 (0)2 874797</a>
+						</span>
+
+						<p>7:00 AM&mdash;8:00 PM</p>
+					</div>
+
+					<div class="location" itemscope itemtype="http://schema.org/Place">
+						<span class="offscreen" itemprop="containedInPlace"></span>
+						<address itemprop="address">Largo La Foppa, 2</address>
+						<span itemprop="telephone" class="tel">
+							Tel <a href="tel:+39026599013">+39 (0)2 6599013</a>
+						</span>
+
+						<p>7:00 AM&mdash;11:00 PM</p>
+					</div>
+
+					<div class="location" itemscope itemtype="http://schema.org/Place">
+						<span class="offscreen" itemprop="containedInPlace"></span>
+						<address itemprop="address">Via Ponte Vetero, 10</address>
+						<span itemprop="telephone" class="tel">
+							Tel <a href="tel:+390272016067">+39 (0)2 72016067</a>
+						</span>
+
+						<p>7:00 AM&mdash;8:00 PM</p>
+					</div>
+
+					<div class="location" itemscope itemtype="http://schema.org/Place">
 						<span class="offscreen" itemprop="containedInPlace"></span>
 						<address itemprop="address">Piazza XXV Aprile, 5</address>
 						<span itemprop="telephone" class="tel">
@@ -42,34 +72,15 @@
 						<p>Thursday&mdash;Sunday<br /> open 24 hours</p>
 					</div>
 
-					<div class="location quarter" itemscope itemtype="http://schema.org/Place">
+					<div class="location" itemscope itemtype="http://schema.org/Place">
 						<span class="offscreen" itemprop="containedInPlace"></span>
-						<address itemprop="address">Via Speronari, 6</address>
+						<address itemprop="address">Corso Venezia, 21</address>
 						<span itemprop="telephone" class="tel">
-							Tel <a href="tel:+3902874797">+39 (0)2 874797</a>
+							Tel <a href="tel:+390276008210">+39 (0)2 76008210</a>
 						</span>
 
-						<p>7:00 AM&mdash;8:00 PM</p>
-					</div>
-
-					<div class="location quarter" itemscope itemtype="http://schema.org/Place">
-						<span class="offscreen" itemprop="containedInPlace"></span>
-						<address itemprop="address">Largo La Foppa, 2</address>
-						<span itemprop="telephone" class="tel">
-							Tel <a href="tel:+39026599013">+39 (0)2 6599013</a>
-						</span>
-
-						<p>7:00 AM&mdash;11:00 PM</p>
-					</div>
-
-					<div class="location quarter" itemscope itemtype="http://schema.org/Place">
-						<span class="offscreen" itemprop="containedInPlace"></span>
-						<address itemprop="address">Via Ponte Vetero, 10</address>
-						<span itemprop="telephone" class="tel">
-							Tel <a href="tel:+390272016067">+39 (0)2 72016067</a>
-						</span>
-
-						<p>7:00 AM&mdash;8:00 PM</p>
+						<p>Monday&mdash;Friday<br /> 7:00 AM&mdash;8:00 PM</p>
+						<p>Saturday&mdash;Sunday<br /> 8:00 AM&mdash;8:00 PM</p>
 					</div>
 				</div>
 			</section>

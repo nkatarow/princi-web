@@ -66,13 +66,24 @@
 		.tel { font-size: 1.6em; }
 
 		.location-group {
+		  	justify-content: center;
 			display: flex;
+			flex-flow: row wrap;
 			padding: 0 2.5%;
 
-			.quarter {
-				padding: 0 2.5%;
-				width: 25%;
+			&.milan {
+				.location {
+					padding: 0 2.5% 5%;
+					width: 28.333333%;
+
+					&:nth-child(3):after {
+						content: '';
+						order: 1;
+						width: 100%;
+					}
+				}
 			}
+
 		}
 
 	 	p { font-size: 1.6em; }
