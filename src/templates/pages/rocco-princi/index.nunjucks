@@ -6,7 +6,7 @@
 		<script type="text/javascript">
 			uo_data.pageInfo = { // All Pages
 				"pageTemplate": "About", // Offerings About Locations
-			    "pageUrl": "http://www.princi.com/rocco-princi/", // Full URL
+			    "pageUrl": "https://www.princi.com/rocco-princi/", // Full URL
 			}
 
 			var metaDescription = "Bread is Rocco Princi's calling. The city of Milan is his muse. Learn more about his passion, perfectionism and pursuit of extraordinary ingredients.";

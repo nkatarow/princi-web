@@ -38,17 +38,23 @@ footer {
 	width: 100%;
 
 	small {
-		// font-family: $tradegothic;
 		display: block;
 		font-size: 1.4em;
 		font-weight: 300;
-		// font-size: 1.2em;
-		// text-transform: uppercase;
 		margin: $space 0 $space-double;
 	}
 }
 
 @media screen and (min-width: $bp-large) {
+	html,
+	body {
+	  height: 100%;
+	  width: 100%;
+	  overflow: auto;
+	}
+
+	body { -webkit-overflow-scrolling: touch; }
+
 	footer {
 		.wordmark {
 			bottom: $space-double;

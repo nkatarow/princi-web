@@ -6,7 +6,7 @@
 		<script type="text/javascript">
 			uo_data.pageInfo = { // All Pages
 				"pageTemplate": "Locations", // Offerings About Locations
-			    "pageUrl": "http://www.princi.com/locations/", // Full URL
+			    "pageUrl": "https://www.princi.com/locations/", // Full URL
 			}
 
 			var metaDescription = "Princi bakeries are located in Milan and London, with Seattle and Shanghai coming soon. Come enjoy a meal in the Milanese style.";

@@ -1,7 +1,7 @@
 .ie #inline-video { opacity: 0; }
 .ie .owl-carousel { background-color: white; }
 .ie .wow { visibility: visible !important; }
-.ie .parallax { overflow: hidden; }
+/*.ie .parallax { overflow: hidden; }*/
 .ie .btn { border: 1px solid #98694c; }
 .ie .btn.alt { border: 1px solid #ffffff; }
 

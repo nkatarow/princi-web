@@ -6,7 +6,7 @@
 		<script type="text/javascript">
 			uo_data.pageInfo = { // All Pages
 				"pageTemplate": "Offerings", // Offerings About Locations
-			    "pageUrl": "http://www.princi.com/offerings/aperitivo/", // Full URL
+			    "pageUrl": "https://www.princi.com/offerings/aperitivo/", // Full URL
 			}
 			uo_data.offeringInfo = { // Offerings Page
             	"offeringName": "Aperitivo" // When an offering is selected, push the name to the object

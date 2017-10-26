@@ -6,7 +6,7 @@
 		<script type="text/javascript">
 			uo_data.pageInfo = { // All Pages
 				"pageTemplate": "Offerings", // Offerings About Locations
-			    "pageUrl": "http://www.princi.com/offerings/", // Full URL
+			    "pageUrl": "https://www.princi.com/offerings/", // Full URL
 			}
 
 			var metaDescription = "Princi offers inspired menus for every moment, from early morning to aperitivo. Everything is made with exceptional ingredients and an obsessive attention to detail.";

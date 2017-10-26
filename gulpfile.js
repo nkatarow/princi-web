@@ -11,7 +11,12 @@ var gulp = require ('gulp'),
 	plumber = require('gulp-plumber'),
 	livereload = require('gulp-livereload'),
 	pump = require('pump'),
-	nunjucksRender = require('gulp-nunjucks-render');
+	nunjucksRender = require('gulp-nunjucks-render'),
+	replace = require('gulp-replace');
+
+var date = new Date();
+var cssFilename = 'main.min.' + date.getFullYear() + (date.getMonth() + 1) + date.getDate() + '-' + date.getTime() + '.css';
+var jsFilename = 'scripts.min.' + date.getFullYear() + (date.getMonth() + 1) + date.getDate() + '-' + date.getTime() + '.js';
 
 function createErrorHandler(name) {
     return function (err) {
@@ -55,18 +60,25 @@ gulp.task('scripts', function(){
 gulp.task('minify', function(){
 	return gulp.src('app/_ui/compiled/main.css')
 		.pipe(cleanCSS())
-		.pipe(rename({suffix: '.min'}))
+		.pipe(rename(cssFilename))
 		.pipe(gulp.dest('app/_ui/dist'))
     	.on('error', createErrorHandler('minify task'))
 });
 gulp.task('uglify', function(){
 	return gulp.src('app/_ui/compiled/scripts.js')
-		.pipe(rename({suffix: '.min'}))
+		.pipe(rename(jsFilename))
 		.pipe(uglify())
     	.on('error', createErrorHandler('uglify task'))
 		.pipe(gulp.dest('app/_ui/dist'))
 });
 
+// Cache Busting
+gulp.task('cache', function(){
+    gulp.src(['app/*.html', 'app/**/*.html', 'app/**/**/*.html']) //must define base so I can overwrite the src file below. Per http://stackoverflow.com/questions/22418799/can-gulp-overwrite-all-src-files
+        .pipe(replace(/<link id="stylesheet".*>/g, '<link id="stylesheet" rel="stylesheet" href="/_ui/dist/' + cssFilename + '" type="text/css" media="all">'))  //so find the script tag with an id of bundle, and replace its src.
+        .pipe(replace(/<script id="scripts".*><\/script>/g, '<script id="scripts" src="/_ui/dist/' + jsFilename + '"></script>'))  //so find the script tag with an id of bundle, and replace its src.
+        .pipe(gulp.dest('app/')); //Write the file back to the same spot.
+});
 
 // Cleaners
 gulp.task('cleancompiled', function(){
@@ -101,5 +113,5 @@ gulp.task('watch', function(){
 
 // Build task
 gulp.task('build', ['cleandist'], function(){
-	gulp.start('minify', 'uglify', 'nunjucks');
+	gulp.start(['minify', 'uglify', 'nunjucks'], 'cache');
 });

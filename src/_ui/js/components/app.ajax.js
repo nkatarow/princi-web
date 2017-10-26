@@ -66,6 +66,9 @@ $(function() {
 
 					ajaxLoad(pageTransitionType);
 				},
+				complete: function(){
+          			$('.progress').css({ width: '0%' });					
+				},
 				error: function(){
 					location.reload();
 				}
