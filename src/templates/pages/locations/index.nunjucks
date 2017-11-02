@@ -16,7 +16,7 @@
 			<div class="food-hero wow fadeIn">
 				<div class="">
 					<h1 class="h1">Locations</h1>
-					<span class="line"></span>
+					{# <span class="line"></span> #}
 					<p class="intro">Eat, drink and live Italian.</p>
 				</div>
 

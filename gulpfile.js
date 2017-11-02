@@ -74,6 +74,7 @@ gulp.task('uglify', function(){
 
 // Cache Busting
 gulp.task('cache', function(){
+	// THIS STILL ISN'T WRITING TO ALL FILES
     gulp.src(['app/*.html', 'app/**/*.html', 'app/**/**/*.html']) //must define base so I can overwrite the src file below. Per http://stackoverflow.com/questions/22418799/can-gulp-overwrite-all-src-files
         .pipe(replace(/<link id="stylesheet".*>/g, '<link id="stylesheet" rel="stylesheet" href="/_ui/dist/' + cssFilename + '" type="text/css" media="all">'))  //so find the script tag with an id of bundle, and replace its src.
         .pipe(replace(/<script id="scripts".*><\/script>/g, '<script id="scripts" src="/_ui/dist/' + jsFilename + '"></script>'))  //so find the script tag with an id of bundle, and replace its src.

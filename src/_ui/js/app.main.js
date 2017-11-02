@@ -21,8 +21,6 @@ window.APP = {
 
         self.events.parent = this;
 
-		console.log("init");
-
         // Init Components
 		self.detectIE();
         APP.nav.init();
@@ -94,7 +92,6 @@ window.APP = {
     	return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 	},
 	detectIE: function() {
-		console.log("detectIE");
 	    var ieV,
 			ua = window.navigator.userAgent,
 			msie = ua.indexOf('MSIE '),
@@ -111,9 +108,8 @@ window.APP = {
 
 		if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./) || ua.match(/Edge/i)) {
 			$('body').append('<link rel="stylesheet" href="/_ui/ie/IE.css" media="all">');
+        	$('html').addClass(' ie ie' + ieV);
         }
-
-        $('html').addClass(' ie ie' + ieV);
 
 	    // other browser
 	    return false;

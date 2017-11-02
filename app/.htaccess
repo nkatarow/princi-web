@@ -1,2 +1,5 @@
 #PLEASE LEAVE THIS IN
 ErrorDocument 404 /not-found/
+
+Redirect 301 /menus /offerings
+Redirect 301 /wifi-welcome /
