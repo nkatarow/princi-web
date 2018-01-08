@@ -21,10 +21,11 @@
 				</div>
 
 				<div class="owl-carousel locations">
-					<img src="/_ui/img/locations/princi-locations-carousel-1.jpg" alt="A hand sprinkles flour over dough">
-					<img src="/_ui/img/locations/princi-locations-carousel-2.jpg" alt="Close up of a closed oven door">
-					<img src="/_ui/img/locations/princi-locations-carousel-3.jpg" alt="Fresh loaf of bread being pulled out of an oven on a wood paddle">
-					<img src="/_ui/img/locations/princi-locations-carousel-4.jpg" alt="A paper stencil that reads Princi sits on top of flour">
+					<img src="/_ui/img/locations/princi-locations-carousel-1.jpg" alt="Rocco Princi and his team at the Starbucks Roastery counter.">
+					<img src="/_ui/img/locations/princi-locations-carousel-2.jpg" alt="Princi counter at the Starbucks Roastery.">
+					<img src="/_ui/img/locations/princi-locations-carousel-3.jpg" alt="Princi counter Shanghai.">
+					<img src="/_ui/img/locations/princi-locations-carousel-4.jpg" alt="Busy Princi location.">
+					<img src="/_ui/img/locations/princi-locations-carousel-4.jpg" alt="Rocco Princi at his new store.">
 				</div>
 			</div>
 
@@ -38,7 +39,9 @@
 							Tel <a href="tel:+3902874797">+39 (0)2 874797</a>
 						</span>
 
-						<p>7:00 AM&mdash;8:00 PM</p>
+						<p>Monday&mdash;Friday<br /> 7:00 AM&mdash;8:00 PM</p>
+						<p>Saturday<br /> 8:00 AM&mdash;8:00 PM</p>
+						<p>Sunday<br /> 9:00 AM&mdash;8:00 PM</p>
 					</div>
 
 					<div class="location" itemscope itemtype="http://schema.org/Place">
@@ -48,7 +51,8 @@
 							Tel <a href="tel:+39026599013">+39 (0)2 6599013</a>
 						</span>
 
-						<p>7:00 AM&mdash;11:00 PM</p>
+						<p>Monday&mdash;Friday<br /> 7:00 AM&mdash;11:00 PM</p>
+						<p>Saturday&mdash;Sunday<br /> 8:00 AM&mdash;11:00 PM</p>
 					</div>
 
 					<div class="location" itemscope itemtype="http://schema.org/Place">
@@ -58,7 +62,8 @@
 							Tel <a href="tel:+390272016067">+39 (0)2 72016067</a>
 						</span>
 
-						<p>7:00 AM&mdash;8:00 PM</p>
+						<p>Monday&mdash;Friday<br /> 7:00 AM&mdash;8:00 PM</p>
+						<p>Saturday&mdash;Sunday<br /> 8:00 AM&mdash;8:00 PM</p>
 					</div>
 
 					<div class="location" itemscope itemtype="http://schema.org/Place">
@@ -68,8 +73,8 @@
 							Tel <a href="tel:+390229060832">+39 (0)2 29060832</a>
 						</span>
 
-						<p>Monday&mdash;Wednesday<br /> 7:00 AM&mdash;9:00 PM</p>
-						<p>Thursday&mdash;Sunday<br /> open 24 hours</p>
+						<p>Monday&mdash;Friday<br /> 7:00 AM&mdash;11:00 PM</p>
+						<p>Saturday&mdash;Sunday<br /> 8:00 AM&mdash;11:00 PM</p>
 					</div>
 
 					<div class="location" itemscope itemtype="http://schema.org/Place">
@@ -111,13 +116,27 @@
 
 			<section class="city wow fadeIn">
 				<h2 class="large-underline"><span>Seattle</span></h2>
-				<p class="caption large">Coming Soon</p>
+				<div class="location" itemscope itemtype="http://schema.org/Place">
+					<span class="offscreen" itemprop="containedInPlace"></span>
+					<address itemprop="address">1124 Pike Street</address>
+					<span itemprop="telephone" class="tel">
+						Tel <a href="tel:+12066240173">(206) 624-0173</a>
+					</span>
 
+					<p>7:00 AM&mdash;11:00 PM</p>
+				</div>
 			</section>
 
 			<section class="city wow fadeIn">
 				<h2 class="large-underline"><span>Shanghai</span></h2>
-				<p class="caption large">Coming Soon</p>
+				<div class="location" itemscope itemtype="http://schema.org/Place">
+					<address itemprop="address">
+						789 West Nanjing Rd, Unit 110+201
+						<br />Jing’an District
+					</address>
+
+					<p>Monday&mdash;Sunday<br />7:00 AM&mdash;11:00 PM</p>
+				</div>
 				<p class="disclaimer">Our menus and ingredients vary by location, but our commitment to great ingredients remains true.</p>
 
 			</section>
