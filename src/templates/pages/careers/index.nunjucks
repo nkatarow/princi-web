@@ -1,0 +1,86 @@
+<!-- offerings.nunjucks -->
+{% extends "partials/layout.nunjucks" %}
+
+{% block content %}
+	<div id="content">
+		<script type="text/javascript">
+			uo_data.pageInfo = { // All Pages
+				"pageTemplate": "Careers", // Offerings About Locations
+			    "pageUrl": "https://www.princi.com/careers/", // Full URL
+			}
+
+			var metaDescription = "Princi offers inspired menus for every moment, from early morning to aperitivo. Everything is made with exceptional ingredients and an obsessive attention to detail.";
+		</script>
+
+		<div class="parallax">
+			<div class="food-hero">
+				<h1 class="h1 wow fadeIn">Careers</h1>
+
+				<div class="owl-carousel wow fadeIn">
+					<img src="/_ui/img/careers/careers-hero.jpg" alt="">
+				</div>
+
+				<p class="intro">Bring the Spirit of Milan to life.</p>
+			</div>
+
+
+			<section id="passion" class="split-pic flip">
+				<div class="split-flex">
+					<div class="copy wow fadeIn">
+						<p class="airy">Our bakers, commessas and bartenders act as brand ambassadors for Princi, demonstrating culinary leadership, craftsmanship and artistry as well as an obsession for impeccable ingredients and uncompromised quality. We work together to uphold the responsibility and privilege of creating an unforgettable customer experience that stays true to Rocco Princi’s vision.</p>
+					</div>
+
+					<div class="img portrait wow fadeIn">
+						<img src="/_ui/img/careers/baker.jpg" alt="">
+					</div>
+				</div>
+			</section>
+
+			<section id="perfection" class="split-pic">
+				<h2 class="accent-header wow fadeIn"><span>Benefits</span></h2>
+
+				<div class="split-flex">
+					<div class="copy wow fadeIn">
+						<p class="airy">Through our partnership with Starbucks, we proudly offer a full suite of benefits to invest in our Princi partners. Expect structured training and development, empowerment to advance, and competitive rewards and benefits. Benefits vary by global location and job type. Please note that our Milan and London locations are not eligible for Starbucks benefits.</p>
+            <a href="#" target="_blank" class="btn download draw">
+						  <span class="text">Learn More</span>
+					  </a>
+          </div>
+
+					<div class="img edge wow fadeIn">
+						<img src="/_ui/img/careers/benefits.jpg" alt="">
+					</div>
+				</div>
+			</section>
+
+      <section id="roles">
+				<h2 class="accent-header wow fadeIn"><span>Princi Roles</span></h2>
+
+        <a href="#" class="large-underline" target="_blank"><span>BAKER</span></a>
+        <a href="#" class="large-underline" target="_blank"><span>COMMESSA</span></a>
+        <a href="#" class="large-underline" target="_blank"><span>BARTENDER</span></a>
+
+        <p>To inquire about job opportunities in London and Milan, please <a href="mailto:">email us</a></p>
+        <p>Explore Starbucks Reserve careers <a href="#">here</a></p>
+      </section>
+
+      <section id="heritage-cta" class="bottom-cta locations-cta">
+				<a href="/rocco-princi/" class="bottom-cta-link">
+					<div class="cta-container">
+						<div class="">
+							<h2>Rocco Princi</h2>
+
+							<div class="btn alt">
+								<span class="lead-line"></span>
+								<span class="text">Meet The Founder</span>
+							</div>
+						</div>
+					</div>
+				</a>
+
+				{% include "partials/footer.nunjucks" %}
+			</section> <!-- /#heritage-cta -->
+		</div>
+
+	</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+/* ==========================================================================
+   COMPONENTS/_CAREERS.SCSS
+   ========================================================================== */
+
+.careers {
+  .split-pic {
+    .btn { margin: 2em 0; }
+  }
+
+  #roles {
+    padding-bottom: $space*4;
+    text-align: center;
+
+    a { color: $bronze; }
+    .accent-header { margin-bottom: 2em; }
+
+    .large-underline {
+      display: block;
+
+      span { border-bottom: 0; }
+
+      &:last-of-type { margin-bottom: $space; }
+
+      &:hover,
+      &:focus {
+        span { border-bottom: 1px solid $bronze; }
+      }
+    }
+
+    p a { border-bottom: 1px solid $bronze; }
+  }
+}
+
+@media screen and (min-width: $bp-large) {
+  .careers {
+    .split-pic {
+      padding-top: 0;
+
+      .img.edge img { max-width: 115%; }
+    }
+  }
+}
